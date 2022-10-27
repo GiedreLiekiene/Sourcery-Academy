@@ -1,0 +1,18 @@
+:root {
+  --color-primary: #ff3454;
+  --color-secondary: #404cfa;
+  --font-size-base: 1.6rem;
+  --font-family: system-ui;
+  --line-height-base: 1.5;
+
+  /* Spacers */
+  --spacer-xxs: 0.4rem;
+  --spacer-xs: 0.8rem;
+  --spacer-s: 1.2rem;
+  --spacer-m: 1.6rem;
+  --spacer: var(--spacer-m); /* alias for --spacer-m */
+  --spacer-l: 2rem;
+  --spacer-xl: 2.4rem;
+  --spacer-xxl: 3.2rem;
+  --spacer-xxxl: 4rem;
+}
