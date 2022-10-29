@@ -18,7 +18,7 @@
     "react-dom": "18.2.0"
   },
   "scripts": {
-    "start": "npm run build:dev",
+    "start": "npm run build && npm run dev",
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack -p --mode production",
     "stylelint:lint": "stylelint \"src/**/*.css\"",
