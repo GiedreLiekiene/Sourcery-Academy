@@ -41,6 +41,28 @@ To start developing run npm script command:
 
     $ npm run ts:fix
 
+## Git Guidelines
+
+New features should be developed in separate branches starting with the `feat/` or `fix/` prefix, for example: `feat/SR22AS-80_some-new-feature`.
+The `SR22AS-XX` part is an issue number from JIRA, if there's no issue for this feature, feature key can be omitted.
+
+Start commit messages with `JIRA issue number` + `Fix`, `Add`, `Remove`, `Change`, etc. instead of `Fixed`, `Added`, `Removed`, `Changed`.
+
+Commit messages should describe what will be done with this commit. Some examples:
+
+- SR22AS-80 Add lodash to devDependencies
+- SR22AS-80 Change the layout of the feed page
+
+You may specify multiple issue number if commit is relevant for them or if using subtasks:
+
+- SR22AS-80, SR22AS-81 Change the layout of the feed page
+
+This enables to easily locate a branch or related commits directly from JIRA story or lookup story when looking at commit history.
+
+```
+
+```
+
 ## License
 
 The MIT License (MIT).
