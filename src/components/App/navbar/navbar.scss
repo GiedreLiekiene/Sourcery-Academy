@@ -1,0 +1,44 @@
+:root {
+  --background-color: #fff;
+  --background-light: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: #3d3691;
+  --text-color: #0a0a0a;
+  --text-light: #575757;
+  --font-size: 18px;
+  --animation-speed: 1;
+}
+
+.navbar {
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  display: flex;
+  font-family: 'Raley', sans-serif;
+  height: 55px;
+  justify-content: space-between;
+  position: fixed;
+  text-decoration: none;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+}
+
+.logo {
+  font-weight: 600;
+  line-height: 21.13px;
+  text-decoration: none;
+}
+
+.container {
+  padding-inline: 10vw;
+}
+
+.nav-links a {
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 21.13px;
+  margin-left: 1em;
+  position: relative;
+  text-decoration: none;
+}
