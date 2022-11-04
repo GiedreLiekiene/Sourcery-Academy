@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
+import SourceryLogoSvg from '~/assets/svg/sourcery-logo.svg';
+import SourceryLogoSvgInside from '~/assets/svg/sourcery-logo-inside.svg';
 import './navbar.scss';
 
 const Navbar = () => {
@@ -27,6 +29,10 @@ const Navbar = () => {
     <>
       <div className="navbar container">
         <Link to="/" className="logo">
+          <div className="logo-svg-container">
+            <SourceryLogoSvg className="logo-svg" />
+            <SourceryLogoSvgInside className="logo-svg-inside" />
+          </div>
           Sourcery Academy
         </Link>
         <div className="nav-links">

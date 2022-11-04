@@ -1,7 +1,5 @@
 :root {
   --background-color: #fff;
-  --background-light: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.2);
   --primary-color: #3d3691;
   --text-color: #0a0a0a;
   --text-light: #575757;
@@ -27,8 +25,31 @@
 }
 
 .logo {
+  align-items: center;
+  display: flex;
   font-weight: 700;
   text-decoration: none;
+}
+
+.logo-svg-container {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-svg {
+  align-self: center;
+  height: 41.25px;
+  margin-right: 16px;
+  width: 41.25px;
+}
+
+.logo-svg-inside {
+  align-self: center;
+  height: 36.98px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 36.98px;
 }
 
 .container {
@@ -41,6 +62,7 @@
   margin-left: 1em;
   position: relative;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .navbar-icon {
