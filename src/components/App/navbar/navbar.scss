@@ -5,8 +5,8 @@
   --primary-color: #3d3691;
   --text-color: #0a0a0a;
   --text-light: #575757;
+  --font-family: 'Raleway', sans-serif;
   --font-size: 18px;
-  --animation-speed: 1;
 }
 
 .navbar {
@@ -14,19 +14,20 @@
   background-color: var(--background-color);
   color: var(--primary-color);
   display: flex;
-  font-family: 'Raleway', sans-serif;
-  height: 55px;
+  height: 96px;
   justify-content: space-between;
+  line-height: 21px;
+  line-height: 100%;
+  padding: 0 40px;
   position: fixed;
   text-decoration: none;
-  top: 0;
+  width: 1440px;
   width: 100%;
   z-index: 998;
 }
 
 .logo {
-  font-weight: 600;
-  line-height: 21.13px;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -37,8 +38,13 @@
 .nav-links a {
   font-weight: 200;
   letter-spacing: 1px;
-  line-height: 21.13px;
   margin-left: 1em;
   position: relative;
   text-decoration: none;
+}
+
+.navbar-icon {
+  height: 8px;
+  margin-left: 6px;
+  width: 13.71px;
 }
