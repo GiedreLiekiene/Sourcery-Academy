@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
 import './navbar.scss';
 
 const Navbar = () => {
@@ -11,6 +12,7 @@ const Navbar = () => {
     {
       name: 'Academies',
       path: '/academies',
+      icon: ArrowDownSvg,
     },
     {
       name: 'Media',
@@ -36,6 +38,7 @@ const Navbar = () => {
               onClick={link.onClick}
             >
               {link.name}
+              {link.icon && <link.icon className={'navbar-icon'} />}
             </Link>
           ))}
         </div>
