@@ -14,6 +14,7 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js',
   }, // The top-level output key contains set of options instructing webpack on how and where it should output your bundles, assets and anything else you bundle or load with webpack. https://webpack.js.org/configuration/output/
+  target: 'web',
   devtool: 'inline-source-map', // Sets a style of source mapping to enhance the debugging process. These values can affect build and rebuild speed dramatically. https://webpack.js.org/configuration/devtool/#devtool
   // Dev server is used to quickly develop an application
   // More info: https://webpack.js.org/configuration/dev-server/
