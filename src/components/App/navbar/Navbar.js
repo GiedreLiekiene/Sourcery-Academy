@@ -24,6 +24,10 @@ const Navbar = () => {
       name: 'Register',
       path: '/register',
     },
+    {
+      name: 'Questions',
+      path: '/questions',
+    },
   ];
   return (
     <>
