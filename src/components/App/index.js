@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import styles from './styles.module';
 import Svg from '~/assets/svg/image.svg';
+import Academies from './Academies/Academies';
 
 const cn = classNames.bind(styles);
 
@@ -17,6 +18,7 @@ export default function App({ prop }) {
           {prop}
         </pre>
       </div>
+      <Academies />
     </div>
   );
 }
