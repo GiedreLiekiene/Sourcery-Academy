@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Footer from './Footer.js';
-import '../../sass/global.scss';
+import './layout.scss';
 
 export default function Layout({ children }) {
   return (
     <>
       <main>{children}</main>
-      <Footer />
     </>
   );
 }
