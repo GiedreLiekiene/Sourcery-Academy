@@ -1,4 +1,21 @@
-.main {
+html,
+body,
+body > div,
+.container {
   height: 100%;
-  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 0 8rem;
+  }
 }
