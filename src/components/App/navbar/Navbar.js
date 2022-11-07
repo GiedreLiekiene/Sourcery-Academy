@@ -37,7 +37,9 @@ const Navbar = () => {
             <SourceryLogoSvg className="logo-svg" />
             <SourceryLogoSvgInside className="logo-svg-inside" />
           </div>
-          Sourcery Academy
+          <span className="logo-text-container">
+            <span className="logo-text">Sourcery Academy</span>
+          </span>
         </Link>
         <div className="nav-links">
           {links.map((link) => (

@@ -39,18 +39,16 @@
 
 .logo-svg {
   align-self: center;
-  height: 41.25px;
   margin-right: 16px;
-  width: 41.25px;
+  width: 49px;
 }
 
 .logo-svg-inside {
   align-self: center;
-  height: 36.98px;
-  left: 0;
+  left: 9px;
   position: absolute;
-  top: 0;
-  width: 36.98px;
+  top: 6px;
+  width: 30px;
 }
 
 .container {
@@ -80,6 +78,27 @@
 }
 
 .nav-links a:hover::before {
+  transform: scaleX(1);
+}
+
+.logo-text-container {
+  position: relative;
+}
+
+.logo-text::before {
+  background-color: #3d3691;
+  bottom: 0;
+  content: '';
+  display: inline-block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform calc(var(--animation-speed) * 0.2s);
+  width: 100%;
+}
+
+.logo-text:hover::before {
   transform: scaleX(1);
 }
 
