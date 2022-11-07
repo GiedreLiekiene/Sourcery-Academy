@@ -61,18 +61,52 @@
   .row-two {
     align-items: center;
     display: flex;
+    // width: 100%;
+    gap: 50px;
     // flex-direction: column;
     justify-content: center;
-    margin: 18px 27px 0 128px;
+    margin: 20px 100px 0;
     position: relative;
-    // width: 100%;
 
     .text-block {
       flex: 1;
     }
 
+    h2 {
+      color: var(--color-tertiary);
+      font-size: 32px;
+      line-height: 1.25;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 30px 0 0;
+      padding: 0;
+      text-align: start;
+    }
+
     .img-block {
       flex: 1;
+    }
+
+    .btn-learn {
+      background-color: var(--color-violet);
+      border: var(--color-violet);
+      border-radius: 50px;
+      color: var(--color-white);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-top: 50px;
+      padding: 12px 24px;
+      width: 150px;
+    }
+
+    .btn-learn:hover {
+      background-color: var(--color-tertiary);
     }
   }
 }

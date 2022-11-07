@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../../../sass/layout/academies.scss';
-// import ArrowOne from '../../../assets/svg/Academies/arrow1.svg';
-// import ArrowTwo from '../../../assets/svg/Academies/arrow2.svg';
+import '../../../sass/layout/academies.scss';
 import Arrow from '../../../assets/svg/Academies/Btn-arrow.svg';
 import Particles from '../../../assets/svg/Academies/Particles.svg';
+import Developers from '../../../assets/svg/Academies/Developers.svg';
+import Testers from '../../../assets/svg/Academies/Testers.svg';
 
 export default function Academies() {
   return (
@@ -35,7 +35,51 @@ export default function Academies() {
             and create custom projects with the help of software development
             professionals.
           </p>
-          <button>Learn more</button>
+          <button className="btn-learn">Learn more</button>
+        </div>
+        <div className="img-block">
+          <Developers />
+        </div>
+      </div>
+      <div className="row-two">
+        <div className="img-block">
+          <Testers />
+        </div>
+        <div className="text-block">
+          <h2>Sourcery for Testers</h2>
+          <p>
+            Top-notch studies for the future Test Engineers. Students join the
+            Devbridge team as a paid employee for the Academy period (two
+            months) to learn and work. Ones who finish the Academy successfully
+            are invited to continue employment on full time.
+          </p>
+          <button className="btn-learn">Learn more</button>
+        </div>
+      </div>
+      <div className="row-two">
+        <div className="img-block">IMG</div>
+        <div className="text-block">
+          <h2>Sourcery for Front-End</h2>
+          <p>
+            Start your career in software development with the intense program
+            at Sourcery for Front-End Developers. Complete the admission and
+            enter our free of charge two-month academy this autumn in Vilnius to
+            learn from our top specialists.
+          </p>
+          <button className="btn-learn">Learn more</button>
+        </div>
+      </div>
+      <div className="row-two">
+        <div className="text-block">
+          <h2>Sourcery for Kids</h2>
+          <p>
+            Sourcery for Kids seeks to educate kids giving them opportunity to
+            learn and apply technological product development skills. For the
+            entire academic year, the children will study key aspects of
+            programming, from logical concepts and functions, through to
+            variables, sequences, coordinates, and movement.
+          </p>
+          <button className="btn-learn">Learn more</button>
         </div>
         <div className="img-block">IMG</div>
       </div>
