@@ -5,6 +5,7 @@
   --text-light: #575757;
   --font-family: 'Raleway', sans-serif;
   --font-size: 18px;
+  --animation-speed: 1;
 }
 
 .navbar {
@@ -63,6 +64,23 @@
   position: relative;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.nav-links a::before {
+  background-color: #3d3691;
+  bottom: 0;
+  content: '';
+  display: inline-block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform calc(var(--animation-speed) * 0.2s);
+  width: 100%;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
 }
 
 .navbar-icon {
