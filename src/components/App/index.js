@@ -18,7 +18,6 @@ export default function App({ prop }) {
           {prop}
         </pre>
       </div>
-      <Academies />
     </div>
   );
 }

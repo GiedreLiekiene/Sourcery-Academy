@@ -1,6 +1,8 @@
 import React from 'react';
-import ArrowOne from '../../../assets/svg/Academies/arrow1.svg';
-import ArrowTwo from '../../../assets/svg/Academies/arrow2.svg';
+import styles from '../../../sass/layout/academies.scss';
+// import ArrowOne from '../../../assets/svg/Academies/arrow1.svg';
+// import ArrowTwo from '../../../assets/svg/Academies/arrow2.svg';
+import Arrow from '../../../assets/svg/Academies/Btn-arrow.svg';
 import Particles from '../../../assets/svg/Academies/Particles.svg';
 
 export default function Academies() {
@@ -20,9 +22,22 @@ export default function Academies() {
         </p>
         <span className="vertical-line"></span>
         <button className="btn-arrow">
-          <ArrowOne className="arrow-one" />
-          <ArrowTwo className="arrow-two" />
+          <Arrow className="arrow" />
         </button>
+      </div>
+      <div className="row-two">
+        <div className="text-block">
+          <h2>Sourcery for Developers</h2>
+          <p>
+            A free of charge three-month cutting-edge technology course,
+            available in the Spring and Fall of each year. Students are invited
+            to the Devbridge in Kaunas and Vilnius offices to attend lectures
+            and create custom projects with the help of software development
+            professionals.
+          </p>
+          <button>Learn more</button>
+        </div>
+        <div className="img-block">IMG</div>
       </div>
     </div>
   );
