@@ -34,8 +34,8 @@ const Navbar = () => {
       <div className="navbar container">
         <Link to="/" className="logo">
           <div className="logo-svg-container">
-            <SourceryLogoSvg className="logo-svg" />
-            <SourceryLogoSvgInside className="logo-svg-inside" />
+            <SourceryLogoSvg className="logo-svg-circle" />
+            <SourceryLogoSvgInside className="logo-svg-square" />
           </div>
           <span className="logo-text-container">
             <span className="logo-text">Sourcery Academy</span>
