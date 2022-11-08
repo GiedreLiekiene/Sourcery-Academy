@@ -30,32 +30,32 @@ const Navbar = () => {
     },
   ];
   return (
-    <>
-      <div className="navbar container">
-        <Link to="/" className="logo">
-          <div className="logo-svg-container">
-            <SourceryLogoSvg className="logo-svg-circle" />
-            <SourceryLogoSvgInside className="logo-svg-square" />
-          </div>
-          <span className="logo-text-container">
-            <span className="logo-text">Sourcery Academy</span>
-          </span>
-        </Link>
-        <div className="nav-links">
-          {links.map((link) => (
-            <Link
-              className={location.pathname === link.path ? 'active' : ''}
-              to={link.path}
-              key={link.name}
-              onClick={link.onClick}
-            >
-              {link.name}
-              {link.icon && <link.icon className={'navbar-icon'} />}
-            </Link>
-          ))}
+    <div className="navbar container">
+      <Link to="/" className="logo">
+        <div className="logo-svg-container">
+          <SourceryLogoSvg className="logo-svg-circle" />
+          <SourceryLogoSvgInside className="logo-svg-square" />
         </div>
+        <span className="logo-text-container">
+          <span className="logo-text">Sourcery Academy</span>
+        </span>
+      </Link>
+      <div className="nav-links">
+        {links.map((link) => (
+          <Link
+            className={
+              'nav-link' + (location.pathname === link.path ? ' active' : '')
+            }
+            to={link.path}
+            key={link.name}
+            onClick={link.onClick}
+          >
+            {link.name}
+            {link.icon && <link.icon className={'navbar-icon'} />}
+          </Link>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

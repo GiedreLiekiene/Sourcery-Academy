@@ -1,12 +1,4 @@
-:root {
-  --background-color: #fff;
-  --primary-color: #3d3691;
-  --text-color: #0a0a0a;
-  --text-light: #575757;
-  --font-family: 'Raleway', sans-serif;
-  --font-size: 18px;
-  --animation-speed: 1;
-}
+@import '../../../sass/variables';
 
 .navbar {
   align-items: center;
@@ -16,12 +8,8 @@
   height: 96px;
   justify-content: space-between;
   line-height: 21px;
-  line-height: 100%;
-  padding: 0 40px;
   padding-inline: 10vw;
-  position: fixed;
   text-decoration: none;
-  width: 1440px;
   width: 100%;
   z-index: 998;
 
@@ -52,8 +40,8 @@
   }
 
   .nav-links {
-    a {
-      font-weight: 200;
+    .nav-link {
+      font-weight: 300;
       letter-spacing: 1px;
       margin-left: 1em;
       position: relative;
@@ -61,7 +49,7 @@
       white-space: nowrap;
     }
 
-    a::before {
+    ::before {
       background-color: var(--primary-color);
       bottom: 0;
       content: '';
@@ -74,7 +62,7 @@
       width: 100%;
     }
 
-    a:hover::before {
+    :hover::before {
       transform: scaleX(1);
     }
   }
@@ -103,6 +91,6 @@
   .navbar-icon {
     height: 8px;
     margin-left: 6px;
-    width: 13.71px;
+    width: 14px;
   }
 }
