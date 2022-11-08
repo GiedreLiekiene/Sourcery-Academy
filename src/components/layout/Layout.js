@@ -8,9 +8,9 @@ const cn = classNames.bind(styles);
 export default function Layout({ children }) {
   return (
     <div className={cn('container')}>
-      <div className={cn('header')}></div>
+      <div className={cn('header')}>HEADER</div>
       <main className={cn('content')}>{children}</main>
-      <div className={cn('footer')}></div>
+      <div className={cn('footer')}>FOOTER</div>
     </div>
   );
 }
