@@ -1,14 +1,13 @@
 import React from 'react';
-import Image from './images.js';
+import { ReactComponent as Group_303 } from '/src/assets/svg/Group_303.svg';
+import './images.scss';
 
-export default function Images() {
+const PromoSvg = () => {
   return (
-    <div>
-      <Image.Group303 />
-      <Image.Group351 />
-      <Image.Group363 />
-      <Image.Group365 />
-      <Image.Group406 />
+    <div className="svg-promo">
+      <Group_303 />
     </div>
   );
-}
+};
+
+export { PromoSvg };
