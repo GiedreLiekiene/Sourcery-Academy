@@ -7,10 +7,10 @@ const cn = classNames.bind(styles);
 
 export default function Layout({ children }) {
   return (
-    <div className={cn('container')}>
-      <div className={cn('header')}>HEADER</div>
-      <main className={cn('content')}>{children}</main>
-      <div className={cn('footer')}>FOOTER</div>
+    <div className={cn('layout')}>
+      <div className={cn('layout-header')}>HEADER</div>
+      <main className={cn('layout-content')}>{children}</main>
+      <div className={cn('layout-footer')}>FOOTER</div>
     </div>
   );
 }
