@@ -5,30 +5,31 @@ import SourceryLogoSvg from '~/assets/svg/sourcery-logo.svg';
 import SourceryLogoSvgInside from '~/assets/svg/sourcery-logo-inside.svg';
 import './navbar.scss';
 
+const links = [
+  {
+    name: 'About us',
+    path: '/about',
+  },
+  {
+    name: 'Academies',
+    path: '/academies',
+    icon: ArrowDownSvg,
+  },
+  {
+    name: 'Media',
+    path: '/media',
+  },
+  {
+    name: 'Register',
+    path: '/register',
+  },
+  {
+    name: 'Questions',
+    path: '/questions',
+  },
+];
+
 const Navbar = () => {
-  let links = [
-    {
-      name: 'About us',
-      path: '/about',
-    },
-    {
-      name: 'Academies',
-      path: '/academies',
-      icon: ArrowDownSvg,
-    },
-    {
-      name: 'Media',
-      path: '/media',
-    },
-    {
-      name: 'Register',
-      path: '/register',
-    },
-    {
-      name: 'Questions',
-      path: '/questions',
-    },
-  ];
   return (
     <div className="navbar container">
       <Link to="/" className="logo">
