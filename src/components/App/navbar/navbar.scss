@@ -9,7 +9,6 @@
   line-height: 21px;
   padding-inline: 10vw;
   width: 100%;
-  z-index: 998;
 
   .logo {
     height: 40px;
@@ -24,11 +23,8 @@
 
     .nav-link {
       color: var(--primary-color);
-      font-family: var(--font-family);
       font-size: 18px;
-      font-weight: 400;
       letter-spacing: 1px;
-      line-height: 21px;
       text-decoration: none;
       white-space: nowrap;
     }
