@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
-import SourceryLogoSvg from '~/assets/svg/sourcery-logo.svg';
-import SourceryLogoSvgInside from '~/assets/svg/sourcery-logo-inside.svg';
+import LogoSvg from '~/assets/svg/logo.svg';
 import './navbar.scss';
 
 const links = [
@@ -33,13 +32,7 @@ const Navbar = () => {
   return (
     <div className="navbar container">
       <Link to="/" className="logo">
-        <div className="logo-svg-container">
-          <SourceryLogoSvg className="logo-svg-circle" />
-          <SourceryLogoSvgInside className="logo-svg-square" />
-        </div>
-        <span className="logo-text-container">
-          <span className="logo-text">Sourcery Academy</span>
-        </span>
+        <LogoSvg />
       </Link>
       <div className="nav-links">
         {links.map((link) => (
