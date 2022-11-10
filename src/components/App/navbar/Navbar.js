@@ -12,7 +12,7 @@ const links = [
   {
     name: 'Academies',
     path: '/academies',
-    icon: ArrowDownSvg,
+    Icon: ArrowDownSvg,
   },
   {
     name: 'Media',
@@ -35,18 +35,17 @@ const Navbar = () => {
         <LogoSvg />
       </Link>
       <div className="navbar__links">
-        {links.map((link) => (
+        {links.map(({ path, name, Icon }) => (
           <Link
             className={
               'navbar__links--link' +
-              (location.pathname === link.path ? ' active' : '')
+              (location.pathname === path ? ' active' : '')
             }
-            to={link.path}
-            key={link.name}
-            onClick={link.onClick}
+            to={path}
+            key={name}
           >
-            {link.name}
-            {link.icon && <link.icon className={'navbar__links--link--icon'} />}
+            {name}
+            {Icon && <Icon className={'navbar__links--link--icon'} />}
           </Link>
         ))}
       </div>
