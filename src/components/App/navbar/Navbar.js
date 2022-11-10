@@ -30,22 +30,23 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className="navbar container">
-      <Link to="/" className="logo">
+    <div className="navbar">
+      <Link to="/" className="navbar__logo">
         <LogoSvg />
       </Link>
-      <div className="nav-links">
+      <div className="navbar__links">
         {links.map((link) => (
           <Link
             className={
-              'nav-link' + (location.pathname === link.path ? ' active' : '')
+              'navbar__links--link' +
+              (location.pathname === link.path ? ' active' : '')
             }
             to={link.path}
             key={link.name}
             onClick={link.onClick}
           >
             {link.name}
-            {link.icon && <link.icon className={'navbar-icon'} />}
+            {link.icon && <link.icon className={'navbar__links--link--icon'} />}
           </Link>
         ))}
       </div>

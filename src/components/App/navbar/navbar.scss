@@ -10,25 +10,25 @@
   padding-inline: 10vw;
   width: 100%;
 
-  .logo {
+  &__logo {
     height: 4rem;
     width: 22.2rem;
   }
 
-  .nav-links {
+  &__links {
     display: flex;
     height: 2.1rem;
     justify-content: space-between;
     width: 49rem;
 
-    .nav-link {
+    &--link {
       color: var(--primary-color);
       font-size: 1.8rem;
       letter-spacing: 0.1rem;
       text-decoration: none;
     }
 
-    .navbar-icon {
+    &--link--icon {
       height: 0.8rem;
       margin-left: 0.6rem;
       width: 1.4rem;
