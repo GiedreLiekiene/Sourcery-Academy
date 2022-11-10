@@ -4,35 +4,34 @@
   align-items: center;
   color: var(--primary-color);
   display: flex;
-  height: 96px;
+  height: 9.6rem;
   justify-content: space-between;
-  line-height: 21px;
+  line-height: 2.1rem;
   padding-inline: 10vw;
   width: 100%;
 
   .logo {
-    height: 40px;
-    width: 222px;
+    height: 4rem;
+    width: 22.2rem;
   }
 
   .nav-links {
     display: flex;
-    height: 21px;
+    height: 2.1rem;
     justify-content: space-between;
-    width: 490px;
+    width: 49rem;
 
     .nav-link {
       color: var(--primary-color);
-      font-size: 18px;
-      letter-spacing: 1px;
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
       text-decoration: none;
-      white-space: nowrap;
     }
 
     .navbar-icon {
-      height: 8px;
-      margin-left: 6px;
-      width: 14px;
+      height: 0.8rem;
+      margin-left: 0.6rem;
+      width: 1.4rem;
     }
   }
 }
