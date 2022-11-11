@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import styles from './layout.scss';
-
-const cn = classNames.bind(styles);
+import './layout.scss';
 
 export default function Layout({ children }) {
   return (
-    <div className={cn('layout')}>
-      <div className={cn('layout-header')}>HEADER</div>
-      <main className={cn('layout-content')}>{children}</main>
-      <div className={cn('layout-footer')}>FOOTER</div>
+    <div className={'layout'}>
+      <div className={'layout__header'}>HEADER</div>
+      <main className={'layout__content'}>{children}</main>
+      <div className={'layout__footer'}>FOOTER</div>
     </div>
   );
 }

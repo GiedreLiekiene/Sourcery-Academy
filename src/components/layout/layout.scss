@@ -9,12 +9,12 @@ body > div,
   display: flex;
   flex-direction: column;
 
-  &-header {
+  &__header {
     position: sticky;
     top: 0;
   }
 
-  &-content {
+  &__content {
     flex-grow: 1;
     padding: 0 8rem;
   }
