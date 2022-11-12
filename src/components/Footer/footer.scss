@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacer-xxxl);
-  position: relative;
   width: 100%;
   z-index: 1;
 
@@ -23,7 +22,7 @@
       fill: none;
     }
 
-    &--facebook:hover > path:nth-child(2) {
+    &--facebook:hover .icon-logo {
       fill: var(--color-facebook);
       stroke: var(--color-facebook);
     }
@@ -44,7 +43,7 @@
     }
   }
 
-  .footer__copyright {
+  &__copyright {
     color: var(--color-primary);
     font-size: 1.4rem;
     margin: 1rem;
