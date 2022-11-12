@@ -3,8 +3,10 @@ import Dropdown from './Dropdown';
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const NavbarLink = ({ link: { path, name, Icon, onClick, submenu } }) => {
+  const [dropdown, setDropdown] = useState(false);
   return (
     <>
       <Link
@@ -13,12 +15,13 @@ const NavbarLink = ({ link: { path, name, Icon, onClick, submenu } }) => {
         }
         to={path}
         key={name}
-        onClick={onClick}
+        aria-expanded={dropdown ? 'true' : 'false'}
+        onClick={() => setDropdown((prev) => !prev)}
       >
         {name}
         {Icon && <Icon className={'navbar__links--link--icon'} />}
       </Link>
-      {submenu && <Dropdown submenuItems={submenu} />}
+      {submenu && <Dropdown submenuItems={submenu} dropdown={dropdown} />}
     </>
   );
 };
