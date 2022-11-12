@@ -23,7 +23,7 @@ $color-white: #fff;
     margin: 1rem;
     width: 4rem;
 
-    &:hover > path {
+    &:hover > .icon-background {
       fill: none;
     }
 
@@ -32,17 +32,12 @@ $color-white: #fff;
       stroke: $color-facebook;
     }
 
-    &--twitter:hover > path:nth-child(2) {
+    &--twitter:hover .icon-logo {
       fill: $color-twitter;
       stroke: $color-twitter;
     }
 
-    &--instagram:hover > path:nth-child(2) {
-      fill: none;
-      stroke: $color-instagram;
-    }
-
-    &--instagram:hover > path:nth-child(3) {
+    &--instagram:hover .icon-logo {
       fill: none;
       stroke: $color-instagram;
     }
