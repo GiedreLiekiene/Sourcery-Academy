@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
 import LogoSvg from '~/assets/svg/logo.svg';
 import './navbar.scss';
+import Navbarlink from './Navbarlink';
 
 const links = [
   {
@@ -13,6 +14,24 @@ const links = [
     name: 'Academies',
     path: '/academies',
     Icon: ArrowDownSvg,
+    submenu: [
+      {
+        name: 'Sourcery for Developers',
+        path: '/academies/sourcery-for-developers',
+      },
+      {
+        name: 'Sourcery for Testers',
+        path: '/academies/sourcery-for-testers',
+      },
+      {
+        name: 'Sourcery for Front-End',
+        path: '/academies/sourcery-for-front-end',
+      },
+      {
+        name: 'Sourcery for Kids',
+        path: '/academies/sourcery-for-kids',
+      },
+    ],
   },
   {
     name: 'Media',
@@ -35,18 +54,8 @@ const Navbar = () => {
         <LogoSvg />
       </Link>
       <div className="navbar__links">
-        {links.map(({ path, name, Icon }) => (
-          <Link
-            className={
-              'navbar__links--link' +
-              (location.pathname === path ? ' active' : '')
-            }
-            to={path}
-            key={name}
-          >
-            {name}
-            {Icon && <Icon className={'navbar__links--link--icon'} />}
-          </Link>
+        {links.map((link, index) => (
+          <Navbarlink link={link} key={index} />
         ))}
       </div>
     </div>
