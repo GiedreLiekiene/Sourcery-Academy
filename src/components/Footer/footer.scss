@@ -19,15 +19,7 @@
     margin: 1rem;
     width: 4rem;
 
-    &--facebook:hover > path {
-      fill: none;
-    }
-
-    &--twitter:hover > path {
-      fill: none;
-    }
-
-    &--instagram:hover > path {
+    &:hover > path {
       fill: none;
     }
 
