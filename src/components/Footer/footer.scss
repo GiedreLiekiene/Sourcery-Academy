@@ -1,10 +1,15 @@
+//Variables
+$color-twitter: #1da1f2;
+$color-facebook: #3b5998;
+$color-instagram: #8a3ab9;
+$color-white: #fff;
+
 .footer {
   align-items: center;
-  background: var(--color-white);
+  background: $color-white;
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacer-xxxl);
-  width: 100%;
   z-index: 1;
 
   &__social-icons {
@@ -23,23 +28,23 @@
     }
 
     &--facebook:hover .icon-logo {
-      fill: var(--color-facebook);
-      stroke: var(--color-facebook);
+      fill: $color-facebook;
+      stroke: $color-facebook;
     }
 
     &--twitter:hover > path:nth-child(2) {
-      fill: var(--color-twitter);
-      stroke: var(--color-twitter);
+      fill: $color-twitter;
+      stroke: $color-twitter;
     }
 
     &--instagram:hover > path:nth-child(2) {
       fill: none;
-      stroke: var(--color-instagram);
+      stroke: $color-instagram;
     }
 
     &--instagram:hover > path:nth-child(3) {
       fill: none;
-      stroke: var(--color-instagram);
+      stroke: $color-instagram;
     }
   }
 
