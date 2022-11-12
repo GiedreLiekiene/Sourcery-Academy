@@ -1,12 +1,13 @@
 //Variables
-$color-twitter: #1da1f2;
-$color-facebook: #3b5998;
-$color-instagram: #8a3ab9;
-$color-white: #fff;
+$_color-twitter: #1da1f2;
+$_color-facebook: #3b5998;
+$_color-instagram: #8a3ab9;
+$_color-white: #fff;
+$_color-primary: #3d3691;;
 
 .footer {
   align-items: center;
-  background: $color-white;
+  background: $_color-white;
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacer-xxxl);
@@ -23,28 +24,36 @@ $color-white: #fff;
     margin: 1rem;
     width: 4rem;
 
-    &:hover > .icon-background {
-      fill: none;
+    &:hover {
+      .icon-background {
+        fill: none;
     }
-
-    &--facebook:hover .icon-logo {
-      fill: $color-facebook;
-      stroke: $color-facebook;
-    }
-
-    &--twitter:hover .icon-logo {
-      fill: $color-twitter;
-      stroke: $color-twitter;
-    }
-
-    &--instagram:hover .icon-logo {
-      fill: none;
-      stroke: $color-instagram;
+  }
+  
+    &--facebook:hover {
+      .icon-logo {
+        fill: $_color-facebook;
+        stroke: $_color-facebook;
     }
   }
 
+    &--twitter:hover {
+      .icon-logo {
+        fill: $_color-twitter;
+        stroke: $_color-twitter;
+    }
+  }
+
+    &--instagram:hover {
+      .icon-logo {
+        fill: none;
+        stroke: $_color-instagram;
+    }
+  }
+  }
+
   &__copyright {
-    color: var(--color-primary);
+    color: $_color-primary;
     font-size: 1.4rem;
     margin: 1rem;
   }
