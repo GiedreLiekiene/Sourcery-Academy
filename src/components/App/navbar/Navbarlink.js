@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './navbar.scss';
 import PropTypes from 'prop-types';
 
-const Navbarlink = ({ link: { path, name, Icon, onClick, submenu } }) => {
+const NavbarLink = ({ link: { path, name, Icon, onClick, submenu } }) => {
   return (
     <>
       <Link
@@ -23,8 +23,8 @@ const Navbarlink = ({ link: { path, name, Icon, onClick, submenu } }) => {
   );
 };
 
-export default Navbarlink;
+export default NavbarLink;
 
-Navbarlink.propTypes = {
+NavbarLink.propTypes = {
   link: PropTypes.object,
 };

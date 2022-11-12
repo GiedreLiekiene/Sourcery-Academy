@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
 import LogoSvg from '~/assets/svg/logo.svg';
 import './navbar.scss';
-import Navbarlink from './Navbarlink';
+import NavbarLink from './NavbarLink';
 
 const links = [
   {
@@ -55,7 +55,7 @@ const Navbar = () => {
       </Link>
       <div className="navbar__links">
         {links.map((link, index) => (
-          <Navbarlink link={link} key={index} />
+          <NavbarLink link={link} key={index} />
         ))}
       </div>
     </div>
