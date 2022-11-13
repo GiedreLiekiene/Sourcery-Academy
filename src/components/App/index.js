@@ -1,11 +1,9 @@
 import React from 'react';
-import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
-import styles from './styles.module';
+
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './navbar/Navbar';
-
-const cn = classNames.bind(styles);
+import Layout from '../layout/Layout';
 
 export default function App({ prop }) {
   const charCount = prop.length;
@@ -14,6 +12,7 @@ export default function App({ prop }) {
     <div>
       <Router>
         <Navbar />
+        <Layout>Content</Layout>
       </Router>
     </div>
   );
