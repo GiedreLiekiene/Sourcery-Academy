@@ -29,5 +29,5 @@ const NavbarLink = ({ link: { path, name, Icon, onClick, submenu } }) => {
 export default NavbarLink;
 
 NavbarLink.propTypes = {
-  link: PropTypes.object,
+  link: PropTypes.object.isRequired,
 };

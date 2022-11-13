@@ -17,6 +17,6 @@ const Dropdown = ({ submenuItems, dropdown }) => {
 export default Dropdown;
 
 Dropdown.propTypes = {
-  submenuItems: PropTypes.array,
-  dropdown: PropTypes.bool,
+  submenuItems: PropTypes.array.isRequired,
+  dropdown: PropTypes.bool.isRequired,
 };
