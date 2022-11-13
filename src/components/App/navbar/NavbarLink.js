@@ -19,7 +19,7 @@ const NavbarLink = ({ link: { path, name, Icon, onClick, submenu } }) => {
         onClick={() => setDropdown((prev) => !prev)}
       >
         {name}
-        {Icon && <Icon className={'navbar__links--link--icon'} />}
+        {Icon && <Icon className={'navbar__links--link-icon'} />}
       </Link>
       {submenu && <Dropdown submenuItems={submenu} dropdown={dropdown} />}
     </div>
