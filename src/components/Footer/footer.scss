@@ -2,12 +2,11 @@
 $_color-footer-twitter: #1da1f2;
 $_color-footer-facebook: #3b5998;
 $_color-footer-instagram: #8a3ab9;
-$_color-footer-white: #fff;
-$_color-footer-purple: #3d3691;;
+$_color-footer-purple: #3d3691;
 
 .footer {
   align-items: center;
-  background: $_color-footer-white;
+  background: var(--color-white);
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacer-xxxl);
