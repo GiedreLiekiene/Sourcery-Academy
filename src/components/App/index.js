@@ -9,12 +9,10 @@ export default function App({ prop }) {
   const charCount = prop.length;
 
   return (
-    <div>
-      <Router>
-        <Navbar />
-        <Layout>Content</Layout>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Layout>Content</Layout>
+    </Router>
   );
 }
 
