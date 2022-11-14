@@ -5,7 +5,7 @@ import LogoSvg from '~/assets/svg/logo.svg';
 import './navbar.scss';
 import NavbarLink from './NavbarLink';
 
-const links = [
+const navigationLinks = [
   {
     name: 'About us',
     path: '/about',
@@ -54,7 +54,7 @@ const Navbar = () => {
         <LogoSvg />
       </Link>
       <div className="navbar__links">
-        {links.map((link, index) => (
+        {navigationLinks.map((link, index) => (
           <NavbarLink link={link} key={index} />
         ))}
       </div>
