@@ -26,29 +26,35 @@ $_color-footer-purple: #3d3691;
     &:hover {
       .icon-background {
         fill: none;
+      }
     }
-  }
-  
-    &--facebook:hover {
-      .icon-logo {
-        fill: $_color-footer-facebook;
-        stroke: $_color-footer-facebook;
-    }
-  }
 
-    &--twitter:hover {
-      .icon-logo {
-        fill: $_color-footer-twitter;
-        stroke: $_color-footer-twitter;
+    &--facebook {
+      &:hover {
+        .icon-logo {
+          fill: $_color-footer-facebook;
+          stroke: $_color-footer-facebook;
+        }
+      }
     }
-  }
 
-    &--instagram:hover {
-      .icon-logo {
-        fill: none;
-        stroke: $_color-footer-instagram;
+    &--twitter {
+      &:hover {
+        .icon-logo {
+          fill: $_color-footer-twitter;
+          stroke: $_color-footer-twitter;
+        }
+      }
     }
-  }
+
+    &--instagram {
+      &:hover {
+        .icon-logo {
+          fill: none;
+          stroke: $_color-footer-instagram;
+        }
+      }
+    }
   }
 
   &__copyright {
