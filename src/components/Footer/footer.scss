@@ -1,0 +1,65 @@
+//Variables
+$_color-footer-twitter: #1da1f2;
+$_color-footer-facebook: #3b5998;
+$_color-footer-instagram: #8a3ab9;
+$_color-footer-purple: #3d3691;
+
+.footer {
+  align-items: center;
+  background: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--spacer-xxxl);
+  z-index: 1;
+
+  &__social-icons {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-icon {
+    height: 4rem;
+    margin: 1rem;
+    width: 4rem;
+
+    &:hover {
+      .icon-background {
+        fill: none;
+      }
+    }
+
+    &--facebook {
+      &:hover {
+        .icon-logo {
+          fill: $_color-footer-facebook;
+          stroke: $_color-footer-facebook;
+        }
+      }
+    }
+
+    &--twitter {
+      &:hover {
+        .icon-logo {
+          fill: $_color-footer-twitter;
+          stroke: $_color-footer-twitter;
+        }
+      }
+    }
+
+    &--instagram {
+      &:hover {
+        .icon-logo {
+          fill: none;
+          stroke: $_color-footer-instagram;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    color: $_color-footer-purple;
+    font-size: 1.4rem;
+    margin: 1rem;
+  }
+}

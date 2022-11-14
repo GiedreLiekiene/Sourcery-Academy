@@ -2,7 +2,7 @@
 
 .navbar {
   align-items: center;
-  color: var(--primary-color);
+  color: var(--color-primary);
   display: flex;
   height: 9.6rem;
   width: 100%;
@@ -23,7 +23,7 @@
     width: 49rem;
 
     &--link {
-      color: var(--primary-color);
+      color: var(--color-primary);
       font-size: 1.8rem;
       letter-spacing: 0.1rem;
       text-decoration: none;
