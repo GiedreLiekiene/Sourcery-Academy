@@ -1,5 +1,5 @@
-import { ReactComponent as Group_303 } from './Group_303.svg';
+import { ReactComponent as WalkingToLaptopImg } from './WalkingToLaptop.svg';
 
 export const assets = {
-  Group_303,
+  WalkingToLaptopImg,
 };
