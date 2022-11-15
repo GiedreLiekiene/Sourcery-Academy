@@ -6,7 +6,7 @@
     "url": "git://github.com/devbridge/Front-End-Toolkit.git"
   },
   "description": "Starter project",
-  "main": "",
+  "main": "babel.config.js",
   "browserslist": [
     ">0.25%",
     "not op_mini all"
