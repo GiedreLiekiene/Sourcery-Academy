@@ -1,10 +1,15 @@
 import React from 'react';
-import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
+
+import { BrowserRouter as Router } from 'react-router-dom';
 import Layout from '../layout/Layout';
 
-export default function App() {
-  return <Layout></Layout>;
+export default function App({ prop }) {
+  return (
+    <Router>
+      <Layout>Content</Layout>
+    </Router>
+  );
 }
 
 App.propTypes = {
