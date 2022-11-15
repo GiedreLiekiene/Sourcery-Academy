@@ -36,10 +36,10 @@
     justify-content: center;
     padding: 1.6rem;
     width: 20rem;
-  }
 
-  &:hover {
-    background-color: --color-background;
+    &:hover {
+      background-color: var(--color-background);
+    }
   }
 
   a {
