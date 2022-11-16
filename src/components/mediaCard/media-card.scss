@@ -1,0 +1,26 @@
+@import '../../sass/variables.scss';
+
+.card {
+  border-radius: 1.5rem;
+  box-shadow: -2rem 2rem var(color-shadow-grey);
+  color: var(--color-primary);
+  display: inline-block;
+  height: 22rem;
+  width: 26.6rem;
+}
+
+&__img {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+}
+
+img {
+  border: 0.1rem solid var(--color-primary);
+  border-radius: 1.5rem;
+  height: 22rem;
+  object-fit: cover;
+  width: 26.6rem;
+}
