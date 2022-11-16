@@ -1,0 +1,64 @@
+//Variables
+$_color-shadow-grey: #f6f5f7;
+
+.card {
+  align-items: center;
+  border: 0.2rem solid var(--color-primary);
+  border-radius: 1.5rem;
+  box-shadow: -2rem 2rem $_color-shadow-grey;
+  color: var(--color-primary);
+
+  &__img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+
+    img {
+      border-radius: 50%;
+      height: 8rem;
+      width: 8rem;
+    }
+  }
+
+  &__text {
+    margin: 4rem 3rem 0;
+    position: relative;
+
+    p {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .backticks {
+      display: inline-block;
+      font-size: 10rem;
+      line-height: 0;
+      margin: 0;
+      position: absolute;
+
+      &--rotated {
+        right: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__author {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      font-size: 1.4rem;
+      margin: 0.8rem 0 3.8rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 5.2rem 0 0;
+    }
+  }
+}
