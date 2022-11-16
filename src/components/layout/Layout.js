@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './layout.scss';
-import Navbar from '../App/Navbar/Navbar';
+import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
 export default function Layout({ children }) {
