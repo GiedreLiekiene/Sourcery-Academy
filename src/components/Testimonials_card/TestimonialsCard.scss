@@ -2,7 +2,6 @@
 $_color-shadow-grey: #f6f5f7;
 
 .card {
-  align-items: center;
   border: 0.2rem solid var(--color-primary);
   border-radius: 1.5rem;
   box-shadow: -2rem 2rem $_color-shadow-grey;
@@ -12,7 +11,7 @@ $_color-shadow-grey: #f6f5f7;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 3.5rem;
+    margin: 3.5rem 0 4rem;
 
     img {
       border-radius: 50%;
@@ -22,7 +21,8 @@ $_color-shadow-grey: #f6f5f7;
   }
 
   &__text {
-    margin: 4rem 3rem 0;
+    display: flex;
+    margin: 0 3rem;
     position: relative;
 
     p {
@@ -33,11 +33,14 @@ $_color-shadow-grey: #f6f5f7;
     .backticks {
       display: inline-block;
       font-size: 10rem;
+      left: 0;
       line-height: 0;
       margin: 0;
       position: absolute;
+      top: 0;
 
       &--rotated {
+        bottom: 0;
         right: 0;
         transform: rotate(180deg);
       }
@@ -49,16 +52,17 @@ $_color-shadow-grey: #f6f5f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 5.2rem 0 3.8rem;
 
     p {
       font-size: 1.4rem;
-      margin: 0.8rem 0 3.8rem;
+      margin: 0.8rem 0 0;
     }
 
     h3 {
       font-size: 2rem;
       font-weight: 700;
-      margin: 5.2rem 0 0;
+      margin: 0;
     }
   }
 }
