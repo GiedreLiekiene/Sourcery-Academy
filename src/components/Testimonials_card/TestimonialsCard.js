@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Testimonials/TestimonialsCard.scss';
+import '../Testimonials_card/TestimonialsCard.scss';
 import PropTypes from 'prop-types';
 
 function TestimonialsCard({ item }) {
