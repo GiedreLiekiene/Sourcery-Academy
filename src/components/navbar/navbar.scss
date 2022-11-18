@@ -21,6 +21,11 @@
     justify-content: space-between;
     width: 49rem;
 
+    .active {
+      color: var(--color-secondary);
+      font-weight: bold;
+    }
+
     &--link {
       color: var(--color-primary);
       font-size: 1.8rem;
