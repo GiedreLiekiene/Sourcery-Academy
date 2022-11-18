@@ -1,0 +1,29 @@
+.waves {
+  &__first-wave {
+    height: 41rem;
+    position: absolute;
+    right: 1.7rem;
+    z-index: -1;
+  }
+
+  &__second-wave {
+    height: 41rem;
+    left: 1.4rem;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__third-wave {
+    height: 55rem;
+    position: absolute;
+    right: 2.2rem;
+    z-index: -1;
+  }
+
+  &__fourth-wave {
+    height: 40rem;
+    left: 3.4rem;
+    position: absolute;
+    z-index: -1;
+  }
+}
