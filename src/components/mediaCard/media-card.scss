@@ -1,24 +1,16 @@
 @import '../../sass/variables.scss';
 
 .card {
-  align-items: center;
+  border: 0.1rem solid var(--color-primary);
   border-radius: var(--spacer-radius);
+  box-shadow: -2rem 2rem var(--color-background-shadow);
   color: var(--color-primary);
-  justify-content: center;
-  padding: var(--spacer-l);
+  height: 22rem;
+  margin: var(--spacer-l);
+  object-fit: cover;
+  width: 26.6rem;
 
   &.double-width {
-    img {
-      width: 57.2rem;
-    }
-  }
-
-  img {
-    border: 0.1rem solid var(--color-primary);
-    border-radius: var(--spacer-radius);
-    box-shadow: -2rem 2rem var(--color-background-shadow);
-    height: 22rem;
-    object-fit: cover;
-    width: 26.6rem;
+    width: 57.2rem;
   }
 }
