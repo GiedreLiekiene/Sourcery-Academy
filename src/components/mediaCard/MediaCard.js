@@ -14,7 +14,7 @@ const MediaCard = ({ photo, doubleWidth }) => {
 
 MediaCard.propTypes = {
   photo: PropTypes.string.isRequired,
-  doubleWidth: PropTypes.bool.isRequired,
+  doubleWidth: PropTypes.bool,
 };
 
 export default MediaCard;
