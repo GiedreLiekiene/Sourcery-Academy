@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const MediaCard = ({ photo, doubleWidth }) => {
   return (
-    <div className={'card' + (doubleWidth ? 'double-width' : '')}>
+    <div className={'card' + (doubleWidth ? ' double-width' : '')}>
       <div className="card__img">
         <img src={photo} alt="photo" />
       </div>
