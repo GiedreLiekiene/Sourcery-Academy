@@ -1,6 +1,9 @@
-$color-developers: #0048c1;
-$color-testers: #0b555f;
-$color-front-end: #b40031;
+$academies: (
+  home-page: var(--color-primary),
+  developers: #0048c1,
+  testers: #0b555f,
+  front-end: #b40031,
+);
 
 .card-container {
   display: flex;
@@ -25,20 +28,10 @@ $color-front-end: #b40031;
       align-self: end;
     }
 
-    &--home-page {
-      color: var(--color-primary);
-    }
-
-    &--developers {
-      color: $color-developers;
-    }
-
-    &--testers {
-      color: $color-testers;
-    }
-
-    &--front-end {
-      color: $color-front-end;
+    @each $key, $val in $academies {
+      &--#{$key} {
+        color: $val;
+      }
     }
   }
 
