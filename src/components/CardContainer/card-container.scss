@@ -1,1 +1,20 @@
-//Variables
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-size: 4.8rem;
+    padding: 4rem 0;
+
+    &--left {
+      align-self: left;
+    }
+    &--center {
+      align-self: center;
+    }
+    &--right {
+      align-self: right;
+    }
+  }
+}
