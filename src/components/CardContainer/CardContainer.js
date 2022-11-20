@@ -5,15 +5,16 @@ import './card-container.scss';
 export default function CardContainer({
   title,
   alignment = 'center',
+  academy = 'homePage',
   children,
 }) {
   return (
     <section className="card-container">
-      <h3
-        className={`card-container__title card-container__title--${alignment}`}
+      <h1
+        className={`card-container__title card-container__title--${alignment} card-container__title--${academy}`}
       >
         {title}
-      </h3>
+      </h1>
       <div className="card-container__content">{children}</div>
     </section>
   );
@@ -23,4 +24,5 @@ CardContainer.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
   alignment: PropTypes.oneOf(['left', 'right', 'center']),
+  academy: PropTypes.oneOf(['homePage', 'developers', 'testers', 'front-end']),
 };
