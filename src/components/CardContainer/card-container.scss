@@ -1,7 +1,10 @@
+$color-developers: #0048c1;
+$color-testers: #0b555f;
+$color-front-end: #b40031;
+
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 0 4rem;
 
   &__title {
@@ -20,6 +23,22 @@
 
     &--right {
       align-self: end;
+    }
+
+    &--home-page {
+      color: var(--color-primary);
+    }
+
+    &--developers {
+      color: $color-developers;
+    }
+
+    &--testers {
+      color: $color-testers;
+    }
+
+    &--front-end {
+      color: $color-front-end;
     }
   }
 

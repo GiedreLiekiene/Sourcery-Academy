@@ -5,7 +5,7 @@ import './card-container.scss';
 export default function CardContainer({
   title,
   alignment = 'center',
-  academy = 'homePage',
+  academy = 'home-page',
   children,
 }) {
   return (
@@ -24,5 +24,5 @@ CardContainer.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
   alignment: PropTypes.oneOf(['left', 'right', 'center']),
-  academy: PropTypes.oneOf(['homePage', 'developers', 'testers', 'front-end']),
+  academy: PropTypes.oneOf(['home-page', 'developers', 'testers', 'front-end']),
 };
