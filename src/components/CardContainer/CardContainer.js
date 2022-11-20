@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './card-container.scss';
 
-export default function CardContainer({ title, alignment, children }) {
+export default function CardContainer({
+  title,
+  alignment = 'center',
+  children,
+}) {
   return (
     <section className="card-container">
       <h3
@@ -18,5 +22,5 @@ export default function CardContainer({ title, alignment, children }) {
 CardContainer.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
-  alignment: PropTypes.string,
+  alignment: PropTypes.oneOf(['left', 'right', 'center']),
 };
