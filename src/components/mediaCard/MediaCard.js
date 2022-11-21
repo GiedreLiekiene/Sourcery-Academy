@@ -7,7 +7,7 @@ const MediaCard = ({ photo, doubleWidth }) => {
     <img
       src={photo}
       alt="photo"
-      className={'card' + (doubleWidth ? ' double-width' : '')}
+      className={'media-card' + (doubleWidth ? ' double-width' : '')}
     />
   );
 };
