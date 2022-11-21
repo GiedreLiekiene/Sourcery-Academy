@@ -1,9 +1,8 @@
-//Variables
-$_color-shadow-grey: #f6f5f7;
+.testimonials-card {
+  $_color-shadow-grey: #f6f5f7;
 
-.card {
   border: 0.2rem solid var(--color-primary);
-  border-radius: 1.5rem;
+  border-radius: var(--border-radius-m);
   box-shadow: -2rem 2rem $_color-shadow-grey;
   color: var(--color-primary);
 
@@ -12,57 +11,56 @@ $_color-shadow-grey: #f6f5f7;
     display: flex;
     justify-content: center;
     margin: 3.5rem 0 4rem;
-
-    img {
-      border-radius: 50%;
-      height: 8rem;
-      width: 8rem;
-    }
   }
 
-  &__text {
+  &__photo {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__review {
     display: flex;
     margin: 0 3rem;
     position: relative;
-
-    p {
-      font-size: 1.4rem;
-      margin: 0;
-    }
-
-    .backticks {
-      display: inline-block;
-      font-size: 10rem;
-      left: 0;
-      line-height: 0;
-      margin: 0;
-      position: absolute;
-      top: 0;
-
-      &--rotated {
-        bottom: 0;
-        right: 0;
-        transform: rotate(180deg);
-      }
-    }
   }
 
-  &__author {
+  &__text {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  &__reviewer {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 5.2rem 0 3.8rem;
+  }
 
-    p {
-      font-size: 1.4rem;
-      margin: 0.8rem 0 0;
+  &__name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__academy {
+    font-size: 1.4rem;
+    margin: 0.8rem 0 0;
+  }
+
+  .backticks {
+    font-size: 10rem;
+    line-height: 0;
+
+    &__start {
+      position: absolute;
     }
 
-    h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 0;
+    &__end {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      transform: rotate(180deg);
     }
   }
 }
