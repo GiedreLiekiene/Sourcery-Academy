@@ -1,0 +1,15 @@
+.backticks {
+  font-size: 10rem;
+  line-height: 0;
+
+  &__start {
+    position: absolute;
+  }
+
+  &__end {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+  }
+}
