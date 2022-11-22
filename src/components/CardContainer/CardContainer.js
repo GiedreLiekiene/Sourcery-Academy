@@ -21,8 +21,8 @@ export default function CardContainer({
 }
 
 CardContainer.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   alignment: PropTypes.oneOf(['left', 'right', 'center']),
   academy: PropTypes.oneOf(['home-page', 'developers', 'testers', 'front-end']),
 };
