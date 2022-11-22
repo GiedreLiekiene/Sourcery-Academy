@@ -1,8 +1,8 @@
-$academies: (
-  home-page: var(--color-primary),
-  developers: #0048c1,
-  testers: #0b555f,
-  front-end: #b40031,
+$themes: (
+  primary: var(--color-primary),
+  developers: var( --color-secondary-blue),
+  testers: var(--color-secondary-green),
+  front-end: var(--color-secondary-red),
 );
 
 .card-container {
@@ -28,7 +28,7 @@ $academies: (
       align-self: end;
     }
 
-    @each $key, $val in $academies {
+    @each $key, $val in $themes {
       &--#{$key} {
         color: $val;
       }

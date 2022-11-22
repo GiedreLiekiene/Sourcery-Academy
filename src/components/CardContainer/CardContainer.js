@@ -5,13 +5,13 @@ import './card-container.scss';
 export default function CardContainer({
   title,
   alignment = 'center',
-  academy = 'home-page',
+  theme = 'primary',
   children,
 }) {
   return (
     <section className="card-container">
       <h1
-        className={`card-container__title card-container__title--${alignment} card-container__title--${academy}`}
+        className={`card-container__title card-container__title--${alignment} card-container__title--${theme}`}
       >
         {title}
       </h1>
@@ -24,5 +24,5 @@ CardContainer.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   alignment: PropTypes.oneOf(['left', 'right', 'center']),
-  academy: PropTypes.oneOf(['home-page', 'developers', 'testers', 'front-end']),
+  theme: PropTypes.oneOf(['primary', 'developers', 'testers', 'front-end']),
 };
