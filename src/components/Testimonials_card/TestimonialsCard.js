@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Testimonials_card/testimonialsCard.scss';
+import './testimonials-card.scss';
 import PropTypes from 'prop-types';
 import Backticks from './Backticks';
 
