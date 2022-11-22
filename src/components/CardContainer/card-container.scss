@@ -8,13 +8,13 @@ $academies: (
 .card-container {
   display: flex;
   flex-direction: column;
-  padding: 0 4rem;
+  padding: 0 var(--spacer-xxxl);
 
   &__title {
     font-size: 4.8rem;
     font-weight: 700;
     margin: 0;
-    padding: 4rem;
+    padding: var(--spacer-xxxl);
 
     &--left {
       align-self: start;
@@ -36,6 +36,6 @@ $academies: (
   }
 
   &__content {
-    padding: 0 4rem;
+    padding: 0 var(--spacer-xxxl);
   }
 }
