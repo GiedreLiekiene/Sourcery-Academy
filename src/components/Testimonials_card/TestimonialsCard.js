@@ -1,12 +1,12 @@
 import React from 'react';
-import '../Testimonials_card/TestimonialsCard.scss';
+import '../Testimonials_card/testimonialsCard.scss';
 import PropTypes from 'prop-types';
 import Backticks from './Backticks';
 
 function TestimonialsCard({ item: { name, photo, message, academy } }) {
   return (
     <div className="testimonials-card">
-      <div className="testimonials-card__img">
+      <div className="testimonials-card__img-container">
         <img
           src={photo}
           alt="Person profile photo"
@@ -29,10 +29,10 @@ TestimonialsCard.propTypes = {
   item:
     PropTypes.object &&
     PropTypes.shape({
-      name: PropTypes.string,
-      photo: PropTypes.string,
-      message: PropTypes.string,
-      academy: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      photo: PropTypes.string.isRequired,
+      message: PropTypes.string.isRequired,
+      academy: PropTypes.string.isRequired,
     }),
 };
 

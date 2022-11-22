@@ -1,4 +1,5 @@
 import React from 'react';
+import './backticks.scss';
 
 function Backticks() {
   return (

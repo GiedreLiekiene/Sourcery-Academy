@@ -5,8 +5,10 @@
   border-radius: var(--border-radius-m);
   box-shadow: -2rem 2rem $_color-shadow-grey;
   color: var(--color-primary);
+  position: relative;
+  z-index: -1;
 
-  &__img {
+  &__img-container {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -46,21 +48,5 @@
   &__academy {
     font-size: 1.4rem;
     margin: 0.8rem 0 0;
-  }
-
-  .backticks {
-    font-size: 10rem;
-    line-height: 0;
-
-    &__start {
-      position: absolute;
-    }
-
-    &__end {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-      transform: rotate(180deg);
-    }
   }
 }
