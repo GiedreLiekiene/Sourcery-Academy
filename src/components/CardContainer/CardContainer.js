@@ -24,5 +24,5 @@ CardContainer.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   alignment: PropTypes.oneOf(['left', 'right', 'center']),
-  theme: PropTypes.oneOf(['primary', 'developers', 'testers', 'front-end']),
+  theme: PropTypes.oneOf(['purple', 'blue', 'green', 'red']),
 };
