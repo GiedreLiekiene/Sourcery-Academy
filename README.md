@@ -63,7 +63,7 @@ This enables to easily locate a branch or related commits directly from JIRA sto
 
 ```
 
-## HTML/CSS Guidelines
+## HTML/CSS/Structure/JS Guidelines
 
 ### General
 
@@ -271,6 +271,30 @@ Use relative `rem` units for spacing, padding, margin and so on. You can use `px
 When working with media queries place them as close to their relevant rule set whenever possible. Don’t bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future.
 
 Use `em` units for setting breakpoints. (`rem` units are not supported in media queries).
+
+### Project Structure
+
+Folder structure should look like this:
+
+src - source code:
+
+- assets/static - global static assets such as images, svgs, company logo, etc.
+- components - global shared/reusable components.
+- views/pages/features - top level views.
+- services/api - JavaScript modules.
+- store - global Redux store.
+- utils - utilities, helpers, constants and etc.
+- theme/styles/scss/sass - global style declarations.
+- public - index.html with supporting static files (robots.txt, favicon and etc.)
+- build - final build
+
+### JS/React
+
+- Use camelCase for JS and PascalCase for React components
+- Do **NOT** use classnames utility (https://www.npmjs.com/package/classnames)
+- Once a component file is created (Use file extensions based on code inside .js .jsx .ts .tsx), add its style to a .scss file (Use lower case and dash separator for css based files project-styles.scss,).
+- Default export & import: Only a single default export per file and Can use any name when importing
+- Named export & import: Multiple exports per file; MUST use the exported name when importing unless alias name is used (“.. as.. “) (edited)
 
 ## License
 
