@@ -13,7 +13,8 @@ import ScheduleWaveSvg from './Academy-pages/ScheduleWave.svg';
 import VideoWaveSvg from './Academy-pages/VideoWave.svg';
 
 const WavesList = (props) => {
-  switch (props.name) {
+  const { name } = props;
+  switch (name) {
     case 'first':
       return <FirstWaveSvg {...props} />;
     case 'second':
