@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../sass/layout/academies.scss';
+import '../Academies/academies.scss';
 import RoundedArrow from '../../../assets/svg/Academies/Rounded-arrow.svg';
 import Particles from '../../../assets/svg/Academies/Particles.svg';
 
