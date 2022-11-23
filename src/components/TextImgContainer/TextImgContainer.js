@@ -4,7 +4,7 @@ import './text-img-container.scss';
 
 export const TextImgContainer = ({
   alignment = 'center',
-  textSide = 'text--left',
+  textSide = 'text-left',
   leftChild,
   rightChild,
 }) => {
@@ -25,8 +25,8 @@ export const TextImgContainer = ({
 };
 
 TextImgContainer.propTypes = {
-  leftChild: PropTypes.node,
-  rightChild: PropTypes.node,
+  leftChild: PropTypes.node.isRequired,
+  rightChild: PropTypes.node.isRequired,
   alignment: PropTypes.oneOf(['left', 'right', 'center']),
-  textSide: PropTypes.oneOf(['text--left', 'text--right']),
+  textSide: PropTypes.oneOf(['text-left', 'text-right']),
 };

@@ -23,21 +23,17 @@
     margin-right: 0;
   }
 
-  &__left {
+  &__left, &__right {
     flex: 1;
-
-    &--text--left {
-      flex: 1 0 0;
-      text-align: left;
-    }
   }
 
-  &__right {
-    flex: 1;
+  &__left--text-left {
+    flex: 1 0 0;
+    text-align: left;
+  }
 
-    &--text--right {
-      flex: 1 0 0;
-      text-align: right;
-    }
+  &__right--text-right {
+    flex: 1 0 0;
+    text-align: right;
   }
 }
