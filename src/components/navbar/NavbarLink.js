@@ -5,12 +5,12 @@ import './navbar.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
+const NavbarLink = ({ link: { path, name, Icon, submenu }, active }) => {
   const [dropdown, setDropdown] = useState(false);
   return (
     <div>
       <Link
-        className="navbar__links--link"
+        className={'navbar__links--link' + (active ? ' active' : '')}
         to={path}
         key={name}
         aria-expanded={dropdown ? 'true' : 'false'}
@@ -28,4 +28,5 @@ export default NavbarLink;
 
 NavbarLink.propTypes = {
   link: PropTypes.object.isRequired,
+  active: PropTypes.bool,
 };
