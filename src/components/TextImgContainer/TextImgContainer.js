@@ -1,26 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import './text-img-container.scss';
 
-
-export default function TextImgContainer({leftChild, rightChild }) {
+export const TextImgContainer = ({
+  alignment = 'center',
+  leftChild,
+  rightChild,
+}) => {
   return (
-    <section className="container">
-      <div className={"container__left"}>
-        <div className={"container__left--child"}>
-          {leftChild}
-        </div>
-      </div>
-      <div className={"container__right"}>
-        <div className={"container__right--child"}>
-          {rightChild}
-        </div>
-      </div>
+    <section className={`text-img-container text-img-container--${alignment}`}>
+      <div className="text-img-container__left">{leftChild}</div>
+      <div className="text-img-container__right">{rightChild}</div>
     </section>
   );
-}
-
-
-TextImgContainer.propTypes={
-  leftChild: PropTypes.node,
-  rightChild: PropTypes.node,
 };
 
+TextImgContainer.propTypes = {
+  leftChild: PropTypes.node,
+  rightChild: PropTypes.node,
+  alignment: PropTypes.oneOf(['left', 'right', 'center']),
+};
