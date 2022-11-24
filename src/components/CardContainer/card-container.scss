@@ -1,8 +1,8 @@
 $themes: (
-  purple: var(--color-primary),
-  blue: var( --color-secondary-blue),
-  green: var(--color-secondary-green),
-  red: var(--color-secondary-red),
+  primary: var(--color-primary),
+  secondary: var( --color-secondary),
+  tertiary: var(--color-tertiary),
+  quaternary: var(--color-quaternary),
 );
 
 .card-container {
