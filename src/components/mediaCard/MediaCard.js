@@ -13,11 +13,6 @@ const MediaCard = ({ photo, altInfo, extended }) => {
     </div>
   );
 };
-//<img
-//   src={photo}
-//   alt={altInfo}
-//   className={'media-card' + (extended ? ' media-card--extended' : '')}
-// />
 
 MediaCard.propTypes = {
   photo: PropTypes.string.isRequired,
