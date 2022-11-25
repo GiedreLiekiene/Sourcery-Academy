@@ -1,6 +1,6 @@
 $themes: (
   primary: var(--color-primary),
-  secondary: var( --color-secondary),
+  secondary: var(--color-secondary),
   tertiary: var(--color-tertiary),
   quaternary: var(--color-quaternary),
 );
@@ -15,10 +15,6 @@ $themes: (
     font-weight: 700;
     margin: 0;
     padding: var(--spacer-xxxl);
-
-    &--left {
-      align-self: start;
-    }
 
     &--center {
       align-self: center;
