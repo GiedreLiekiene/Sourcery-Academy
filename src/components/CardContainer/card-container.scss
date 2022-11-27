@@ -1,0 +1,37 @@
+$themes: (
+  primary: var(--color-primary),
+  secondary: var(--color-secondary),
+  tertiary: var(--color-tertiary),
+  quaternary: var(--color-quaternary),
+);
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--spacer-xxxl);
+
+  &__title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin: 0;
+    padding: var(--spacer-xxxl);
+
+    &--center {
+      align-self: center;
+    }
+
+    &--right {
+      align-self: end;
+    }
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 var(--spacer-xxxl);
+  }
+}
