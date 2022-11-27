@@ -1,5 +1,6 @@
-import { ReactComponent as WalkingToLaptopImg } from './WalkingToLaptop.svg';
+import React from 'react';
+import WalkingToLaptopImg from './WalkingToLaptop.svg';
 
 export const assets = {
-  WalkingToLaptopImg,
+  WalkingToLaptopImg: WalkingToLaptopImg,
 };
