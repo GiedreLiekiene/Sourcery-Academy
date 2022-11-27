@@ -2,17 +2,11 @@
   align-items: center;
   column-gap: 15%;
   display: flex;
-  flex: 1;
   flex-direction: row;
   justify-content: space-between;
   max-width: 140rem;
   overflow: hidden;
   position: relative;
-
-  &--left {
-    margin-left: 0;
-    margin-right: auto;
-  }
 
   &--center {
     margin: auto;
@@ -23,17 +17,19 @@
     margin-right: 0;
   }
 
-  &__left, &__right {
+  &__left {
     flex: 1;
+
+    &--text-right {
+      flex: 1.3;
+    }
   }
 
-  &__left--text-left {
-    flex: 1 0 0;
-    text-align: left;
-  }
+  &__right {
+    flex: 1.3;
 
-  &__right--text-right {
-    flex: 1 0 0;
-    text-align: right;
+    &--text-right {
+      flex: 1;
+    }
   }
 }

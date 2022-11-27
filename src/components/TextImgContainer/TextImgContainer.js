@@ -1,32 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './text-img-container.scss';
+import classNames from 'classnames';
 
-export const TextImgContainer = ({
-  alignment = 'center',
-  textSide = 'text-left',
+export default function TextImgContainer({
+  alignRight = false,
+  alignCenter = false,
+  textRight = false,
   leftChild,
   rightChild,
-}) => {
+}) {
+  const textImgClass = classNames('text-img-container', {
+    'text-img-container--right': alignRight,
+    'text-img-container--center': alignCenter,
+  });
+  const leftChildTextSide = classNames('text-img-container__left', {
+    'text-img-container__left--text-right': textRight,
+  });
+  const rightChildTextSide = classNames('text-img-container__right', {
+    'text-img-container__right--text-right': textRight,
+  });
   return (
-    <section className={`text-img-container text-img-container--${alignment}`}>
-      <div
-        className={`text-img-container__left text-img-container__left--${textSide}`}
-      >
-        {leftChild}
-      </div>
-      <div
-        className={`text-img-container__right text-img-container__right--${textSide}`}
-      >
-        {rightChild}
-      </div>
+    <section className={textImgClass}>
+      <div className={leftChildTextSide}>{leftChild}</div>
+      <div className={rightChildTextSide}>{rightChild}</div>
     </section>
   );
-};
+}
 
 TextImgContainer.propTypes = {
   leftChild: PropTypes.node.isRequired,
   rightChild: PropTypes.node.isRequired,
-  alignment: PropTypes.oneOf(['left', 'right', 'center']),
-  textSide: PropTypes.oneOf(['text-left', 'text-right']),
+  alignRight: PropTypes.bool,
+  alignCenter: PropTypes.bool,
+  textRight: PropTypes.bool,
 };
