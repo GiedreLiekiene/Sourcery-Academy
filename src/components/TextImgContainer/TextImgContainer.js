@@ -27,5 +27,4 @@ TextImgContainer.propTypes = {
   rightChild: PropTypes.node.isRequired,
   alignRight: PropTypes.bool,
   alignCenter: PropTypes.bool,
-  textRight: PropTypes.bool,
 };
