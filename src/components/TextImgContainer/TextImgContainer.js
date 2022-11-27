@@ -6,7 +6,6 @@ import classNames from 'classnames';
 export default function TextImgContainer({
   alignRight = false,
   alignCenter = false,
-  textRight = false,
   leftChild,
   rightChild,
 }) {
@@ -14,16 +13,11 @@ export default function TextImgContainer({
     'text-img-container--right': alignRight,
     'text-img-container--center': alignCenter,
   });
-  const leftChildTextSide = classNames('text-img-container__left', {
-    'text-img-container__left--text-right': textRight,
-  });
-  const rightChildTextSide = classNames('text-img-container__right', {
-    'text-img-container__right--text-right': textRight,
-  });
+
   return (
     <section className={textImgClass}>
-      <div className={leftChildTextSide}>{leftChild}</div>
-      <div className={rightChildTextSide}>{rightChild}</div>
+      <div className="text-img-container__left">{leftChild}</div>
+      <div className="text-img-container__right">{rightChild}</div>
     </section>
   );
 }
