@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
 import LogoSvg from '~/assets/svg/logo.svg';
 import './navbar.scss';
@@ -48,6 +48,7 @@ const navigationLinks = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
   return (
     <div className="navbar">
       <Link to="/" className="navbar__logo">
@@ -55,7 +56,13 @@ const Navbar = () => {
       </Link>
       <div className="navbar__links">
         {navigationLinks.map((link, index) => (
-          <NavbarLink link={link} key={index} />
+          <NavbarLink
+            active={location.pathname === link.path}
+            link={link}
+            key={index}
+          >
+            {link.name}
+          </NavbarLink>
         ))}
       </div>
     </div>
