@@ -41,7 +41,7 @@ To start developing run npm script command:
 
     $ npm run ts:fix
 
-## Git Guidelines
+# Git Guidelines
 
 New features should be developed in separate branches starting with the `feat/` or `fix/` prefix, for example: `feat/SR22AS-80_some-new-feature`.
 The `SR22AS-XX` part is an issue number from JIRA, if there's no issue for this feature, feature key can be omitted.
@@ -63,9 +63,9 @@ This enables to easily locate a branch or related commits directly from JIRA sto
 
 ```
 
-## HTML/CSS/Structure/JS Guidelines
+# HTML/CSS/Structure/JS Guidelines
 
-### General
+## General
 
 1. Indentation
 
@@ -93,7 +93,7 @@ All code has to be lowercase: This applies to HTML element names, attributes, at
 <img src="google.png" alt="Google" />
 ```
 
-### HTML
+## HTML
 
 1. Semantics
 
@@ -133,7 +133,7 @@ Providing alternative contents is important for accessibility reasons: A blind u
 <img src="spreadsheet.png" alt="Spreadsheet screenshot." />
 ```
 
-### CSS
+## CSS
 
 1. Class naming
 
@@ -250,16 +250,20 @@ font-size: 0.8em;
 
 6. Follow BEM naming standards
 
-```csss
+```css
 /* Block component */
-.btn {}
+.btn {
+}
 
 /* Element that depends upon the block */
-.btn__price {}
+.btn__price {
+}
 
 /* Modifier that changes the style of the block */
-.btn--orange {}
-.btn--big {}
+.btn--orange {
+}
+.btn--big {
+}
 ```
 
 7. Use `rem` units
@@ -272,7 +276,7 @@ When working with media queries place them as close to their relevant rule set w
 
 Use `em` units for setting breakpoints. (`rem` units are not supported in media queries).
 
-### Project Structure
+## Project Structure
 
 Folder structure should look like this:
 
@@ -288,13 +292,59 @@ src - source code:
 - public - index.html with supporting static files (robots.txt, favicon and etc.)
 - build - final build
 
-### JS/React
+## JS/React
 
 - Use camelCase for JS and PascalCase for React components
-- Do **NOT** use classnames utility (https://www.npmjs.com/package/classnames)
-- Once a component file is created (Use file extensions based on code inside .js .jsx .ts .tsx), add its style to a .scss file (Use lower case and dash separator for css based files project-styles.scss,).
-- Default export & import: Only a single default export per file and Can use any name when importing
-- Named export & import: Multiple exports per file; MUST use the exported name when importing unless alias name is used (“.. as.. “) (edited)
+- Use classnames utility (https://www.npmjs.com/package/classnames)
+
+```js
+/* Recommended */
+//IMPORT
+import classNames from 'classnames';
+//DEFINE
+const cardClass = classNames(
+  'card-container__title', //This class goes always
+  `card-container__title--${theme}`, //This class goes always with a prop
+  {
+    //An object which sends only those classes with truthy values
+    'card-container__title--right': right,
+    'card-container__title--center': center,
+  }
+);
+//USE
+<h1 className={cardClass}>{title}</h1>;
+```
+
+- Once a component file is created (Use file extensions based on the code inside .js .jsx .ts .tsx), add its style to a .scss file (Use lower case and dash separator for css based files project-styles.scss).
+- Default export & import: Only a single default export per file and can use any name as alias when importing
+- Named export & import: Multiple exports per file; MUST use the exported name when importing unless alias name is used (“.. as.. “)
+- Variables and functions are named using `camelCase`, except for constants, these are named in capital letters, like testimonials API.
+- Boolean holding variables should start with `is`, `has` and so on.
+- Functions should start with a verb `set`, `get`, `show`, `calculate` and so on.
+- Variables should start with a noun like `person`. Avoid using meaningless names like `a`, be verbose: `numberOfCards`.
+- Avoid `var`, use `let` and `const` instead.
+
+## File naming guidelines
+
+- React components files are named using `PascalCase`:
+
+```
+TestimonialsCard.jsx, CardContainer.jsx, Layout.jsx ...
+```
+
+- SCSS files are named using `snake-case` (component name in lower case):
+
+```
+testimonials-card.scss, card-container.scss, layout.scss ...
+```
+
+- Folders are named the same as React components, in `PascalCase`
+
+```
+TestimonialsCard, CardContainer, Layout ...
+```
+
+- Image names should follow this pattern: `{imageType}-{name}-{size[optional]}.{imageExtension}`. e.g. `icon-devbridge.svg`. If an image is static like `jpg`, `png` add sizing (width x height) to the name, `bg-balloons-100x150.png`.
 
 ## License
 
