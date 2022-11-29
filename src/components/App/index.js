@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { BrowserRouter as Router } from 'react-router-dom';
-import Layout from '../layout/Layout';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-export default function App({ prop }) {
+import About from './About';
+import Home from './Home';
+export default function App() {
   return (
-    <Router>
-      <Layout>Content</Layout>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
