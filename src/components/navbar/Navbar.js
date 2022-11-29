@@ -12,24 +12,23 @@ const navigationLinks = [
   },
   {
     name: 'Academies',
-    path: '/academies',
     Icon: ArrowDownSvg,
     submenu: [
       {
         name: 'Sourcery for Developers',
-        path: '/academies/sourcery-for-developers',
+        path: '/sourcery-for-developers',
       },
       {
         name: 'Sourcery for Testers',
-        path: '/academies/sourcery-for-testers',
+        path: '/sourcery-for-testers',
       },
       {
         name: 'Sourcery for Front-End',
-        path: '/academies/sourcery-for-front-end',
+        path: '/sourcery-for-front-end',
       },
       {
         name: 'Sourcery for Kids',
-        path: '/academies/sourcery-for-kids',
+        path: '/sourcery-for-kids',
       },
     ],
   },
