@@ -1,8 +1,7 @@
 import React from 'react';
-import Layout from '../layout/Layout';
 
 function Questions() {
-  return <Layout>Questions</Layout>;
+  return <div>Questions</div>;
 }
 
 export default Questions;

@@ -1,8 +1,7 @@
 import React from 'react';
-import Layout from '../layout/Layout';
 
 function Media() {
-  return <Layout>Media</Layout>;
+  return <div>Media</div>;
 }
 
 export default Media;
