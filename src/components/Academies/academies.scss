@@ -1,17 +1,22 @@
 .container {
+  height: 100vh;
   position: relative;
 
   &__particles {
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
+    width: 100%;
   }
 
   &__text {
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
+    width: 100%;
     z-index: 99;
   }
 
