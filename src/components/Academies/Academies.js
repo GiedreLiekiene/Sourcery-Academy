@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Academies/academies.scss';
-import RoundedArrow from '../../../assets/svg/Academies/Rounded-arrow.svg';
-import Particles from '../../../assets/svg/Academies/Particles.svg';
+import RoundedArrow from '../../assets/svg/Academies/Rounded-arrow.svg';
+import Particles from '../../assets/svg/Academies/Particles.svg';
 
 export default function Academies() {
   return (
