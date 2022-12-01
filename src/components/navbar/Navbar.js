@@ -4,45 +4,47 @@ import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
 import LogoSvg from '~/assets/svg/logo.svg';
 import './navbar.scss';
 import NavbarLink from './NavbarLink';
+import { ROUTES } from '../Pages/Routes';
 
 const navigationLinks = [
   {
     name: 'About us',
-    path: '/about',
+    path: ROUTES.about,
   },
   {
     name: 'Academies',
+    path: ROUTES.academies,
     Icon: ArrowDownSvg,
     submenu: [
       {
         name: 'Sourcery for Developers',
-        path: '/sourcery-for-developers',
+        path: ROUTES.forDevelopers,
       },
       {
         name: 'Sourcery for Testers',
-        path: '/sourcery-for-testers',
+        path: ROUTES.forTesters,
       },
       {
         name: 'Sourcery for Front-End',
-        path: '/sourcery-for-front-end',
+        path: ROUTES.forFrontEnd,
       },
       {
         name: 'Sourcery for Kids',
-        path: '/sourcery-for-kids',
+        path: ROUTES.forKids,
       },
     ],
   },
   {
     name: 'Media',
-    path: '/media',
+    path: ROUTES.media,
   },
   {
     name: 'Register',
-    path: '/register',
+    path: ROUTES.register,
   },
   {
     name: 'Questions',
-    path: '/questions',
+    path: ROUTES.questions,
   },
 ];
 
@@ -69,3 +71,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+export { navigationLinks };
