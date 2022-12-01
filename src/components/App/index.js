@@ -12,9 +12,9 @@ import AcademyFrontEnd from '../Pages/SourceryForFrontEnd';
 import AcademyKids from '../Pages/SourceryForKids';
 import AcademyTesters from '../Pages/SourceryForTesters';
 import Layout from '~/components/layout/Layout';
-import { ROUTES } from '../Pages/Routes';
+import { ROUTES } from './Routes';
 
-function Navigate() {
+function Routing() {
   return (
     <Routes>
       <Route path={ROUTES.home} element={<Home />} />
@@ -31,10 +31,10 @@ function Navigate() {
   );
 }
 
-export default function App({ prop }) {
+export default function App() {
   return (
     <Router>
-      <Layout>{<Navigate />}</Layout>
+      <Layout>{<Routing />}</Layout>
     </Router>
   );
 }

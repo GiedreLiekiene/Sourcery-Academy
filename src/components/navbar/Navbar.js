@@ -4,7 +4,7 @@ import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
 import LogoSvg from '~/assets/svg/logo.svg';
 import './navbar.scss';
 import NavbarLink from './NavbarLink';
-import { ROUTES } from '../Pages/Routes';
+import { ROUTES } from '../App/Routes';
 
 const navigationLinks = [
   {
