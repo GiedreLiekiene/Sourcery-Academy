@@ -11,4 +11,5 @@ export const ROUTES = {
   media: '/media',
   questions: '/questions',
   register: '/register',
+  notFound: '*',
 };
