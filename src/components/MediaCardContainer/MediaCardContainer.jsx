@@ -29,7 +29,7 @@ function MediaCardContainer() {
             {images.map((image, index) => (
               <MediaCard
                 key={index}
-                photo={image.src}
+                photo={image.thumbnail}
                 extended={index == 1 || index == 5}
               />
             ))}
