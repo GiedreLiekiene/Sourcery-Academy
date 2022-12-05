@@ -11,13 +11,10 @@
   img {
     height: 22rem;
     object-fit: cover;
+    width: 100%;
   }
 
   &--extended {
     width: 57.2rem;
-
-    img {
-      width: 100%;
-    }
   }
 }
