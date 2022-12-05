@@ -1,0 +1,28 @@
+@import '../../sass/variables';
+@import '../../sass/base/typography';
+
+.mediacard-container {
+  display: flex;
+  justify-content: center;
+
+  &__heading {
+    color: var(--color-primary);
+    font-family: var(--font-family-headings);
+    font-size: var(--font-size-headings);
+    font-weight: 700;
+    height: 5.9rem;
+    line-height: var(--line-height-headings);
+    margin-block-end: 0;
+    width: 15.4rem;
+  }
+
+  &__gallery {
+    float: left;
+    height: auto;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+  }
+}
