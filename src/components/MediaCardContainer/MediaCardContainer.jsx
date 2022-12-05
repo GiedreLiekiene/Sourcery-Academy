@@ -23,9 +23,9 @@ function MediaCardContainer() {
         <h2>Loading...</h2>
       ) : (
         <section>
-          <h1>Media</h1>
+          <h1 className="mediacard-container__heading">Media</h1>
 
-          <div>
+          <div className="mediacard-container__gallery">
             {images.map((image, index) => (
               <MediaCard
                 key={index}
