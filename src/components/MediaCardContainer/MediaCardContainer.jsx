@@ -11,7 +11,7 @@ function MediaCardContainer() {
         'https://sfe-2022-data.netlify.app/static/media.json'
       );
       const data = await response.json();
-      setImages(data);
+      setImages(data.slice(0, 6));
     };
 
     fetchImages();
