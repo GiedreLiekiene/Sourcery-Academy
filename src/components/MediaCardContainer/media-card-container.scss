@@ -9,17 +9,6 @@
     color: var(--color-error);
   }
 
-  &__heading {
-    color: var(--color-primary);
-    font-family: var(--font-family-headings);
-    font-size: var(--font-size-headings);
-    font-weight: 700;
-    height: 5.9rem;
-    line-height: var(--line-height-headings);
-    margin-block-end: 0;
-    width: 15.4rem;
-  }
-
   &__gallery {
     width: 100%;
   }

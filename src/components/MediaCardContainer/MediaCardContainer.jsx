@@ -30,19 +30,15 @@ function MediaCardContainer() {
   }
 
   return (
-    <section>
-      <h1 className="mediacard-container__heading">Media</h1>
-
-      <div className="mediacard-container__gallery">
-        {images.map(({ thumbnail }, index) => (
-          <MediaCard
-            key={thumbnail}
-            photo={thumbnail}
-            extended={index == 1 || index == 5}
-          />
-        ))}
-      </div>
-    </section>
+    <div className="mediacard-container__gallery">
+      {images.map(({ thumbnail }, index) => (
+        <MediaCard
+          key={thumbnail}
+          photo={thumbnail}
+          extended={index == 1 || index == 5}
+        />
+      ))}
+    </div>
   );
 }
 
