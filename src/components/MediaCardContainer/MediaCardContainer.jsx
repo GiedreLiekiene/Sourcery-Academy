@@ -35,10 +35,10 @@ function MediaCardContainer() {
         <h1 className="mediacard-container__heading">Media</h1>
 
         <div className="mediacard-container__gallery">
-          {images.map((image, index) => (
+          {images.map(({ thumbnail }, index) => (
             <MediaCard
               key={index}
-              photo={image.thumbnail}
+              photo={thumbnail}
               extended={index == 1 || index == 5}
             />
           ))}
