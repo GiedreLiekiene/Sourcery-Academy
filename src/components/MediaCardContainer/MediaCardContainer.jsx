@@ -25,25 +25,25 @@ function MediaCardContainer() {
     return <h2 className="mediacard-container__error">{error}</h2>;
   }
 
+  if (!images) {
+    return <h2>Loading...</h2>;
+  }
+
   return (
     <>
-      {!images ? (
-        <h2>Loading...</h2>
-      ) : (
-        <section>
-          <h1 className="mediacard-container__heading">Media</h1>
+      <section>
+        <h1 className="mediacard-container__heading">Media</h1>
 
-          <div className="mediacard-container__gallery">
-            {images.map((image, index) => (
-              <MediaCard
-                key={index}
-                photo={image.thumbnail}
-                extended={index == 1 || index == 5}
-              />
-            ))}
-          </div>
-        </section>
-      )}
+        <div className="mediacard-container__gallery">
+          {images.map((image, index) => (
+            <MediaCard
+              key={index}
+              photo={image.thumbnail}
+              extended={index == 1 || index == 5}
+            />
+          ))}
+        </div>
+      </section>
     </>
   );
 }
