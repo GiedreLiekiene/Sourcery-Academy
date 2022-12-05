@@ -4,17 +4,26 @@ import './media-card-container.scss';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
 function MediaCardContainer() {
+  const [error, setError] = useState(null);
   const [images, setImages] = useState(null);
 
   useEffect(() => {
     const fetchImages = async () => {
-      const response = await fetch(mediaUrl);
-      const data = await response.json();
-      setImages(data.slice(0, 6));
+      try {
+        const response = await fetch(mediaUrl);
+        const data = await response.json();
+        setImages(data.slice(0, 6));
+      } catch (error) {
+        setError('Failed to load...');
+      }
     };
 
     fetchImages();
   }, []);
+
+  if (error) {
+    return <h2 className="mediacard-container__error">{error}</h2>;
+  }
 
   return (
     <>

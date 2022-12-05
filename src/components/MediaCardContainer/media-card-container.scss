@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
 
+  &__error {
+    color: var(--color-error);
+  }
+
   &__heading {
     color: var(--color-primary);
     font-family: var(--font-family-headings);
