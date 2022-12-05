@@ -37,7 +37,7 @@ function MediaCardContainer() {
         <div className="mediacard-container__gallery">
           {images.map(({ thumbnail }, index) => (
             <MediaCard
-              key={index}
+              key={thumbnail}
               photo={thumbnail}
               extended={index == 1 || index == 5}
             />
