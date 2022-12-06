@@ -5,7 +5,9 @@
   border-radius: var(--border-radius-m);
   box-shadow: -2rem 2rem $_color-shadow-grey;
   color: var(--color-primary);
+  height: 100%;
   position: relative;
+  width: 100%;
   z-index: -1;
 
   &__img-container {

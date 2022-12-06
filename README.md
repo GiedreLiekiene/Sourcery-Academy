@@ -41,7 +41,7 @@ To start developing run npm script command:
 
     $ npm run ts:fix
 
-## Git Guidelines
+# Git Guidelines
 
 New features should be developed in separate branches starting with the `feat/` or `fix/` prefix, for example: `feat/SR22AS-80_some-new-feature`.
 The `SR22AS-XX` part is an issue number from JIRA, if there's no issue for this feature, feature key can be omitted.
@@ -62,6 +62,289 @@ This enables to easily locate a branch or related commits directly from JIRA sto
 ```
 
 ```
+
+# HTML/CSS/Structure/JS Guidelines
+
+## General
+
+1. Indentation
+
+Indent by 2 spaces at a time.
+Don’t use tabs or mix tabs and spaces for indentation.
+
+```css
+.example {
+  color: blue;
+}
+```
+
+2. Capitalization
+
+Use only lowercase.
+All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings).
+
+```html
+<!-- Not recommended -->
+<a href="/">Home</a>
+```
+
+```html
+<!-- Recommended -->
+<img src="google.png" alt="Google" />
+```
+
+## HTML
+
+1. Semantics
+
+Use HTML according to its purpose.
+
+Use elements (sometimes incorrectly called “tags”) for what they have been created for. For example, use heading elements for headings, p elements for paragraphs, a elements for anchors, etc.
+
+Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.
+
+```html
+<!-- Not recommended -->
+<div onclick="goToRecommendations();">All recommendations</div>
+```
+
+```html
+<!-- Recommended -->
+<a href="recommendations/">All recommendations</a>
+```
+
+2. Multimedia Fallback
+
+Provide alternative contents for multimedia.
+
+For multimedia, such as images, videos, animated objects via canvas, make sure to offer alternative access. For images that means use of meaningful alternative text (alt) and for video and audio transcripts and captions, if available.
+
+Providing alternative contents is important for accessibility reasons: A blind user has few cues to tell what an image is about without @alt, and other users may have no way of understanding what video or audio contents are about either.
+
+(For images whose alt attributes would introduce redundancy, and for images whose purpose is purely decorative which you cannot immediately use CSS for, use no alternative text, as in alt="".)
+
+```html
+<!-- Not recommended -->
+<img src="spreadsheet.png" />
+```
+
+```html
+<!-- Recommended -->
+<img src="spreadsheet.png" alt="Spreadsheet screenshot." />
+```
+
+## CSS
+
+1. Class naming
+
+Use meaningful or generic class names.
+
+Instead of presentational or cryptic names, always use class names that reflect the purpose of the element in question, or that are otherwise generic.
+
+Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change.
+
+Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as “helpers.”
+
+Using functional or generic names reduces the probability of unnecessary document or template changes.
+
+```css
+/* Not recommended: meaningless */
+.yee-1901 {
+}
+
+/* Not recommended: presentational */
+.button-green {
+}
+.clear {
+}
+```
+
+```css
+/* Recommended: specific */
+.gallery {
+}
+.login {
+}
+.video {
+}
+
+/* Recommended: generic */
+.aux {
+}
+.alt {
+}
+```
+
+2. Class name style
+
+Use class names that are as short as possible but as long as necessary.
+
+Try to convey what a class is about while being as brief as possible.
+
+Using class names this way contributes to acceptable levels of understandability and code efficiency.
+
+```css
+/* Not recommended */
+.navigation {
+}
+.atr {
+}
+```
+
+```css
+/* Recommended */
+.nav {
+}
+.author {
+}
+```
+
+3. Shorthand Properties
+
+Use shorthand properties where possible.
+
+CSS offers a variety of shorthand properties (like font) that should be used whenever possible. **Except** in cases where only one value is needed.
+
+Using shorthand properties is useful for code efficiency and understandability.
+
+```css
+/* Not recommended */
+border-top-style: none;
+font-family: palatino, georgia, serif;
+font-size: 100%;
+line-height: 1.6;
+padding-bottom: 2em;
+padding-left: 1em;
+padding-right: 1em;
+padding-top: 0;
+```
+
+```css
+/* Recommended */
+border-top: 0;
+font: 100%/1.6 palatino, georgia, serif;
+padding: 0 1em 2em;
+```
+
+4. 0 and Units
+
+Omit unit specification after “0” values, unless required.
+
+Do not use units after 0 values unless they are required.
+
+```css
+flex: 0px; /* This flex-basis component requires a unit. */
+flex: 1 1 0px; /* Not ambiguous without the unit, but needed in IE11. */
+margin: 0;
+padding: 0;
+```
+
+5. Leading 0s
+   Always include leading “0”s in values.
+
+Put 0s in front of values or lengths between -1 and 1.
+
+```css
+font-size: 0.8em;
+```
+
+6. Follow BEM naming standards
+
+```css
+/* Block component */
+.btn {
+}
+
+/* Element that depends upon the block */
+.btn__price {
+}
+
+/* Modifier that changes the style of the block */
+.btn--orange {
+}
+.btn--big {
+}
+```
+
+7. Use `rem` units
+
+Use relative `rem` units for spacing, padding, margin and so on. You can use `px` for small things that does not affect UI/UX if they are scaled, like `border`.
+
+8. Media Queries
+
+When working with media queries place them as close to their relevant rule set whenever possible. Don’t bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future.
+
+Use `em` units for setting breakpoints. (`rem` units are not supported in media queries).
+
+## Project Structure
+
+Folder structure should look like this:
+
+src - source code:
+
+- assets/static - global static assets such as images, svgs, company logo, etc.
+- components - global shared/reusable components.
+- views/pages/features - top level views.
+- services/api - JavaScript modules.
+- store - global Redux store.
+- utils - utilities, helpers, constants and etc.
+- theme/styles/scss/sass - global style declarations.
+- public - index.html with supporting static files (robots.txt, favicon and etc.)
+- build - final build
+
+## JS/React
+
+- Use camelCase for JS and PascalCase for React components
+- Use classnames utility (https://www.npmjs.com/package/classnames)
+
+```js
+/* Recommended */
+//IMPORT
+import classNames from 'classnames';
+//DEFINE
+const cardClass = classNames(
+  'card-container__title', //This class goes always
+  `card-container__title--${theme}`, //This class goes always with a prop
+  {
+    //An object which sends only those classes with truthy values
+    'card-container__title--right': right,
+    'card-container__title--center': center,
+  }
+);
+//USE
+<h1 className={cardClass}>{title}</h1>;
+```
+
+- Once a component file is created (Use file extensions based on the code inside .js .jsx .ts .tsx), add its style to a .scss file (Use lower case and dash separator for css based files project-styles.scss).
+- Default export & import: Only a single default export per file and can use any name as alias when importing
+- Named export & import: Multiple exports per file; MUST use the exported name when importing unless alias name is used (“.. as.. “)
+- Variables and functions are named using `camelCase`, except for constants, these are named in capital letters, like testimonials API.
+- Boolean holding variables should start with `is`, `has` and so on.
+- Functions should start with a verb `set`, `get`, `show`, `calculate` and so on.
+- Variables should start with a noun like `person`. Avoid using meaningless names like `a`, be verbose: `numberOfCards`.
+- Avoid `var`, use `let` and `const` instead.
+
+## File naming guidelines
+
+- React components files are named using `PascalCase`:
+
+```
+TestimonialsCard.jsx, CardContainer.jsx, Layout.jsx ...
+```
+
+- SCSS files are named using `snake-case` (component name in lower case):
+
+```
+testimonials-card.scss, card-container.scss, layout.scss ...
+```
+
+- Folders are named the same as React components, in `PascalCase`
+
+```
+TestimonialsCard, CardContainer, Layout ...
+```
+
+- Image names should follow this pattern: `{imageType}-{name}-{size[optional]}.{imageExtension}`. e.g. `icon-devbridge.svg`. If an image is static like `jpg`, `png` add sizing (width x height) to the name, `bg-balloons-100x150.png`.
 
 ## License
 
