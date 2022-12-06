@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ErrorMessage from '../ErrorMessage/ErrorMessage.jsx';
 import MediaCard from '../MediaCard/MediaCard.js';
 import './media-card-container.scss';
 
@@ -22,7 +23,7 @@ function MediaCardContainer() {
   }, []);
 
   if (error) {
-    return <h2 className="mediacard-container__error">{error}</h2>;
+    return <ErrorMessage error={error} />;
   }
 
   if (!images) {
