@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './error-message.scss';
 
-const ErrorMessage = ({ error }) => {
-  return <div className="error-message">{error}</div>;
+const ErrorMessage = ({ message }) => {
+  return <div className="error-message">{message}</div>;
 };
 
 ErrorMessage.propTypes = {
-  error: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 };
 
 export default ErrorMessage;
