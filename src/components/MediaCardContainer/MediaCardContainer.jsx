@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ErrorMessage from '../ErrorMessage/ErrorMessage.jsx';
 import MediaCard from '../MediaCard/MediaCard.js';
 import './media-card-container.scss';
+import classnames from 'classnames';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
 function MediaCardContainer() {
@@ -34,14 +35,11 @@ function MediaCardContainer() {
     <div className="mediacard-container">
       {images.map(({ thumbnail }, index) => {
         let extended = index == 1 || index == 5;
+        const cardClass = classnames('mediacard-container__item', {
+          'mediacard-container__item--extended': extended,
+        });
         return (
-          <div
-            className={
-              'mediacard-container__item ' +
-              (extended ? 'mediacard-container__item--extended' : '')
-            }
-            key={thumbnail}
-          >
+          <div className={cardClass} key={thumbnail}>
             <MediaCard imgUrl={thumbnail} />
           </div>
         );
