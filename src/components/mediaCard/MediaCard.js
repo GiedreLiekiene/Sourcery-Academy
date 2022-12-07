@@ -5,7 +5,7 @@ import BoxShadow from '../BoxShadow/BoxShadow';
 
 const MediaCard = ({ imgUrl, altInfo }) => {
   return (
-    <BoxShadow className="mediacard">
+    <BoxShadow className="media-card">
       <img src={imgUrl} alt={altInfo} />
     </BoxShadow>
   );
