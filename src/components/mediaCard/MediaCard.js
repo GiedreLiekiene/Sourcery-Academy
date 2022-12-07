@@ -1,14 +1,10 @@
 import React from 'react';
 import './media-card.scss';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
-const MediaCard = ({ imgUrl, altInfo, extended }) => {
-  const cardClass = classnames('media-card', {
-    'media-card--extended': extended,
-  });
+const MediaCard = ({ imgUrl, altInfo }) => {
   return (
-    <div className={cardClass}>
+    <div className="mediacard">
       <img src={imgUrl} alt={altInfo} />
     </div>
   );
@@ -16,7 +12,6 @@ const MediaCard = ({ imgUrl, altInfo, extended }) => {
 
 MediaCard.propTypes = {
   imgUrl: PropTypes.string.isRequired,
-  extended: PropTypes.bool,
   altInfo: PropTypes.string,
 };
 

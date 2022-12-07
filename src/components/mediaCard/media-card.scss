@@ -1,18 +1,14 @@
-.media-card {
+.mediacard {
   border: 1px solid var(--color-primary);
   border-radius: var(--border-radius-s);
   box-shadow: -2rem 2rem var(--color-background-shadow);
   height: auto;
   overflow: hidden;
-  width: 26.6rem;
+  width: 100%;
 
   img {
     height: 22rem;
     object-fit: cover;
     width: 100%;
-  }
-
-  &--extended {
-    width: 57.2rem;
   }
 }
