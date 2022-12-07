@@ -1,12 +1,13 @@
 import React from 'react';
 import './media-card.scss';
 import PropTypes from 'prop-types';
+import BoxShadow from '../BoxShadow/BoxShadow';
 
 const MediaCard = ({ imgUrl, altInfo }) => {
   return (
-    <div className="mediacard">
+    <BoxShadow className="mediacard">
       <img src={imgUrl} alt={altInfo} />
-    </div>
+    </BoxShadow>
   );
 };
 
