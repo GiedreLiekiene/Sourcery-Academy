@@ -1,7 +1,5 @@
-import React from 'react';
-
 export const ROUTES = {
-  academies: '/academies',
+  academies: '',
   forDevelopers: '/academies/sourcery-for-developers',
   forTesters: '/academies/sourcery-for-testers',
   forFrontEnd: '/academies/sourcery-for-front-end',
