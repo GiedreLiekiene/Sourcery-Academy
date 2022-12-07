@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ErrorMessage from '../ErrorMessage/ErrorMessage.jsx';
+import LoadingMessage from '../LoadingMessage/LoadingMessage.jsx';
 import MediaCard from '../MediaCard/MediaCard.js';
 import './media-container.scss';
 import classnames from 'classnames';
@@ -24,11 +25,11 @@ function MediaContainer() {
   }, []);
 
   if (error) {
-    return <ErrorMessage error={error} />;
+    return <ErrorMessage message={error} />;
   }
 
   if (!images) {
-    return <h2>Loading...</h2>;
+    return <LoadingMessage message={'Loading...'} />;
   }
 
   return (
