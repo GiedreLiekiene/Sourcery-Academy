@@ -32,13 +32,20 @@ function MediaCardContainer() {
 
   return (
     <div className="mediacard-container">
-      {images.map(({ thumbnail }, index) => (
-        <MediaCard
-          key={thumbnail}
-          imgUrl={thumbnail}
-          extended={index == 1 || index == 5}
-        />
-      ))}
+      {images.map(({ thumbnail }, index) => {
+        let extended = index == 1 || index == 5;
+        return (
+          <div
+            className={
+              'mediacard-container__item ' +
+              (extended ? 'mediacard-container__item--extended' : '')
+            }
+            key={thumbnail}
+          >
+            <MediaCard imgUrl={thumbnail} />
+          </div>
+        );
+      })}
     </div>
   );
 }

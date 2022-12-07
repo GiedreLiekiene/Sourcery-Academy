@@ -1,12 +1,18 @@
-@import '../../sass/variables';
-@import '../../sass/base/typography';
-
 .mediacard-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4rem;
   width: 100%;
+
+  &__item {
+    height: 24rem;
+    width: calc(25% - 4rem * 3 / 4);
+
+    &--extended {
+      width: calc(50% - 4rem / 2);
+    }
+  }
 
   @media only screen and (max-width: 900px) {
     flex-wrap: wrap;
