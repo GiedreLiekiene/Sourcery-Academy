@@ -29,7 +29,7 @@ function MediaContainer() {
   }
 
   if (!images) {
-    return <LoadingMessage message={'Loading...'} />;
+    return <LoadingMessage message="Loading..." />;
   }
 
   return (
