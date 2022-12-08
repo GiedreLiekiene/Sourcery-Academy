@@ -2,8 +2,8 @@ import React from 'react';
 import './box-shadow.scss';
 import PropTypes from 'prop-types';
 
-const BoxShadow = ({ className, children }) => {
-  return <div className={'box-shadow ' + className}> {children} </div>;
+const BoxShadow = ({ children }) => {
+  return <div className="box-shadow">{children}</div>;
 };
 
 BoxShadow.propTypes = {
