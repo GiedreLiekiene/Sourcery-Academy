@@ -4,6 +4,7 @@ import LoadingMessage from '../LoadingMessage/LoadingMessage.jsx';
 import MediaCard from '../MediaCard/MediaCard.js';
 import './media-container.scss';
 import classnames from 'classnames';
+import BoxShadow from '../BoxShadow/BoxShadow.jsx';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
 function MediaContainer() {
@@ -41,7 +42,9 @@ function MediaContainer() {
         });
         return (
           <div className={cardClass} key={thumbnail}>
-            <MediaCard imgUrl={thumbnail} />
+            <BoxShadow>
+              <MediaCard imgUrl={thumbnail} />
+            </BoxShadow>
           </div>
         );
       })}
