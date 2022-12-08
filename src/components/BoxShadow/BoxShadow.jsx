@@ -7,7 +7,6 @@ const BoxShadow = ({ children }) => {
 };
 
 BoxShadow.propTypes = {
-  className: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
