@@ -1,23 +1,9 @@
 .media-card {
-  border: 1px solid var(--color-primary);
-  border-radius: var(--border-radius-s);
-  box-shadow: -2rem 2rem var(--color-background-shadow);
   height: auto;
-  margin: var(--spacer-l);
-  overflow: hidden;
-  width: 26.6rem;
 
   img {
     height: 22rem;
     object-fit: cover;
     width: 100%;
-  }
-
-  &--extended {
-    width: 57.2rem;
-
-    img {
-      width: 100%;
-    }
   }
 }

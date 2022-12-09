@@ -1,0 +1,6 @@
+.box-shadow {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-s);
+  box-shadow: -2rem 2rem var(--color-background-shadow);
+  overflow: hidden;
+}
