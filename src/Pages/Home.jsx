@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
 import Academies from '../components/Academies/Academies';
 import TextButtonContainer from '../components/TextButtonContainer/TextButtonContainer';
+import TestimonialsContent from '../components/TestimonialsContent/TestimonialsContent';
 import CardContainer from '../components/CardContainer/CardContainer';
 import academyInformation from '../utils/academyInformation.json';
 import { assets } from '../assets/svg/assets';
@@ -116,7 +117,7 @@ function Home() {
         </div>
       </div>
       <CardContainer title="Testimonials" right>
-        <div></div>
+        <TestimonialsContent />
       </CardContainer>
       <CardContainer title="Media">
         <div></div>
