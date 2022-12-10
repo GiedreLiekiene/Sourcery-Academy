@@ -4,6 +4,7 @@ import Academies from '../components/Academies/Academies';
 import TextButtonContainer from '../components/TextButtonContainer/TextButtonContainer';
 import TestimonialsContent from '../components/TestimonialsContent/TestimonialsContent';
 import CardContainer from '../components/CardContainer/CardContainer';
+import MediaContainer from '../components/MediaContainer/MediaContainer';
 import academyInformation from '../utils/academyInformation.json';
 import { assets } from '../assets/svg/assets';
 import { SvgList } from '../assets/svg/index';
@@ -30,21 +31,23 @@ function Home() {
 
   return (
     <>
-      <TextImgContainer
-        leftChild={
-          <TextButtonContainer
-            title="Sourcery Academy"
-            buttonName="View academies"
-            text="Sourcery academy is our free of charge education program created to allow students to improve their skills and prepare for a career in the IT industry. There are three academies available. They serve as our long- term commitment to increase the number of students in Lithuania entering information technologies studies."
-          />
-        }
-        rightChild={
-          <>
-            <WalkingToLaptopImg />
-          </>
-        }
-        alignCenter
-      ></TextImgContainer>
+      <div className="section-group">
+        <TextImgContainer
+          leftChild={
+            <TextButtonContainer
+              title="Sourcery Academy"
+              buttonName="View academies"
+              text="Sourcery academy is our free of charge education program created to allow students to improve their skills and prepare for a career in the IT industry. There are three academies available. They serve as our long- term commitment to increase the number of students in Lithuania entering information technologies studies."
+            />
+          }
+          rightChild={
+            <>
+              <WalkingToLaptopImg />
+            </>
+          }
+          alignCenter
+        ></TextImgContainer>
+      </div>
 
       <Academies />
 
@@ -60,7 +63,7 @@ function Home() {
           }
           rightChild={<WorkingWithLaptop />}
         ></TextImgContainer>
-        <div className="section-group__rightWave">
+        <div className="section-group__firstWave">
           <FirstWaveSvg />
         </div>
       </div>
@@ -79,7 +82,7 @@ function Home() {
           }
           alignRight
         ></TextImgContainer>
-        <div className="section-group__leftWave">
+        <div className="section-group__secondWave">
           <SecondWaveSvg />
         </div>
       </div>
@@ -112,16 +115,25 @@ function Home() {
           }
           rightChild={<WorkingAtDeskKidRobot />}
         ></TextImgContainer>
-        <div className="section-group__rightWave">
+        <div className="section-group__thirdWave">
           <ThirdWaveSvg />
         </div>
       </div>
-      <CardContainer title="Testimonials" right>
-        <TestimonialsContent />
-      </CardContainer>
-      <CardContainer title="Media">
-        <div></div>
-      </CardContainer>
+
+      <div className="section-group">
+        <CardContainer title="Testimonials" right>
+          <TestimonialsContent />
+        </CardContainer>
+      </div>
+
+      <div className="section-group">
+        <CardContainer title="Media">
+          <MediaContainer />
+        </CardContainer>
+        <div className="section-group__fourthWave">
+          <FourthWaveSvg />
+        </div>
+      </div>
     </>
   );
 }
