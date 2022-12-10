@@ -10,12 +10,8 @@ const randomNum = () => {
 
 function TestimonialsContent({ academy }) {
   const [showPosts, setShowPosts] = useState(null);
-  const [random, setRandom] = useState(randomNum());
+  const [random, setRandom] = useState(randomNum);
   const randomAcademy = 'Random';
-
-  useMemo(() => {
-    return setRandom(random);
-  }, [random]);
 
   const getTestimonials = async () => {
     const data = await fetch(TESTIMONIALS_ENDPOINT)
@@ -28,6 +24,10 @@ function TestimonialsContent({ academy }) {
       .catch((err) => err.message);
     return data;
   };
+
+  useEffect(() => {
+    return setRandom(random);
+  }, [random]);
 
   useEffect(() => {
     getTestimonials();
