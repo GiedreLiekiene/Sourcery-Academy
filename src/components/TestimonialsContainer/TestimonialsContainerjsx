@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import './testimonials-content.scss';
+import './testimonials-container.scss';
 import TestimonialsCard from '../Testimonials_card/TestimonialsCard.js';
 import TESTIMONIALS_ENDPOINT from './testimonialsEndpoint.js';
 
