@@ -28,16 +28,14 @@ export default function TextButtonContainer({
     <div className={textButtonContainerClass}>
       <HeadingTag className={titleClass}>{title}</HeadingTag>
       <p className={textClass}>{text}</p>
-      <div className="text-button-container__button">
-        <button>Button and/or link</button>
-      </div>
+      <div className="text-button-container__button"></div>
     </div>
   );
 }
 
 TextButtonContainer.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   alignRight: PropTypes.bool,
   headingLevel: PropTypes.number,
   smallHeading: PropTypes.oneOf([1, 2]),
