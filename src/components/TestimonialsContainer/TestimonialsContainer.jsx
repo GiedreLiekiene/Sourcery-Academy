@@ -8,7 +8,7 @@ const randomNum = () => {
   return Math.floor(Math.random() * 7);
 };
 
-function TestimonialsContent({ academy }) {
+function TestimonialsContainer({ academy }) {
   const [showPosts, setShowPosts] = useState(null);
   const [random, setRandom] = useState(randomNum);
   const randomAcademy = 'Random';
@@ -34,7 +34,7 @@ function TestimonialsContent({ academy }) {
   }, []);
 
   return (
-    <div className="testimonials-content">
+    <div className="testimonials-container">
       {showPosts
         ? randomAcademy === academy
           ? showPosts.map((item, index) => (
@@ -50,8 +50,8 @@ function TestimonialsContent({ academy }) {
   );
 }
 
-TestimonialsContent.propTypes = {
+TestimonialsContainer.propTypes = {
   academy: PropTypes.string.isRequired,
 };
 
-export default TestimonialsContent;
+export default TestimonialsContainer;
