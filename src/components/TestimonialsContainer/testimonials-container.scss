@@ -1,0 +1,10 @@
+.testimonials-container {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  margin: 2rem 0;
+
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+  }
+}
