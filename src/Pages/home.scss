@@ -1,32 +1,37 @@
-.debug {
-  border: 1px solid red;
-}
-
 .section-group {
-  @extend .debug;
-
   display: flex;
-  // max-width: 140rem;
-  padding: 10rem 0;
+  padding: 12rem 4rem;
   position: relative;
 
-  &__rightWave {
-    @extend .debug;
-
+  &__firstWave {
     position: absolute;
-    right: 0;
+    right: -2.5rem;
     transform: translateY(-25%);
-    width: 50%;
+    width: 70rem;
     z-index: -1;
   }
 
-  &__leftWave {
-    @extend .debug;
+  &__secondWave {
+    left: -2.5rem;
+    position: absolute;
+    transform: translateY(-20%);
+    width: 65rem;
+    z-index: -1;
+  }
 
+  &__thirdWave {
+    position: absolute;
+    right: 0;
+    transform: translateY(-15%);
+    width: 65rem;
+    z-index: -1;
+  }
+
+  &__fourthWave {
     left: 0;
     position: absolute;
-    transform: translateY(-25%);
-    width: 50%;
+    transform: translateY(-35%);
+    width: 32.5rem;
     z-index: -1;
   }
 }
