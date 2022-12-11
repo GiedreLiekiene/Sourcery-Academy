@@ -5,6 +5,7 @@ import TextButtonContainer from '../components/TextButtonContainer/TextButtonCon
 import TestimonialsContent from '../components/TestimonialsContent/TestimonialsContent';
 import CardContainer from '../components/CardContainer/CardContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
+import ImageHolder from '../components/ImageHolder/ImageHolder';
 import academyInformation from '../utils/academyInformation.json';
 import { assets } from '../assets/svg/assets';
 import { SvgList } from '../assets/svg/index';
@@ -61,7 +62,7 @@ function Home() {
               text={getAcademyInfo('intro', 'Sourcery for Developers')}
             />
           }
-          rightChild={<WorkingWithLaptop />}
+          rightChild={<ImageHolder image={<WorkingWithLaptop />} />}
         ></TextImgContainer>
         <div className="section-group__firstWave">
           <FirstWaveSvg />
@@ -70,7 +71,7 @@ function Home() {
 
       <div className="section-group">
         <TextImgContainer
-          leftChild={<MacWithHammer />}
+          leftChild={<ImageHolder right image={<MacWithHammer />} />}
           rightChild={
             <TextButtonContainer
               alignRight
@@ -89,7 +90,7 @@ function Home() {
 
       <div className="section-group">
         <TextImgContainer
-          leftChild={<WebTechAbbr />}
+          leftChild={<ImageHolder right image={<WebTechAbbr />} />}
           rightChild={
             <TextButtonContainer
               headingLevel={2}
@@ -113,7 +114,7 @@ function Home() {
               text={getAcademyInfo('intro', 'Sourcery for Kids')}
             />
           }
-          rightChild={<WorkingAtDeskKidRobot />}
+          rightChild={<ImageHolder image={<WorkingAtDeskKidRobot />} />}
         ></TextImgContainer>
         <div className="section-group__thirdWave">
           <ThirdWaveSvg />
