@@ -1,4 +1,4 @@
-$headingAllLevels: (
+$heading-all-levels: (
   h1: 4.8rem,
   h2: 3.2rem,
   h3: 1.6rem,
@@ -20,7 +20,7 @@ $headingAllLevels: (
 
   &__title {
     color: var(--color-primary);
-    @each $key, $val in $headingAllLevels {
+    @each $key, $val in $heading-all-levels {
       &--#{$key} {
         font-size: $val;
       }
