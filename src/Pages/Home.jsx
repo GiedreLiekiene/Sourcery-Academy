@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
 import Academies from '../components/Academies/Academies';
 import TextButtonContainer from '../components/TextButtonContainer/TextButtonContainer';
-import TestimonialsContent from '../components/TestimonialsContent/TestimonialsContainer';
+import TestimonialsContent from '../components/TestimonialsContainer/TestimonialsContainer';
 import CardContainer from '../components/CardContainer/CardContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
 import ImageHolder from '../components/ImageHolder/ImageHolder';
