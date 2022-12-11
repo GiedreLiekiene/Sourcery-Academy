@@ -3,7 +3,7 @@
   padding: 12rem 4rem;
   position: relative;
 
-  &__firstWave {
+  &__first-wave {
     position: absolute;
     right: -2.5rem;
     transform: translateY(-25%);
@@ -11,7 +11,7 @@
     z-index: -1;
   }
 
-  &__secondWave {
+  &__second-wave {
     left: -2.5rem;
     position: absolute;
     transform: translateY(-20%);
@@ -19,7 +19,7 @@
     z-index: -1;
   }
 
-  &__thirdWave {
+  &__third-wave {
     position: absolute;
     right: 0;
     transform: translateY(-15%);
@@ -27,7 +27,7 @@
     z-index: -1;
   }
 
-  &__fourthWave {
+  &__fourth-wave {
     left: 0;
     position: absolute;
     transform: translateY(-35%);

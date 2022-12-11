@@ -64,7 +64,7 @@ function Home() {
           }
           rightChild={<ImageHolder image={<WorkingWithLaptop />} />}
         ></TextImgContainer>
-        <div className="section-group__firstWave">
+        <div className="section-group__first-wave">
           <FirstWaveSvg />
         </div>
       </div>
@@ -83,7 +83,7 @@ function Home() {
           }
           alignRight
         ></TextImgContainer>
-        <div className="section-group__secondWave">
+        <div className="section-group__second-wave">
           <SecondWaveSvg />
         </div>
       </div>
@@ -116,7 +116,7 @@ function Home() {
           }
           rightChild={<ImageHolder image={<WorkingAtDeskKidRobot />} />}
         ></TextImgContainer>
-        <div className="section-group__thirdWave">
+        <div className="section-group__third-wave">
           <ThirdWaveSvg />
         </div>
       </div>
@@ -131,7 +131,7 @@ function Home() {
         <CardContainer title="Media">
           <MediaContainer />
         </CardContainer>
-        <div className="section-group__fourthWave">
+        <div className="section-group__fourth-wave">
           <FourthWaveSvg />
         </div>
       </div>
