@@ -1,4 +1,8 @@
 .image-holder {
-  padding: 0 2rem;
-  max-width: 35rem;
+  max-width: 55rem;
+  padding: 0 10rem;
+
+  &--right {
+    margin-left: auto;
+  }
 }
