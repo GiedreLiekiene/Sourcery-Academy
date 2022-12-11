@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
 import Academies from '../components/Academies/Academies';
-import TextButtonContainer from '../components/TextButtonContainer/TextButtonContainer';
 import TestimonialsContainer from '../components/TestimonialsContainer/TestimonialsContainer';
 import CardContainer from '../components/CardContainer/CardContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
@@ -21,31 +20,13 @@ const {
 
 const { FirstWaveSvg, SecondWaveSvg, ThirdWaveSvg, FourthWaveSvg } = SvgList;
 
-function getAcademyInfo(key, academy) {
-  return academyInformation
-    .filter((item) => item.academy === academy)
-    .map((item) => item[key])
-    .toString();
-}
 function Home() {
-  const [data, setData] = useState(academyInformation);
-
   return (
     <>
       <div className="section-group">
         <TextImgContainer
-          leftChild={
-            <TextButtonContainer
-              title="Sourcery Academy"
-              buttonName="View academies"
-              text="Sourcery academy is our free of charge education program created to allow students to improve their skills and prepare for a career in the IT industry. There are three academies available. They serve as our long- term commitment to increase the number of students in Lithuania entering information technologies studies."
-            />
-          }
-          rightChild={
-            <>
-              <WalkingToLaptopImg />
-            </>
-          }
+          leftChild={<div></div>}
+          rightChild={<WalkingToLaptopImg />}
           alignCenter
         ></TextImgContainer>
       </div>
@@ -54,14 +35,7 @@ function Home() {
 
       <div className="section-group">
         <TextImgContainer
-          leftChild={
-            <TextButtonContainer
-              headingLevel={2}
-              title="Sourcery for Developers"
-              buttonName="Learn more"
-              text={getAcademyInfo('intro', 'Sourcery for Developers')}
-            />
-          }
+          leftChild={<div></div>}
           rightChild={<ImageHolder image={<WorkingWithLaptop />} />}
         ></TextImgContainer>
         <div className="section-group__first-wave">
@@ -72,15 +46,7 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={<ImageHolder right image={<MacWithHammer />} />}
-          rightChild={
-            <TextButtonContainer
-              alignRight
-              headingLevel={2}
-              title="Sourcery for Testers"
-              buttonName="Learn more"
-              text={getAcademyInfo('intro', 'Sourcery for Testers')}
-            />
-          }
+          rightChild={<div></div>}
           alignRight
         ></TextImgContainer>
         <div className="section-group__second-wave">
@@ -91,29 +57,14 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={<ImageHolder right image={<WebTechAbbr />} />}
-          rightChild={
-            <TextButtonContainer
-              headingLevel={2}
-              title="Sourcery for Front-End"
-              alignRight
-              buttonName="Learn more"
-              text={getAcademyInfo('intro', 'Sourcery for Front-End')}
-            />
-          }
+          rightChild={<div></div>}
           alignRight
         ></TextImgContainer>
       </div>
 
       <div className="section-group">
         <TextImgContainer
-          leftChild={
-            <TextButtonContainer
-              headingLevel={2}
-              title="Sourcery for Kids"
-              buttonName="Learn more"
-              text={getAcademyInfo('intro', 'Sourcery for Kids')}
-            />
-          }
+          leftChild={<div></div>}
           rightChild={<ImageHolder image={<WorkingAtDeskKidRobot />} />}
         ></TextImgContainer>
         <div className="section-group__third-wave">
