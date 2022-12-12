@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import './testimonials-container.scss';
 import TestimonialsCard from '../Testimonials_card/TestimonialsCard.js';
 import TESTIMONIALS_ENDPOINT from './testimonialsEndpoint.js';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import LoadingMessage from '../LoadingMessage/LoadingMessage';
+import BoxShadow from '../BoxShadow/BoxShadow';
 
 const randomNum = () => {
   return Math.floor(Math.random() * 7);
@@ -11,6 +14,7 @@ const randomNum = () => {
 function TestimonialsContainer({ academy }) {
   const [showPosts, setShowPosts] = useState(null);
   const [random, setRandom] = useState(randomNum);
+  const [error, setError] = useState(null);
   const randomAcademy = 'Random';
 
   const getTestimonials = async () => {
@@ -21,7 +25,7 @@ function TestimonialsContainer({ academy }) {
           ? setShowPosts(result.slice(random, random + 3))
           : setShowPosts(result)
       )
-      .catch((err) => err.message);
+      .catch(() => setError('Failed to load...'));
     return data;
   };
 
@@ -33,17 +37,29 @@ function TestimonialsContainer({ academy }) {
     getTestimonials();
   }, []);
 
+  if (error) {
+    return <ErrorMessage message={error} />;
+  }
+
+  if (!showPosts) {
+    return <LoadingMessage message="Loading..." />;
+  }
+
   return (
     <div className="testimonials-container">
       {showPosts
         ? randomAcademy === academy
           ? showPosts.map((item, index) => (
-              <TestimonialsCard item={item} key={index}></TestimonialsCard>
+              <BoxShadow key={index}>
+                <TestimonialsCard item={item} key={index}></TestimonialsCard>
+              </BoxShadow>
             ))
           : showPosts
               .filter((el) => el.academy === academy)
               .map((item, index) => (
-                <TestimonialsCard item={item} key={index}></TestimonialsCard>
+                <BoxShadow key={index}>
+                  <TestimonialsCard item={item} key={index}></TestimonialsCard>
+                </BoxShadow>
               ))
         : null}
     </div>
