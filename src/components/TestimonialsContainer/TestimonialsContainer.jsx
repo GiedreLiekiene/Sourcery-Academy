@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import './testimonials-container.scss';
-import TestimonialsCard from '../Testimonials_card/TestimonialsCard.js';
+import TestimonialsCard from '../TestimonialsCard/TestimonialsCard.js';
 import TESTIMONIALS_ENDPOINT from './testimonialsEndpoint.js';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
