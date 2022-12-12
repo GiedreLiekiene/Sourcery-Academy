@@ -42,3 +42,33 @@
     }
   }
 }
+
+@media screen and (max-width: 1220px) {
+  .navbar__logo {
+    font-size: 1.2em;
+  }
+
+  .navbar__links {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .navbar__logo {
+    font-size: 1.2em;
+  }
+
+  .navbar__links {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .navbar__logo {
+    font-size: 1.2em;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+}
