@@ -37,6 +37,5 @@ TextButtonContainer.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   alignRight: PropTypes.bool,
-  headingLevel: PropTypes.number,
-  smallHeading: PropTypes.oneOf([1, 2]),
+  headingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
