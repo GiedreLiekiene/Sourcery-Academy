@@ -1,0 +1,55 @@
+.sidebar {
+  animation: slide 0.3s ease-in-out;
+  background-color: var(--background-color);
+  box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.2), 3px 0 5px var(--shadow-color);
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 260px;
+  z-index: 999;
+}
+
+.sidebar-link {
+  border-left: 0.4em solid transparent;
+  color: var(--text-color);
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+}
+
+.sidebar-link:active {
+  border-left: 0.4em solid var(--primary-color);
+}
+
+.sidebar-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left: 0.4em solid var(--primary-color);
+}
+
+.sidebar-link.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.sidebar-link svg {
+  margin-right: 0.5em;
+  width: 1.2em;
+}
+
+.logo {
+  line-height: 2.7em;
+  padding-left: 1.4em;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
