@@ -50,16 +50,20 @@ function TestimonialsContainer({ academy }) {
       {showPosts
         ? randomAcademy === academy
           ? showPosts.map((item, index) => (
-              <BoxShadow key={index}>
-                <TestimonialsCard item={item} key={index}></TestimonialsCard>
-              </BoxShadow>
+              <div className="testimonials-container__card" key={index}>
+                <BoxShadow>
+                  <TestimonialsCard item={item}></TestimonialsCard>
+                </BoxShadow>
+              </div>
             ))
           : showPosts
               .filter((el) => el.academy === academy)
               .map((item, index) => (
-                <BoxShadow key={index}>
-                  <TestimonialsCard item={item} key={index}></TestimonialsCard>
-                </BoxShadow>
+                <div className="testimonials-container__card" key={index}>
+                  <BoxShadow>
+                    <TestimonialsCard item={item}></TestimonialsCard>
+                  </BoxShadow>
+                </div>
               ))
         : null}
     </div>
