@@ -20,6 +20,12 @@ const {
 
 const { FirstWaveSvg, SecondWaveSvg, ThirdWaveSvg, FourthWaveSvg } = SvgList;
 
+function getAcademyInfo(key, academy) {
+  return academyInformation
+    .filter((item) => item.academy === academy)
+    .map((item) => item[key])
+    .toString();
+}
 function Home() {
   return (
     <>
