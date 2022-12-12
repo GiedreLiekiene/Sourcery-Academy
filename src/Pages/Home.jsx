@@ -1,6 +1,7 @@
 import React from 'react';
 import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
 import Academies from '../components/Academies/Academies';
+import TextButtonContainer from '../components/TextButtonContainer/TextButtonContainer';
 import TestimonialsContainer from '../components/TestimonialsContainer/TestimonialsContainer';
 import CardContainer from '../components/CardContainer/CardContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
@@ -31,7 +32,12 @@ function Home() {
     <>
       <div className="section-group">
         <TextImgContainer
-          leftChild={<div></div>}
+          leftChild={
+            <TextButtonContainer
+              title="Sourcery Academy"
+              text="Sourcery academy is our free of charge education program created to allow students to improve their skills and prepare for a career in the IT industry. There are three academies available. They serve as our long- term commitment to increase the number of students in Lithuania entering information technologies studies."
+            />
+          }
           rightChild={<WalkingToLaptopImg />}
           alignCenter
         ></TextImgContainer>
@@ -41,7 +47,13 @@ function Home() {
 
       <div className="section-group">
         <TextImgContainer
-          leftChild={<div></div>}
+          leftChild={
+            <TextButtonContainer
+              headingLevel={2}
+              title="Sourcery for Developers"
+              text={getAcademyInfo('intro', 'Sourcery for Developers')}
+            />
+          }
           rightChild={<ImageHolder image={<WorkingWithLaptop />} />}
         ></TextImgContainer>
         <div className="section-group__first-wave">
@@ -52,7 +64,14 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={<ImageHolder right image={<MacWithHammer />} />}
-          rightChild={<div></div>}
+          rightChild={
+            <TextButtonContainer
+              alignRight
+              headingLevel={2}
+              title="Sourcery for Testers"
+              text={getAcademyInfo('intro', 'Sourcery for Testers')}
+            />
+          }
           alignRight
         ></TextImgContainer>
         <div className="section-group__second-wave">
@@ -63,14 +82,27 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={<ImageHolder right image={<WebTechAbbr />} />}
-          rightChild={<div></div>}
+          rightChild={
+            <TextButtonContainer
+              headingLevel={2}
+              title="Sourcery for Front-End"
+              alignRight
+              text={getAcademyInfo('intro', 'Sourcery for Front-End')}
+            />
+          }
           alignRight
         ></TextImgContainer>
       </div>
 
       <div className="section-group">
         <TextImgContainer
-          leftChild={<div></div>}
+          leftChild={
+            <TextButtonContainer
+              headingLevel={2}
+              title="Sourcery for Kids"
+              text={getAcademyInfo('intro', 'Sourcery for Kids')}
+            />
+          }
           rightChild={<ImageHolder image={<WorkingAtDeskKidRobot />} />}
         ></TextImgContainer>
         <div className="section-group__third-wave">
