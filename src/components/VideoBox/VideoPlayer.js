@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import './video-player.scss';
 
 function VideoPlayer({ videoSrc }) {
