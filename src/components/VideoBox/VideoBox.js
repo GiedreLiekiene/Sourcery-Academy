@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../../assets/svg/PlayButton.svg';
+import PlayIcon from '../../assets/svg/PlayIcon.svg';
 import VideoPlayer from './VideoPlayer';
 
 import './video-box.scss';
@@ -18,7 +18,7 @@ const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc }) => {
       <div className="video-box">
         <img src={thumbnail} alt={altInfo} />
         <button className="video-box__button" onClick={showModal}>
-          <Button
+          <PlayIcon
             className="video-box__button__svg"
             stroke={stroke || '#000000'}
           />
