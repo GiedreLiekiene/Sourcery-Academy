@@ -22,7 +22,7 @@ function VideoPlayer({ videoSrc }) {
 }
 
 VideoPlayer.propTypes = {
-  videoSrc: PropTypes.string,
+  videoSrc: PropTypes.string.isRequired,
 };
 
 export default VideoPlayer;

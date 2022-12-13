@@ -33,7 +33,7 @@ VideoBox.propTypes = {
   thumbnail: PropTypes.string.isRequired,
   altInfo: PropTypes.string,
   stroke: PropTypes.string,
-  videoSrc: PropTypes.string,
+  videoSrc: PropTypes.string.isRequired,
 };
 
 export default VideoBox;
