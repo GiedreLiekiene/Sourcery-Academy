@@ -1,13 +1,15 @@
 @import '../../sass/variables.scss';
+$padding-size-m: 5rem;
+$padding-size-l: 10rem;
 
 .text-button-container {
   display: flex;
   flex-direction: column;
-  padding-right: 10rem;
+  padding-right: $padding-size-l;
 
   &--right {
     align-items: flex-end;
-    padding-left: 10rem;
+    padding-left: $padding-size-l;
     padding-right: 0;
   }
 
@@ -22,17 +24,17 @@
     }
 
     &--right {
-      padding-left: 10rem;
+      padding-left: $padding-size-l;
       padding-right: 0;
       text-align: right;
     }
   }
 
   &__text {
-    padding-right: 5rem;
+    padding-right: $padding-size-m;
 
     &--right {
-      padding-left: 5rem;
+      padding-left: $padding-size-m;
       padding-right: 0;
       text-align: right;
     }
