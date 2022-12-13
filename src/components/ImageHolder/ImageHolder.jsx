@@ -11,6 +11,6 @@ export default function ImageHolder({ image, right = false }) {
 }
 
 ImageHolder.propTypes = {
-  image: PropTypes.node,
+  image: PropTypes.node.isRequired,
   right: PropTypes.bool,
 };
