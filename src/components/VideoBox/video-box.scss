@@ -1,0 +1,37 @@
+.video-box {
+  align-items: center;
+  border-radius: 11.25rem;
+  display: flex;
+  height: 38.75rem;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 38.75rem;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  img {
+    height: 38.75rem;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: transparent;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &__svg {
+      width: 5.5rem;
+    }
+  }
+}
