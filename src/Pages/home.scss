@@ -1,37 +1,29 @@
+@mixin wave-position($width, $direction, $direction_val, $translate_val) {
+  position: absolute;
+  transform: translateY($translate_val);
+  width: $width;
+  z-index: -1;
+  #{$direction}: $direction_val;
+}
+
 .section-group {
   display: flex;
   padding: 12rem 4rem;
   position: relative;
 
   &__first-wave {
-    position: absolute;
-    right: -2.5rem;
-    transform: translateY(-25%);
-    width: 70rem;
-    z-index: -1;
+    @include wave-position(50%, right, -2.5rem, -25%);
   }
 
   &__second-wave {
-    left: -2.5rem;
-    position: absolute;
-    transform: translateY(-20%);
-    width: 65rem;
-    z-index: -1;
+    @include wave-position(50%, left, -2.5rem, -20%);
   }
 
   &__third-wave {
-    position: absolute;
-    right: 0;
-    transform: translateY(-15%);
-    width: 65rem;
-    z-index: -1;
+    @include wave-position(50%, right, 0, -15%);
   }
 
   &__fourth-wave {
-    left: 0;
-    position: absolute;
-    transform: translateY(-35%);
-    width: 32.5rem;
-    z-index: -1;
+    @include wave-position(25%, left, 0, -35%);
   }
 }
