@@ -1,7 +1,8 @@
 .sidebar {
   animation: slide 0.3s ease-in-out;
-  background-color: var(--background-color);
-  box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.2), 3px 0 5px var(--shadow-color);
+  background-color: var(--color-background-links-hover);
+  box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.2),
+    3px 0 5px var(--color-background-shadow);
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   left: 0;
@@ -13,7 +14,7 @@
 
 .sidebar-link {
   border-left: 0.4em solid transparent;
-  color: var(--text-color);
+  color: var(--color-primary);
   display: block;
   font-size: 1.1em;
   margin-bottom: 1em;
@@ -21,16 +22,16 @@
 }
 
 .sidebar-link:active {
-  border-left: 0.4em solid var(--primary-color);
+  border-left: 0.4em solid var(--color-primary);
 }
 
 .sidebar-link:hover {
   background-color: rgba(0, 0, 0, 0.05);
-  border-left: 0.4em solid var(--primary-color);
+  border-left: 0.4em solid var(--color-primary);
 }
 
 .sidebar-link.active {
-  color: var(--primary-color);
+  color: var(--color-secondary);
   font-weight: bold;
 }
 
@@ -39,8 +40,8 @@
   width: 1.2em;
 }
 
-.logo {
-  line-height: 2.7em;
+.logo-svg {
+  line-height: 2.1em;
   padding-left: 1.4em;
 }
 

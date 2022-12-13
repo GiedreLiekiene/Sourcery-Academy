@@ -10,7 +10,7 @@ const Sidebar = ({ links, close }) => {
   return (
     <div className="sidebar" onClick={close}>
       <Link to="/" className="logo">
-        <LogoSvg />
+        <LogoSvg className="logo-svg" />
       </Link>
       {links.map((link) => (
         <Link
