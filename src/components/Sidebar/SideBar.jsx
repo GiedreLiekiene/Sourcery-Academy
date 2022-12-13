@@ -23,7 +23,6 @@ const Sidebar = ({ links, close }) => {
           key={link.name}
           onClick={link.onClick}
         >
-          <FontAwesomeIcon icon={link.icon} />
           {link.name}
         </Link>
       ))}
@@ -34,6 +33,6 @@ const Sidebar = ({ links, close }) => {
 export default Sidebar;
 
 Sidebar.propTypes = {
-  links: PropTypes.object.isRequired,
-  close: PropTypes.bool,
+  links: PropTypes.array.isRequired,
+  close: PropTypes.func,
 };
