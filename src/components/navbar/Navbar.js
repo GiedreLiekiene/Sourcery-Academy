@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
-import LogoSvg from '~/assets/svg/logo.svg';
+import LogoSvg from '~/assets/svg/Logo.svg';
 import './navbar.scss';
 import NavbarLink from './NavbarLink';
 import { ROUTES } from '../App/Routes';
+import Sidebar from '../Sidebar/SideBar.jsx';
 
 const navigationLinks = [
   {
@@ -49,26 +51,41 @@ const navigationLinks = [
 ];
 
 const Navbar = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
   const location = useLocation();
+
+  function closeSidebar() {
+    setShowSidebar(false);
+  }
   return (
-    <div className="navbar">
-      <Link to="/" className="navbar__logo">
-        <LogoSvg />
-      </Link>
-      <div className="navbar__links">
-        {navigationLinks.map((link, index) => (
-          <NavbarLink
-            active={location.pathname === link.path}
-            link={link}
-            key={index}
-          >
-            {link.name}
-          </NavbarLink>
-        ))}
+    <>
+      <div className="navbar">
+        <Link to="/" className="navbar__logo">
+          <LogoSvg />
+        </Link>
+        <div className="navbar__links">
+          {navigationLinks.map((link, index) => (
+            <NavbarLink
+              active={location.pathname === link.path}
+              link={link}
+              key={index}
+            >
+              {link.name}
+            </NavbarLink>
+          ))}
+        </div>
+        <div
+          onClick={() => setShowSidebar(!showSidebar)}
+          className={showSidebar ? 'sidebar-btn active' : 'sidebar-btn'}
+        >
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </div>
-    </div>
+      {showSidebar && <Sidebar close={closeSidebar} links={navigationLinks} />}
+    </>
   );
 };
 
 export default Navbar;
-export { navigationLinks };
