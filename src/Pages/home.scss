@@ -1,0 +1,29 @@
+@mixin wave-position($width, $direction, $direction_val, $translate_val) {
+  position: absolute;
+  transform: translateY($translate_val);
+  width: $width;
+  z-index: -1;
+  #{$direction}: $direction_val;
+}
+
+.section-group {
+  display: flex;
+  padding: 12rem 4rem;
+  position: relative;
+
+  &__first-wave {
+    @include wave-position(50%, right, -2.5rem, -25%);
+  }
+
+  &__second-wave {
+    @include wave-position(50%, left, -2.5rem, -20%);
+  }
+
+  &__third-wave {
+    @include wave-position(50%, right, 0, -15%);
+  }
+
+  &__fourth-wave {
+    @include wave-position(25%, left, 0, -35%);
+  }
+}

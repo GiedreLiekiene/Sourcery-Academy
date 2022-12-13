@@ -1,21 +1,18 @@
-html,
-body,
-body > div,
-.layout {
-  height: 100%;
-}
-
 .layout {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 
   &__header {
     position: sticky;
     top: 0;
+    z-index: 10;
   }
 
   &__content {
     flex-grow: 1;
-    padding: 0 8rem;
+    margin: 0 auto;
+    max-width: 140rem;
+    padding: 0 4rem;
   }
 }
