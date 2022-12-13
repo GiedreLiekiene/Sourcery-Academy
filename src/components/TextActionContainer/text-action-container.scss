@@ -1,0 +1,46 @@
+@import '../../sass/variables.scss';
+$padding-size-m: 5rem;
+$padding-size-l: 10rem;
+
+.text-action-container {
+  display: flex;
+  flex-direction: column;
+  padding-right: $padding-size-l;
+
+  &--right {
+    align-items: flex-end;
+    padding-left: $padding-size-l;
+    padding-right: 0;
+  }
+
+  &__title {
+    color: var(--color-primary);
+
+    @each $key, $val in $heading-all-levels {
+      &--#{$key} {
+        font-family: var(--font-family-headings);
+        font-size: $val;
+      }
+    }
+
+    &--right {
+      padding-left: $padding-size-l;
+      padding-right: 0;
+      text-align: right;
+    }
+  }
+
+  &__text {
+    padding-right: $padding-size-m;
+
+    &--right {
+      padding-left: $padding-size-m;
+      padding-right: 0;
+      text-align: right;
+    }
+  }
+
+  &__action {
+    max-width: fit-content;
+  }
+}
