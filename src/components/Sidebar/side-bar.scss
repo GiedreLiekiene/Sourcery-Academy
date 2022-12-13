@@ -17,7 +17,7 @@
     display: block;
     font-size: var(--font-size);
     margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     text-decoration: none;
 
     &:active {
@@ -36,9 +36,8 @@
   }
 
   &__logo svg {
-    height: 4rem;
-    padding: 0.8rem 0.8rem 0;
-    width: 22.2rem;
+    padding: 1rem 1rem 0;
+    width: 24rem;
   }
 }
 
