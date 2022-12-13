@@ -75,7 +75,7 @@ const Navbar = () => {
             </NavbarLink>
           ))}
         </div>
-        <div className="navbar__burger">
+        <div className="navbar__burgermeniu">
           <SidebarButton
             onClick={() => setShowSidebar(!showSidebar)}
             active={showSidebar}
