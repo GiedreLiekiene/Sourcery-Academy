@@ -1,7 +1,7 @@
 import React from 'react';
 import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
 import Academies from '../components/Academies/Academies';
-import TextButtonContainer from '../components/TextButtonContainer/TextButtonContainer';
+import TextActionContainer from '../components/TextActionContainer/TextActionContainer';
 import TestimonialsContainer from '../components/TestimonialsContainer/TestimonialsContainer';
 import CardContainer from '../components/CardContainer/CardContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
@@ -33,7 +33,7 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={
-            <TextButtonContainer
+            <TextActionContainer
               title="Sourcery Academy"
               text="Sourcery academy is our free of charge education program created to allow students to improve their skills and prepare for a career in the IT industry. There are three academies available. They serve as our long- term commitment to increase the number of students in Lithuania entering information technologies studies."
             />
@@ -48,7 +48,7 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={
-            <TextButtonContainer
+            <TextActionContainer
               headingLevel={2}
               title="Sourcery for Developers"
               text={getAcademyInfo('intro', 'Sourcery for Developers')}
@@ -65,7 +65,7 @@ function Home() {
         <TextImgContainer
           leftChild={<ImageHolder right image={<MacWithHammer />} />}
           rightChild={
-            <TextButtonContainer
+            <TextActionContainer
               alignRight
               headingLevel={2}
               title="Sourcery for Testers"
@@ -83,7 +83,7 @@ function Home() {
         <TextImgContainer
           leftChild={<ImageHolder right image={<WebTechAbbr />} />}
           rightChild={
-            <TextButtonContainer
+            <TextActionContainer
               headingLevel={2}
               title="Sourcery for Front-End"
               alignRight
@@ -97,7 +97,7 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={
-            <TextButtonContainer
+            <TextActionContainer
               headingLevel={2}
               title="Sourcery for Kids"
               text={getAcademyInfo('intro', 'Sourcery for Kids')}
