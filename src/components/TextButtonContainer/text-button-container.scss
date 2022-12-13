@@ -16,6 +16,7 @@
 
     @each $key, $val in $heading-all-levels {
       &--#{$key} {
+        font-family: var(--font-family-headings);
         font-size: $val;
       }
     }
