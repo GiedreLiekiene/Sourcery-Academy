@@ -9,7 +9,7 @@ const Sidebar = ({ links, close }) => {
   const location = useLocation();
   return (
     <div className="sidebar" onClick={close}>
-      <Link to="/" className="logo">
+      <Link to="/" className="sidebar__logo">
         <LogoSvg />
       </Link>
       {links.map((link) => (
@@ -17,8 +17,8 @@ const Sidebar = ({ links, close }) => {
           to={link.path}
           className={
             location.pathname === link.path
-              ? 'sidebar-link active'
-              : 'sidebar-link'
+              ? 'sidebar__link active'
+              : 'sidebar__link'
           }
           key={link.name}
           onClick={link.onClick}

@@ -1,48 +1,48 @@
 .sidebar {
   animation: slide 0.3s ease-in-out;
   background-color: var(--color-background-links-hover);
-  box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.2),
-    3px 0 5px var(--color-background-shadow);
-  font-family: 'Roboto', sans-serif;
-  height: 100vh;
+  box-shadow: 0 0 0 1000rem rgba(0, 0, 0, 0.2),
+    0.3rem 0 0.5rem var(--color-background-shadow);
+  font-family: var(--font-family);
+  height: 100%;
   left: 0;
   position: fixed;
   top: 0;
-  width: 260px;
+  width: 28rem;
   z-index: 999;
-}
 
-.sidebar-link {
-  border-left: 0.4em solid transparent;
-  color: var(--color-primary);
-  display: block;
-  font-size: 1.1em;
-  margin-bottom: 1em;
-  padding: 0.5em 1em;
-}
+  &__link {
+    border-left: 0.4rem solid transparent;
+    color: var(--color-primary);
+    display: block;
+    font-size: var(--font-size);
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
 
-.sidebar-link:active {
-  border-left: 0.4em solid var(--color-primary);
-}
+  :active {
+    border-left: 0.4rem solid var(--color-primary);
+  }
 
-.sidebar-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-left: 0.4em solid var(--color-primary);
-}
+  :hover {
+    background-color: var(--color-background-links-hover);
+    border-left: 0.4em solid var(--color-primary);
+  }
 
-.sidebar-link.active {
-  color: var(--color-secondary);
-  font-weight: bold;
-}
+  .active {
+    color: var(--color-secondary);
+    font-weight: bold;
+  }
 
-.sidebar-link svg {
-  margin-right: 0.5em;
-  width: 1.2em;
-}
+  &__link svg {
+    margin-right: 0.5rem;
+    width: 1.2rem;
+  }
 
-.logo-svg {
-  line-height: 2.1em;
-  padding-left: 1.4em;
+  &__logo {
+    line-height: 2.1rem;
+    padding-left: 1.4rem;
+  }
 }
 
 @keyframes slide {
