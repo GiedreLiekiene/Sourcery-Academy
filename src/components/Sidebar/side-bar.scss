@@ -1,6 +1,6 @@
 .sidebar {
   animation: slide 0.3s ease-in-out;
-  background-color: var(--color-background-links-hover);
+  background-color: var(--color-white);
   box-shadow: 0 0 0 1000rem rgba(0, 0, 0, 0.2),
     0.3rem 0 0.5rem var(--color-background-shadow);
   font-family: var(--font-family);
@@ -18,15 +18,16 @@
     font-size: var(--font-size);
     margin-bottom: 1rem;
     padding: 0.5rem 1rem;
-  }
+    text-decoration: none;
 
-  :active {
-    border-left: 0.4rem solid var(--color-primary);
-  }
+    &:active {
+      border-left: 0.4rem solid var(--color-primary);
+    }
 
-  :hover {
-    background-color: var(--color-background-links-hover);
-    border-left: 0.4em solid var(--color-primary);
+    &:hover {
+      background-color: var(--color-background-links-hover);
+      border-left: 0.4em solid var(--color-primary);
+    }
   }
 
   .active {
@@ -34,14 +35,10 @@
     font-weight: bold;
   }
 
-  &__link svg {
-    margin-right: 0.5rem;
-    width: 1.2rem;
-  }
-
-  &__logo {
-    line-height: 2.1rem;
-    padding-left: 1.4rem;
+  &__logo svg {
+    height: 4rem;
+    padding: 0.8rem 0.8rem 0;
+    width: 22.2rem;
   }
 }
 
