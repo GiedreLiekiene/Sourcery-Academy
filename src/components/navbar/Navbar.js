@@ -7,6 +7,7 @@ import './navbar.scss';
 import NavbarLink from './NavbarLink';
 import { ROUTES } from '../App/Routes';
 import Sidebar from '../Sidebar/SideBar.jsx';
+import SidebarButton from '../SidebarButton/SidebarButton';
 
 const navigationLinks = [
   {
@@ -74,13 +75,11 @@ const Navbar = () => {
             </NavbarLink>
           ))}
         </div>
-        <div
-          onClick={() => setShowSidebar(!showSidebar)}
-          className={showSidebar ? 'sidebar-btn active' : 'sidebar-btn'}
-        >
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div className="navbar__burger">
+          <SidebarButton
+            onClick={() => setShowSidebar(!showSidebar)}
+            active={showSidebar}
+          />
         </div>
       </div>
       {showSidebar && <Sidebar close={closeSidebar} links={navigationLinks} />}
