@@ -75,7 +75,7 @@ const Navbar = () => {
             </NavbarLink>
           ))}
         </div>
-        <div className="navbar__burgermeniu">
+        <div className="navbar__mobile-meniu">
           <SidebarButton
             onClick={() => setShowSidebar(!showSidebar)}
             active={showSidebar}
