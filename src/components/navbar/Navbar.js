@@ -65,15 +65,18 @@ const Navbar = () => {
           <LogoSvg />
         </Link>
         <div className="navbar__links">
-          {navigationLinks.map((link, index) => (
-            <NavbarLink
-              active={location.pathname === link.path}
-              link={link}
-              key={index}
-            >
-              {link.name}
-            </NavbarLink>
-          ))}
+          {navigationLinks.map((link, index) => {
+            const { path, name } = link;
+            return (
+              <NavbarLink
+                active={location.pathname === path}
+                link={link}
+                key={index}
+              >
+                {name}
+              </NavbarLink>
+            );
+          })}
         </div>
         <div className="navbar__mobile-meniu">
           <SidebarButton
