@@ -21,10 +21,11 @@ const Modal =({open, close, children })=>{
 
   return (
     open? ReactDOM.createPortal(
-      <div className = 'modal' onClick={close}>
-        <div className = 'modal--children' onClick={e => {e.stopPropagation();}}>
+      <div>
+      <button className="modal__overlay" onClick={close}></button>
+      <div className = "modal" >
           {children}
-        </div>
+      </div>
       </div>,document.body):null
   );
 }
@@ -34,5 +35,5 @@ export default Modal
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
   open: PropTypes.bool,
-  close: PropTypes.bool,
+  close: PropTypes.func,
 };
