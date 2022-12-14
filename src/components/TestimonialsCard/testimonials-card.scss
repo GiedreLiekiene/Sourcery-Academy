@@ -1,14 +1,11 @@
 .testimonials-card {
   $_color-shadow-grey: #f6f5f7;
 
-  border: 0.2rem solid var(--color-primary);
-  border-radius: var(--border-radius-m);
-  box-shadow: -2rem 2rem $_color-shadow-grey;
+  background-color: var(--color-white);
   color: var(--color-primary);
   height: 100%;
   position: relative;
   width: 100%;
-  z-index: -1;
 
   &__img-container {
     align-items: center;

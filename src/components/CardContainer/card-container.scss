@@ -8,13 +8,12 @@ $themes: (
 .card-container {
   display: flex;
   flex-direction: column;
-  padding: 0 var(--spacer-xxxl);
 
   &__title {
     font-size: 4.8rem;
     font-weight: 700;
     margin: 0;
-    padding: var(--spacer-xxxl);
+    padding: var(--spacer-l) 0;
 
     &--center {
       align-self: center;
@@ -29,9 +28,5 @@ $themes: (
         color: $val;
       }
     }
-  }
-
-  &__content {
-    padding: 0 var(--spacer-xxxl);
   }
 }

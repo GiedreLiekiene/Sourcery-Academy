@@ -24,11 +24,11 @@
     "start": "npm run dev",
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack -p --mode production",
-    "stylelint:lint": "stylelint \"src/**/*.css\"",
-    "stylelint:fix": "stylelint \"src/**/*.css\" --fix",
+    "stylelint:lint": "stylelint \"src/**/*.{css,scss}\"",
+    "stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
     "stylelint-check": "stylelint-config-prettier-check",
-    "prettier:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "prettier:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
+    "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
     "eslint:check": "eslint \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
     "eslint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,json,md}\""
   },
@@ -100,11 +100,11 @@
       "eslint",
       "git add"
     ],
-    "./src/**/*.css": [
+    "./src/**/*.{css,scss}": [
       "stylelint",
       "git add"
     ],
-    "*.{js,jsx,ts,tsx,json,md,css}": "prettier --write"
+    "*.{js,jsx,ts,tsx,json,md,css,scss}": "prettier --write"
   },
   "husky": {
     "hooks": {

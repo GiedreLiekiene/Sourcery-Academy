@@ -11,15 +11,15 @@ import ScheduleWaveSvg from './background-waves/Academy-pages/ScheduleWave.svg';
 import VideoWaveSvg from './background-waves/Academy-pages/VideoWave.svg';
 
 export const SvgList = {
-  FirstWaveSvg,
-  SecondWaveSvg,
-  ThirdWaveSvg,
-  FourthWaveSvg,
-  ApplyWaveSvg,
-  DatesWaveSvg,
-  MediaWaveSvg,
-  ProcessWaveSvg,
-  ScheduleWaveSvg,
-  VideoWaveSvg,
-  RegisterWaveSvg,
+  FirstWaveSvg: FirstWaveSvg,
+  SecondWaveSvg: SecondWaveSvg,
+  ThirdWaveSvg: ThirdWaveSvg,
+  FourthWaveSvg: FourthWaveSvg,
+  ApplyWaveSvg: ApplyWaveSvg,
+  DatesWaveSvg: DatesWaveSvg,
+  MediaWaveSvg: MediaWaveSvg,
+  ProcessWaveSvg: ProcessWaveSvg,
+  ScheduleWaveSvg: ScheduleWaveSvg,
+  VideoWaveSvg: VideoWaveSvg,
+  RegisterWaveSvg: RegisterWaveSvg,
 };
