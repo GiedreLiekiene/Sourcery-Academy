@@ -2,6 +2,8 @@
 
 .sidebar {
   &__button {
+    background-color: var(--color-button-background);
+    border: 0;
     height: 2.8rem;
     position: relative;
     width: 3rem;

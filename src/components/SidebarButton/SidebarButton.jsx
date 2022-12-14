@@ -4,20 +4,20 @@ import PropTypes from 'prop-types';
 
 const SidebarButton = ({ onClick, active }) => {
   return (
-    <div
+    <button
       onClick={onClick}
       className={active ? 'sidebar__button active' : 'sidebar__button'}
     >
       <div className="sidebar__button--bar"></div>
       <div className="sidebar__button--bar"></div>
       <div className="sidebar__button--bar"></div>
-    </div>
+    </button>
   );
 };
 
-export default SidebarButton;
-
 SidebarButton.propTypes = {
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   active: PropTypes.bool,
 };
+
+export default SidebarButton;
