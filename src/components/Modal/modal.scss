@@ -1,0 +1,21 @@
+.modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  &--children {
+    background-color: white;
+    margin: auto;
+    max-width: 120rem;
+    text-align: center;
+    z-index: 999;
+  }
+}
