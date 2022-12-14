@@ -1,6 +1,8 @@
 import React,{useEffect} from "react";
 import ReactDOM from "react-dom";
 import './modal.scss';
+import PropTypes from "prop-types";
+import TextImgContainer from "../TextImgContainer/TextImgContainer";
 
 const Modal =({open, close, children })=>{
 
@@ -30,3 +32,8 @@ const Modal =({open, close, children })=>{
 
 export default Modal
 
+TextImgContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+  open: PropTypes.bool,
+  close: PropTypes.bool,
+};
