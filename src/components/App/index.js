@@ -11,7 +11,7 @@ import AcademyDevelopers from '../../Pages/SourceryForDevelopers';
 import AcademyFrontEnd from '../../Pages/SourceryForFrontEnd';
 import AcademyKids from '../../Pages/SourceryForKids';
 import AcademyTesters from '../../Pages/SourceryForTesters';
-import NotFound from "../../Pages/NotFound";
+import NotFound from '../../Pages/NotFound';
 import Layout from '~/components/layout/Layout';
 import { ROUTES } from './Routes';
 
@@ -20,16 +20,16 @@ function Routing() {
     <Routes>
       <Route path={ROUTES.home} element={<Home />} />
       <Route path={ROUTES.about} element={<About />} />
-      <Route path={ROUTES.academies} >
+      <Route path={ROUTES.academies}>
         <Route path={ROUTES.forDevelopers} element={<AcademyDevelopers />} />
         <Route path={ROUTES.forTesters} element={<AcademyTesters />} />
         <Route path={ROUTES.forFrontEnd} element={<AcademyFrontEnd />} />
         <Route path={ROUTES.forKids} element={<AcademyKids />} />
-        </Route>
+      </Route>
       <Route path={ROUTES.media} element={<Media />} />
       <Route path={ROUTES.questions} element={<Questions />} />
       <Route path={ROUTES.register} element={<Register />} />
-      <Route path={ROUTES.notFound} element={<NotFound />}/>
+      <Route path={ROUTES.notFound} element={<NotFound />} />
     </Routes>
   );
 }
