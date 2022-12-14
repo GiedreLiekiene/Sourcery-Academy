@@ -1,6 +1,5 @@
 import React from 'react';
 import './side-bar.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useLocation } from 'react-router-dom';
 import LogoSvg from '~/assets/svg/Logo.svg';
 import PropTypes from 'prop-types';
