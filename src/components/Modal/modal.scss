@@ -2,7 +2,6 @@
   &__content {
     background: #fff;
     bottom: 10%;
-    height: 450px;
     left: 0;
     margin: auto;
     overflow: auto;
@@ -14,12 +13,10 @@
     z-index: 100;
 
     &--min {
-      height: 250px;
-      width: 400px;
+      width: 450px;
     }
 
     &--max {
-      height: 652px;
       width: 1084px;
     }
   }
