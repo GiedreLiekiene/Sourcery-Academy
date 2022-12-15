@@ -78,7 +78,7 @@ const Navbar = () => {
             );
           })}
         </div>
-        <div className="navbar__mobile-meniu">
+        <div className="navbar__mobile-menu">
           <SidebarButton
             onClick={() => setShowSidebar(!showSidebar)}
             active={showSidebar}
