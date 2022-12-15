@@ -8,9 +8,9 @@ const SidebarButton = ({ onClick, active }) => {
       onClick={onClick}
       className={active ? 'sidebar__button active' : 'sidebar__button'}
     >
-      <div className="sidebar__button--bar"></div>
-      <div className="sidebar__button--bar"></div>
-      <div className="sidebar__button--bar"></div>
+      <div className="sidebar__button--bar" />
+      <div className="sidebar__button--bar" />
+      <div className="sidebar__button--bar" />
     </button>
   );
 };
