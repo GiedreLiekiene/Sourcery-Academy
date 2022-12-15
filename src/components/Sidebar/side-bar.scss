@@ -43,18 +43,20 @@
     font-weight: bold;
   }
 
-  &__logo svg {
-    padding: 1rem 1rem 0;
-    width: 24rem;
-  }
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(-100%);
+  &__logo {
+    svg {
+      padding: 1rem 1rem 0;
+      width: 24rem;
+    }
   }
 
-  to {
-    transform: translateX(0);
+  @keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
   }
 }
