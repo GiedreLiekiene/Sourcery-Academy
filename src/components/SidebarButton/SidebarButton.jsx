@@ -6,11 +6,11 @@ const SidebarButton = ({ onClick, active }) => {
   return (
     <button
       onClick={onClick}
-      className={active ? 'sidebar__button active' : 'sidebar__button'}
+      className={active ? 'sidebar-button active' : 'sidebar-button'}
     >
-      <div className="sidebar__button--bar" />
-      <div className="sidebar__button--bar" />
-      <div className="sidebar__button--bar" />
+      <div className="sidebar-button--bar" />
+      <div className="sidebar-button--bar" />
+      <div className="sidebar-button--bar" />
     </button>
   );
 };
