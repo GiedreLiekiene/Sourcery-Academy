@@ -13,7 +13,7 @@
       border-radius: var(--border-radius-xxxxxl);
       height: 0.5rem;
       position: absolute;
-      transition: transform calc(var(--animation-speed) * 0.5);
+      transition: transform var(--animation-speed);
       width: 100%;
       z-index: 5;
     }
