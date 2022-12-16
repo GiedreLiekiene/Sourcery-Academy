@@ -1,5 +1,6 @@
 @import '../../sass/variables';
 @import '../../sass/base/typography';
+@import '../../sass/media-queries';
 
 .navbar {
   align-items: center;
@@ -15,7 +16,7 @@
     height: 4rem;
     width: 22.2rem;
 
-    @media screen and (max-width: 1220px) {
+    @include media-query-l {
       font-size: 1.2em;
     }
   }
@@ -45,15 +46,15 @@
       width: 1.4rem;
     }
 
-    @media screen and (max-width: 1220px) {
+    @include media-query-l {
       font-size: 0.8em;
     }
 
-    @media screen and (max-width: 840px) {
+    @include media-query-m {
       font-size: 0.7em;
     }
 
-    @media screen and (max-width: 798px) {
+    @include media-query-s {
       display: none;
     }
   }
