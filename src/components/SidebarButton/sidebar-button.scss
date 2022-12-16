@@ -3,9 +3,14 @@
 .sidebar-button {
   background-color: var(--color-button-background);
   border: 0;
+  display: none;
   height: 2.8rem;
   position: relative;
   width: 3rem;
+
+  @media screen and (max-width: 798px) {
+    display: block;
+  }
 
   &--bar {
     background-color: var(--color-primary);

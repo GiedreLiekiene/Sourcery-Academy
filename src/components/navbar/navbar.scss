@@ -15,6 +15,18 @@
   &__logo {
     height: 4rem;
     width: 22.2rem;
+
+    @media screen and (max-width: 1220px) {
+      font-size: 1.2em;
+    }
+
+    @media screen and (max-width: 840px) {
+      font-size: 1.2em;
+    }
+
+    @media screen and (max-width: 798px) {
+      font-size: 1.2em;
+    }
   }
 
   &__links {
@@ -23,61 +35,35 @@
     justify-content: space-between;
     width: 49rem;
 
-    .active {
-      color: var(--color-secondary);
-      font-weight: 600;
-    }
-
-    &--link {
-      color: var(--color-primary);
-      font-size: 1.8rem;
-      font-weight: 400;
-      letter-spacing: 0.1rem;
-      text-decoration: none;
-    }
-
-    &--link-icon {
-      height: 0.8rem;
-      margin-left: 0.6rem;
-      width: 1.4rem;
-    }
-  }
-
-  &__mobile-menu {
-    display: none;
-  }
-
-  @media screen and (max-width: 1220px) {
-    &__logo {
-      font-size: 1.2em;
-    }
-
-    &__links {
+    @media screen and (max-width: 1220px) {
       font-size: 0.8em;
     }
-  }
 
-  @media screen and (max-width: 840px) {
-    &__logo {
-      font-size: 1.2em;
-    }
-
-    &__links {
+    @media screen and (max-width: 840px) {
       font-size: 0.7em;
     }
-  }
 
-  @media screen and (max-width: 798px) {
-    &__logo {
-      font-size: 1.2em;
-    }
-
-    &__links {
+    @media screen and (max-width: 798px) {
       display: none;
     }
+  }
 
-    &__mobile-menu {
-      display: block;
-    }
+  .active {
+    color: var(--color-secondary);
+    font-weight: 600;
+  }
+
+  &--link {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+  }
+
+  &--link-icon {
+    height: 0.8rem;
+    margin-left: 0.6rem;
+    width: 1.4rem;
   }
 }
