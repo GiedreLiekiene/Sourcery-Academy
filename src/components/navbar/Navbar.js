@@ -78,12 +78,10 @@ const Navbar = () => {
             );
           })}
         </div>
-        <div className="navbar__mobile-menu">
-          <SidebarButton
-            onClick={() => setShowSidebar(!showSidebar)}
-            active={showSidebar}
-          />
-        </div>
+        <SidebarButton
+          onClick={() => setShowSidebar(!showSidebar)}
+          active={showSidebar}
+        />
       </div>
       {showSidebar && <Sidebar close={closeSidebar} links={navigationLinks} />}
     </>
