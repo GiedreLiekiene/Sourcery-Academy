@@ -1,3 +1,12 @@
+// Min-width: 480px (small devices and most phones)
+// Min-width: 768px (most tablets)
+// Min-width: 992px (smaller desktop viewpoints)
+// Min-width: 1200px (large devices and wide screens)
+
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 480px;
+$breakpoint-laptop: 992px;
+
 .modal-container {
   &__content {
     background: #fff;
@@ -12,18 +21,29 @@
     width: 700px;
     z-index: 100;
 
+    @media (max-width: $breakpoint-phone) {
+      width: 380px;
+    }
+
     &--min {
       width: 450px;
     }
 
     &--max {
       width: 1084px;
+
+      @media (max-width: $breakpoint-laptop) {
+        width: 700px;
+      }
+      @media (max-width: $breakpoint-phone) {
+        width: 380px;
+      }
     }
   }
 
   &__overlay {
     background: rgba(0, 0, 0, 0.5);
-    border: none;
+    border: hidden;
     height: 100%;
     left: 0;
     position: fixed;
