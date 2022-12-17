@@ -12,7 +12,7 @@
     display: block;
   }
 
-  &--bar {
+  &__bar {
     background-color: var(--color-primary);
     border-radius: var(--border-radius-xxxxxl);
     height: 0.5rem;
@@ -20,37 +20,39 @@
     transition: transform var(--animation-speed);
     width: 100%;
     z-index: 5;
+
+    &--top {
+      top: 0;
+    }
+
+    &--middle {
+      top: 50%;
+      transform: scaleX(0.8) translateY(-50%);
+    }
+
+    &--bottom {
+      top: 100%;
+      transform: translateY(-100%);
+    }
   }
 
-  &--bar:nth-child(1) {
-    top: 0;
-  }
+  &.is-active {
+    &--top {
+      top: 50%;
+      transform: translate(0, -50%) rotate(45deg);
+      transform-origin: center;
+    }
 
-  &--bar:nth-child(2) {
-    top: 50%;
-    transform: scaleX(0.8) translateY(-50%);
-  }
+    &--middle {
+      top: 50%;
+      transform: scaleX(0) translateY(-50%);
+      transform-origin: center;
+    }
 
-  &--bar:nth-child(3) {
-    top: 100%;
-    transform: translateY(-100%);
-  }
-
-  &.active &--bar:nth-child(1) {
-    top: 50%;
-    transform: translate(0, -50%) rotate(45deg);
-    transform-origin: center;
-  }
-
-  &.active &--bar:nth-child(2) {
-    top: 50%;
-    transform: scaleX(0) translateY(-50%);
-    transform-origin: center;
-  }
-
-  &.active &--bar:nth-child(3) {
-    top: 50%;
-    transform: translate(0, -50%) rotate(-45deg);
-    transform-origin: center;
+    &--bottom {
+      top: 50%;
+      transform: translate(0, -50%) rotate(-45deg);
+      transform-origin: center;
+    }
   }
 }
