@@ -6,8 +6,8 @@ import LogoSvg from '~/assets/svg/Logo.svg';
 import './navbar.scss';
 import NavbarLink from './NavbarLink';
 import { ROUTES } from '../App/Routes';
-import Sidebar from '../Sidebar/SideBar.jsx';
-import SidebarButton from '../SidebarButton/SidebarButton';
+import Mobilemenu from '../Mobilemenu/Mobilemenu.jsx';
+import MobilemenuButton from '../MobilemenuButton/MobilemenuButton';
 
 const navigationLinks = [
   {
@@ -52,11 +52,11 @@ const navigationLinks = [
 ];
 
 const Navbar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showMobilemenu, setShowMobilemenu] = useState(false);
   const location = useLocation();
 
-  function closeSidebar() {
-    setShowSidebar(false);
+  function closeMobilemenu() {
+    setShowMobilemenu(false);
   }
   return (
     <>
@@ -78,12 +78,14 @@ const Navbar = () => {
             );
           })}
         </div>
-        <SidebarButton
-          onClick={() => setShowSidebar(!showSidebar)}
-          active={showSidebar}
+        <MobilemenuButton
+          onClick={() => setShowMobilemenu(!showMobilemenu)}
+          active={showMobilemenu}
         />
       </div>
-      {showSidebar && <Sidebar close={closeSidebar} links={navigationLinks} />}
+      {showMobilemenu && (
+        <Mobilemenu close={closeMobilemenu} links={navigationLinks} />
+      )}
     </>
   );
 };

@@ -1,16 +1,16 @@
 import React from 'react';
-import './side-bar.scss';
+import './mobile-menu.scss';
 import { Link, useLocation } from 'react-router-dom';
 import LogoSvg from '~/assets/svg/Logo.svg';
 import PropTypes from 'prop-types';
 
-const Sidebar = ({ links, close }) => {
+const Mobilemenu = ({ links, close }) => {
   const location = useLocation();
   return (
     <>
       <div className="overlay" onClick={close} />
-      <div className="sidebar" onClick={close}>
-        <Link to="/" className="sidebar__logo">
+      <div className="mobile-menu" onClick={close}>
+        <Link to="/" className="mobile-menu__logo">
           <LogoSvg />
         </Link>
         {links.map(({ path, name, onClick }) => (
@@ -18,8 +18,8 @@ const Sidebar = ({ links, close }) => {
             to={path}
             className={
               location.pathname === path
-                ? 'sidebar__link active'
-                : 'sidebar__link'
+                ? 'mobile-menu__link active'
+                : 'mobile-menu__link'
             }
             key={name}
             onClick={onClick}
@@ -32,9 +32,9 @@ const Sidebar = ({ links, close }) => {
   );
 };
 
-export default Sidebar;
+export default Mobilemenu;
 
-Sidebar.propTypes = {
+Mobilemenu.propTypes = {
   links: PropTypes.array.isRequired,
   close: PropTypes.func,
 };
