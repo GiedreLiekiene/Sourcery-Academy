@@ -37,22 +37,21 @@
   }
 
   &.is-active {
-    &--top {
+    &__bar {
       top: 50%;
-      transform: translate(0, -50%) rotate(45deg);
       transform-origin: center;
-    }
 
-    &--middle {
-      top: 50%;
-      transform: scaleX(0) translateY(-50%);
-      transform-origin: center;
-    }
+      &--top {
+        transform: translate(0, -50%) rotate(45deg);
+      }
 
-    &--bottom {
-      top: 50%;
-      transform: translate(0, -50%) rotate(-45deg);
-      transform-origin: center;
+      &--middle {
+        transform: scaleX(0) translateY(-50%);
+      }
+
+      &--bottom {
+        transform: translate(0, -50%) rotate(-45deg);
+      }
     }
   }
 }
