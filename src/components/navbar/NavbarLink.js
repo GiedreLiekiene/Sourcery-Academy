@@ -52,7 +52,9 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
         onClick={submenu ? openCloseSubmenu : undefined}
       >
         {name}
-        {Icon && <Icon className="navbarlink__icon" />}
+        {Icon && (
+          <Icon className={'navbarlink__icon ' + (showSubmenu ? 'open' : '')} />
+        )}
       </Link>
       {submenu &&
         showSubmenu &&

@@ -14,5 +14,9 @@
     height: 0.8rem;
     margin-left: 0.6rem;
     width: 1.4rem;
+
+    &.open {
+      transform: rotate(180deg);
+    }
   }
 }
