@@ -16,7 +16,7 @@
     height: 4rem;
     width: 22.2rem;
 
-    @include media-query-l {
+    @include media-query-desktop {
       font-size: 1.2em;
     }
   }
@@ -46,15 +46,15 @@
       width: 1.4rem;
     }
 
-    @include media-query-l {
+    @include media-query-desktop {
       font-size: 0.8em;
     }
 
-    @include media-query-m {
+    @include media-query-tablet {
       font-size: 0.7em;
     }
 
-    @include media-query-s {
+    @include media-query-mobile {
       display: none;
     }
   }

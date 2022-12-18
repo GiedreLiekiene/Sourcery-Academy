@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
 
 .mobilemenu-button {
   background-color: var(--color-button-background);
@@ -8,7 +9,7 @@
   position: relative;
   width: 3rem;
 
-  @media screen and (max-width: 798px) {
+  @include media-query-mobile {
     display: block;
   }
 
