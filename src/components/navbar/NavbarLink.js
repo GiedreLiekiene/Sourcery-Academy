@@ -7,6 +7,12 @@ import { useState } from 'react';
 
 const NavbarLink = ({ link: { path, name, Icon, submenu }, active }) => {
   const [dropdown, setDropdown] = useState(false);
+
+  let openDropdown = (e) => {
+    setDropdown((prev) => !prev);
+    e.stopPropagation();
+  };
+
   return (
     <div>
       <Link
@@ -14,7 +20,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, active }) => {
         to={path}
         key={name}
         aria-expanded={dropdown ? 'true' : 'false'}
-        onClick={() => setDropdown((prev) => !prev)}
+        onClick={submenu ? openDropdown : undefined}
       >
         {name}
         {Icon && <Icon className="navbar__links--link-icon" />}

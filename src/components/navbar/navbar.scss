@@ -27,17 +27,17 @@
     justify-content: space-between;
     width: 49rem;
 
-    .active {
-      color: var(--color-secondary);
-      font-weight: 600;
-    }
-
     &--link {
       color: var(--color-primary);
       font-size: 1.8rem;
       font-weight: 400;
       letter-spacing: 0.1rem;
       text-decoration: none;
+
+      &.active {
+        color: var(--color-secondary);
+        font-weight: 600;
+      }
     }
 
     &--link-icon {
