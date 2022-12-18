@@ -26,7 +26,7 @@ const Mobilemenu = ({ links, close }) => {
                 to={path}
                 className={
                   location.pathname === path
-                    ? 'mobile-menu__link active'
+                    ? 'mobile-menu__link is-active'
                     : 'mobile-menu__link'
                 }
                 key={name}
