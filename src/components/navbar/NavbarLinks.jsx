@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import NavbarLink from './NavbarLink';
 import { ROUTES } from '../App/Routes';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
+import PropTypes from 'prop-types';
 
 const navigationLinks = [
   {
@@ -11,7 +12,6 @@ const navigationLinks = [
   },
   {
     name: 'Academies',
-    path: ROUTES.academies,
     Icon: ArrowDownSvg,
     submenu: [
       {
@@ -46,7 +46,7 @@ const navigationLinks = [
   },
 ];
 
-const NavbarLinks = () => {
+const NavbarLinks = ({ popupSubmenu }) => {
   const location = useLocation();
 
   return (
@@ -58,6 +58,7 @@ const NavbarLinks = () => {
             active={location.pathname === path}
             link={link}
             key={path}
+            popupSubmenu={popupSubmenu}
           >
             {name}
           </NavbarLink>
@@ -68,3 +69,7 @@ const NavbarLinks = () => {
 };
 
 export default NavbarLinks;
+
+NavbarLinks.propTypes = {
+  popupSubmenu: PropTypes.bool.isRequired,
+};

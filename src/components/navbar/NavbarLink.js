@@ -5,11 +5,31 @@ import './navbar-link.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-const NavbarLink = ({ link: { path, name, Icon, submenu }, active }) => {
-  const [dropdown, setDropdown] = useState(false);
+const InlineSubmenu = ({ submenuItems }) => {
+  return (
+    <>
+      {submenuItems.map(({ path, name }) => (
+        <Link to={path} key={name} className={'navbarlink submenu'}>
+          {name}
+        </Link>
+      ))}
+    </>
+  );
+};
 
-  let openDropdown = (e) => {
-    setDropdown((prev) => !prev);
+InlineSubmenu.propTypes = {
+  submenuItems: PropTypes.array.isRequired,
+};
+
+const NavbarLink = ({
+  link: { path, name, Icon, submenu },
+  active,
+  popupSubmenu,
+}) => {
+  const [showSubmenu, setShowSubmenu] = useState(false);
+
+  let openCloseSubmenu = (e) => {
+    setShowSubmenu((prev) => !prev);
     e.stopPropagation();
   };
 
@@ -19,13 +39,19 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, active }) => {
         className={'navbarlink' + (active ? ' active' : '')}
         to={path}
         key={name}
-        aria-expanded={dropdown ? 'true' : 'false'}
-        onClick={submenu ? openDropdown : undefined}
+        aria-expanded={showSubmenu && popupSubmenu ? 'true' : 'false'}
+        onClick={submenu ? openCloseSubmenu : undefined}
       >
         {name}
         {Icon && <Icon className="navbarlink__icon" />}
       </Link>
-      {submenu && <Dropdown submenuItems={submenu} dropdown={dropdown} />}
+      {submenu &&
+        showSubmenu &&
+        (popupSubmenu ? (
+          <Dropdown submenuItems={submenu} />
+        ) : (
+          <InlineSubmenu submenuItems={submenu} />
+        ))}
     </div>
   );
 };
@@ -35,4 +61,5 @@ export default NavbarLink;
 NavbarLink.propTypes = {
   link: PropTypes.object.isRequired,
   active: PropTypes.bool,
+  popupSubmenu: PropTypes.bool,
 };

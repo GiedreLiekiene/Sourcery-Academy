@@ -26,12 +26,17 @@
     padding: 0.6rem 1rem;
 
     &:active {
-      border-left: 4px solid var(--color-primary);
+      border-left-color: var(--color-primary);
     }
 
     &:hover {
       background-color: var(--color-background-links-hover);
-      border-left: 4px solid var(--color-primary);
+      border-left-color: var(--color-primary);
+    }
+
+    &.submenu {
+      border-left-width: 12px;
+      padding-left: 2rem;
     }
   }
 

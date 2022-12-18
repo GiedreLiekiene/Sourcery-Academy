@@ -13,7 +13,13 @@ const Mobilemenu = ({ close }) => {
         <Link to="/" className="mobile-menu__logo">
           <LogoSvg />
         </Link>
-        <NavbarLinks />
+        <NavbarLinks
+          popupSubmenu={false}
+          // classNames={{
+          //   menulink: 'mobile-menu__link',
+          //   submenulink: 'mobile-menu__sublink',
+          // }}
+        />
       </div>
     </>
   );

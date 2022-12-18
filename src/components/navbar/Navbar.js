@@ -23,7 +23,7 @@ const Navbar = () => {
           <LogoSvg />
         </Link>
         <div className="navbar__links">
-          <NavbarLinks />
+          <NavbarLinks popupSubmenu={true} />
         </div>
         <MobilemenuButton
           onClick={() => setShowMobilemenu(!showMobilemenu)}
