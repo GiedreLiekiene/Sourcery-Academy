@@ -50,6 +50,54 @@
     }
   }
 
+  &__link-icon {
+    height: 0.8rem;
+    margin-left: 0.6rem;
+    width: 1.4rem;
+  }
+
+  .dropdown-menu {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-background-shadow);
+    border-radius: 0.3rem;
+    box-shadow: 0.3rem 0 0.5rem var(--color-background-shadow);
+    display: none;
+    font-size: var(--font-size);
+    left: 100%;
+    margin-top: -1px;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    width: 20rem;
+    z-index: 999;
+
+    &__link {
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.6rem 1rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--color-background-links-hover);
+      }
+    }
+
+    &__link-icon {
+      height: 0.8rem;
+      margin-left: 0.6rem;
+      width: 1.4rem;
+    }
+  }
+
+  .submenu {
+    display: block;
+    height: 100%;
+    margin-left: 7rem;
+    margin-top: -1rem;
+    position: absolute;
+  }
+
   @keyframes slide {
     from {
       transform: translateX(-100%);
