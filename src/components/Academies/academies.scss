@@ -61,5 +61,10 @@
     height: 5rem;
     padding: 0;
     width: 5rem;
+
+    svg:hover {
+      color: var(--color-background-shadow);
+      transition: 0.2s ease-in-out;
+    }
   }
 }
