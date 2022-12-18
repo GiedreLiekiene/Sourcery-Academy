@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import './dropdown.scss';
 import { Link } from 'react-router-dom';
 
-const Dropdown = ({ submenuItems }) => {
+const Dropdown = ({ submenuItems, close }) => {
   return (
     <ul className="dropdown">
       {submenuItems.map((submenu, index) => (
         <li key={index} className="dropdown__links">
-          <Link to={submenu.path}>{submenu.name}</Link>
+          <Link to={submenu.path} onClick={close}>
+            {submenu.name}
+          </Link>
         </li>
       ))}
     </ul>
@@ -19,4 +21,5 @@ export default Dropdown;
 
 Dropdown.propTypes = {
   submenuItems: PropTypes.array.isRequired,
+  close: PropTypes.func.isRequired,
 };
