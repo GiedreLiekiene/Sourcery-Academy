@@ -1,0 +1,30 @@
+$themes: (
+  primary: var(--color-primary),
+  secondary: var(--color-secondary),
+  tertiary: var(--color-tertiary),
+  quaternary: var(--color-quaternary),
+);
+
+.link-container {
+  border-radius: var(--border-radius-xxxl);
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+  margin: 0;
+  padding: var(--spacer-s) var(--spacer-xl);
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      background-color: $val;
+    }
+  }
+}
