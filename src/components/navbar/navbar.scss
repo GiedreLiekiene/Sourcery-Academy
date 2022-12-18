@@ -27,33 +27,6 @@
     justify-content: space-between;
     width: 49rem;
 
-    &--link {
-      color: var(--color-primary);
-      font-size: 1.8rem;
-      font-weight: 400;
-      letter-spacing: 0.1rem;
-      text-decoration: none;
-
-      &.active {
-        color: var(--color-secondary);
-        font-weight: 600;
-      }
-    }
-
-    &--link-icon {
-      height: 0.8rem;
-      margin-left: 0.6rem;
-      width: 1.4rem;
-    }
-
-    @include media-query-desktop {
-      font-size: 0.8em;
-    }
-
-    @include media-query-tablet {
-      font-size: 0.7em;
-    }
-
     @include media-query-mobile {
       display: none;
     }

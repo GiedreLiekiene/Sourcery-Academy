@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from './Dropdown';
 import { Link } from 'react-router-dom';
-import './navbar.scss';
+import './navbar-link.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
@@ -16,14 +16,14 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, active }) => {
   return (
     <div>
       <Link
-        className={'navbar__links--link' + (active ? ' active' : '')}
+        className={'navbarlink' + (active ? ' active' : '')}
         to={path}
         key={name}
         aria-expanded={dropdown ? 'true' : 'false'}
         onClick={submenu ? openDropdown : undefined}
       >
         {name}
-        {Icon && <Icon className="navbar__links--link-icon" />}
+        {Icon && <Icon className="navbarlink__icon" />}
       </Link>
       {submenu && <Dropdown submenuItems={submenu} dropdown={dropdown} />}
     </div>
