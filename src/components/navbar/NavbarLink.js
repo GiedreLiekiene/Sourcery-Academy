@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Dropdown from './Dropdown';
 import { Link } from 'react-router-dom';
 import './navbar-link.scss';
@@ -6,10 +7,19 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 const InlineSubmenu = ({ submenuItems }) => {
+  const location = useLocation();
+
   return (
     <>
       {submenuItems.map(({ path, name }) => (
-        <Link to={path} key={name} className={'navbarlink submenu'}>
+        <Link
+          to={path}
+          key={name}
+          className={
+            'navbarlink submenu' +
+            (location.pathname.includes(path) ? ' active' : '')
+          }
+        >
           {name}
         </Link>
       ))}
@@ -21,11 +31,10 @@ InlineSubmenu.propTypes = {
   submenuItems: PropTypes.array.isRequired,
 };
 
-const NavbarLink = ({
-  link: { path, name, Icon, submenu },
-  active,
-  popupSubmenu,
-}) => {
+const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
+  const location = useLocation();
+  let active = location.pathname.includes(path);
+
   const [showSubmenu, setShowSubmenu] = useState(false);
 
   let openCloseSubmenu = (e) => {
@@ -37,7 +46,7 @@ const NavbarLink = ({
     <div>
       <Link
         className={'navbarlink' + (active ? ' active' : '')}
-        to={path}
+        to={submenu ? undefined : path}
         key={name}
         aria-expanded={showSubmenu && popupSubmenu ? 'true' : 'false'}
         onClick={submenu ? openCloseSubmenu : undefined}
@@ -60,6 +69,5 @@ export default NavbarLink;
 
 NavbarLink.propTypes = {
   link: PropTypes.object.isRequired,
-  active: PropTypes.bool,
   popupSubmenu: PropTypes.bool,
 };

@@ -1,9 +1,11 @@
+export const ACADEMIES_ROUTE = '/academies/';
+
 export const ROUTES = {
   academies: '',
-  forDevelopers: '/academies/sourcery-for-developers',
-  forTesters: '/academies/sourcery-for-testers',
-  forFrontEnd: '/academies/sourcery-for-front-end',
-  forKids: '/academies/sourcery-for-kids',
+  forDevelopers: ACADEMIES_ROUTE + 'sourcery-for-developers',
+  forTesters: ACADEMIES_ROUTE + 'sourcery-for-testers',
+  forFrontEnd: ACADEMIES_ROUTE + 'sourcery-for-front-end',
+  forKids: ACADEMIES_ROUTE + 'sourcery-for-kids',
   home: '/',
   about: '/about',
   media: '/media',

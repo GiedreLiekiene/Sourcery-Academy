@@ -1,7 +1,6 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import NavbarLink from './NavbarLink';
-import { ROUTES } from '../App/Routes';
+import { ACADEMIES_ROUTE, ROUTES } from '../App/Routes';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
 import PropTypes from 'prop-types';
 
@@ -12,6 +11,7 @@ const navigationLinks = [
   },
   {
     name: 'Academies',
+    path: ACADEMIES_ROUTE,
     Icon: ArrowDownSvg,
     submenu: [
       {
@@ -47,19 +47,12 @@ const navigationLinks = [
 ];
 
 const NavbarLinks = ({ popupSubmenu }) => {
-  const location = useLocation();
-
   return (
     <>
       {navigationLinks.map((link) => {
         const { path, name } = link;
         return (
-          <NavbarLink
-            active={location.pathname === path}
-            link={link}
-            key={path}
-            popupSubmenu={popupSubmenu}
-          >
+          <NavbarLink link={link} key={name} popupSubmenu={popupSubmenu}>
             {name}
           </NavbarLink>
         );
