@@ -1,3 +1,5 @@
+@import '../../sass/media-queries';
+
 .navbar-link {
   color: var(--color-primary);
   font-size: 1.8rem;
@@ -8,6 +10,27 @@
   &.is-active {
     color: var(--color-secondary);
     font-weight: 600;
+  }
+
+  @include media-query-mobile {
+    border-left: 4px solid transparent;
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+
+    &:active {
+      border-left-color: var(--color-primary);
+    }
+
+    &:hover {
+      background-color: var(--color-background-links-hover);
+      border-left-color: var(--color-primary);
+    }
+
+    &.is-submenu {
+      border-left-width: 14px;
+      padding-left: 2rem;
+    }
   }
 
   &__icon {
