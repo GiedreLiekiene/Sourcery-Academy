@@ -58,16 +58,9 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
           />
         )}
       </Link>
-      {submenu &&
-        showSubmenu &&
-        (popupSubmenu ? (
-          <Dropdown
-            submenuItems={submenu}
-            close={() => setShowSubmenu(false)}
-          />
-        ) : (
-          <InlineSubmenu submenuItems={submenu} />
-        ))}
+      <div className="navbar-link__inline">
+        {submenu && showSubmenu && <InlineSubmenu submenuItems={submenu} />}
+      </div>
     </div>
   );
 };
