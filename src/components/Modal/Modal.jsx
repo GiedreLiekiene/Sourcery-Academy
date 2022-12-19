@@ -38,8 +38,8 @@ export default Modal;
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
-  open: PropTypes.bool,
-  close: PropTypes.func,
+  open: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
   min: PropTypes.bool,
   max: PropTypes.bool,
 };

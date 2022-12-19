@@ -1,49 +1,43 @@
-// Min-width: 480px (small devices and most phones)
-// Min-width: 768px (most tablets)
-// Min-width: 992px (smaller desktop viewpoints)
-// Min-width: 1200px (large devices and wide screens)
-
-$breakpoint-tablet: 768px;
-$breakpoint-phone: 480px;
-$breakpoint-laptop: 992px;
+@import 'src/sass/media-queries.scss';
+$color-white: #fff;
 
 .modal-container {
   &__content {
-    background: #fff;
+    background: $color-white;
     bottom: 10%;
-    left: 0;
-    margin: auto;
-    overflow: auto;
+    margin: auto auto auto 50%;
+    overflow-y: auto;
     padding: 10px;
     position: absolute;
-    right: 0;
     top: 20%;
-    width: 700px;
+    transform: translateX(-50%);
+    width: 55rem;
     z-index: 100;
-
-    @media (max-width: $breakpoint-phone) {
-      width: 380px;
+    @include media-query-tablet {
+      width: 49rem;
+    }
+    @include media-query-mobile {
+      width: 35rem;
     }
 
     &--min {
-      width: 450px;
+      width: 35rem;
     }
 
     &--max {
-      width: 1084px;
-
-      @media (max-width: $breakpoint-laptop) {
-        width: 700px;
+      width: 68rem;
+      @include media-query-tablet {
+        width: 49rem;
       }
-      @media (max-width: $breakpoint-phone) {
-        width: 380px;
+      @include media-query-mobile {
+        width: 35rem;
       }
     }
   }
 
   &__overlay {
     background: rgba(0, 0, 0, 0.5);
-    border: hidden;
+    border: 0;
     height: 100%;
     left: 0;
     position: fixed;
