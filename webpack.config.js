@@ -99,7 +99,7 @@ const config = {
       },
       {
         test: /\.svg$/i,
-        issuer: /\.js?$/,
+        issuer: /\.jsx?$/,
         use: ['@svgr/webpack'],
       },
     ],
