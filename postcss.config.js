@@ -8,7 +8,8 @@ module.exports = (context) => ({
       preserve: true,
       importFrom: './src/css/variables.scss',
       autoprefixer: {
-        grid: true,
+        add: true,
+        grid: false,
       },
       features: {
         'nesting-rules': false,
