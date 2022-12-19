@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import ArrowSVG from '~/assets/svg/navbar-icon.svg';
 import './schedule-card.scss';
 
 function ScheduleCard({ id, title, children, theme }) {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <>
-      <h3>
+    <div className="schedule-card">
+      <h3 className="schedule-card__header">
         <button
           id={`${id}-header`}
           aria-controls={`${id}-panel`}
@@ -14,6 +15,7 @@ function ScheduleCard({ id, title, children, theme }) {
           onClick={() => setIsExpanded(!isExpanded)}
         >
           {title}
+          <ArrowSVG />
         </button>
       </h3>
       {isExpanded && (
@@ -25,7 +27,7 @@ function ScheduleCard({ id, title, children, theme }) {
           {children}
         </section>
       )}
-    </>
+    </div>
   );
 }
 

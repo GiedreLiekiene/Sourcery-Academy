@@ -1,3 +1,14 @@
 .schedule-card {
   position: relative;
+  width: 100%;
+
+  &__header button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__header button svg {
+    height: 2rem;
+  }
 }
