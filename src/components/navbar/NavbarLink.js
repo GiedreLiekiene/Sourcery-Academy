@@ -16,7 +16,7 @@ const InlineSubmenu = ({ submenuItems }) => {
           to={path}
           key={name}
           className={
-            'navbarlink submenu' +
+            'navbar-link is-submenu' +
             (location.pathname.includes(path) ? ' active' : '')
           }
         >
@@ -45,7 +45,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
   return (
     <div>
       <Link
-        className={'navbarlink' + (active ? ' active' : '')}
+        className={'navbarlink' + (active ? ' is-active' : '')}
         to={submenu ? undefined : path}
         key={name}
         aria-expanded={showSubmenu && popupSubmenu ? 'true' : 'false'}
@@ -53,7 +53,9 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
       >
         {name}
         {Icon && (
-          <Icon className={'navbarlink__icon ' + (showSubmenu ? 'open' : '')} />
+          <Icon
+            className={'navbarlink__icon ' + (showSubmenu ? 'is-open' : '')}
+          />
         )}
       </Link>
       {submenu &&
