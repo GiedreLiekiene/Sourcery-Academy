@@ -45,7 +45,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
   return (
     <div>
       <Link
-        className={'navbarlink' + (active ? ' is-active' : '')}
+        className={'navbar-link' + (active ? ' is-active' : '')}
         to={submenu ? undefined : path}
         key={name}
         aria-expanded={showSubmenu && popupSubmenu ? 'true' : 'false'}
@@ -54,7 +54,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
         {name}
         {Icon && (
           <Icon
-            className={'navbarlink__icon ' + (showSubmenu ? 'is-open' : '')}
+            className={'navbar-link__icon ' + (showSubmenu ? 'is-open' : '')}
           />
         )}
       </Link>
