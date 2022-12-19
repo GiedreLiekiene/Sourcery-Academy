@@ -1,11 +1,11 @@
-.navbarlink {
+.navbar-link {
   color: var(--color-primary);
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   text-decoration: none;
 
-  &.active {
+  &.is-active {
     color: var(--color-secondary);
     font-weight: 600;
   }
@@ -15,7 +15,7 @@
     margin-left: 0.6rem;
     width: 1.4rem;
 
-    &.open {
+    &.is-open {
       transform: rotate(180deg);
     }
   }
