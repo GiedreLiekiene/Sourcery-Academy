@@ -47,18 +47,14 @@ const navigationLinks = [
 ];
 
 const NavbarLinks = ({ popupSubmenu }) => {
-  return (
-    <>
-      {navigationLinks.map((link) => {
-        const { path, name } = link;
-        return (
-          <NavbarLink link={link} key={name} popupSubmenu={popupSubmenu}>
-            {name}
-          </NavbarLink>
-        );
-      })}
-    </>
-  );
+  return navigationLinks.map((link) => {
+    const { path, name } = link;
+    return (
+      <NavbarLink link={link} key={name} popupSubmenu={popupSubmenu}>
+        {name}
+      </NavbarLink>
+    );
+  });
 };
 
 export default NavbarLinks;
