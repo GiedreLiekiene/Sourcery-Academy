@@ -61,7 +61,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
         )}
       </Link>
       {submenu && showSubmenu && (
-        <div className="navbar-link--submenu">
+        <div className="navbar-link--inline">
           <InlineSubmenu
             submenuItems={submenu}
             close={() => setShowSubmenu(false)}
