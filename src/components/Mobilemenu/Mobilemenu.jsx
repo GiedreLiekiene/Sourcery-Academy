@@ -14,11 +14,11 @@ const Mobilemenu = ({ close }) => {
           <LogoSvg />
         </Link>
         <NavbarLinks
-          popupSubmenu={false}
-          // classNames={{
-          //   menulink: 'mobile-menu__link',
-          //   submenulink: 'mobile-menu__sublink',
-          // }}
+        //popupSubmenu={false}
+        // classNames={{
+        //   menulink: 'mobile-menu__link',
+        //   submenulink: 'mobile-menu__sublink',
+        // }}
         />
       </div>
     </>
