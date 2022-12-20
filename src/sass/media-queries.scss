@@ -3,11 +3,13 @@
     @content;
   }
 }
+
 @mixin media-query-tablet {
   @media screen and (max-width: 840px) {
     @content;
   }
 }
+
 @mixin media-query-mobile {
   @media screen and (max-width: 798px) {
     @content;
