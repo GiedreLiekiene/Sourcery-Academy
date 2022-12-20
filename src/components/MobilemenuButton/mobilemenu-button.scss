@@ -37,20 +37,22 @@
     }
   }
 
-  &.is-active &__bar {
-    top: 50%;
-    transform-origin: center;
+  &.is-active {
+    &__bar {
+      top: 50%;
+      transform-origin: center;
 
-    &--top {
-      transform: translate(0, -50%) rotate(45deg);
-    }
+      &--top {
+        transform: translate(0, -50%) rotate(45deg);
+      }
 
-    &--middle {
-      transform: scaleX(0) translateY(-50%);
-    }
+      &--middle {
+        transform: scaleX(0) translateY(-50%);
+      }
 
-    &--bottom {
-      transform: translate(0, -50%) rotate(-45deg);
+      &--bottom {
+        transform: translate(0, -50%) rotate(-45deg);
+      }
     }
   }
 }
