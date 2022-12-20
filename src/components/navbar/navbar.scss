@@ -28,6 +28,58 @@
     width: 49rem;
 
     @include media-query-mobile {
+      animation: slide 0.3s ease-in-out;
+      background-color: var(--color-white);
+      box-shadow: 0 0 0 1000rem rgba(0, 0, 0, 0.2),
+        0.3rem 0 0.5rem var(--color-background-shadow);
+      display: block;
+      font-family: var(--font-family);
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 28rem;
+      z-index: 999;
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    &__logo {
+      display: none;
+      padding: 1rem 1rem 0;
+      width: 24rem;
+
+      @include media-query-mobile {
+        display: block;
+      }
+    }
+  }
+  @include media-query-mobile {
+    @keyframes slide {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .overlay {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &.hide {
+      display: none;
+    }
+
+    @include media-query-not-mobile {
       display: none;
     }
   }
