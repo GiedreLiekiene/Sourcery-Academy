@@ -6,7 +6,7 @@ import './navbar-link.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-const InlineSubmenu = ({ submenuItems }) => {
+const InlineSubmenu = ({ submenuItems, close }) => {
   const location = useLocation();
 
   return (
@@ -19,6 +19,7 @@ const InlineSubmenu = ({ submenuItems }) => {
             'navbar-link is-submenu' +
             (location.pathname.includes(path) ? ' active' : '')
           }
+          onClick={close}
         >
           {name}
         </Link>
@@ -29,9 +30,10 @@ const InlineSubmenu = ({ submenuItems }) => {
 
 InlineSubmenu.propTypes = {
   submenuItems: PropTypes.array.isRequired,
+  close: PropTypes.func.isRequired,
 };
 
-const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
+const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
   const location = useLocation();
   let active = location.pathname.includes(path);
 
@@ -48,7 +50,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
         className={'navbar-link' + (active ? ' is-active' : '')}
         to={submenu ? undefined : path}
         key={name}
-        aria-expanded={showSubmenu && popupSubmenu ? 'true' : 'false'}
+        aria-expanded={showSubmenu ? 'true' : 'false'}
         onClick={submenu ? openCloseSubmenu : undefined}
       >
         {name}
@@ -58,9 +60,14 @@ const NavbarLink = ({ link: { path, name, Icon, submenu }, popupSubmenu }) => {
           />
         )}
       </Link>
-      <div className="navbar-link__inline">
-        {submenu && showSubmenu && <InlineSubmenu submenuItems={submenu} />}
-      </div>
+      {submenu && showSubmenu && (
+        <div className="navbar-link--submenu">
+          <InlineSubmenu
+            submenuItems={submenu}
+            close={() => setShowSubmenu(false)}
+          />{' '}
+        </div>
+      )}
     </div>
   );
 };
@@ -69,5 +76,4 @@ export default NavbarLink;
 
 NavbarLink.propTypes = {
   link: PropTypes.object.isRequired,
-  popupSubmenu: PropTypes.bool,
 };
