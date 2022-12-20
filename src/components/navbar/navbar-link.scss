@@ -33,6 +33,11 @@
       margin: 0;
       padding-left: 2rem;
     }
+
+    &.active {
+      color: var(--color-secondary);
+      font-weight: 600;
+    }
   }
 
   &__icon {
@@ -91,7 +96,12 @@
       font-size: 1.7rem;
       font-weight: 400;
       padding-left: 2rem;
-      width: 25rem;
+      width: 26rem;
+    }
+
+    &.active {
+      color: var(--color-secondary);
+      font-weight: 600;
     }
   }
 }
