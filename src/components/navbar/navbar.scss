@@ -22,9 +22,12 @@
   }
 
   &__links {
+    background-color: var(--color-white);
     display: flex;
+    font-family: var(--font-family);
     height: 2.1rem;
     justify-content: space-between;
+    padding: 0;
     width: 49rem;
 
     @include media-query-mobile {
@@ -37,6 +40,7 @@
       height: 100%;
       left: 0;
       position: fixed;
+      text-align: start;
       top: 0;
       width: 28rem;
       z-index: 999;
@@ -69,11 +73,12 @@
   }
 
   .overlay {
-    height: 100%;
+    bottom: 0;
     left: 0;
+    opacity: 0.5;
     position: fixed;
+    right: 0;
     top: 0;
-    width: 100%;
 
     &.hide {
       display: none;

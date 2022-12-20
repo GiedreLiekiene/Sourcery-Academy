@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 
 const Navbar = () => {
   const [showMobilemenu, setShowMobilemenu] = useState(false);
-  // const location = useLocation();
 
   function closeMobilemenu() {
     setShowMobilemenu(false);
@@ -22,7 +21,8 @@ const Navbar = () => {
         <Link to={ROUTES.home} className="navbar__logo">
           <LogoSvg />
         </Link>
-        <div
+        <button
+          type="button"
           className={'overlay' + mobileMenuClass}
           onClick={closeMobilemenu}
         />
