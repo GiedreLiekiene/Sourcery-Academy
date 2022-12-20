@@ -5,9 +5,13 @@ import { Link } from 'react-router-dom';
 import './navbar-link.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import classNames from 'classnames';
 
-const InlineSubmenu = ({ submenuItems, close }) => {
+const InlineSubmenu = ({ submenuItems, close, path }) => {
   const location = useLocation();
+  const navbarLinkSubmenuClass = classNames('navbar-link is-submenu', {
+    active: location.pathname.includes(path),
+  });
 
   return (
     <>
@@ -15,10 +19,7 @@ const InlineSubmenu = ({ submenuItems, close }) => {
         <Link
           to={path}
           key={name}
-          className={
-            'navbar-link is-submenu' +
-            (location.pathname.includes(path) ? ' active' : '')
-          }
+          className={navbarLinkSubmenuClass}
           onClick={close}
         >
           {name}
@@ -31,6 +32,7 @@ const InlineSubmenu = ({ submenuItems, close }) => {
 InlineSubmenu.propTypes = {
   submenuItems: PropTypes.array.isRequired,
   close: PropTypes.func.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
@@ -38,6 +40,12 @@ const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
   let active = location.pathname.includes(path);
 
   const [showSubmenu, setShowSubmenu] = useState(false);
+  const navbarLinkClass = classNames('navbar-link', {
+    'is-active': active,
+  });
+  const navbarLinkIconClass = classNames('navbar-link__icon ', {
+    'is-open': showSubmenu,
+  });
 
   let openCloseSubmenu = (e) => {
     setShowSubmenu((prev) => !prev);
@@ -47,18 +55,14 @@ const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
   return (
     <div>
       <Link
-        className={'navbar-link' + (active ? ' is-active' : '')}
+        className={navbarLinkClass}
         to={submenu ? undefined : path}
         key={name}
         aria-expanded={showSubmenu ? 'true' : 'false'}
         onClick={submenu ? openCloseSubmenu : undefined}
       >
         {name}
-        {Icon && (
-          <Icon
-            className={'navbar-link__icon ' + (showSubmenu ? 'is-open' : '')}
-          />
-        )}
+        {Icon && <Icon className={navbarLinkIconClass} />}
       </Link>
       {submenu && showSubmenu && (
         <div className="navbar-link--inline">

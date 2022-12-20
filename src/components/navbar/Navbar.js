@@ -7,14 +7,20 @@ import NavbarLinks from './NavbarLinks';
 import { ROUTES } from '../App/Routes';
 import MobilemenuButton from '../MobilemenuButton/MobilemenuButton';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Navbar = () => {
   const [showMobilemenu, setShowMobilemenu] = useState(false);
+  const overlayButtonClass = classNames('overlay', {
+    hide: !showMobilemenu,
+  });
+  const navbarLinksClass = classNames('navbar__links', {
+    hide: !showMobilemenu,
+  });
 
   function closeMobilemenu() {
     setShowMobilemenu(false);
   }
-  let mobileMenuClass = showMobilemenu ? '' : ' hide';
   return (
     <>
       <div className="navbar">
@@ -23,13 +29,10 @@ const Navbar = () => {
         </Link>
         <button
           type="button"
-          className={'overlay' + mobileMenuClass}
+          className={overlayButtonClass}
           onClick={closeMobilemenu}
         />
-        <div
-          className={'navbar__links' + mobileMenuClass}
-          onClick={closeMobilemenu}
-        >
+        <div className={navbarLinksClass} onClick={closeMobilemenu}>
           <Link to={ROUTES.home} className="navbar__links__logo">
             <LogoSvg />
           </Link>
