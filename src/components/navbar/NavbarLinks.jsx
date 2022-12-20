@@ -2,7 +2,6 @@ import React from 'react';
 import NavbarLink from './NavbarLink';
 import { ACADEMIES_ROUTE, ROUTES } from '../App/Routes';
 import ArrowDownSvg from '~/assets/svg/navbar-icon.svg';
-import PropTypes from 'prop-types';
 
 const navigationLinks = [
   {
@@ -58,5 +57,3 @@ const NavbarLinks = () => {
 };
 
 export default NavbarLinks;
-
-NavbarLinks.propTypes = {};
