@@ -7,24 +7,26 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import classNames from 'classnames';
 
-const InlineSubmenu = ({ submenuItems, close, path }) => {
+const InlineSubmenu = ({ submenuItems, close }) => {
   const location = useLocation();
-  const navbarLinkSubmenuClass = classNames('navbar-link is-submenu', {
-    active: location.pathname.includes(path),
-  });
 
   return (
     <>
-      {submenuItems.map(({ path, name }) => (
-        <Link
-          to={path}
-          key={name}
-          className={navbarLinkSubmenuClass}
-          onClick={close}
-        >
-          {name}
-        </Link>
-      ))}
+      {submenuItems.map(({ path, name }) => {
+        const navbarLinkSubmenuClass = classNames('navbar-link is-submenu', {
+          active: location.pathname.includes(path),
+        });
+        return (
+          <Link
+            to={path}
+            key={name}
+            className={navbarLinkSubmenuClass}
+            onClick={close}
+          >
+            {name}
+          </Link>
+        );
+      })}
     </>
   );
 };
@@ -32,7 +34,6 @@ const InlineSubmenu = ({ submenuItems, close, path }) => {
 InlineSubmenu.propTypes = {
   submenuItems: PropTypes.array.isRequired,
   close: PropTypes.func.isRequired,
-  path: PropTypes.string.isRequired,
 };
 
 const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
@@ -65,7 +66,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
         {Icon && <Icon className={navbarLinkIconClass} />}
       </Link>
       {submenu && showSubmenu && (
-        <div className="navbar-link--inline">
+        <div className="navbar-link__inline">
           <InlineSubmenu
             submenuItems={submenu}
             close={() => setShowSubmenu(false)}
