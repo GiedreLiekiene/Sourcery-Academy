@@ -1,5 +1,7 @@
 .backticks {
-  font-size: 10rem;
+  font-family: var(--font-family-headings);
+  font-size: 3.8rem;
+  font-weight: 700;
   line-height: 0;
 
   &__start {
