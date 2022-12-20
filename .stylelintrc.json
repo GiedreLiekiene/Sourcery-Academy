@@ -14,46 +14,30 @@
       [
         "/color/",
         {
-          "ignoreValues": [
-            "transparent",
-            "inherit",
-            "currentColor"
-          ]
+          "ignoreValues": ["transparent", "inherit", "currentColor"]
         }
       ]
     ],
     "block-closing-brace-newline-after": [
       "always",
       {
-        "ignoreAtRules": [
-          "if",
-          "else"
-        ]
+        "ignoreAtRules": ["if", "else"]
       }
     ],
     "selector-max-id": 0,
     "no-descending-specificity": [
       true,
       {
-        "ignore": [
-          "selectors-within-list"
-        ]
+        "ignore": ["selectors-within-list"]
       }
     ],
-    "order/order": [
-      "custom-properties",
-      "declarations"
-    ],
+    "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": true,
     "max-nesting-depth": 3,
     "property-no-unknown": [
       true,
       {
-        "ignoreProperties": [
-          "composes",
-          "compose-with",
-          "font-range"
-        ]
+        "ignoreProperties": ["composes", "compose-with", "font-range"]
       }
     ],
     "selector-pseudo-class-no-unknown": [
@@ -71,11 +55,10 @@
     "selector-no-qualifying-type": [
       true,
       {
-        "ignore": [
-          "attribute",
-          "class"
-        ]
+        "ignore": ["attribute", "class"]
       }
-    ]
+    ],
+    "at-rule-blacklist": null,
+    "declaration-property-value-blacklist": null
   }
 }

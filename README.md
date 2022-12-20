@@ -274,7 +274,7 @@ Use relative `rem` units for spacing, padding, margin and so on. You can use `px
 
 When working with media queries place them as close to their relevant rule set whenever possible. Don’t bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future.
 
-Use `em` units for setting breakpoints. (`rem` units are not supported in media queries).
+Use `px` units for setting breakpoints. (`rem` units are not supported in media queries and `em` units produce unpredictable results).
 
 ## Project Structure
 
