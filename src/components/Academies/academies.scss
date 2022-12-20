@@ -22,17 +22,28 @@
 
   &__header {
     color: var(--color-violet);
-    font-size: 4.8rem;
-    line-height: 1.25;
+    font: 700 4.8rem / 1.25 var(--font-family-headings);
     margin: 0;
     padding: 0;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 4rem;
+    }
   }
 
   &__description {
+    color: var(--color-main-text);
+    font-family: var(--font-family);
     font-size: 1.8rem;
-    margin: 3rem 0;
+    line-height: 1.5;
+    margin: 3rem 0 0;
+    max-width: 102rem;
     padding: 0;
     text-align: center;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__vertical-line {
@@ -48,5 +59,10 @@
     height: 5rem;
     padding: 0;
     width: 5rem;
+
+    &:hover {
+      fill: var(--color-background-shadow);
+      transition: 0.2s ease-in-out;
+    }
   }
 }
