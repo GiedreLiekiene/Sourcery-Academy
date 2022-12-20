@@ -51,7 +51,7 @@
   }
 
   @include media-query-not-mobile {
-    &--inline {
+    &__inline {
       background: var(--color-white);
       border-radius: 0.7rem;
       box-shadow: (0 1rem 3rem rgba(0, 0, 0, 0.15));
