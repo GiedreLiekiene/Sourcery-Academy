@@ -22,11 +22,6 @@
       border-left-color: var(--color-primary);
     }
 
-    &:hover {
-      background-color: var(--color-background-links-hover);
-      border-left-color: var(--color-primary);
-    }
-
     &.is-submenu {
       border-left-width: 14px;
       font-size: 1.7rem;
@@ -63,7 +58,7 @@
       position: absolute;
 
       &::after {
-        border-bottom: solid 1.5rem #fff;
+        border-bottom: solid 1.5rem var(--color-white);
         border-left: solid 1.5rem transparent;
         border-right: solid 1.5rem transparent;
         content: '';
