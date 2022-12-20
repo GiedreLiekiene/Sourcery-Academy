@@ -29,6 +29,8 @@
 
     &.is-submenu {
       border-left-width: 14px;
+      font-size: 1.7rem;
+      margin: 0;
       padding-left: 2rem;
     }
   }
@@ -46,13 +48,14 @@
   @include media-query-not-mobile {
     &--inline {
       background: var(--color-white);
-      border-radius: 0.5rem;
+      border-radius: 0.7rem;
       box-shadow: (0 1rem 3rem rgba(0, 0, 0, 0.15));
       display: block;
+      font-size: 1.4rem;
       margin-left: -5rem;
+      margin-top: 2rem;
       padding: 0.7rem 0;
       position: absolute;
-      width: 20rem;
 
       &::after {
         border-bottom: solid 1.5rem #fff;
@@ -82,6 +85,15 @@
       :hover {
         background-color: var(--color-background-links-hover);
       }
+    }
+
+    &.is-submenu {
+      border-left-width: 14px;
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.6rem;
+      padding-left: 2rem;
+      width: 25rem;
     }
   }
 }
