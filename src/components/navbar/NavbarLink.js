@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Dropdown from './Dropdown';
 import { Link } from 'react-router-dom';
 import './navbar-link.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import classNames from 'classnames';
 
-const InlineSubmenu = ({ submenuItems, close }) => {
+const InlineSubmenu = ({ submenuItems }) => {
   const location = useLocation();
 
   return (
@@ -17,12 +16,7 @@ const InlineSubmenu = ({ submenuItems, close }) => {
           active: location.pathname.includes(path),
         });
         return (
-          <Link
-            to={path}
-            key={name}
-            className={navbarLinkSubmenuClass}
-            onClick={close}
-          >
+          <Link to={path} key={name} className={navbarLinkSubmenuClass}>
             {name}
           </Link>
         );
@@ -33,7 +27,6 @@ const InlineSubmenu = ({ submenuItems, close }) => {
 
 InlineSubmenu.propTypes = {
   submenuItems: PropTypes.array.isRequired,
-  close: PropTypes.func.isRequired,
 };
 
 const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
@@ -41,6 +34,12 @@ const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
   let active = location.pathname.includes(path);
 
   const [showSubmenu, setShowSubmenu] = useState(false);
+
+  // Automatically close submenu when route changes
+  useEffect(() => {
+    setShowSubmenu(false);
+  }, [location.pathname]);
+
   const navbarLinkClass = classNames('navbar-link', {
     'is-active': active,
   });
@@ -67,10 +66,7 @@ const NavbarLink = ({ link: { path, name, Icon, submenu } }) => {
       </Link>
       {submenu && showSubmenu && (
         <div className="navbar-link__inline">
-          <InlineSubmenu
-            submenuItems={submenu}
-            close={() => setShowSubmenu(false)}
-          />{' '}
+          <InlineSubmenu submenuItems={submenu} />{' '}
         </div>
       )}
     </div>
