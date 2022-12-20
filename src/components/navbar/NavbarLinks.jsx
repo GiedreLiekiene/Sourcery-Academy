@@ -46,11 +46,11 @@ const navigationLinks = [
   },
 ];
 
-const NavbarLinks = ({ popupSubmenu }) => {
+const NavbarLinks = () => {
   return navigationLinks.map((link) => {
     const { path, name } = link;
     return (
-      <NavbarLink link={link} key={name} popupSubmenu={popupSubmenu}>
+      <NavbarLink link={link} key={name}>
         {name}
       </NavbarLink>
     );
@@ -59,6 +59,4 @@ const NavbarLinks = ({ popupSubmenu }) => {
 
 export default NavbarLinks;
 
-NavbarLinks.propTypes = {
-  popupSubmenu: PropTypes.bool.isRequired,
-};
+NavbarLinks.propTypes = {};
