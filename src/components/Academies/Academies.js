@@ -4,6 +4,11 @@ import RoundedArrow from '../../assets/svg/Academies/Rounded-arrow.svg';
 import Particles from '../../assets/svg/Academies/Particles.svg';
 
 export default function Academies() {
+  const scrollHandler = () => {
+    const element = document.getElementsByClassName('section-group')[1];
+    element.scrollIntoView();
+  };
+
   return (
     <section className="academies-container">
       <Particles className="academies-container__particles" />
@@ -19,7 +24,10 @@ export default function Academies() {
           available number of entries.
         </p>
         <span className="academies-container__vertical-line"></span>
-        <button className="academies-container__rounded-arrow">
+        <button
+          onClick={scrollHandler}
+          className="academies-container__rounded-arrow"
+        >
           <RoundedArrow />
         </button>
       </div>
