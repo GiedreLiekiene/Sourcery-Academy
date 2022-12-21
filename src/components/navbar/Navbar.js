@@ -12,10 +12,10 @@ import classNames from 'classnames';
 const Navbar = () => {
   const [showMobilemenu, setShowMobilemenu] = useState(false);
   const overlayButtonClass = classNames('overlay', {
-    hide: !showMobilemenu,
+    'is-hidden': !showMobilemenu,
   });
   const navbarLinksClass = classNames('navbar__links', {
-    hide: !showMobilemenu,
+    'is-hidden': !showMobilemenu,
   });
 
   function closeMobilemenu() {

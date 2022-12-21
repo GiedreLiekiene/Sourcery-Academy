@@ -45,7 +45,7 @@
       width: 28rem;
       z-index: 999;
 
-      &.hide {
+      &.is-hidden {
         display: none;
       }
     }
@@ -80,7 +80,7 @@
     right: 0;
     top: 0;
 
-    &.hide {
+    &.is-hidden {
       display: none;
     }
 
