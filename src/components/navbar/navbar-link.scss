@@ -1,0 +1,102 @@
+@import '../../sass/media-queries';
+
+.navbar-link {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+
+  &.is-active {
+    color: var(--color-secondary);
+    font-weight: 600;
+  }
+
+  @include media-query-mobile {
+    border-left: 4px solid transparent;
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+
+    &:active {
+      border-left-color: var(--color-primary);
+    }
+
+    &.is-submenu {
+      border-left-width: 14px;
+      font-size: 1.7rem;
+      margin: 0;
+      padding-left: 2rem;
+    }
+
+    &.active {
+      color: var(--color-secondary);
+      font-weight: 600;
+    }
+  }
+
+  &__icon {
+    height: 0.8rem;
+    margin-left: 0.6rem;
+    width: 1.4rem;
+
+    &.is-open {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include media-query-not-mobile {
+    &__inline {
+      background: var(--color-white);
+      border-radius: 0.7rem;
+      box-shadow: (0 1rem 3rem rgba(0, 0, 0, 0.15));
+      display: block;
+      font-size: 1.4rem;
+      margin-left: -5rem;
+      margin-top: 2rem;
+      padding: 0.7rem 0;
+      position: absolute;
+
+      &::after {
+        border-bottom: solid 1.5rem var(--color-white);
+        border-left: solid 1.5rem transparent;
+        border-right: solid 1.5rem transparent;
+        content: '';
+        height: 0;
+        left: 50%;
+        margin-left: -1.5rem;
+        margin-top: -1.5rem;
+        position: absolute;
+        top: 0;
+        width: 0;
+      }
+
+      .navbar-link {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 4.8rem;
+        justify-content: center;
+        padding: 1.6rem;
+        width: 20rem;
+      }
+
+      :hover {
+        background-color: var(--color-background-links-hover);
+      }
+    }
+
+    &.is-submenu {
+      font-size: 1.7rem;
+      font-weight: 400;
+      padding-left: 2rem;
+      width: 26rem;
+    }
+
+    &.active {
+      color: var(--color-secondary);
+      font-weight: 600;
+    }
+  }
+}
