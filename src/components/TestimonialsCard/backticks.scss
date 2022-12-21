@@ -1,8 +1,5 @@
 .backticks {
-  font-family: var(--font-family-headings);
-  font-size: 3.8rem;
-  font-weight: 700;
-  line-height: 0;
+  font: 700 3.8rem / 0 var(--font-family-headings);
 
   &__start {
     position: absolute;
