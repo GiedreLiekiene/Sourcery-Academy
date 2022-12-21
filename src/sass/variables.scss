@@ -8,6 +8,7 @@
   --color-violet: #3d3691;
   --color-white: #fff;
   --color-error: #f00;
+  --color-transparent: transparent;
   --color-background-links-hover: #f6f5f7;
   --color-background-shadow: #f6f5f7;
   --color-main-text: #3e3c4e;
@@ -16,6 +17,7 @@
   --font-family-headings: 'Montserrat', sans-serif;
   --line-height-base: 1.2;
   --line-height-headings: 5.9;
+  --animation-speed: 0.5s;
 
   /* Spacers */
   --spacer-xxs: 0.4rem;
@@ -24,6 +26,11 @@
   --border-radius-s: 1.5rem;
   --border-radius-m: 2rem;
   --border-radius-l: 2.5rem;
+  --border-radius-xl: 3rem;
+  --border-radius-xxl: 3.5rem;
+  --border-radius-xxxl: 4rem;
+  --border-radius-xxxxl: 4.5rem;
+  --border-radius-xxxxxl: 5rem;
   --spacer-m: 1.6rem;
   --spacer: var(--spacer-m); /* alias for --spacer-m */
   --spacer-l: 2rem;

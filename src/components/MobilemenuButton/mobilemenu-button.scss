@@ -1,0 +1,58 @@
+@import '../../sass/variables';
+@import '../../sass/media-queries';
+
+.mobilemenu-button {
+  background-color: var(--color-button-background);
+  border: 0;
+  display: none;
+  height: 2.8rem;
+  position: relative;
+  width: 3rem;
+
+  @include media-query-mobile {
+    display: block;
+  }
+
+  &__bar {
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-xxxxxl);
+    height: 0.5rem;
+    position: absolute;
+    transition: transform var(--animation-speed);
+    width: 100%;
+    z-index: 5;
+
+    &--top {
+      top: 0;
+    }
+
+    &--middle {
+      top: 50%;
+      transform: scaleX(0.8) translateY(-50%);
+    }
+
+    &--bottom {
+      top: 100%;
+      transform: translateY(-100%);
+    }
+  }
+
+  &.is-active {
+    &__bar {
+      top: 50%;
+      transform-origin: center;
+
+      &--top {
+        transform: translate(0, -50%) rotate(45deg);
+      }
+
+      &--middle {
+        transform: scaleX(0) translateY(-50%);
+      }
+
+      &--bottom {
+        transform: translate(0, -50%) rotate(-45deg);
+      }
+    }
+  }
+}
