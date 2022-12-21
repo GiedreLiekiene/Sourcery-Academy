@@ -4,10 +4,10 @@ import './modal.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Modal = ({ open, close, children, min, max }) => {
+const Modal = ({ isModalOpen, isModalClose, children, min, max }) => {
   const closeOnEsc = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
-      close();
+      isModalClose();
     }
   };
 
@@ -23,10 +23,10 @@ const Modal = ({ open, close, children, min, max }) => {
     'modal-container__content--max': max,
   });
 
-  return open
+  return isModalOpen
     ? ReactDOM.createPortal(
         <div className="modal-container">
-          <button className="modal-container__overlay" onClick={close}></button>
+          <button className="modal-container__overlay" onClick={isModalClose}></button>
           <div className={modalClass}>{children}</div>
         </div>,
         document.body
