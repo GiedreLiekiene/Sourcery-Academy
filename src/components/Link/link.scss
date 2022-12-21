@@ -1,14 +1,14 @@
 @import '../../sass/variables.scss';
 
 .link-container {
-  border-radius: var(--border-radius-xxxl);
+  border-radius: var(--border-radius-xxxxxxl);
   color: var(--color-white);
   cursor: pointer;
   display: flex;
   font-family: var(--font-family);
   font-size: 1.8rem;
   font-weight: 700;
-  line-height: 17.25pt;
+  line-height: 1.2;
   padding: var(--spacer-s) var(--spacer-xl);
   text-decoration: none;
 
@@ -26,7 +26,7 @@
       opacity: 0.9;
 
       &:focus {
-        border: 0.2rem solid $val;
+        border: 2px solid $val;
       }
     }
   }
