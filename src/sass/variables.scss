@@ -41,3 +41,10 @@ $heading-all-levels: (
   h5: 1.8rem,
   h6: 1.8rem,
 );
+
+$themes: (
+  primary: var(--color-primary),
+  secondary: var(--color-secondary),
+  tertiary: var(--color-tertiary),
+  quaternary: var(--color-quaternary),
+);

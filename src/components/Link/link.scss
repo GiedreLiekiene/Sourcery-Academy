@@ -1,9 +1,4 @@
-$themes: (
-  primary: var(--color-primary),
-  secondary: var(--color-secondary),
-  tertiary: var(--color-tertiary),
-  quaternary: var(--color-quaternary),
-);
+@import '../../sass/variables.scss';
 
 .link-container {
   border-radius: var(--border-radius-xxxl);
@@ -13,18 +8,26 @@ $themes: (
   font-family: var(--font-family);
   font-size: 1.8rem;
   font-weight: 700;
-  line-height: 2.3rem;
-  margin: 0;
+  line-height: 17.25pt;
   padding: var(--spacer-s) var(--spacer-xl);
   text-decoration: none;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @each $key, $val in $themes {
     &--#{$key} {
       background-color: $val;
+      opacity: 0.9;
+
+      &:focus {
+        border: 0.2rem solid $val;
+      }
     }
   }
 }
