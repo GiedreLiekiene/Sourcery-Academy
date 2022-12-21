@@ -1,0 +1,33 @@
+@import '../../sass/variables.scss';
+
+.link-container {
+  border-radius: var(--border-radius-xxxxxxl);
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: var(--spacer-s) var(--spacer-xl);
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      background-color: $val;
+      opacity: 0.9;
+
+      &:focus {
+        border: 2px solid $val;
+      }
+    }
+  }
+}

@@ -31,6 +31,7 @@
   --border-radius-xxxl: 4rem;
   --border-radius-xxxxl: 4.5rem;
   --border-radius-xxxxxl: 5rem;
+  --border-radius-xxxxxxl: 4.8rem;
   --spacer-m: 1.6rem;
   --spacer: var(--spacer-m); /* alias for --spacer-m */
   --spacer-l: 2rem;
@@ -47,4 +48,11 @@ $heading-all-levels: (
   h4: 1.8rem,
   h5: 1.8rem,
   h6: 1.8rem,
+);
+
+$themes: (
+  primary: var(--color-primary),
+  secondary: var(--color-secondary),
+  tertiary: var(--color-tertiary),
+  quaternary: var(--color-quaternary),
 );
