@@ -5,21 +5,28 @@ $padding-size-l: 10rem;
 .text-action-container {
   display: flex;
   flex-direction: column;
-  padding-right: $padding-size-l;
 
   &--right {
     align-items: flex-end;
-    padding-left: $padding-size-l;
-    padding-right: 0;
   }
 
   &__title {
     color: var(--color-primary);
 
     @each $key, $val in $heading-all-levels {
-      &--#{$key} {
-        font-family: var(--font-family-headings);
-        font-size: $val;
+      @if #{$key} == h1 {
+        &--#{$key} {
+          font-family: var(--font-family-headings);
+          font-size: $val;
+          font-weight: 700;
+          max-width: 1rem;
+        }
+      } @else {
+        &--#{$key} {
+          font-family: var(--font-family-headings);
+          font-size: $val;
+          margin: 1rem 0;
+        }
       }
     }
 
@@ -31,6 +38,10 @@ $padding-size-l: 10rem;
   }
 
   &__text {
+    color: var(--color-main-text);
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+    line-height: var(--line-height-small);
     padding-right: $padding-size-m;
 
     &--right {
