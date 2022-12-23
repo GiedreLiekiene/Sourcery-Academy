@@ -8,12 +8,8 @@
 
 .section-group {
   display: flex;
-  padding: 12rem 4rem;
+  padding: 12 4rem;
   position: relative;
-
-  &__text-action-container h1 {
-    max-width: 1rem;
-  }
 
   &__first-wave {
     @include wave-position(50%, right, -2.5rem, -25%);
