@@ -16,6 +16,7 @@ function MediaContainer() {
       try {
         const response = await fetch(mediaUrl);
         const data = await response.json();
+
         setImages(data.slice(0, 6));
       } catch (error) {
         setError('Failed to load...');
@@ -35,7 +36,7 @@ function MediaContainer() {
 
   return (
     <div className="media-container">
-      {images.map(({ thumbnail }, index) => {
+      {images.map(({ thumbnail, src, type }, index) => {
         let extended = index == 1 || index == 5;
         const cardClass = classnames('media-container__item', {
           'media-container__item--extended': extended,
@@ -43,7 +44,11 @@ function MediaContainer() {
         return (
           <div className={cardClass} key={thumbnail}>
             <BoxShadow>
-              <MediaCard imgUrl={thumbnail} />
+              {type === 'video' ? (
+                <MediaCard videoThumbnail={thumbnail} videoUrl={src} />
+              ) : (
+                <MediaCard imgUrl={thumbnail} />
+              )}
             </BoxShadow>
           </div>
         );
