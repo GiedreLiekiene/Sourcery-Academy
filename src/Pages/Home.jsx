@@ -33,10 +33,12 @@ function Home() {
       <div className="section-group">
         <TextImgContainer
           leftChild={
-            <TextActionContainer
-              title="Sourcery Academy"
-              text="Sourcery academy is our free of charge education program created to allow students to improve their skills and prepare for a career in the IT industry. There are three academies available. They serve as our long- term commitment to increase the number of students in Lithuania entering information technologies studies."
-            />
+            <div className="section-group__text-action-container">
+              <TextActionContainer
+                title="Sourcery Academy"
+                text="Sourcery academy is our free of charge education program created to allow students to improve their skills and prepare for a career in the IT industry. There are three academies available. They serve as our long- term commitment to increase the number of students in Lithuania entering information technologies studies."
+              />
+            </div>
           }
           rightChild={<WalkingToLaptopImg />}
           alignCenter

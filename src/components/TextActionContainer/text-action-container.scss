@@ -19,7 +19,6 @@ $padding-size-l: 10rem;
           font-family: var(--font-family-headings);
           font-size: $val;
           font-weight: 700;
-          max-width: 1rem;
         }
       } @else {
         &--#{$key} {
