@@ -12,6 +12,7 @@ $padding-size-l: 10rem;
 
   &__title {
     color: var(--color-primary);
+    padding-right: $padding-size-m;
 
     @each $key, $val in $heading-all-levels {
       @if #{$key} == h1 {
@@ -30,7 +31,7 @@ $padding-size-l: 10rem;
     }
 
     &--right {
-      padding-left: $padding-size-l;
+      padding-left: $padding-size-m;
       padding-right: 0;
       text-align: right;
     }
