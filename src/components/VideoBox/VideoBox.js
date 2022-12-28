@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import Modal from '../Modal/Modal';
 import PlayIcon from '../../assets/svg/PlayIcon.svg';
 import VideoPlayer from './VideoPlayer';
 
@@ -10,7 +10,11 @@ const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
-    setIsModalOpen(!isModalOpen);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -24,7 +28,11 @@ const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc }) => {
           />
         </button>
       </div>
-      {isModalOpen && <VideoPlayer videoSrc={videoSrc} />}
+      {isModalOpen && (
+        <Modal onClickClose={closeModal}>
+          <VideoPlayer videoSrc={videoSrc} />
+        </Modal>
+      )}
     </>
   );
 };
