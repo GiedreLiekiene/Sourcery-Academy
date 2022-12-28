@@ -12,7 +12,6 @@ $padding-size-l: 10rem;
 
   &__title {
     color: var(--color-primary);
-    padding-right: $padding-size-m;
 
     @each $key, $val in $heading-all-levels {
       @if #{$key} == h1 {
