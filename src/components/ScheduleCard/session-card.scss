@@ -1,0 +1,88 @@
+@import '../../sass/variables';
+
+.session-card {
+  align-items: center;
+  border-radius: $radius-s;
+  display: flex;
+  margin: $spacing-m;
+  padding: $spacing-s;
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      border: 2px solid $val;
+    }
+  }
+
+  &__date {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-month {
+      font-size: $font-size-s;
+      margin: 0;
+
+      @each $key, $val in $themes {
+        &--#{$key} {
+          color: $val;
+        }
+      }
+    }
+
+    &-day {
+      font-size: $font-size-m;
+      font-weight: 700;
+      margin: 0;
+
+      @each $key, $val in $themes {
+        &--#{$key} {
+          color: $val;
+        }
+      }
+    }
+  }
+
+  &__location {
+    align-items: center;
+    display: flex;
+    margin-right: $spacing-s;
+
+    &-place {
+      font-size: $font-size-m;
+      margin: 0;
+
+      @each $key, $val in $themes {
+        &--#{$key} {
+          color: $val;
+        }
+      }
+    }
+  }
+
+  @each $key, $val in $themes {
+    &__icon--#{$key} {
+      flex-grow: 0;
+      flex-shrink: 0;
+      height: 2rem;
+      margin: 0 $spacing-s;
+
+      path {
+        fill: $val;
+      }
+    }
+  }
+
+  &__vertical-line {
+    align-self: center;
+    height: 3.5rem;
+    margin: 0 $spacing-s;
+    width: 0.2rem;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        background-color: $val;
+      }
+    }
+  }
+}
