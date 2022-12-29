@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import './media-carousel.scss';
 import PropTypes from 'prop-types';
+import VideoBox from '../VideoBox/VideoBox';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const MediaCarousel = ({ images }) => {
   const [index, setIndex] = useState(0);
   const length = images.length;
+
+  if (length === 0) {
+    return <ErrorMessage message="Cannot display gallery without images" />;
+  }
 
   const handlePrevious = () => {
     const newIndex = index - 1;
@@ -16,6 +22,7 @@ const MediaCarousel = ({ images }) => {
     setIndex(newIndex >= length ? 0 : newIndex);
   };
 
+  let { thumbnail, src, type } = images[index];
   return (
     <div className="carousel">
       <button className="carousel-button--prev" onClick={handlePrevious}>
@@ -24,7 +31,11 @@ const MediaCarousel = ({ images }) => {
       <button className="carousel-button--next" onClick={handleNext}>
         Next
       </button>
-      <img src={images[index].thumbnail}></img>
+      {type != 'video' ? (
+        <img src={thumbnail} />
+      ) : (
+        <VideoBox videoSrc={src} thumbnail={thumbnail} />
+      )}
     </div>
   );
 };
