@@ -5,6 +5,7 @@ import MediaCard from '../MediaCard/MediaCard.js';
 import './media-container.scss';
 import classnames from 'classnames';
 import BoxShadow from '../BoxShadow/BoxShadow.jsx';
+import MediaCarousel from '../MediaCarousel/MediaCarousel.jsx';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
 function MediaContainer() {
@@ -17,7 +18,7 @@ function MediaContainer() {
         const response = await fetch(mediaUrl);
         const data = await response.json();
 
-        setImages(data.slice(0, 6));
+        setImages(data);
       } catch (error) {
         setError('Failed to load...');
       }
@@ -35,25 +36,28 @@ function MediaContainer() {
   }
 
   return (
-    <div className="media-container">
-      {images.map(({ thumbnail, src, type }, index) => {
-        let extended = index == 1 || index == 5;
-        const cardClass = classnames('media-container__item', {
-          'media-container__item--extended': extended,
-        });
-        return (
-          <div className={cardClass} key={thumbnail}>
-            <BoxShadow>
-              {type === 'video' ? (
-                <MediaCard videoThumbnail={thumbnail} videoUrl={src} />
-              ) : (
-                <MediaCard imgUrl={thumbnail} />
-              )}
-            </BoxShadow>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className="media-container">
+        {images.slice(0, 6).map(({ thumbnail, src, type }, index) => {
+          let extended = index == 1 || index == 5;
+          const cardClass = classnames('media-container__item', {
+            'media-container__item--extended': extended,
+          });
+          return (
+            <div className={cardClass} key={thumbnail}>
+              <BoxShadow>
+                {type === 'video' ? (
+                  <MediaCard videoThumbnail={thumbnail} videoUrl={src} />
+                ) : (
+                  <MediaCard imgUrl={thumbnail} />
+                )}
+              </BoxShadow>
+            </div>
+          );
+        })}
+      </div>
+      <MediaCarousel images={images} />
+    </>
   );
 }
 
