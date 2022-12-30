@@ -5,25 +5,11 @@ import ScheduleCard from '../ScheduleCard/ScheduleCard';
 import './schedule-container.scss';
 import classNames from 'classnames';
 import { ThemeContext } from '../../utils/ThemeContext';
+import { months } from './MONTHS';
 import BoxShadow from '../BoxShadow/BoxShadow';
 
 function ScheduleContainer({ academy }) {
   const { theme } = useContext(ThemeContext);
-
-  const months = {
-    Jan: 'January',
-    Feb: 'February',
-    Mar: 'March',
-    Apr: 'April',
-    May: 'May',
-    Jun: 'June',
-    Jul: 'July',
-    Aug: 'August',
-    Sep: 'September',
-    Oct: 'October',
-    Nov: 'November',
-    Dec: 'December',
-  };
 
   function getLectures(academy) {
     return scheduleInformation
