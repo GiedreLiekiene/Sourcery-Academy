@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-import './schedule-card.scss';
 import ScheduleCardHeader from './ScheduleCardHeader';
 import ScheduleCardPanel from './ScheduleCardPanel';
 import BoxShadow from '../BoxShadow/BoxShadow';
@@ -13,25 +12,22 @@ function ScheduleCard({
 
   return (
     <BoxShadow theme={theme}>
-      <div className="schedule-card">
-        <ScheduleCardHeader
+      <ScheduleCardHeader
+        id={id}
+        title={title}
+        isExpanded={isExpanded}
+        setIsExpanded={setIsExpanded}
+      />
+      {isExpanded && (
+        <ScheduleCardPanel
           id={id}
-          title={title}
+          lecturers={lecturers}
+          startTime={startTime}
+          duration={duration}
           isExpanded={isExpanded}
-          setIsExpanded={setIsExpanded}
+          sessions={sessions}
         />
-
-        {isExpanded && (
-          <ScheduleCardPanel
-            id={id}
-            lecturers={lecturers}
-            startTime={startTime}
-            duration={duration}
-            isExpanded={isExpanded}
-            sessions={sessions}
-          />
-        )}
-      </div>
+      )}
     </BoxShadow>
   );
 }
