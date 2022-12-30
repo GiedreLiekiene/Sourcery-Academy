@@ -4,7 +4,6 @@
   border-radius: 0 0 $radius-s $radius-s;
 
   &--open {
-    animation: fadeIn 1s;
     height: auto;
   }
 
@@ -47,15 +46,5 @@
     height: 1.4rem;
     margin: 0 $spacing-s;
     width: 0.2rem;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
