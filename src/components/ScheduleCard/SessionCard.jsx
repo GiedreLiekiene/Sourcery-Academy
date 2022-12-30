@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import IconLocation from '~/assets/svg/icon-location-mark.svg';
 import './session-card.scss';
@@ -7,9 +7,7 @@ import { ThemeContext } from '../../utils/ThemeContext';
 
 function SessionCard({ startTime, location }) {
   const { theme } = useContext(ThemeContext);
-
-  const month = startTime.split(' ')[0].toString();
-  const day = startTime.split(' ')[1].toString();
+  const [month, day] = useMemo(() => startTime.split(' '), []);
 
   const sessionCardClass = classNames('session-card', `session-card--${theme}`);
   const monthClass = classNames(
