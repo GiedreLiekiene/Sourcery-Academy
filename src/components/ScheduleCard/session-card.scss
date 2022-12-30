@@ -18,27 +18,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
 
-    &-month {
-      font-size: $font-size-s;
-      margin: 0;
+  &__date-month {
+    font-size: $font-size-s;
+    margin: 0;
 
-      @each $key, $val in $themes {
-        &--#{$key} {
-          color: $val;
-        }
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
       }
     }
+  }
 
-    &-day {
-      font-size: $font-size-m;
-      font-weight: 700;
-      margin: 0;
+  &__date-day {
+    font-size: $font-size-m;
+    font-weight: 700;
+    margin: 0;
 
-      @each $key, $val in $themes {
-        &--#{$key} {
-          color: $val;
-        }
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
       }
     }
   }
