@@ -2,6 +2,7 @@ import React from 'react';
 import './testimonials-card.scss';
 import PropTypes from 'prop-types';
 import Backticks from './Backticks';
+import classnames from 'classnames';
 
 function TestimonialsCard({ item: { name, photo, message, academy } }) {
   return (
@@ -9,8 +10,10 @@ function TestimonialsCard({ item: { name, photo, message, academy } }) {
       <div className="testimonials-card__img-container">
         <img
           src={photo}
-          alt="Person profile photo"
-          className="testimonials-card__photo"
+          alt={photo ? 'Person profile photo' : 'No photo'}
+          className={classnames('testimonials-card__photo', {
+            'testimonials-card__photo--empty': !photo,
+          })}
         />
       </div>
       <div className="testimonials-card__review">
