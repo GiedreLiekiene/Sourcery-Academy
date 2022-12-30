@@ -71,7 +71,7 @@ function ScheduleContainer({ academy }) {
           {lecturesFirstHalf.map((lecture) => {
             return (
               <div className="schedule-cards__item" key={lecture.id}>
-                <BoxShadow theme={theme}>
+                <BoxShadow>
                   <ScheduleCard scheduleInfo={lecture} />
                 </BoxShadow>
               </div>
@@ -85,7 +85,7 @@ function ScheduleContainer({ academy }) {
           {lecturesSecondHalf.map((lecture) => {
             return (
               <div className="schedule-cards__item" key={lecture.id}>
-                <BoxShadow theme={theme}>
+                <BoxShadow>
                   <ScheduleCard scheduleInfo={lecture} />
                 </BoxShadow>
               </div>
