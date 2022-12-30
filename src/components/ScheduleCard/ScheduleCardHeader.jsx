@@ -19,20 +19,18 @@ function ScheduleCardHeader({ id, title, isExpanded, setIsExpanded }) {
     }
   );
   return (
-    <h3 className="schedule-card-header">
-      <button
-        className={actionClass}
-        id={`${id}-header`}
-        aria-controls={`${id}-panel`}
-        aria-expanded={isExpanded}
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
-        {title}
-        <div className={iconClass}>
-          <IconArrow />
-        </div>
-      </button>
-    </h3>
+    <button
+      className={actionClass}
+      id={`${id}-header`}
+      aria-controls={`${id}-panel`}
+      aria-expanded={isExpanded}
+      onClick={() => setIsExpanded(!isExpanded)}
+    >
+      {title}
+      <div className={iconClass}>
+        <IconArrow />
+      </div>
+    </button>
   );
 }
 

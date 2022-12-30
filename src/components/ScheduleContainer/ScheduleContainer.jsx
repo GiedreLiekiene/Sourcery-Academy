@@ -5,6 +5,7 @@ import ScheduleCard from '../ScheduleCard/ScheduleCard';
 import './schedule-container.scss';
 import classNames from 'classnames';
 import { ThemeContext } from '../../utils/ThemeContext';
+import BoxShadow from '../BoxShadow/BoxShadow';
 
 function ScheduleContainer({ academy }) {
   const { theme } = useContext(ThemeContext);
@@ -70,7 +71,9 @@ function ScheduleContainer({ academy }) {
           {lecturesFirstHalf.map((lecture) => {
             return (
               <div className="schedule-cards__item" key={lecture.id}>
-                <ScheduleCard scheduleInfo={lecture} />
+                <BoxShadow theme={theme}>
+                  <ScheduleCard scheduleInfo={lecture} />
+                </BoxShadow>
               </div>
             );
           })}
@@ -82,7 +85,9 @@ function ScheduleContainer({ academy }) {
           {lecturesSecondHalf.map((lecture) => {
             return (
               <div className="schedule-cards__item" key={lecture.id}>
-                <ScheduleCard scheduleInfo={lecture} />
+                <BoxShadow theme={theme}>
+                  <ScheduleCard scheduleInfo={lecture} />
+                </BoxShadow>
               </div>
             );
           })}

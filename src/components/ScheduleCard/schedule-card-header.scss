@@ -1,15 +1,7 @@
 @import '../../sass/variables';
 
 .schedule-card-header {
-  margin: 0;
-
   &__action {
-    @each $key, $val in $themes {
-      &--#{$key} {
-        background-color: $val;
-      }
-    }
-
     border: 0;
     color: $clr-white;
     display: flex;
@@ -19,9 +11,10 @@
     padding: $spacing-m;
     text-align: left;
     width: 100%;
-
-    &--open {
-      border-radius: 0 $radius-s 0 0;
+    @each $key, $val in $themes {
+      &--#{$key} {
+        background-color: $val;
+      }
     }
 
     &:hover {
@@ -34,7 +27,7 @@
     display: flex;
     flex-shrink: 0;
     margin-left: $spacing-xxl;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.1s ease-in-out;
     width: 2rem;
 
     &--rotated {

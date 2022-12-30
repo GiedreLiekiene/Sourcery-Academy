@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import ScheduleCardHeader from './ScheduleCardHeader';
 import ScheduleCardPanel from './ScheduleCardPanel';
-import BoxShadow from '../BoxShadow/BoxShadow';
 import { ThemeContext } from '../../utils/ThemeContext';
 function ScheduleCard({
   scheduleInfo: { id, title, lecturers, duration, startTime, sessions },
@@ -11,7 +10,7 @@ function ScheduleCard({
   const { theme } = useContext(ThemeContext);
 
   return (
-    <BoxShadow theme={theme}>
+    <>
       <ScheduleCardHeader
         id={id}
         title={title}
@@ -28,7 +27,7 @@ function ScheduleCard({
           sessions={sessions}
         />
       )}
-    </BoxShadow>
+    </>
   );
 }
 
