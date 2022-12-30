@@ -19,10 +19,7 @@ function ScheduleCardPanel({
 
   const panelClass = classNames(
     'schedule-card-panel',
-    `schedule-card-panel--${theme}`,
-    {
-      'schedule-card-panel--open': isExpanded,
-    }
+    `schedule-card-panel--${theme}`
   );
   const panelUpperClass = classNames(
     'schedule-card-panel__upper',

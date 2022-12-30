@@ -39,13 +39,6 @@
   --spacer-xl: 2.4rem;
   --spacer-xxl: 3.2rem;
   --spacer-xxxl: 4rem;
-  --spacing-s: 1rem;
-  --spacing-sm: 1.5rem;
-  --spacing-m: 2rem;
-  --spacing-ml: 2.5rem;
-  --spacing-l: 3rem;
-  --spacing-xl: 3.5rem;
-  --spacing-xxl: 4rem;
 }
 
 $heading-all-levels: (
@@ -58,33 +51,33 @@ $heading-all-levels: (
 );
 //Color Palette
 $themes: (
-  primary: var(--color-primary),
-  secondary: var(--color-secondary),
-  tertiary: var(--color-tertiary),
-  quaternary: var(--color-quaternary),
+  primary: #3d3691,
+  secondary: #0048c1,
+  tertiary: #0b555f,
+  quaternary: #b40031,
 );
 
-$clr-white: var(--color-white);
-$clr-error: var(--color-error);
-$clr-main-text: var(--color-main-text);
-$clr-bkg-links-hover: var(--color-background-links-hover);
-$clr-bkg-shadow: var(--color-background-shadow);
+$color-white: #fff;
+$color-error: #f00;
+$color-main-text: #3e3c4e;
+$color-bkg-links-hover: #f6f5f7;
+$color-bkg-shadow: #f6f5f7;
 
 //Spacing
-$spacing-s: var(--spacing-s);
-$spacing-sm: var(--spacing-sm);
-$spacing-m: var(--spacing-m);
-$spacing-ml: var(--spacing-ml);
-$spacing-l: var(--spacing-l);
-$spacing-xl: var(--spacing-xl);
-$spacing-xxl: var(--spacing-xxl);
+$spacing-s: 1rem;
+$spacing-sm: 1.5rem;
+$spacing-m: 2rem;
+$spacing-ml: 2.5rem;
+$spacing-l: 3rem;
+$spacing-xl: 3.5rem;
+$spacing-xxl: 4rem;
 
 //Radius
-$radius-s: var(--border-radius-s);
-$radius-m: var(--border-radius-m);
-$radius-l: var(--border-radius-l);
+$radius-s: 1.5rem;
+$radius-m: 2rem;
+$radius-l: 2.5rem;
 
 //Font Size
-$font-size-s: var(--font-size-small);
-$font-size-base: var(--font-size-base);
-$font-size-m: var(--font-size);
+$font-size-s: 1.4rem;
+$font-size-base: 1.6rem;
+$font-size-m: 1.8rem;

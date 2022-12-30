@@ -3,10 +3,6 @@
 .schedule-card-panel {
   border-radius: 0 0 $radius-s $radius-s;
 
-  &--open {
-    height: auto;
-  }
-
   &__upper {
     border-bottom-left-radius: $radius-s;
 
@@ -18,7 +14,7 @@
   }
 
   &__lecturers {
-    color: $clr-white;
+    color: $color-white;
     display: flex;
     padding-right: $spacing-m;
   }
@@ -30,7 +26,7 @@
   }
 
   &__time {
-    color: $clr-white;
+    color: $color-white;
     display: flex;
   }
 
@@ -42,7 +38,7 @@
 
   &__vertical-line {
     align-self: center;
-    background-color: $clr-white;
+    background-color: $color-white;
     height: 1.4rem;
     margin: 0 $spacing-s;
     width: 0.2rem;

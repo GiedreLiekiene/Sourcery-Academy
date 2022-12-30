@@ -1,9 +1,9 @@
 @import '../../sass/variables';
 
 .box-shadow {
-  background-color: $clr-white;
+  background-color: $color-white;
   border-radius: $radius-s;
-  box-shadow: calc($spacing-m * -1) $spacing-m $clr-bkg-shadow;
+  box-shadow: calc($spacing-m * -1) $spacing-m $color-bkg-shadow;
   overflow: hidden;
 
   @each $key, $val in $themes {
