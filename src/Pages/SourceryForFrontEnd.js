@@ -5,13 +5,11 @@ import { ThemeProvider } from '../utils/ThemeContext';
 
 function AcademyFrontEnd() {
   return (
-    <>
-      <ThemeProvider theme="tertiary">
-        <CardContainer title="Schedule" center>
-          <ScheduleContainer academy="Sourcery for Front-End" />
-        </CardContainer>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme="tertiary">
+      <CardContainer title="Schedule" center>
+        <ScheduleContainer academy="Sourcery for Front-End" />
+      </CardContainer>
+    </ThemeProvider>
   );
 }
 export default AcademyFrontEnd;
