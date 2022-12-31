@@ -6,11 +6,22 @@ import './media-container.scss';
 import classnames from 'classnames';
 import BoxShadow from '../BoxShadow/BoxShadow.jsx';
 import MediaCarousel from '../MediaCarousel/MediaCarousel.jsx';
+import Modal from '../Modal/Modal.jsx';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
 function MediaContainer() {
   const [error, setError] = useState(null);
   const [images, setImages] = useState(null);
+
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+
+  const showCarousel = () => {
+    setIsCarouselOpen(true);
+  };
+
+  const closeCarousel = () => {
+    setIsCarouselOpen(false);
+  };
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -47,16 +58,24 @@ function MediaContainer() {
             <div className={cardClass} key={thumbnail}>
               <BoxShadow>
                 {type === 'video' ? (
-                  <MediaCard videoThumbnail={thumbnail} videoUrl={src} />
+                  <MediaCard
+                    videoThumbnail={thumbnail}
+                    videoUrl={src}
+                    onClick={showCarousel}
+                  />
                 ) : (
-                  <MediaCard imgUrl={thumbnail} />
+                  <MediaCard imgUrl={thumbnail} onClick={showCarousel} />
                 )}
               </BoxShadow>
             </div>
           );
         })}
       </div>
-      <MediaCarousel images={images} />
+      {isCarouselOpen && (
+        <Modal onClickClose={closeCarousel}>
+          <MediaCarousel images={images} />
+        </Modal>
+      )}
     </>
   );
 }

@@ -6,12 +6,20 @@ import VideoPlayer from './VideoPlayer';
 
 import './video-box.scss';
 
-const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc }) => {
+const VideoBox = ({
+  thumbnail,
+  altInfo,
+  stroke,
+  videoSrc,
+  isPlayable = true,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
+  const showModal = !isPlayable
+    ? null
+    : () => {
+        setIsModalOpen(true);
+      };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -42,6 +50,7 @@ VideoBox.propTypes = {
   altInfo: PropTypes.string,
   stroke: PropTypes.string,
   videoSrc: PropTypes.string.isRequired,
+  isPlayable: PropTypes.bool,
 };
 
 export default VideoBox;
