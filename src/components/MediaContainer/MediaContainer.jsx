@@ -13,14 +13,14 @@ function MediaContainer() {
   const [error, setError] = useState(null);
   const [images, setImages] = useState(null);
 
-  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+  const [carouselInitialIndex, setCarouselInitialIndex] = useState(null);
 
-  const showCarousel = () => {
-    setIsCarouselOpen(true);
+  const showCarousel = (initialIndex) => {
+    setCarouselInitialIndex(initialIndex);
   };
 
   const closeCarousel = () => {
-    setIsCarouselOpen(false);
+    setCarouselInitialIndex(null);
   };
 
   useEffect(() => {
@@ -61,19 +61,22 @@ function MediaContainer() {
                   <MediaCard
                     videoThumbnail={thumbnail}
                     videoUrl={src}
-                    onClick={showCarousel}
+                    onClick={() => showCarousel(index)}
                   />
                 ) : (
-                  <MediaCard imgUrl={thumbnail} onClick={showCarousel} />
+                  <MediaCard
+                    imgUrl={thumbnail}
+                    onClick={() => showCarousel(index)}
+                  />
                 )}
               </BoxShadow>
             </div>
           );
         })}
       </div>
-      {isCarouselOpen && (
+      {carouselInitialIndex !== null && (
         <Modal onClickClose={closeCarousel}>
-          <MediaCarousel images={images} />
+          <MediaCarousel images={images} initialIndex={carouselInitialIndex} />
         </Modal>
       )}
     </>

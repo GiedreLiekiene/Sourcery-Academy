@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './media-carousel.scss';
 import PropTypes from 'prop-types';
-import VideoBox from '../VideoBox/VideoBox';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import VideoPlayer from '../VideoBox/VideoPlayer';
 
-const MediaCarousel = ({ images }) => {
-  const [index, setIndex] = useState(0);
+const MediaCarousel = ({ images, initialIndex = 0 }) => {
+  const [index, setIndex] = useState(initialIndex);
   const length = images.length;
 
   if (length === 0) {
@@ -34,7 +34,7 @@ const MediaCarousel = ({ images }) => {
       {type != 'video' ? (
         <img src={thumbnail} />
       ) : (
-        <VideoBox videoSrc={src} thumbnail={thumbnail} />
+        <VideoPlayer videoSrc={src} />
       )}
     </div>
   );
@@ -42,6 +42,7 @@ const MediaCarousel = ({ images }) => {
 
 MediaCarousel.propTypes = {
   images: PropTypes.array.isRequired,
+  initialIndex: PropTypes.number,
 };
 
 export default MediaCarousel;
