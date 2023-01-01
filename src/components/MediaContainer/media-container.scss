@@ -1,3 +1,5 @@
+@import '../../sass/media-queries';
+
 .media-container {
   display: flex;
   flex-direction: row;
@@ -13,9 +15,12 @@
     }
   }
 
-  @media only screen and (max-width: 900px) {
+  @include media-query-mobile {
+    &__item {
+      width: calc(40% - 4rem / 2);
+    }
+
     flex-wrap: wrap;
-    height: 22rem;
-    width: 100%;
+    gap: 2rem;
   }
 }
