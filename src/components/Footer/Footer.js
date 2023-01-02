@@ -15,21 +15,21 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          <SvgFacebook className="footer__social-icon footer__social-icon--facebook" />
+          <SvgFacebook className="social-media-icon social-media-icon--facebook" />
         </a>
         <a
           href="https://twitter.com/devbridge"
           target="_blank"
           rel="noreferrer"
         >
-          <SvgTwitter className="footer__social-icon footer__social-icon--twitter" />
+          <SvgTwitter className="social-media-icon social-media-icon--twitter" />
         </a>
         <a
           href="https://www.instagram.com/devbridge/"
           target="_blank"
           rel="noreferrer"
         >
-          <SvgInstagram className="footer__social-icon footer__social-icon--instagram" />
+          <SvgInstagram className="social-media-icon social-media-icon--instagram" />
         </a>
       </div>
       <p className="footer__copyright">Copyright © {year} Sourcery Academy</p>

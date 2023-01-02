@@ -1,8 +1,10 @@
+@import '../../sass/variables';
+@import '../../sass/media-queries';
+
 //Variables
 $_color-footer-twitter: #1da1f2;
 $_color-footer-facebook: #3b5998;
 $_color-footer-instagram: #8a3ab9;
-$_color-footer-purple: #3d3691;
 
 .footer {
   align-items: center;
@@ -18,48 +20,52 @@ $_color-footer-purple: #3d3691;
     justify-content: center;
   }
 
-  &__social-icon {
-    height: 4rem;
+  &__copyright {
+    color: map-get($map: $themes, $key: primary);
+    font-size: 1.4rem;
     margin: 1rem;
-    width: 4rem;
 
+    @include media-query-mobile {
+      text-align: right;
+    }
+  }
+}
+
+.social-media-icon {
+  height: 4rem;
+  margin: 1rem;
+  width: 4rem;
+
+  &:hover {
+    .icon-background {
+      fill: none;
+    }
+  }
+
+  &--facebook {
     &:hover {
-      .icon-background {
-        fill: none;
-      }
-    }
-
-    &--facebook {
-      &:hover {
-        .icon-logo {
-          fill: $_color-footer-facebook;
-          stroke: $_color-footer-facebook;
-        }
-      }
-    }
-
-    &--twitter {
-      &:hover {
-        .icon-logo {
-          fill: $_color-footer-twitter;
-          stroke: $_color-footer-twitter;
-        }
-      }
-    }
-
-    &--instagram {
-      &:hover {
-        .icon-logo {
-          fill: none;
-          stroke: $_color-footer-instagram;
-        }
+      .icon-logo {
+        fill: $_color-footer-facebook;
+        stroke: $_color-footer-facebook;
       }
     }
   }
 
-  &__copyright {
-    color: $_color-footer-purple;
-    font-size: 1.4rem;
-    margin: 1rem;
+  &--twitter {
+    &:hover {
+      .icon-logo {
+        fill: $_color-footer-twitter;
+        stroke: $_color-footer-twitter;
+      }
+    }
+  }
+
+  &--instagram {
+    &:hover {
+      .icon-logo {
+        fill: none;
+        stroke: $_color-footer-instagram;
+      }
+    }
   }
 }
