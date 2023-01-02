@@ -34,7 +34,7 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
     setIndex(newIndex >= length ? 0 : newIndex);
   };
 
-  let { thumbnail, src, type } = images[index];
+  let { src, type } = images[index];
   return (
     <div className="carousel">
       <button
@@ -49,11 +49,7 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
       >
         <Arrow isLeft={false} />
       </button>
-      {type != 'video' ? (
-        <img src={thumbnail} />
-      ) : (
-        <VideoPlayer videoSrc={src} />
-      )}
+      {type != 'video' ? <img src={src} /> : <VideoPlayer videoSrc={src} />}
     </div>
   );
 };
