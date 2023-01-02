@@ -10,13 +10,7 @@
     grid-template-columns: 1fr;
   }
 
-  &__left {
-    align-content: start;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  &__right {
+  &__column {
     align-content: start;
     display: grid;
     grid-template-columns: 1fr;

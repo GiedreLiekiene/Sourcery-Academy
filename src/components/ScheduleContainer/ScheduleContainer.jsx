@@ -51,7 +51,7 @@ function ScheduleContainer({ academy }) {
 
   return (
     <div className="schedule-container">
-      <div className="schedule-container__left">
+      <div className="schedule-container__column">
         <h2 className={titleClass}>{firstTitle}</h2>
         <div className="schedule-cards">
           {lecturesFirstHalf.map((lecture) => {
@@ -65,7 +65,7 @@ function ScheduleContainer({ academy }) {
           })}
         </div>
       </div>
-      <div className="schedule-container__right">
+      <div className="schedule-container__column">
         <h2 className={titleClass}>{secondTitle}</h2>
         <div className="schedule-cards">
           {lecturesSecondHalf.map((lecture) => {
