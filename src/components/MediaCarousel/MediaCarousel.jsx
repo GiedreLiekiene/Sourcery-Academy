@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import VideoPlayer from '../VideoBox/VideoPlayer';
 
+const Arrow = ({ isLeft }) => {
+  return (
+    <span
+      className={isLeft ? 'arrow arrow--left' : 'arrow arrow--right'}
+    ></span>
+  );
+};
+
 const MediaCarousel = ({ images, initialIndex = 0 }) => {
   const [index, setIndex] = useState(initialIndex);
   const length = images.length;
@@ -25,11 +33,17 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
   let { thumbnail, src, type } = images[index];
   return (
     <div className="carousel">
-      <button className="carousel-button--prev" onClick={handlePrevious}>
-        Previous
+      <button
+        className="carousel__button carousel__button--prev"
+        onClick={handlePrevious}
+      >
+        <Arrow isLeft={true} />
       </button>
-      <button className="carousel-button--next" onClick={handleNext}>
-        Next
+      <button
+        className="carousel__button carousel__button--next"
+        onClick={handleNext}
+      >
+        <Arrow isLeft={false} />
       </button>
       {type != 'video' ? (
         <img src={thumbnail} />
@@ -38,6 +52,10 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
       )}
     </div>
   );
+};
+
+Arrow.propTypes = {
+  isLeft: PropTypes.bool.isRequired,
 };
 
 MediaCarousel.propTypes = {
