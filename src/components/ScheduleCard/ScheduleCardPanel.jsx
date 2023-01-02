@@ -45,14 +45,8 @@ function ScheduleCardPanel({
         </div>
       </div>
       <div className="schedule-card-panel__lower">
-        {sessions.map((session, index) => {
-          return (
-            <SessionCard
-              key={index}
-              location={session.city}
-              startTime={session.date}
-            />
-          );
+        {sessions.map(({ city, date }, index) => {
+          return <SessionCard key={index} location={city} startTime={date} />;
         })}
       </div>
     </section>
