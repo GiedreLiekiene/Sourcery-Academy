@@ -7,7 +7,7 @@ function AcademyDevelopers() {
   return (
     <ThemeProvider theme="secondary">
       <CardContainer title="Schedule" center>
-        <ScheduleContainer academy="Sourcery for Testers" />
+        <ScheduleContainer academy="Sourcery for Developers" />
       </CardContainer>
     </ThemeProvider>
   );
