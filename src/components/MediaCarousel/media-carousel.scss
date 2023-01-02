@@ -1,0 +1,54 @@
+.carousel {
+  &__button {
+    background: none;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-xxxs);
+    color: var(--color-violet);
+    cursor: pointer;
+    font-size: 2rem;
+    opacity: 0.5;
+    padding: 0 0.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-background-links-hover);
+      color: var(--first-color);
+      opacity: 1;
+      outline: 1px solid var(--color-background-links-hover);
+    }
+
+    &--prev {
+      left: 1rem;
+    }
+
+    &--next {
+      right: 1rem;
+    }
+  }
+
+  &__arrow {
+    border: solid var(--color-black);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 0.5rem;
+
+    &--left {
+      transform: rotate(135deg);
+    }
+
+    &--right {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.video-box {
+  border-radius: unset;
+  height: 22rem;
+  width: 100%;
+}

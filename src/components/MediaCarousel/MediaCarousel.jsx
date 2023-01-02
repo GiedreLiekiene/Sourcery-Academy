@@ -7,7 +7,11 @@ import VideoPlayer from '../VideoBox/VideoPlayer';
 const Arrow = ({ isLeft }) => {
   return (
     <span
-      className={isLeft ? 'arrow arrow--left' : 'arrow arrow--right'}
+      className={
+        isLeft
+          ? 'carousel__arrow carousel__arrow--left'
+          : 'carousel__arrow carousel__arrow--right'
+      }
     ></span>
   );
 };
