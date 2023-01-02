@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './footer.scss';
 import SvgFacebook from '~/assets/svg/icon-facebook.svg';
 import SvgTwitter from '~/assets/svg/icon-twitter.svg';
 import SvgInstagram from '~/assets/svg/icon-instagram.svg';
 
 export default function Footer() {
+  const year = useMemo(() => new Date().getFullYear(), []);
+
   return (
     <footer className="footer">
       <div className="footer__social-icons">
@@ -30,7 +32,7 @@ export default function Footer() {
           <SvgInstagram className="footer__social-icon footer__social-icon--instagram" />
         </a>
       </div>
-      <p className="footer__copyright">Copyright © 2022 Sourcery Academy</p>
+      <p className="footer__copyright">Copyright © {year} Sourcery Academy</p>
     </footer>
   );
 }
