@@ -43,19 +43,19 @@
     }
   }
 
-  &__location {
+  &__location-container {
     align-items: center;
     display: flex;
     margin-right: $spacing-s;
+  }
 
-    &-place {
-      font-size: $font-size-m;
-      margin: 0;
+  &__location-place {
+    font-size: $font-size-m;
+    margin: 0;
 
-      @each $key, $val in $themes {
-        &--#{$key} {
-          color: $val;
-        }
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
       }
     }
   }

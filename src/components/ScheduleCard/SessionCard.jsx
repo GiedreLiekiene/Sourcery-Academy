@@ -34,7 +34,7 @@ function SessionCard({ startTime, location }) {
         <p className={dayClass}>{day}</p>
       </div>
       <span className={verticalLineClass}></span>
-      <div className="session-card__location">
+      <div className="session-card__location-container">
         <IconLocation className={iconClass} />
         <p className={placeClass}>{location}</p>
       </div>
