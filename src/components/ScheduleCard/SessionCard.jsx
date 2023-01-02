@@ -26,7 +26,7 @@ function SessionCard({ startTime, location }) {
     'session-card__vertical-line',
     `session-card__vertical-line--${theme}`
   );
-  const iconClass = classNames(`session-card__icon--${theme}`);
+  const markerClass = classNames('location-mark', `location-mark--${theme}`);
   return (
     <div className={sessionCardClass}>
       <div className="session-card__date">
@@ -35,7 +35,7 @@ function SessionCard({ startTime, location }) {
       </div>
       <span className={verticalLineClass}></span>
       <div className="session-card__location-container">
-        <IconLocation className={iconClass} />
+        <IconLocation className={markerClass} />
         <p className={placeClass}>{location}</p>
       </div>
     </div>

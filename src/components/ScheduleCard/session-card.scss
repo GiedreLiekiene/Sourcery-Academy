@@ -60,19 +60,6 @@
     }
   }
 
-  @each $key, $val in $themes {
-    &__icon--#{$key} {
-      flex-grow: 0;
-      flex-shrink: 0;
-      height: 2rem;
-      margin: 0 $spacing-s;
-
-      path {
-        fill: $val;
-      }
-    }
-  }
-
   &__vertical-line {
     align-self: center;
     height: 3.5rem;
@@ -82,6 +69,21 @@
     @each $key, $val in $themes {
       &--#{$key} {
         background-color: $val;
+      }
+    }
+  }
+}
+
+.location-mark {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 2rem;
+  margin: 0 $spacing-s;
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      path {
+        fill: $val;
       }
     }
   }
