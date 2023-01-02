@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import scheduleInformation from '../../utils/scheduleInformation.json';
 import ScheduleCard from '../ScheduleCard/ScheduleCard';
@@ -11,38 +11,59 @@ import BoxShadow from '../BoxShadow/BoxShadow';
 function ScheduleContainer({ academy }) {
   const { theme } = useContext(ThemeContext);
 
-  function getLectures(academy) {
+  const getLectures = (academy) => {
     return scheduleInformation
       .filter((item) => item.name === academy)
       .map((item) => item.lectures)[0];
-  }
+  };
 
-  const lectures = getLectures(academy);
+  const lectures = useMemo(() => getLectures(academy), []);
 
-  const half = Math.ceil(lectures.length / 2);
-  const lecturesFirstHalf = lectures.slice(0, half);
-  const lecturesSecondHalf = lectures.slice(half);
+  const getMonthsTitle = (lectures) => {
+    return lectures
+      .flatMap(({ sessions }) => sessions.map(({ date }) => date.split(' ')[0]))
+      .filter((item, index, array) => array.indexOf(item) === index)
+      .map((month) =>
+        months.hasOwnProperty(month) ? months[month] : undefined
+      )
+      .join(' / ');
+  };
 
-  const firstHalfMonths = lecturesFirstHalf.flatMap((item) =>
-    item.sessions.map((session) => session.date.split(' ')[0])
+  const getHalves = (lectures) => {
+    const half = Math.ceil(lectures.length / 2);
+    const firstHalf = lectures.slice(0, half);
+    const secondHalf = lectures.slice(half);
+
+    return [firstHalf, secondHalf];
+  };
+
+  const getQuarters = (lectures) => {
+    const half = Math.ceil(lectures.length / 2);
+    const firstHalf = lectures.slice(0, half);
+    const secondHalf = lectures.slice(half);
+
+    const firstQuarter = firstHalf.slice(0, Math.ceil(firstHalf.length / 2));
+    const secondQuarter = firstHalf.slice(Math.ceil(firstHalf.length / 2));
+    const thirdQuarter = secondHalf.slice(0, Math.ceil(secondHalf.length / 2));
+    const fourthQuarter = secondHalf.slice(Math.ceil(secondHalf.length / 2));
+
+    return [firstQuarter, secondQuarter, thirdQuarter, fourthQuarter];
+  };
+
+  const [
+    lecturesFirstQuarter,
+    lecturesSecondQuarter,
+    lecturesThirdQuarter,
+    lecturesFourthQuarter,
+  ] = useMemo(() => getQuarters(lectures), []);
+
+  const [lecturesFirstHalf, lecturesSecondHalf] = useMemo(
+    () => getHalves(lectures),
+    []
   );
-  const secondHalfMonths = lecturesSecondHalf.flatMap((item) =>
-    item.sessions.map((session) => session.date.split(' ')[0])
-  );
 
-  const firstHalfNoDuplicates = firstHalfMonths.filter(
-    (item, index) => firstHalfMonths.indexOf(item) === index
-  );
-  const secondHalfNoDuplicates = secondHalfMonths.filter(
-    (item, index) => secondHalfMonths.indexOf(item) === index
-  );
-
-  const firstTitle = firstHalfNoDuplicates
-    .map((key) => (months.hasOwnProperty(key) ? months[key] : undefined))
-    .join(' / ');
-  const secondTitle = secondHalfNoDuplicates
-    .map((key) => (months.hasOwnProperty(key) ? months[key] : undefined))
-    .join(' / ');
+  const firstTitle = useMemo(() => getMonthsTitle(lecturesFirstHalf), []);
+  const secondTitle = useMemo(() => getMonthsTitle(lecturesSecondHalf), []);
 
   const titleClass = classNames(
     'schedule-container__title',
@@ -53,10 +74,21 @@ function ScheduleContainer({ academy }) {
     <div className="schedule-container">
       <div className="schedule-container__column">
         <h2 className={titleClass}>{firstTitle}</h2>
-        <div className="schedule-cards">
-          {lecturesFirstHalf.map((lecture) => {
+        <div className="schedule-container__cards">
+          {lecturesFirstQuarter.map((lecture) => {
             return (
-              <div className="schedule-cards__item" key={lecture.id}>
+              <div key={lecture.id}>
+                <BoxShadow>
+                  <ScheduleCard scheduleInfo={lecture} />
+                </BoxShadow>
+              </div>
+            );
+          })}
+        </div>
+        <div className="schedule-container__cards">
+          {lecturesSecondQuarter.map((lecture) => {
+            return (
+              <div key={lecture.id}>
                 <BoxShadow>
                   <ScheduleCard scheduleInfo={lecture} />
                 </BoxShadow>
@@ -67,10 +99,21 @@ function ScheduleContainer({ academy }) {
       </div>
       <div className="schedule-container__column">
         <h2 className={titleClass}>{secondTitle}</h2>
-        <div className="schedule-cards">
-          {lecturesSecondHalf.map((lecture) => {
+        <div className="schedule-container__cards">
+          {lecturesThirdQuarter.map((lecture) => {
             return (
-              <div className="schedule-cards__item" key={lecture.id}>
+              <div key={lecture.id}>
+                <BoxShadow>
+                  <ScheduleCard scheduleInfo={lecture} />
+                </BoxShadow>
+              </div>
+            );
+          })}
+        </div>
+        <div className="schedule-container__cards">
+          {lecturesFourthQuarter.map((lecture) => {
+            return (
+              <div key={lecture.id}>
                 <BoxShadow>
                   <ScheduleCard scheduleInfo={lecture} />
                 </BoxShadow>
