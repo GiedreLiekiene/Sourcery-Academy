@@ -1,17 +1,13 @@
 @import '../../sass/variables';
 
 .session-card {
+  $this: &;
+
   align-items: center;
   border-radius: $radius-s;
   display: flex;
   margin: $spacing-m;
   padding: $spacing-s;
-
-  @each $key, $val in $themes {
-    &--#{$key} {
-      border: 2px solid $val;
-    }
-  }
 
   &__date {
     align-items: center;
@@ -23,24 +19,12 @@
   &__date-month {
     font-size: $font-size-s;
     margin: 0;
-
-    @each $key, $val in $themes {
-      &--#{$key} {
-        color: $val;
-      }
-    }
   }
 
   &__date-day {
     font-size: $font-size-m;
     font-weight: 700;
     margin: 0;
-
-    @each $key, $val in $themes {
-      &--#{$key} {
-        color: $val;
-      }
-    }
   }
 
   &__location-container {
@@ -52,12 +36,13 @@
   &__location-place {
     font-size: $font-size-m;
     margin: 0;
+  }
 
-    @each $key, $val in $themes {
-      &--#{$key} {
-        color: $val;
-      }
-    }
+  &__location-mark {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 2rem;
+    margin: 0 $spacing-s;
   }
 
   &__vertical-line {
@@ -65,24 +50,23 @@
     height: 3.5rem;
     margin: 0 $spacing-s;
     width: 0.2rem;
-
-    @each $key, $val in $themes {
-      &--#{$key} {
-        background-color: $val;
-      }
-    }
   }
-}
-
-.location-mark {
-  flex-grow: 0;
-  flex-shrink: 0;
-  height: 2rem;
-  margin: 0 $spacing-s;
 
   @each $key, $val in $themes {
     &--#{$key} {
-      path {
+      border: 2px solid $val;
+
+      #{$this}__date-month,
+      #{$this}__date-day,
+      #{$this}__location-place {
+        color: $val;
+      }
+
+      #{$this}__vertical-line {
+        background-color: $val;
+      }
+
+      #{$this}__location-mark {
         fill: $val;
       }
     }

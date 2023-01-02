@@ -8,35 +8,18 @@ import { ThemeContext } from '../../utils/ThemeContext';
 function SessionCard({ startTime, location }) {
   const { theme } = useContext(ThemeContext);
   const [month, day] = useMemo(() => startTime.split(' '), []);
-
   const sessionCardClass = classNames('session-card', `session-card--${theme}`);
-  const monthClass = classNames(
-    'session-card__date-month',
-    `session-card__date-month--${theme}`
-  );
-  const dayClass = classNames(
-    'session-card__date-day',
-    `session-card__date-day--${theme}`
-  );
-  const placeClass = classNames(
-    'session-card__location-place',
-    `session-card__location-place--${theme}`
-  );
-  const verticalLineClass = classNames(
-    'session-card__vertical-line',
-    `session-card__vertical-line--${theme}`
-  );
-  const markerClass = classNames('location-mark', `location-mark--${theme}`);
+
   return (
     <div className={sessionCardClass}>
       <div className="session-card__date">
-        <p className={monthClass}>{month}</p>
-        <p className={dayClass}>{day}</p>
+        <p className="session-card__date-month">{month}</p>
+        <p className="session-card__date-day">{day}</p>
       </div>
-      <span className={verticalLineClass}></span>
+      <span className="session-card__vertical-line"></span>
       <div className="session-card__location-container">
-        <IconLocation className={markerClass} />
-        <p className={placeClass}>{location}</p>
+        <IconLocation className="session-card__location-mark" />
+        <p className="session-card__location-place">{location}</p>
       </div>
     </div>
   );
