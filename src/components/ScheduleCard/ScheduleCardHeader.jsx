@@ -13,10 +13,7 @@ function ScheduleCardHeader({ id, title, isExpanded, setIsExpanded }) {
   });
   const actionClass = classNames(
     'schedule-card-header__action',
-    `schedule-card-header__action--${theme}`,
-    {
-      'schedule-card-header__action--open': isExpanded,
-    }
+    `schedule-card-header__action--${theme}`
   );
   return (
     <button
