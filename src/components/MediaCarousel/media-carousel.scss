@@ -31,6 +31,11 @@
     }
   }
 
+  &__image {
+    max-height: 80vh;
+    max-width: 80vw;
+  }
+
   &__arrow {
     border: solid var(--color-black);
     border-width: 0 3px 3px 0;
@@ -45,10 +50,10 @@
       transform: rotate(-45deg);
     }
   }
-}
 
-.video-box {
-  border-radius: unset;
-  height: 22rem;
-  width: 100%;
+  .video-player {
+    max-height: 80vh;
+    max-width: 80vw;
+    width: unset;
+  }
 }
