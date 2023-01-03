@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import './card-container.scss';
 import classNames from 'classnames';
+import { ThemeContext } from '../../utils/ThemeContext';
 
 export default function CardContainer({
   title,
-  theme = 'primary',
   right = false,
   center = false,
   children,
 }) {
+  const { theme } = useContext(ThemeContext);
+
   const cardClass = classNames(
     'card-container__title',
     `card-container__title--${theme}`,
@@ -32,5 +34,4 @@ CardContainer.propTypes = {
   right: PropTypes.bool,
   center: PropTypes.bool,
   alignment: PropTypes.oneOf(['right', 'center']),
-  theme: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
 };

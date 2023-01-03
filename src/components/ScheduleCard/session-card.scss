@@ -1,0 +1,74 @@
+@import '../../sass/variables';
+
+.session-card {
+  $this: &;
+
+  align-items: center;
+  border-radius: $radius-s;
+  display: flex;
+  margin: $spacing-m;
+  padding: $spacing-s;
+
+  &__date {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__date-month {
+    font-size: $font-size-s;
+    margin: 0;
+  }
+
+  &__date-day {
+    font-size: $font-size-m;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__location-container {
+    align-items: center;
+    display: flex;
+    margin-right: $spacing-s;
+  }
+
+  &__location-place {
+    font-size: $font-size-m;
+    margin: 0;
+  }
+
+  &__location-mark {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 2rem;
+    margin: 0 $spacing-s;
+  }
+
+  &__vertical-line {
+    align-self: center;
+    height: 3.5rem;
+    margin: 0 $spacing-s;
+    width: 0.2rem;
+  }
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      border: 2px solid $val;
+
+      #{$this}__date-month,
+      #{$this}__date-day,
+      #{$this}__location-place {
+        color: $val;
+      }
+
+      #{$this}__vertical-line {
+        background-color: $val;
+      }
+
+      #{$this}__location-mark {
+        fill: $val;
+      }
+    }
+  }
+}
