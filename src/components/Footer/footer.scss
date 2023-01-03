@@ -1,17 +1,12 @@
 @import '../../sass/variables';
 @import '../../sass/media-queries';
 
-//Variables
-$_color-footer-twitter: #1da1f2;
-$_color-footer-facebook: #3b5998;
-$_color-footer-instagram: #8a3ab9;
-
 .footer {
   align-items: center;
-  background: var(--color-white);
+  background: $color-white;
   display: flex;
   justify-content: space-between;
-  padding: 0 var(--spacer-xxxl);
+  padding: 0 $spacing-xxl;
   z-index: 1;
 
   &__social-icons {
@@ -22,50 +17,11 @@ $_color-footer-instagram: #8a3ab9;
 
   &__copyright {
     color: map-get($map: $themes, $key: primary);
-    font-size: 1.4rem;
-    margin: 1rem;
+    font-size: $font-size-s;
+    margin: $spacing-s;
 
     @include media-query-mobile {
       text-align: right;
-    }
-  }
-}
-
-.social-media-icon {
-  height: 4rem;
-  margin: 1rem;
-  width: 4rem;
-
-  &:hover {
-    .icon-background {
-      fill: none;
-    }
-  }
-
-  &--facebook {
-    &:hover {
-      .icon-logo {
-        fill: $_color-footer-facebook;
-        stroke: $_color-footer-facebook;
-      }
-    }
-  }
-
-  &--twitter {
-    &:hover {
-      .icon-logo {
-        fill: $_color-footer-twitter;
-        stroke: $_color-footer-twitter;
-      }
-    }
-  }
-
-  &--instagram {
-    &:hover {
-      .icon-logo {
-        fill: none;
-        stroke: $_color-footer-instagram;
-      }
     }
   }
 }

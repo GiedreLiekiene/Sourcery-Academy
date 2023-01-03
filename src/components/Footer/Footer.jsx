@@ -3,6 +3,7 @@ import './footer.scss';
 import SvgFacebook from '~/assets/svg/icon-facebook.svg';
 import SvgTwitter from '~/assets/svg/icon-twitter.svg';
 import SvgInstagram from '~/assets/svg/icon-instagram.svg';
+import SocialMediaLink from './SocialMediaLink';
 
 export default function Footer() {
   const year = useMemo(() => new Date().getFullYear(), []);
@@ -10,27 +11,21 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__social-icons">
-        <a
-          href="http://www.facebook.com/Devbridge"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SvgFacebook className="social-media-icon social-media-icon--facebook" />
-        </a>
-        <a
-          href="https://twitter.com/devbridge"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SvgTwitter className="social-media-icon social-media-icon--twitter" />
-        </a>
-        <a
-          href="https://www.instagram.com/devbridge/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SvgInstagram className="social-media-icon social-media-icon--instagram" />
-        </a>
+        <SocialMediaLink
+          address="http://www.facebook.com/Devbridge"
+          brand="facebook"
+          Icon={SvgFacebook}
+        />
+        <SocialMediaLink
+          address="https://twitter.com/devbridge"
+          brand="twitter"
+          Icon={SvgTwitter}
+        />
+        <SocialMediaLink
+          address="https://www.instagram.com/devbridge/"
+          brand="instagram"
+          Icon={SvgInstagram}
+        />
       </div>
       <p className="footer__copyright">Copyright © {year} Sourcery Academy</p>
     </footer>
