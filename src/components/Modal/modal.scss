@@ -4,9 +4,9 @@ $color-white: #fff;
 .modal-container {
   &__content {
     background: $color-white;
+    border-radius: var(--border-radius-xs);
     left: 50%;
     overflow-y: auto;
-    padding: 1rem;
     position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
