@@ -50,7 +50,7 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
       >
         <Arrow isLeft={false} />
       </button>
-      {type != 'video' ? (
+      {type !== 'video' ? (
         <img src={src} className="carousel__image" />
       ) : (
         <VideoPlayer videoSrc={src} />
