@@ -13,6 +13,7 @@
   --color-background-shadow: #f6f5f7;
   --color-main-text: #3e3c4e;
   --font-size-base: 1.6rem;
+  --font-size-small: 1.4rem;
   --font-family: 'Raleway', sans-serif;
   --font-family-headings: 'Montserrat', sans-serif;
   --line-height-base: 1.2;
@@ -39,7 +40,6 @@
   --spacer-xl: 2.4rem;
   --spacer-xxl: 3.2rem;
   --spacer-xxxl: 4rem;
-  --border-radius-m: 1.5rem;
 }
 
 $heading-all-levels: (
@@ -50,10 +50,35 @@ $heading-all-levels: (
   h5: 1.8rem,
   h6: 1.8rem,
 );
-
+//Color Palette
 $themes: (
-  primary: var(--color-primary),
-  secondary: var(--color-secondary),
-  tertiary: var(--color-tertiary),
-  quaternary: var(--color-quaternary),
+  primary: #3d3691,
+  secondary: #0048c1,
+  tertiary: #0b555f,
+  quaternary: #b40031,
 );
+
+$color-white: #fff;
+$color-error: #f00;
+$color-main-text: #3e3c4e;
+$color-bkg-links-hover: #f6f5f7;
+$color-bkg-shadow: #f6f5f7;
+
+//Spacing
+$spacing-s: 1rem;
+$spacing-sm: 1.5rem;
+$spacing-m: 2rem;
+$spacing-ml: 2.5rem;
+$spacing-l: 3rem;
+$spacing-xl: 3.5rem;
+$spacing-xxl: 4rem;
+
+//Radius
+$radius-s: 1.5rem;
+$radius-m: 2rem;
+$radius-l: 2.5rem;
+
+//Font Size
+$font-size-s: 1.4rem;
+$font-size-base: 1.6rem;
+$font-size-m: 1.8rem;

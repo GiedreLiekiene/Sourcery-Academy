@@ -1,0 +1,698 @@
+[ 
+{
+  "name": "Sourcery for Developers",
+  "lectures": [
+    {
+      "id": "d1",
+      "title": "Git & JS Fundamentals",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Mar 8"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Mar 9"
+        }
+      ]
+    },
+    {
+      "id": "d2",
+      "title": "Web basics",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Mar 15"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Mar 16"
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "title": "React fundamentals",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Mar 22"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Mar 23"
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "title": "Spring Framework & Spring Boot",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Apr 5"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Apr 6"
+        }
+      ]
+    },
+    {
+      "id": "d5",
+      "title": "Gradle, DI, Scopes, Configuration & Rest API Validation",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Apr 12"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Apr 13"
+        }
+      ]
+    },
+    {
+      "id": "d6",
+      "title": "Databases & MyBatis",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Apr 19"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Apr 20"
+        }
+      ]
+    },
+    {
+      "id": "d7",
+      "title": "MyBatis & Spring and ORMs",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Apr 26"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Apr 27"
+        }
+      ]
+    },
+    {
+      "id": "d8",
+      "title": "Authentication, Authorization, Web App Security",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "May 3"
+        },
+        {
+          "city": "Kaunas",
+          "date": "May 4"
+        }
+      ]
+    },
+    {
+      "id": "d9",
+      "title": "DevOps, Clean Code, Secure Development & OWASP TOP 10",
+      "lecturers": "Name Surname, Name Surname",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "May 10"
+        },
+        {
+          "city": "Kaunas",
+          "date": "May 11"
+        }
+      ]
+    },
+    {
+      "id": "d10",
+      "title": "Final exam",
+      "lecturers": "",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "May 15"
+        },
+        {
+          "city": "Kaunas",
+          "date": "May 15"
+        }
+      ]
+    },
+    {
+      "id": "d11",
+      "title": "Live Demo Day & Graduation",
+      "lecturers": "",
+      "duration": 2,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "May 24"
+        },
+        {
+          "city": "Vilnius",
+          "date": "May 25"
+        }
+      ]
+    }
+  ]
+}, 
+{
+  "name": "Sourcery for Testers",
+  "lectures": [ 
+    {
+      "id": "t1",
+      "title": "Kickoff: Testing Foundations & Agile intro",
+      "lecturers": "Agnieszka Pedlewska",
+      "duration": 5,
+      "startTime": "12:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jun 29"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jun 30"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "title": "Client-side testing (Web + Mobile)",
+      "lecturers": "Arūnas Žygis",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jul 5"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jul 7"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "title": "Accessibility management and testing",
+      "lecturers": "Jurij Nesvat",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jul 13"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jul 14"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "title": "Test Automation (part 1)",
+      "lecturers": "Justas Laužadis",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jul 18"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jul 19"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "title": "Test Automation (part 2)",
+      "lecturers": "Justas Laužadis",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jul 20"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jul 21"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "title": "Database testing",
+      "lecturers": "Rūta Guobienė",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jul 25"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jul 25"
+        }
+      ]
+    },
+    {
+      "id": "t7",
+      "title": "API testing",
+      "lecturers": "Gediminas Kvedaravičius",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jul 27"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jul 28"
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "title": "Performance testing",
+      "lecturers": "Daniel Lipowicz",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 3"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 4"
+        }
+      ]
+    },
+    {
+      "id": "t9",
+      "title": "Security testing",
+      "lecturers": "Vladas Kabašinskas",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 10"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 11"
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "title": "Context-driven testing approach",
+      "lecturers": "Rita Birgiel",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 16"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 17"
+        }
+      ]
+    },
+    {
+      "id": "t11",
+      "title": "Bonus: Agile extra (offline)",
+      "lecturers": "Agnieszka Pedlewska",
+      "duration": 2,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 19"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 19"
+        }
+      ]
+    },
+    {
+      "id": "t12",
+      "title": "Bonus: Estimation techniques (offline)",
+      "lecturers": "Agnieszka Pedlewska",
+      "duration": 2,
+      "startTime": "12:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 19"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 19"
+        }
+      ]
+    },
+    {
+      "id": "t13",
+      "title": "Bonus: VCS basics (offline)",
+      "lecturers": "Anastasiya Liavotskaya",
+      "duration": 2,
+      "startTime": "13:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 19"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 19"
+        }
+      ]
+    },
+    {
+      "id": "t14",
+      "title": "Bonus: DevOps & Testing (offline)",
+      "lecturers": "Vaidas Maciulis",
+      "duration": 5,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 19"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 19"
+        }
+      ]
+    },
+    {
+      "id": "t15",
+      "title": "Evaluation workshop",
+      "lecturers": "",
+      "duration": 6,
+      "startTime": "10:00 am",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 22"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 22"
+        }
+      ]
+    },
+    {
+      "id": "t16",
+      "title": "Demo Day",
+      "lecturers": "",
+      "duration": 2,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Aug 24"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Aug 25"
+        }
+      ]
+    }
+  ]
+},
+{
+  "name": "Sourcery for Front-End",
+  "lectures": [
+    {
+      "id": "f1",
+      "title": "Agile & Git Fundamentals",
+      "lecturers": "Simas Leonavičius",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Oct 26"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Oct 27"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "title": "JS fundamentals",
+      "lecturers": "Martynas Druteika",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 3"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Nov 4"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "title": "React fundamentals",
+      "lecturers": "Evelina Mikelaitytė",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 8"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Nov 9"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "title": "React: advanced",
+      "lecturers": "Julius Simas Simutis",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 9"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Nov 10"
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "title": "Project Structure & Dynamic Components",
+      "lecturers": "Martynas Druteika",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 15"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Nov 16"
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "title": "HTML Semantics & BEM",
+      "lecturers": "Martynas Galkus",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 16"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Nov 17"
+        }
+      ]
+    },
+    {
+      "id": "f7",
+      "title": "Tips & tricks to build clean and functional CSS",
+      "lecturers": "Martynas Galkus",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 22"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Nov 23"
+        }
+      ]
+    },
+    {
+      "id": "f8",
+      "title": "SCSS in depth",
+      "lecturers": "Evelina Mikelaitytė",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 23"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Nov 24"
+        }
+      ]
+    },
+    {
+      "id": "f9",
+      "title": "Accessibility in depth",
+      "lecturers": "Kęstutis Buivydas",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Nov 30"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Dec 1"
+        }
+      ]
+    },
+    {
+      "id": "f10",
+      "title": "Build tools",
+      "lecturers": "Julius Simas Simutis",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Dec 7"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Dec 8"
+        }
+      ]
+    },
+    {
+      "id": "f11",
+      "title": "Testing",
+      "lecturers": "Simas Leonavičius",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Dec 14"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Dec 15"
+        }
+      ]
+    },
+    {
+      "id": "f12",
+      "title": "Final exam",
+      "lecturers": "",
+      "duration": 3,
+      "startTime": "4:00 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jan 9"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jan 9"
+        }
+      ]
+    },
+    {
+      "id": "f13",
+      "title": "Demo Day, Results and Rewards",
+      "lecturers": "",
+      "duration": 2,
+      "startTime": "4:30 pm",
+      "sessions": [
+        {
+          "city": "Vilnius",
+          "date": "Jan 18"
+        },
+        {
+          "city": "Kaunas",
+          "date": "Jan 19"
+        }
+      ]
+    }
+  ]
+}
+]
+
