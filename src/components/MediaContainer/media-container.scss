@@ -17,7 +17,7 @@
 
   @include media-query-mobile {
     &__item {
-      width: calc(40% - 4rem / 2);
+      width: calc(50% - 4rem / 2);
     }
 
     flex-wrap: wrap;
