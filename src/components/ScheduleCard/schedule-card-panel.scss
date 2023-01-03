@@ -1,0 +1,46 @@
+@import '../../sass/variables';
+
+.schedule-card-panel {
+  border-radius: 0 0 $radius-s $radius-s;
+
+  &__upper {
+    border-bottom-left-radius: $radius-s;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        background-color: $val;
+      }
+    }
+  }
+
+  &__lecturers {
+    color: $color-white;
+    display: flex;
+    padding-right: $spacing-m;
+  }
+
+  &__icon-person {
+    flex-shrink: 0;
+    margin: 0 $spacing-m;
+    width: 1.4rem;
+  }
+
+  &__time {
+    color: $color-white;
+    display: flex;
+  }
+
+  &__icon-clock {
+    flex-shrink: 0;
+    margin: 0 $spacing-m;
+    width: 1.4rem;
+  }
+
+  &__vertical-line {
+    align-self: center;
+    background-color: $color-white;
+    height: 1.4rem;
+    margin: 0 $spacing-s;
+    width: 0.2rem;
+  }
+}

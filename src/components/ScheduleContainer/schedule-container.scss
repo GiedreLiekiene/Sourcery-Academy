@@ -1,0 +1,47 @@
+@import '../../sass/media-queries';
+@import '../../sass/variables';
+
+.schedule-container {
+  display: grid;
+  gap: $spacing-xxl;
+  grid-template-columns: 1fr 1fr;
+
+  @include media-query-desktop {
+    grid-template-columns: 1fr;
+  }
+
+  &__column {
+    align-content: start;
+    display: grid;
+    gap: $spacing-xxl;
+    grid-template-columns: 1fr 1fr;
+
+    @include media-query-mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    font-size: map-get($map: $heading-all-levels, $key: h2);
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin: 0 auto;
+    width: fit-content;
+
+    @include media-query-mobile {
+      grid-column: 1 / span 1;
+    }
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
+      }
+    }
+  }
+
+  &__cards {
+    align-content: start;
+    display: grid;
+    gap: $spacing-xxl;
+    grid-template-columns: 1fr;
+  }
+}
