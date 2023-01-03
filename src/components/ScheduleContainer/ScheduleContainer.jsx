@@ -20,12 +20,12 @@ function ScheduleContainer({ academy }) {
   const lectures = useMemo(() => getLectures(academy), []);
 
   const getMonthsTitle = (lectures) => {
-    return lectures
-      .flatMap(({ sessions }) => sessions.map(({ date }) => date.split(' ')[0]))
-      .filter((item, index, array) => array.indexOf(item) === index)
-      .map((month) =>
-        months.hasOwnProperty(month) ? months[month] : undefined
-      )
+    const monthsObj = {};
+    lectures.forEach(({ sessions }) =>
+      sessions.forEach(({ date }) => (monthsObj[date.split(' ')[0]] = true))
+    );
+    return Object.keys(monthsObj)
+      .map((month) => months[month])
       .join(' / ');
   };
 
