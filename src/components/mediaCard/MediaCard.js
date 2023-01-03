@@ -3,17 +3,16 @@ import './media-card.scss';
 import PropTypes from 'prop-types';
 import VideoBox from '../VideoBox/VideoBox';
 
-const MediaCard = ({ imgUrl, altInfo, videoThumbnail, videoUrl, onClick }) => {
+const MediaCard = ({ imgUrl, altInfo, videoThumbnail, onClick }) => {
   return (
-    <div className="media-card" onClick={onClick}>
+    <div className="media-card">
       {imgUrl ? (
-        <img src={imgUrl} alt={altInfo} />
+        <img src={imgUrl} alt={altInfo} onClick={onClick} />
       ) : (
         <VideoBox
           thumbnail={videoThumbnail}
-          videoSrc={videoUrl}
           altInfo={altInfo}
-          isPlayable={false}
+          onClick={onClick}
         />
       )}
     </div>
@@ -23,7 +22,6 @@ const MediaCard = ({ imgUrl, altInfo, videoThumbnail, videoUrl, onClick }) => {
 MediaCard.propTypes = {
   imgUrl: PropTypes.string,
   videoThumbnail: PropTypes.string,
-  videoUrl: PropTypes.string,
   altInfo: PropTypes.string,
   onClick: PropTypes.func,
 };

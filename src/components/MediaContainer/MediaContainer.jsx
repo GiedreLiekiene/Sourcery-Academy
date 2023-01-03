@@ -60,13 +60,16 @@ function MediaContainer() {
                 {type === 'video' ? (
                   <MediaCard
                     videoThumbnail={thumbnail}
-                    videoUrl={src}
-                    onClick={() => showCarousel(index)}
+                    onClick={() => {
+                      showCarousel(index);
+                    }}
                   />
                 ) : (
                   <MediaCard
                     imgUrl={thumbnail}
-                    onClick={() => showCarousel(index)}
+                    onClick={() => {
+                      showCarousel(index);
+                    }}
                   />
                 )}
               </BoxShadow>
