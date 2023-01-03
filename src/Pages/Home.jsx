@@ -118,7 +118,7 @@ function Home() {
 
       <div className="section-group">
         <CardContainer title="Media">
-          <MediaContainer />
+          <MediaContainer academy={'frontend'} />
         </CardContainer>
         <div className="section-group__fourth-wave">
           <FourthWaveSvg />
