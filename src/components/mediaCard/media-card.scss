@@ -2,9 +2,14 @@
   height: auto;
 
   img {
+    cursor: pointer;
     height: 22rem;
     object-fit: cover;
     width: 100%;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   .video-box {
