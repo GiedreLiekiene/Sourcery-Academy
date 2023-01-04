@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import './media-carousel.scss';
 import PropTypes from 'prop-types';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -17,23 +17,43 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
   const [index, setIndex] = useState(initialIndex);
   const length = images.length;
 
+  const handlePrevious = () => {
+    setIndex((index) => {
+      const newIndex = index - 1;
+      return newIndex < 0 ? length - 1 : newIndex;
+    });
+  };
+
+  const handleNext = () => {
+    setIndex((index) => {
+      const newIndex = index + 1;
+      return newIndex >= length ? 0 : newIndex;
+    });
+  };
+
+  const handleKeyPress = useCallback((event) => {
+    if (event.key === 'ArrowLeft') {
+      handlePrevious();
+    } else if (event.key === 'ArrowRight') {
+      handleNext();
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [handleKeyPress]);
+
   if (length === 0) {
     return <ErrorMessage message="Cannot display gallery without images" />;
   }
 
-  const handlePrevious = () => {
-    const newIndex = index - 1;
-    setIndex(newIndex < 0 ? length - 1 : newIndex);
+  const closeCarousel = () => {
+    setIndex(initialIndex);
   };
-
-  const handleNext = () => {
-    const newIndex = index + 1;
-    setIndex(newIndex >= length ? 0 : newIndex);
-  };
-
-  // const closeCarousel = () => {
-  //   setIndex(initialIndex);
-  // };
 
   let { src, type } = images[index];
 
@@ -55,14 +75,14 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
           <Arrow right={true} />
         </div>
       </button>
-      {/* <button
+      <button
         className="carousel__button carousel__button--close"
-        onclick={closeCarousel}
+        onClick={closeCarousel}
       >
         <div className="carousel__button--close-icon">
           <span className="carousel__button--close-icon">X</span>
         </div>
-      </button> */}
+      </button>
       {type !== 'video' ? (
         <img src={src} className="carousel__image" />
       ) : (
