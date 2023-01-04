@@ -3,17 +3,14 @@ import './media-carousel.scss';
 import PropTypes from 'prop-types';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import VideoPlayer from '../VideoBox/VideoPlayer';
+import classnames from 'classnames';
 
-const Arrow = ({ isLeft }) => {
-  return (
-    <span
-      className={
-        isLeft
-          ? 'carousel__arrow carousel__arrow--left'
-          : 'carousel__arrow carousel__arrow--right'
-      }
-    ></span>
-  );
+const Arrow = ({ left, right }) => {
+  const arrowClass = classnames('carousel__arrow', {
+    'carousel__arrow--left': left,
+    'carousel__arrow--right': right,
+  });
+  return <span className={arrowClass}></span>;
 };
 
 const MediaCarousel = ({ images, initialIndex = 0 }) => {
@@ -34,6 +31,10 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
     setIndex(newIndex >= length ? 0 : newIndex);
   };
 
+  // const closeCarousel = () => {
+  //   setIndex(initialIndex);
+  // };
+
   let { src, type } = images[index];
 
   return (
@@ -42,14 +43,26 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
         className="carousel__button carousel__button--prev"
         onClick={handlePrevious}
       >
-        <Arrow isLeft={true} />
+        <div className="carousel__button__arrow">
+          <Arrow left={true} />
+        </div>
       </button>
       <button
         className="carousel__button carousel__button--next"
         onClick={handleNext}
       >
-        <Arrow isLeft={false} />
+        <div className="carousel__button__arrow">
+          <Arrow right={true} />
+        </div>
       </button>
+      {/* <button
+        className="carousel__button carousel__button--close"
+        onclick={closeCarousel}
+      >
+        <div className="carousel__button--close-icon">
+          <span className="carousel__button--close-icon">X</span>
+        </div>
+      </button> */}
       {type !== 'video' ? (
         <img src={src} className="carousel__image" />
       ) : (
@@ -60,7 +73,8 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
 };
 
 Arrow.propTypes = {
-  isLeft: PropTypes.bool.isRequired,
+  left: PropTypes.bool,
+  right: PropTypes.bool,
 };
 
 MediaCarousel.propTypes = {
