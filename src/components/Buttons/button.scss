@@ -1,17 +1,19 @@
+@import '../../sass/variables';
+
 $_button-background-color: #584dfc;
 
 .button {
   background-color: $_button-background-color;
   border: 0;
-  border-radius: var(--border-radius-xxxl);
-  color: var(--color-white);
+  border-radius: $radius-xxxl;
+  color: $color-white #fff;
   cursor: pointer;
-  font-family: var(--font-family);
-  font-size: var(--font-size);
+  font-family: $font-family;
+  font-size: $font-size-m;
   font-weight: 700;
   line-height: 1.5;
   margin-top: 6rem;
-  padding: var(--spacer-s) var(--spacer-xl);
+  padding: $spacing-s $spacing-xl;
 
   &:hover {
     opacity: 0.8;
