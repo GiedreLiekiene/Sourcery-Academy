@@ -1,0 +1,19 @@
+$_button-background-color: #584dfc;
+
+.button {
+  background-color: $_button-background-color;
+  border: 0;
+  border-radius: var(--border-radius-xxxl);
+  color: var(--color-white);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 6rem;
+  padding: var(--spacer-s) var(--spacer-xl);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
