@@ -1,0 +1,43 @@
+@import '../../sass/variables';
+$_color-twitter: #1da1f2;
+$_color-facebook: #3b5998;
+$_color-instagram: #8a3ab9;
+
+.social-media-icon {
+  height: 4rem;
+  margin: $spacing-s;
+  width: 4rem;
+
+  &:hover {
+    .icon-background {
+      fill: none;
+    }
+  }
+
+  &--facebook {
+    &:hover {
+      .icon-logo {
+        fill: $_color-facebook;
+        stroke: $_color-facebook;
+      }
+    }
+  }
+
+  &--twitter {
+    &:hover {
+      .icon-logo {
+        fill: $_color-twitter;
+        stroke: $_color-twitter;
+      }
+    }
+  }
+
+  &--instagram {
+    &:hover {
+      .icon-logo {
+        fill: none;
+        stroke: $_color-instagram;
+      }
+    }
+  }
+}
