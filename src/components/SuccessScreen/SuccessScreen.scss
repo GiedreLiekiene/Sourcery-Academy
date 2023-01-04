@@ -1,15 +1,16 @@
 @import '../../sass/media-queries';
+@import '../../sass/variables';
 
 .success-screen {
-  color: var(--color-primary);
+  color: $color-primary;
   display: flex;
   flex-wrap: wrap;
 
   &__title {
-    font: 700 4.8rem / 1.2 var(--font-family-headings);
+    font: 700 4.8rem / 1.2 $font-family-headings;
+    margin: $spacing-xxl 0 $spacing-ml;
 
     @include media-query-mobile {
-      float: unset;
       font-size: 3.2rem;
       text-align: center;
     }
@@ -18,13 +19,13 @@
   &__content {
     align-items: center;
     display: flex;
-    margin: 8rem 0 4rem;
+    margin-bottom: $spacing-xxl;
     width: 100%;
 
     @include media-query-mobile {
       flex-direction: column-reverse;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: $spacing-m;
       margin: 5rem 0;
     }
   }
@@ -47,8 +48,8 @@
   }
 
   &__heading {
-    font: 700 3.2rem / 1.5 var(--font-family-headings);
-    margin: 4rem 0 1.2rem;
+    font: 700 3.2rem / 1.5 $font-family-headings;
+    margin: $spacing-xxl 0 1.2rem;
     text-align: center;
 
     @include media-query-mobile {
@@ -57,7 +58,7 @@
   }
 
   &__submit-message {
-    font: 700 1.8rem / 1.5 var(--font-family);
+    font: 700 1.8rem / 1.5 $font-family;
     margin: 0;
     text-align: center;
   }
@@ -71,21 +72,5 @@
       max-width: 40rem;
       width: 100%;
     }
-  }
-
-  &__bright-circle {
-    height: 1.3rem;
-    position: absolute;
-    right: 75%;
-    top: -8%;
-    width: 1.3rem;
-  }
-
-  &__blue-circle {
-    height: 1.3rem;
-    position: absolute;
-    right: 12%;
-    top: 12%;
-    width: 1.3rem;
   }
 }

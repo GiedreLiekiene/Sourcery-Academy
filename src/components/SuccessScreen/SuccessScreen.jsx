@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import './SuccessScreen.scss';
 import CheckMark from '../../assets/svg/image-check-mark.svg';
 import PersonWithMail from '../../assets/svg/image-person-with-mail.svg';
-import BlueCircle from '../../assets/svg/icon-blue-circle.svg';
-import BrightCircle from '../../assets/svg/icon-bright-circle.svg';
 
 function SuccessScreen({ title, gratitude, text }) {
   return (
@@ -17,8 +15,6 @@ function SuccessScreen({ title, gratitude, text }) {
           <span className="success-screen__submit-message">{text}</span>
         </div>
         <div className="success-screen__picture">
-          <BrightCircle className="success-screen__bright-circle" />
-          <BlueCircle className="success-screen__blue-circle" />
           <PersonWithMail />
         </div>
       </div>
