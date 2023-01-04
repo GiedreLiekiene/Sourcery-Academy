@@ -2,7 +2,6 @@
   &__button {
     background: none;
     border: none;
-    color: var(--color-violet);
     cursor: pointer;
     font-size: var(--font-size);
     height: 100%;
@@ -14,7 +13,7 @@
 
     &:hover,
     &:focus {
-      color: var(--first-color);
+      color: var(--color-black);
       opacity: 1;
     }
 
@@ -24,6 +23,25 @@
 
     &--next {
       right: 1rem;
+    }
+
+    &--close {
+      height: 2.5rem;
+      margin-top: 1rem;
+      opacity: 1;
+      right: 2rem;
+      top: 1rem;
+    }
+
+    .icon {
+      color: var(--color-black);
+      font-size: 3rem;
+      opacity: 0.5;
+
+      :hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -35,8 +53,8 @@
   &__arrow {
     background: 0;
     border: solid var(--color-black);
-    border-bottom: 3px solid var(--color-white);
-    border-right: 3px solid var(--color-white);
+    border-bottom: 3px solid var(--color-black);
+    border-right: 3px solid var(--color-black);
     border-width: 0 3px 3px 0;
     cursor: pointer;
     display: inline-block;
