@@ -1,14 +1,12 @@
 .carousel {
   &__button {
     background: none;
-    background-color: var(--color-white);
     border: none;
-    border-radius: var(--border-radius-xxxs);
     color: var(--color-violet);
     cursor: pointer;
     font-size: var(--font-size);
+    height: 100%;
     opacity: 0.5;
-    padding: 0 0.5rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -16,10 +14,8 @@
 
     &:hover,
     &:focus {
-      background-color: var(--color-background-links-hover);
       color: var(--first-color);
       opacity: 1;
-      outline: 1px solid var(--color-background-links-hover);
     }
 
     &--prev {
@@ -37,10 +33,17 @@
   }
 
   &__arrow {
+    background: 0;
     border: solid var(--color-black);
+    border-bottom: 3px solid var(--color-white);
+    border-right: 3px solid var(--color-white);
     border-width: 0 3px 3px 0;
+    cursor: pointer;
     display: inline-block;
+    height: 2.3rem;
     padding: 0.5rem;
+    transform: rotate(-45deg);
+    width: 23px;
 
     &--left {
       transform: rotate(135deg);
