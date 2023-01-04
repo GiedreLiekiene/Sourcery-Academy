@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './SuccessScreen.scss';
-import CheckMark from '../../assets/svg/check-mark.svg';
-import PersonWithMail from '../../assets/svg/person-with-mail.svg';
-import BlueCircle from '../../assets/svg/blue-circle.svg';
-import BrightCircle from '../../assets/svg/bright-circle.svg';
+import CheckMark from '../../assets/svg/image-check-mark.svg';
+import PersonWithMail from '../../assets/svg/image-person-with-mail.svg';
+import BlueCircle from '../../assets/svg/icon-blue-circle.svg';
+import BrightCircle from '../../assets/svg/icon-bright-circle.svg';
 
 function SuccessScreen({ title, gratitude, text }) {
   return (
@@ -13,8 +13,8 @@ function SuccessScreen({ title, gratitude, text }) {
       <div className="success-screen__content">
         <div className="success-screen__submit-check">
           <CheckMark className="success-screen__check-mark" />
-          <h2>{gratitude}</h2>
-          <span>{text}</span>
+          <h2 className="success-screen__heading">{gratitude}</h2>
+          <span className="success-screen__submit-message">{text}</span>
         </div>
         <div className="success-screen__picture">
           <BrightCircle className="success-screen__bright-circle" />

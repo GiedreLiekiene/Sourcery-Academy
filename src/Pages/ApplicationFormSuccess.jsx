@@ -6,10 +6,6 @@ function ApplicationFormSuccess() {
   const gratitude = 'Thank you!';
   const text = 'Your form was submited';
 
-  return (
-    <>
-      <SuccessScreen title={title} gratitude={gratitude} text={text} />
-    </>
-  );
+  return <SuccessScreen title={title} gratitude={gratitude} text={text} />;
 }
 export default ApplicationFormSuccess;
