@@ -13,7 +13,7 @@ const Arrow = ({ left, right }) => {
   return <span className={arrowClass}></span>;
 };
 
-const MediaCarousel = ({ images, initialIndex = 0 }) => {
+const MediaCarousel = ({ images, initialIndex = 0, onClickClose }) => {
   const [index, setIndex] = useState(initialIndex);
   const length = images.length;
 
@@ -51,10 +51,6 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
     return <ErrorMessage message="Cannot display gallery without images" />;
   }
 
-  const closeCarousel = () => {
-    setIndex(initialIndex);
-  };
-
   let { src, type } = images[index];
 
   return (
@@ -77,10 +73,10 @@ const MediaCarousel = ({ images, initialIndex = 0 }) => {
       </button>
       <button
         className="carousel__button carousel__button--close"
-        onClick={closeCarousel}
+        onClick={onClickClose}
       >
-        <div className="carousel__button--close-icon">
-          <span className="carousel__button--close-icon">X</span>
+        <div className="carousel__button--close icon">
+          <span className="carousel__button--close icon">X</span>
         </div>
       </button>
       {type !== 'video' ? (
@@ -100,6 +96,7 @@ Arrow.propTypes = {
 MediaCarousel.propTypes = {
   images: PropTypes.array.isRequired,
   initialIndex: PropTypes.number,
+  onClickClose: PropTypes.func.isRequired,
 };
 
 export default MediaCarousel;

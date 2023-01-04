@@ -83,6 +83,7 @@ function MediaContainer({ academy }) {
           <MediaCarousel
             images={images.slice(0, 6)}
             initialIndex={carouselInitialIndex}
+            onClickClose={closeCarousel}
           />
         </Modal>
       )}
