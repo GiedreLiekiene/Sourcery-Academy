@@ -1,0 +1,76 @@
+@import '../../sass/media-queries';
+@import '../../sass/variables';
+
+.success-screen {
+  color: $color-primary;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    font: 700 4.8rem / 1.2 $font-family-headings;
+    margin: $spacing-xxl 0 $spacing-ml;
+
+    @include media-query-mobile {
+      font-size: 3.2rem;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    margin-bottom: $spacing-xxl;
+    width: 100%;
+
+    @include media-query-mobile {
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      gap: $spacing-m;
+      margin: 5rem 0;
+    }
+  }
+
+  &__submit-check {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__check-mark {
+    height: 10rem;
+    max-width: 10rem;
+
+    @include media-query-mobile {
+      max-width: 6rem;
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    font: 700 3.2rem / 1.5 $font-family-headings;
+    margin: $spacing-xxl 0 1.2rem;
+    text-align: center;
+
+    @include media-query-mobile {
+      margin: 0;
+    }
+  }
+
+  &__submit-message {
+    font: 700 1.8rem / 1.5 $font-family;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__picture {
+    flex: 1;
+    position: relative;
+    width: 62rem;
+
+    @include media-query-mobile {
+      max-width: 40rem;
+      width: 100%;
+    }
+  }
+}
