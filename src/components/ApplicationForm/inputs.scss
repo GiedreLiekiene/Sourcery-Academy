@@ -1,0 +1,67 @@
+@import '../../sass/variables';
+
+$color-labels: #5c5c5c;
+$size-labels: 1.4rem;
+$line-height: 2.1rem;
+$color-place-holders: #868686;
+
+.input {
+  position: relative;
+
+  &__error {
+    color: $color-error;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    position: absolute;
+  }
+
+  &__label {
+    color: $color-labels;
+    display: block;
+    font-family: $font-family;
+    font-size: $size-labels;
+    font-weight: 400;
+    line-height: $line-height;
+    position: relative;
+    right: 0.5rem;
+
+    &::before {
+      color: $color-error;
+      content: '*';
+      font-weight: 700;
+      position: relative;
+      right: 0.5rem;
+    }
+  }
+
+  &__text,
+  &__file--label {
+    border: 1px solid #999;
+    border-radius: 8px;
+    color: $color-place-holders;
+    font-family: $font-family;
+    font-size: $font-size-m;
+    font-weight: 400;
+    margin: 0.5rem 0 2rem;
+    padding: 1.2rem;
+    width: 100%;
+  }
+
+  &__file {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+
+    &--label {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--icon {
+      width: 2rem;
+    }
+  }
+}
