@@ -13,6 +13,7 @@ import AcademyKids from '../../Pages/SourceryForKids';
 import AcademyTesters from '../../Pages/SourceryForTesters';
 import NotFound from '../../Pages/NotFound';
 import Layout from '~/components/layout/Layout';
+import ApplicationFormSuccess from '../../Pages/ApplicationFormSuccess';
 import { ROUTES } from './Routes';
 
 function Routing() {
@@ -30,6 +31,10 @@ function Routing() {
       <Route path={ROUTES.questions} element={<Questions />} />
       <Route path={ROUTES.register} element={<Register />} />
       <Route path={ROUTES.notFound} element={<NotFound />} />
+      <Route
+        path={ROUTES.applicationFormSuccess}
+        element={<ApplicationFormSuccess />}
+      />
     </Routes>
   );
 }

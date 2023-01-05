@@ -58,6 +58,10 @@ $themes: (
   quaternary: #b40031,
 );
 
+$color-primary: #3d3691;
+$color-secondary: #0048c1;
+$color-tertiary: #0b555f;
+$color-quaternary: #b40031;
 $color-white: #fff;
 $color-error: #f00;
 $color-main-text: #3e3c4e;
@@ -83,5 +87,6 @@ $font-size-s: 1.4rem;
 $font-size-base: 1.6rem;
 $font-size-m: 1.8rem;
 
-//Line Height
-$line-height-small: 1.5;
+//Font Family
+$font-family: 'Raleway', sans-serif;
+$font-family-headings: 'Montserrat', sans-serif;
