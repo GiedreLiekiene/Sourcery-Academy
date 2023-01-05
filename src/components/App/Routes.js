@@ -12,4 +12,5 @@ export const ROUTES = {
   questions: '/questions',
   register: '/register',
   notFound: '*',
+  applicationFormSuccess: '/application-form-success',
 };
