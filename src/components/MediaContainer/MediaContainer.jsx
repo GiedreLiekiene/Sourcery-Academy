@@ -79,7 +79,7 @@ function MediaContainer({ academy }) {
         })}
       </div>
       {carouselInitialIndex !== null && (
-        <Modal onClickClose={closeCarousel}>
+        <Modal onClickClose={closeCarousel} med>
           <MediaCarousel
             images={images.slice(0, 6)}
             initialIndex={carouselInitialIndex}

@@ -11,6 +11,28 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 11;
+
+    @include media-query-mobile {
+      width: 45rem;
+    }
+
+    &--min {
+      width: 40rem;
+    }
+
+    &--med {
+      width: 75rem;
+    }
+
+    &--max {
+      width: 83rem;
+      @include media-query-tablet {
+        width: 75rem;
+      }
+      @include media-query-mobile {
+        width: 55rem;
+      }
+    }
   }
 
   &__overlay {

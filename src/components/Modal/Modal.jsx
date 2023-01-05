@@ -4,7 +4,7 @@ import './modal.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Modal = ({ onClickClose, children, min, max }) => {
+const Modal = ({ onClickClose, children, min, med, max }) => {
   const closeOnEsc = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       onClickClose();
@@ -20,6 +20,7 @@ const Modal = ({ onClickClose, children, min, max }) => {
 
   const modalClass = classNames('modal-container__content', {
     'modal-container__content--min': min,
+    'modal-container__content--med': med,
     'modal-container__content--max': max,
   });
 
@@ -41,5 +42,6 @@ Modal.propTypes = {
   children: PropTypes.node.isRequired,
   onClickClose: PropTypes.func.isRequired,
   min: PropTypes.bool,
+  med: PropTypes.bool,
   max: PropTypes.bool,
 };
