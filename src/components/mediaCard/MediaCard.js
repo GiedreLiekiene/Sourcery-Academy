@@ -5,17 +5,13 @@ import VideoBox from '../VideoBox/VideoBox';
 
 const MediaCard = ({ imgUrl, altInfo, videoThumbnail, onClick }) => {
   return (
-    <div className="media-card">
+    <button type="button" className="media-card" onClick={onClick}>
       {imgUrl ? (
-        <img src={imgUrl} alt={altInfo} onClick={onClick} />
+        <img src={imgUrl} alt={altInfo} />
       ) : (
-        <VideoBox
-          thumbnail={videoThumbnail}
-          altInfo={altInfo}
-          onClick={onClick}
-        />
+        <VideoBox thumbnail={videoThumbnail} altInfo={altInfo} />
       )}
-    </div>
+    </button>
   );
 };
 
