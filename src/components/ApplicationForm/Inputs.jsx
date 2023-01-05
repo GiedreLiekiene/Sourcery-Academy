@@ -16,25 +16,24 @@ export default function Input({
   onChange,
   fileName,
 }) {
+  const inputClassId = 'input' + (fileName ? '__file' : '__text');
+
   return (
     <div className="input">
       {label && (
-        <label
-          className="input__label"
-          htmlFor={'input' + (fileName ? '__file' : '__text')}
-        >
+        <label className="input__label" htmlFor={inputClassId}>
           {label}
         </label>
       )}
       <input
         type={type}
         value={value}
-        className={'input' + (fileName ? '__file' : '__text')}
+        className={inputClassId}
         name={name}
         placeholder={placeholder}
         onChange={onChange}
         accept="application/pdf, application/vnd.ms-excel"
-        id={'input' + (fileName ? '__file' : '__text')}
+        id={inputClassId}
       />
       {fileName && (
         <label

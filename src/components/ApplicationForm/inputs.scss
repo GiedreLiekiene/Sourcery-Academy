@@ -4,6 +4,7 @@ $color-labels: #5c5c5c;
 $size-labels: 1.4rem;
 $line-height: 2.1rem;
 $color-place-holders: #868686;
+$border-radius: 0.8rem;
 
 .input {
   position: relative;
@@ -35,24 +36,22 @@ $color-place-holders: #868686;
   }
 
   &__text,
-  &__file--label {
-    border: 1px solid #999;
-    border-radius: 8px;
-    color: $color-place-holders;
-    font-family: $font-family;
-    font-size: $font-size-m;
-    font-weight: 400;
-    margin: 0.5rem 0 2rem;
-    padding: 1.2rem;
-    width: 100%;
+  &__file {
+    &--label {
+      border: 1px solid #999;
+      border-radius: $border-radius;
+      color: $color-place-holders;
+      font-family: $font-family;
+      font-size: $font-size-m;
+      font-weight: 400;
+      margin: 0.5rem 0 2rem;
+      padding: 1.2rem;
+      width: 100%;
+    }
   }
 
   &__file {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
+    display: none;
 
     &--label {
       cursor: pointer;
