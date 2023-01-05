@@ -56,6 +56,16 @@ const MediaCarousel = ({ images, initialIndex = 0, onClickClose }) => {
   return (
     <div className="carousel">
       <button
+        type="button"
+        className="carousel__button carousel__button--close"
+        onClick={onClickClose}
+      >
+        <div className="carousel__button--close icon">
+          <span className="carousel__button--close icon">X</span>
+        </div>
+      </button>
+      <button
+        type="button"
         className="carousel__button carousel__button--prev"
         onClick={handlePrevious}
       >
@@ -64,6 +74,7 @@ const MediaCarousel = ({ images, initialIndex = 0, onClickClose }) => {
         </div>
       </button>
       <button
+        type="button"
         className="carousel__button carousel__button--next"
         onClick={handleNext}
       >
@@ -71,14 +82,7 @@ const MediaCarousel = ({ images, initialIndex = 0, onClickClose }) => {
           <Arrow right={true} />
         </div>
       </button>
-      <button
-        className="carousel__button carousel__button--close"
-        onClick={onClickClose}
-      >
-        <div className="carousel__button--close icon">
-          <span className="carousel__button--close icon">X</span>
-        </div>
-      </button>
+
       {type !== 'video' ? (
         <img src={src} className="carousel__image" />
       ) : (
