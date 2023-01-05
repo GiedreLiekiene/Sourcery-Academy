@@ -8,6 +8,7 @@ const Checkbox = ({
   value,
   name,
   onChange,
+  id,
 }) => {
   return (
     <div className="checkbox">
@@ -19,8 +20,11 @@ const Checkbox = ({
         name={name}
         onChange={onChange}
         tabIndex={0}
+        id={id}
       />
-      <label className="checkbox__label">{label}</label>
+      <label htmlFor={id} className="checkbox__label">
+        {label}
+      </label>
     </div>
   );
 };
@@ -33,4 +37,5 @@ Checkbox.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.node.isRequired,
   tabIndex: PropTypes.number,
+  id: PropTypes.string,
 };
