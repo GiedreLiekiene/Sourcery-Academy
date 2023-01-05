@@ -21,6 +21,13 @@
 
     &--med {
       width: 75rem;
+
+      @include media-query-tablet {
+        width: 65rem;
+      }
+      @include media-query-mobile {
+        width: 45rem;
+      }
     }
 
     &--max {
