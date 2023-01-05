@@ -2,11 +2,11 @@
 
 .carousel {
   &__button {
-    background: none;
+    // background: none;
     border: none;
     cursor: pointer;
     font-size: $font-size-m;
-    height: 100%;
+    height: 80%;
     opacity: 0.5;
     position: absolute;
     top: 50%;
@@ -19,26 +19,19 @@
       opacity: 1;
     }
 
-    &--prev {
-      left: 1rem;
-    }
-
-    &--next {
-      right: 1rem;
-    }
-
     &--close {
+      font-size: 3rem;
       height: 2.5rem;
-      margin-top: 1rem;
-      opacity: 1;
-      right: 2rem;
+      margin-top: 1.5rem;
+      right: 1rem;
       top: 1rem;
     }
 
     .icon {
       color: $color-black;
       font-size: 3rem;
-      opacity: 0.5;
+      // opacity: 0.5;
+      margin: auto;
 
       :hover,
       :focus {
@@ -46,6 +39,14 @@
         opacity: 1;
         transform: scale(1.1);
       }
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
     }
   }
 
@@ -63,7 +64,8 @@
     cursor: pointer;
     display: inline-block;
     height: 2.3rem;
-    padding: 0.5rem;
+    margin: 1rem;
+    // padding: 1rem;
     transform: rotate(-45deg);
     width: 23px;
 
