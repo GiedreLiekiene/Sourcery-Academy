@@ -1,9 +1,11 @@
+@import '../../sass/variables';
+
 .carousel {
   &__button {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: var(--font-size);
+    font-size: $font-size-m;
     height: 100%;
     opacity: 0.5;
     position: absolute;
@@ -13,7 +15,7 @@
 
     &:hover,
     &:focus {
-      color: var(--color-black);
+      color: $color-black;
       opacity: 1;
     }
 
@@ -34,7 +36,7 @@
     }
 
     .icon {
-      color: var(--color-black);
+      color: $color-black;
       font-size: 3rem;
       opacity: 0.5;
 
@@ -52,9 +54,9 @@
 
   &__arrow {
     background: 0;
-    border: solid var(--color-black);
-    border-bottom: 3px solid var(--color-black);
-    border-right: 3px solid var(--color-black);
+    border: solid $color-black;
+    border-bottom: 3px solid $color-black;
+    border-right: 3px solid $color-black;
     border-width: 0 3px 3px 0;
     cursor: pointer;
     display: inline-block;
