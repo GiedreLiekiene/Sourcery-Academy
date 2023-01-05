@@ -15,40 +15,38 @@ export default function Input({
   placeholder,
   onChange,
   fileName,
+  id,
 }) {
-  const inputClassId = 'input' + (fileName ? '__file' : '__text');
+  const inputClass = 'input__placeholder' + (fileName ? '--file' : '');
 
   return (
     <div className="input">
       {label && (
-        <label className="input__label" htmlFor={inputClassId}>
+        <label className="input__label" htmlFor={inputClass}>
           {label}
         </label>
       )}
       <input
         type={type}
         value={value}
-        className={inputClassId}
+        className={inputClass}
         name={name}
         placeholder={placeholder}
         onChange={onChange}
         accept="application/pdf, application/vnd.ms-excel"
-        id={inputClassId}
+        id={id}
       />
       {fileName && (
-        <label
-          tabIndex={0}
-          className="input__file--label"
-          htmlFor="input__file"
-        >
+        <label tabIndex={0} className="input__label--file" htmlFor={id}>
           {fileName}
-          <FileUploadSvg className="input__file--icon" />
+          <FileUploadSvg className="input__label--file-icon" />
         </label>
       )}
     </div>
   );
 }
 Input.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.node,

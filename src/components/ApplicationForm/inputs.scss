@@ -5,6 +5,7 @@ $size-labels: 1.4rem;
 $line-height: 2.1rem;
 $color-place-holders: #868686;
 $border-radius: 0.8rem;
+$border-color: #999;
 
 .input {
   position: relative;
@@ -33,34 +34,37 @@ $border-radius: 0.8rem;
       position: relative;
       right: 0.5rem;
     }
-  }
 
-  &__text,
-  &__file {
-    &--label {
-      border: 1px solid #999;
-      border-radius: $border-radius;
-      color: $color-place-holders;
-      font-family: $font-family;
-      font-size: $font-size-m;
-      font-weight: 400;
-      margin: 0.5rem 0 2rem;
-      padding: 1.2rem;
-      width: 100%;
-    }
-  }
-
-  &__file {
-    display: none;
-
-    &--label {
+    &--file {
       cursor: pointer;
       display: flex;
       justify-content: space-between;
     }
 
-    &--icon {
+    &--file-icon {
       width: 2rem;
     }
+  }
+
+  &__placeholder,
+  &__label--file {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    color: $color-place-holders;
+    font-family: $font-family;
+    font-size: $font-size-m;
+    font-weight: 400;
+    margin: 0.5rem 0 2rem;
+    max-width: 51rem;
+    padding: 1.2rem;
+    width: 100%;
+
+    &:hover {
+      font-weight: 450;
+    }
+  }
+
+  &__placeholder--file {
+    display: none;
   }
 }
