@@ -14,10 +14,11 @@ export default function Input({
   name,
   placeholder,
   onChange,
-  fileName,
+  isFile,
   id,
 }) {
-  const inputClass = 'input' + (fileName ? '__file' : '');
+  const inputClass = 'input' + (isFile ? '__file' : '');
+  const accept = isFile ? 'application/pdf, application/vnd.ms-excel' : '';
 
   return (
     <div>
@@ -33,16 +34,17 @@ export default function Input({
         name={name}
         placeholder={placeholder}
         onChange={onChange}
-        accept="application/pdf, application/vnd.ms-excel"
+        accept={accept}
         id={id}
+        required
       />
-      {fileName && (
+      {isFile && (
         <label tabIndex={0} className="input input__file-label" htmlFor={id}>
           Upload your resume
           <FileUploadSvg className={`${inputClass}-icon`} />
         </label>
       )}
-      {fileName && <div className="input__uploaded">{fileName}</div>}
+      {isFile && <div className="input__uploaded">{isFile}</div>}
     </div>
   );
 }
@@ -54,5 +56,5 @@ Input.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.node.isRequired,
   placeholder: PropTypes.string,
-  fileName: PropTypes.node,
+  isFile: PropTypes.node,
 };
