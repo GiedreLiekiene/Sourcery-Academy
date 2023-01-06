@@ -14,7 +14,7 @@ const Button = ({ type = 'submit', children, onClick, theme = 'primary' }) => {
 export default Button;
 Button.propTypes = {
   theme: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['button', 'submit']),
   children: PropTypes.string.isRequired,
   onClick: PropTypes.node.isRequired,
 };
