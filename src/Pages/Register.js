@@ -3,7 +3,7 @@ import { ThemeProvider } from '~/utils/ThemeContext';
 
 function Register() {
   return (
-    <ThemeProvider theme="secondary">
+    <ThemeProvider theme="primary">
       <div></div>
     </ThemeProvider>
   );
