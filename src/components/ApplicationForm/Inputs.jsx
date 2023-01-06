@@ -18,9 +18,15 @@ export default function Input({
   id,
   inputPlaceholder = 'Upload your resume',
 }) {
+  const handleUpload = (e) => {
+    if (e.key === 'Enter') {
+      inputRef.click();
+    }
+  };
+
   const inputClass = 'input' + (isFile ? '__file' : '');
   const accept = isFile ? 'application/pdf, application/vnd.ms-excel' : '';
-
+  let inputRef;
   return (
     <div>
       {label && <label className="input__label">{label}</label>}
@@ -34,9 +40,15 @@ export default function Input({
         accept={accept}
         id={id}
         required
+        ref={(refParam) => (inputRef = refParam)}
       />
       {isFile && (
-        <label tabIndex={0} className="input input__file-label" htmlFor={id}>
+        <label
+          tabIndex={0}
+          onKeyDown={handleUpload}
+          className="input input__file-label"
+          htmlFor={id}
+        >
           {inputPlaceholder}
           <FileUploadSvg className={`${inputClass}-icon`} />
         </label>
