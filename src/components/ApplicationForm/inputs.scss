@@ -2,19 +2,26 @@
 
 $color-labels: #5c5c5c;
 $size-labels: 1.4rem;
+$size-uploaded: 1.2rem;
 $line-height: 2.1rem;
 $color-place-holders: #868686;
 $border-radius: 0.8rem;
 $border-color: #999;
+$border-color-hover: rgba(0, 0, 0, 0.74);
 
 .input {
-  position: relative;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  color: $color-place-holders;
+  font-family: $font-family;
+  font-size: $font-size-m;
+  font-weight: 400;
+  max-width: 51rem;
+  padding: 1.2rem;
+  width: 100%;
 
-  &__error {
-    color: $color-error;
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    position: absolute;
+  &:hover {
+    border: 1px solid $border-color-hover;
   }
 
   &__label {
@@ -24,6 +31,7 @@ $border-color: #999;
     font-size: $size-labels;
     font-weight: 400;
     line-height: $line-height;
+    margin-bottom: 0.5rem;
     position: relative;
     right: 0.5rem;
 
@@ -34,37 +42,34 @@ $border-color: #999;
       position: relative;
       right: 0.5rem;
     }
-
-    &--file {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &--file-icon {
-      width: 2rem;
-    }
   }
 
-  &__placeholder,
-  &__label--file {
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    color: $color-place-holders;
-    font-family: $font-family;
-    font-size: $font-size-m;
-    font-weight: 400;
-    margin: 0.5rem 0 2rem;
-    max-width: 51rem;
-    padding: 1.2rem;
-    width: 100%;
-
-    &:hover {
-      font-weight: 450;
-    }
-  }
-
-  &__placeholder--file {
+  &__file {
     display: none;
+  }
+
+  &__file-label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__file-icon {
+    width: 2rem;
+  }
+
+  &__uploaded {
+    color: $color-labels;
+    font-family: $font-family;
+    font-size: $size-uploaded;
+    margin-top: 0.1rem;
+    position: absolute;
+  }
+
+  &__error {
+    color: $color-error;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    position: absolute;
   }
 }

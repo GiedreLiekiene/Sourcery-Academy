@@ -17,10 +17,10 @@ export default function Input({
   fileName,
   id,
 }) {
-  const inputClass = 'input__placeholder' + (fileName ? '--file' : '');
+  const inputClass = 'input' + (fileName ? '__file' : '');
 
   return (
-    <div className="input">
+    <div>
       {label && (
         <label className="input__label" htmlFor={inputClass}>
           {label}
@@ -37,11 +37,12 @@ export default function Input({
         id={id}
       />
       {fileName && (
-        <label tabIndex={0} className="input__label--file" htmlFor={id}>
-          {fileName}
-          <FileUploadSvg className="input__label--file-icon" />
+        <label tabIndex={0} className="input input__file-label" htmlFor={id}>
+          Upload your resume
+          <FileUploadSvg className={`${inputClass}-icon`} />
         </label>
       )}
+      {fileName && <div className="input__uploaded">{fileName}</div>}
     </div>
   );
 }
