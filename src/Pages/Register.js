@@ -1,7 +1,12 @@
 import React from 'react';
+import { ThemeProvider } from '~/utils/ThemeContext';
 
 function Register() {
-  return <div>Register</div>;
+  return (
+    <ThemeProvider theme="secondary">
+      <div></div>
+    </ThemeProvider>
+  );
 }
 
 export default Register;

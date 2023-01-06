@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './button.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { ThemeContext } from '~/utils/ThemeContext';
 
-const Button = ({ type = 'submit', children, onClick, theme = 'primary' }) => {
+const Button = ({ type = 'submit', children, onClick }) => {
+  const { theme } = useContext(ThemeContext);
+
   const buttonClass = classNames('button', `button--${theme}`);
   return (
     <button type={type} className={buttonClass} onClick={onClick}>
@@ -13,7 +16,7 @@ const Button = ({ type = 'submit', children, onClick, theme = 'primary' }) => {
 };
 export default Button;
 Button.propTypes = {
-  theme: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  // theme: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   type: PropTypes.oneOf(['button', 'submit']),
   children: PropTypes.string.isRequired,
   onClick: PropTypes.node.isRequired,
