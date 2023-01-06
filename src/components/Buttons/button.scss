@@ -1,11 +1,8 @@
 @import '../../sass/variables';
 
-$_button-background-color: #584dfc;
-
 .button {
-  background-color: $_button-background-color;
   border: 0;
-  border-radius: $border-radius-xxxxxxl;
+  border-radius: $radius-xxxxxxl;
   color: $color-white;
   cursor: pointer;
   display: flex;
@@ -13,13 +10,23 @@ $_button-background-color: #584dfc;
   font-size: $font-size-m;
   font-weight: 700;
   line-height: 1.2;
-  padding: $spacing-sm $spacing-ml;
+  padding: $spacing-ss $spacing-ml;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 1;
   }
 
   &:active {
     opacity: 0.6;
+  }
+  @each $key, $val in $themes {
+    &--#{$key} {
+      background-color: $val;
+      opacity: 0.9;
+
+      &:focus {
+        border: 2px solid $val;
+      }
+    }
   }
 }
