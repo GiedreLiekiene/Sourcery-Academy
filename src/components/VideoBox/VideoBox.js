@@ -6,14 +6,33 @@ import VideoPlayer from './VideoPlayer';
 
 import './video-box.scss';
 
-const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc, onClick }) => {
+export const VideoBoxThumbnail = ({ thumbnail, altInfo, stroke, onClick }) => {
+  return (
+    <div className="video-box">
+      <img src={thumbnail} alt={altInfo} />
+      <button className="video-box__button" onClick={onClick}>
+        <PlayIcon
+          className="video-box__button__svg"
+          stroke={stroke || '#000000'}
+        />
+      </button>
+    </div>
+  );
+};
+
+VideoBoxThumbnail.propTypes = {
+  thumbnail: PropTypes.string.isRequired,
+  altInfo: PropTypes.string,
+  stroke: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const onClickThumbnail =
-    onClick ??
-    (() => {
-      setIsModalOpen(true);
-    });
+  const onClickThumbnail = () => {
+    setIsModalOpen(true);
+  };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -21,6 +40,12 @@ const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc, onClick }) => {
 
   return (
     <>
+      <VideoBoxThumbnail
+        thumbnail={thumbnail}
+        altInfo={altInfo}
+        stroke={stroke}
+        onClick={onClickThumbnail}
+      />
       <div className="video-box">
         <img src={thumbnail} alt={altInfo} />
         <button className="video-box__button" onClick={onClickThumbnail}>
@@ -43,8 +68,7 @@ VideoBox.propTypes = {
   thumbnail: PropTypes.string.isRequired,
   altInfo: PropTypes.string,
   stroke: PropTypes.string,
-  videoSrc: PropTypes.string,
-  onClick: PropTypes.func,
+  videoSrc: PropTypes.string.isRequired,
 };
 
 export default VideoBox;

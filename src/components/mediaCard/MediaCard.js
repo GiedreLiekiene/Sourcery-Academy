@@ -1,7 +1,7 @@
 import React from 'react';
 import './media-card.scss';
 import PropTypes from 'prop-types';
-import VideoBox from '../VideoBox/VideoBox';
+import { VideoBoxThumbnail } from '../VideoBox/VideoBox';
 
 const MediaCard = ({ imgUrl, altInfo, videoThumbnail, onClick }) => {
   return (
@@ -9,7 +9,7 @@ const MediaCard = ({ imgUrl, altInfo, videoThumbnail, onClick }) => {
       {imgUrl ? (
         <img src={imgUrl} alt={altInfo} />
       ) : (
-        <VideoBox thumbnail={videoThumbnail} altInfo={altInfo} />
+        <VideoBoxThumbnail thumbnail={videoThumbnail} altInfo={altInfo} />
       )}
     </button>
   );
