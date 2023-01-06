@@ -7,7 +7,7 @@ $line-height: 2.1rem;
 $color-place-holders: #868686;
 $border-radius: 0.8rem;
 $border-color: #999;
-$border-color-hover: rgba(0, 0, 0, 0.74);
+$border-color-hover: #000000bc;
 
 .input {
   border: 1px solid $border-color;
@@ -63,13 +63,12 @@ $border-color-hover: rgba(0, 0, 0, 0.74);
     font-family: $font-family;
     font-size: $size-uploaded;
     margin-top: 0.1rem;
-    position: absolute;
   }
 
   &__error {
     color: $color-error;
     font-size: 1.4rem;
-    margin-top: 2rem;
+    margin-top: $spacing-m;
     position: absolute;
   }
 }
