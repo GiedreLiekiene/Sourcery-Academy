@@ -1,5 +1,5 @@
 @import '../../sass/variables';
-$checkbox-color: #5c5c5c;
+
 $_line-height-small: 1.5;
 $_border-radius: 0.3rem;
 
@@ -28,7 +28,7 @@ $_border-radius: 0.3rem;
     }
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
 
@@ -37,6 +37,6 @@ $_border-radius: 0.3rem;
     font-size: $font-size-m;
     font-weight: 400;
     line-height: $_line-height-small;
-    margin-left: 2.5rem;
+    margin-left: $spacing-ml;
   }
 }
