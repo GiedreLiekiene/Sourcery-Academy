@@ -3,12 +3,12 @@
 
   &__button {
     border: unset;
+    cursor: pointer;
     padding: 0;
     width: 100%;
   }
 
   img {
-    cursor: pointer;
     height: 22rem;
     object-fit: cover;
     width: 100%;
