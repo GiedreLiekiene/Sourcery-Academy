@@ -3,7 +3,7 @@ import React from 'react';
 import './video-player.scss';
 
 function VideoPlayer({ videoSrc }) {
-  return <video src={videoSrc} controls className="video-player" />;
+  return <video autoPlay src={videoSrc} controls className="video-player" />;
 }
 
 VideoPlayer.propTypes = {

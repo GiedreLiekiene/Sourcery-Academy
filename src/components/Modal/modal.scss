@@ -1,17 +1,14 @@
-@import 'src/sass/media-queries.scss';
-$color-white: #fff;
+@import 'src/sass/media-queries';
+@import 'src/sass/variables';
 
 .modal-container {
   &__content {
-    background: $color-white;
+    border-radius: $radius-xs;
     left: 50%;
-    max-height: 45rem;
     overflow-y: auto;
-    padding: 1rem;
-    position: absolute;
-    top: 55%;
+    position: fixed;
+    top: 50%;
     transform: translate(-50%, -50%);
-    width: 55rem;
     z-index: 11;
 
     @include media-query-mobile {
@@ -19,7 +16,18 @@ $color-white: #fff;
     }
 
     &--min {
-      width: 30rem;
+      width: 40rem;
+    }
+
+    &--med {
+      width: 75rem;
+
+      @include media-query-tablet {
+        width: 65rem;
+      }
+      @include media-query-mobile {
+        width: 45rem;
+      }
     }
 
     &--max {
