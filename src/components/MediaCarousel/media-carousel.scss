@@ -43,10 +43,20 @@
 
     &--prev {
       left: 0;
+
+      &:hover,
+      &:focus {
+        background-color: $bakcground-color-button;
+      }
     }
 
     &--next {
       right: 0;
+
+      &:hover,
+      &:focus {
+        background-color: $bakcground-color-button;
+      }
     }
   }
 
