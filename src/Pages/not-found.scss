@@ -1,0 +1,71 @@
+@import '../sass/media-queries';
+
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__header {
+    color: var(--color-primary);
+    font: 700 var(--font-size-headings) / 1.25 var(--font-family-headings);
+    text-align: center;
+
+    @include media-query-mobile {
+      font-size: 4rem;
+    }
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  &__computer-svg {
+    transform: translateX(37rem) translateY(-3rem);
+  }
+
+  &__link {
+    position: absolute;
+  }
+
+  &__svg-cord {
+    position: absolute;
+
+    &-left {
+      animation: move 2s ease-in-out infinite;
+    }
+
+    &-right {
+      animation: move1 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-50rem);
+  }
+
+  50% {
+    transform: translateX(-45rem);
+  }
+
+  to {
+    transform: translateX(-50rem);
+  }
+}
+@keyframes move1 {
+  from {
+    transform: translateX(-17rem);
+  }
+
+  50% {
+    transform: translateX(-22rem);
+  }
+
+  to {
+    transform: translateX(-17rem);
+  }
+}
