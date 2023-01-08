@@ -6,7 +6,7 @@
     border: none;
     cursor: pointer;
     font-size: $font-size-m;
-    height: 80%;
+    height: 100%;
     opacity: 0.5;
     position: absolute;
     top: 50%;
@@ -25,6 +25,7 @@
       margin-top: 1.5rem;
       right: 1rem;
       top: 1rem;
+      z-index: 3;
     }
 
     .icon {
