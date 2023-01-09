@@ -9,6 +9,7 @@ import ImageHolder from '../components/ImageHolder/ImageHolder';
 import academyInformation from '../utils/academyInformation.json';
 import { assets } from '../assets/svg/assets';
 import { SvgList } from '../assets/svg/index';
+import { ThemeProvider } from '../utils/ThemeContext';
 import './home.scss';
 
 const {
@@ -29,7 +30,7 @@ function getAcademyInfo(key, academy) {
 }
 function Home() {
   return (
-    <>
+    <ThemeProvider theme="primary">
       <div className="section-group">
         <TextImgContainer
           leftChild={
@@ -119,13 +120,13 @@ function Home() {
 
       <div className="section-group">
         <CardContainer title="Media">
-          <MediaContainer />
+          <MediaContainer academy={'frontend'} />
         </CardContainer>
         <div className="section-group__fourth-wave">
           <FourthWaveSvg />
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 export default Home;

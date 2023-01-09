@@ -1,0 +1,37 @@
+@import '../../sass/variables';
+
+.schedule-card-header {
+  &__action {
+    border: 0;
+    color: $color-white;
+    display: flex;
+    font-size: $font-size-m;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: $spacing-m;
+    text-align: left;
+    width: 100%;
+    @each $key, $val in $themes {
+      &--#{$key} {
+        background-color: $val;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    align-self: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: $spacing-xxl;
+    transition: transform 0.1s ease-in-out;
+    width: 2rem;
+
+    &--rotated {
+      transform: rotate(180deg);
+    }
+  }
+}

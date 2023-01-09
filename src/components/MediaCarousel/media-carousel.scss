@@ -1,0 +1,94 @@
+@import '../../sass/variables';
+
+.carousel {
+  &__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-m;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      opacity: 1;
+    }
+
+    &--close {
+      font-size: 3rem;
+      height: 2.5rem;
+      margin-top: 1.5rem;
+      right: 1rem;
+      top: 1rem;
+      z-index: 3;
+    }
+
+    .icon {
+      color: $color-white;
+      font-size: 3rem;
+      margin: auto;
+
+      :hover,
+      :focus {
+        color: $color-white;
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
+    &--prev {
+      left: 0;
+
+      &:hover,
+      &:focus {
+        background-color: $bakcground-color-button;
+      }
+    }
+
+    &--next {
+      right: 0;
+
+      &:hover,
+      &:focus {
+        background-color: $bakcground-color-button;
+      }
+    }
+  }
+
+  &__image {
+    height: auto;
+    width: 100%;
+  }
+
+  &__arrow {
+    background: 0;
+    border: solid $color-white;
+    border-bottom: 3px solid $color-white;
+    border-right: 3px solid $color-white;
+    border-width: 0 3px 3px 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 2.3rem;
+    margin: 1rem;
+    transform: rotate(-45deg);
+    width: 23px;
+
+    &--left {
+      transform: rotate(135deg);
+    }
+
+    &--right {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .video-player {
+    height: auto;
+    width: 100%;
+  }
+}

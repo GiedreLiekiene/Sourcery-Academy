@@ -7,12 +7,14 @@
   --color-quaternary: #b40031;
   --color-violet: #3d3691;
   --color-white: #fff;
+  --color-black: #000;
   --color-error: #f00;
   --color-transparent: transparent;
   --color-background-links-hover: #f6f5f7;
   --color-background-shadow: #f6f5f7;
   --color-main-text: #3e3c4e;
   --font-size-base: 1.6rem;
+  --font-size-small: 1.4rem;
   --font-family: 'Raleway', sans-serif;
   --font-family-headings: 'Montserrat', sans-serif;
   --line-height-base: 1.2;
@@ -24,6 +26,9 @@
   --spacer-xxs: 0.4rem;
   --spacer-xs: 0.8rem;
   --spacer-s: 1.2rem;
+  --border-radius-xxxs: 0.25rem;
+  --border-radius-xxs: 0.5rem;
+  --border-radius-xs: 1rem;
   --border-radius-s: 1.5rem;
   --border-radius-m: 2rem;
   --border-radius-l: 2.5rem;
@@ -39,7 +44,6 @@
   --spacer-xl: 2.4rem;
   --spacer-xxl: 3.2rem;
   --spacer-xxxl: 4rem;
-  --border-radius-m: 1.5rem;
 }
 
 $heading-all-levels: (
@@ -50,10 +54,47 @@ $heading-all-levels: (
   h5: 1.8rem,
   h6: 1.8rem,
 );
-
+//Color Palette
 $themes: (
-  primary: var(--color-primary),
-  secondary: var(--color-secondary),
-  tertiary: var(--color-tertiary),
-  quaternary: var(--color-quaternary),
+  primary: #3d3691,
+  secondary: #0048c1,
+  tertiary: #0b555f,
+  quaternary: #b40031,
 );
+
+$color-primary: #3d3691;
+$color-secondary: #0048c1;
+$color-tertiary: #0b555f;
+$color-quaternary: #b40031;
+$color-white: #fff;
+$color-black: #000;
+$color-error: #f00;
+$color-main-text: #3e3c4e;
+$color-bkg-links-hover: #f6f5f7;
+$color-bkg-shadow: #f6f5f7;
+$bakcground-color-button: rgb($color-white, 0.1);
+
+//Spacing
+$spacing-s: 1rem;
+$spacing-sm: 1.5rem;
+$spacing-m: 2rem;
+$spacing-ml: 2.5rem;
+$spacing-l: 3rem;
+$spacing-xl: 3.5rem;
+$spacing-xxl: 4rem;
+
+//Radius
+$radius-xxs: 0.5rem;
+$radius-xs: 0.8rem;
+$radius-s: 1.5rem;
+$radius-m: 2rem;
+$radius-l: 2.5rem;
+
+//Font Size
+$font-size-s: 1.4rem;
+$font-size-base: 1.6rem;
+$font-size-m: 1.8rem;
+
+//Font Family
+$font-family: 'Raleway', sans-serif;
+$font-family-headings: 'Montserrat', sans-serif;
