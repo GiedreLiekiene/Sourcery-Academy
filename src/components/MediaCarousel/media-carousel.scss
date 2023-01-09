@@ -13,6 +13,13 @@
     transform: translateY(-50%);
     z-index: 2;
 
+    &:hover,
+    &:focus {
+      animation: fadeInFromNone 0.5s ease-out;
+      color: $color-white;
+      opacity: 1;
+    }
+
     @keyframes fadeInFromNone {
       0% {
         opacity: 0;
@@ -21,14 +28,6 @@
       100% {
         opacity: 1;
       }
-    }
-
-    &:hover,
-    &:focus {
-      animation: fadeInFromNone 0.5s ease-out;
-      background-color: $background-color-button;
-      color: $color-white;
-      opacity: 1;
     }
 
     &--close {
@@ -53,44 +52,20 @@
       }
     }
 
+    &--prev,
+    &--next {
+      &:hover,
+      &:focus {
+        background-color: $background-color-button;
+      }
+    }
+
     &--prev {
       left: 0;
-
-      // &:hover,
-      // &:focus {
-      //   animation: fadeInFromNone 0.5s ease-out;
-      //   background-color: $background-color-button;
-
-      //   @keyframes fadeInFromNone {
-      //     0% {
-      //       opacity: 0;
-      //     }
-
-      //     100% {
-      //       opacity: 1;
-      //     }
-      //   }
-      // }
     }
 
     &--next {
       right: 0;
-
-      // &:hover,
-      // &:focus {
-      //   animation: fadeInFromNone 0.5s ease-out;
-      //   background-color: $background-color-button;
-
-      //   @keyframes fadeInFromNone {
-      //     0% {
-      //       opacity: 0;
-      //     }
-
-      //     100% {
-      //       opacity: 1;
-      //     }
-      //   }
-      // }
     }
   }
 
