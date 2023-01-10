@@ -1,0 +1,42 @@
+@import '../../sass/variables';
+
+$_line-height-small: 1.5;
+$_border-radius: 0.3rem;
+
+.checkbox {
+  display: flex;
+
+  &__check {
+    appearance: none;
+    border: 2px solid $checkbox-color;
+    border-radius: $_border-radius;
+    cursor: pointer;
+    height: 2.2rem;
+    position: relative;
+    width: 2.2rem;
+
+    &:checked,
+    &:hover {
+      &::after {
+        color: $checkbox-color;
+        content: '✔';
+        font-size: 2rem;
+        margin: auto 0.1rem;
+        position: absolute;
+        top: -0.5rem;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__label {
+    font-family: $font-family;
+    font-size: $font-size-m;
+    font-weight: 400;
+    line-height: $_line-height-small;
+    margin-left: $spacing-ml;
+  }
+}
