@@ -3,15 +3,14 @@
 $color-labels: #5c5c5c;
 $size-labels: 1.4rem;
 $size-uploaded: 1.2rem;
-$line-height: 2.1rem;
+$line-height: 2.1;
 $color-place-holders: #868686;
-$border-radius: 0.8rem;
 $border-color: #999;
 $border-color-hover: #000000bc;
 
 .input {
   border: 1px solid $border-color;
-  border-radius: $border-radius;
+  border-radius: $radius-xs;
   color: $color-place-holders;
   font-family: $font-family;
   font-size: $font-size-m;
