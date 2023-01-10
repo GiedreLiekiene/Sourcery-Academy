@@ -16,7 +16,7 @@ export default function Input({
   onChange,
   isFile,
   id,
-  inputPlaceholder = 'Upload your resume',
+  filePlaceholder = 'Upload your resume',
 }) {
   let inputRef;
   const handleUpload = (e) => {
@@ -54,7 +54,7 @@ export default function Input({
           className="input input__file-label"
           htmlFor={id}
         >
-          {inputPlaceholder}
+          {filePlaceholder}
           <FileUploadSvg className={`${inputClass}-icon`} />
         </label>
       )}
@@ -63,7 +63,7 @@ export default function Input({
   );
 }
 Input.propTypes = {
-  inputPlaceholder: PropTypes.string,
+  filePlaceholder: PropTypes.string,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   type: PropTypes.string,
