@@ -1,5 +1,5 @@
 import React from 'react';
-import './inputs.scss';
+import './input.scss';
 import FileUploadSvg from '../../assets/svg/icon-upload.svg';
 import PropTypes from 'prop-types';
 
