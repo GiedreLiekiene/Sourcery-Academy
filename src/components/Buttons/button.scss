@@ -1,15 +1,16 @@
 @import '../../sass/variables';
 
-.link-container {
-  border-radius: var(--border-radius-xxxxxxl);
-  color: var(--color-white);
+.button {
+  border: 0;
+  border-radius: $radius-xxxxxxl;
+  color: $color-white;
   cursor: pointer;
-  font-family: var(--font-family);
-  font-size: 1.8rem;
+  display: flex;
+  font-family: $font-family;
+  font-size: $font-size-m;
   font-weight: 700;
   line-height: 1.2;
-  padding: var(--spacer-s) var(--spacer-xl);
-  text-decoration: none;
+  padding: $spacing-ss $spacing-ml;
 
   &:hover {
     opacity: 1;
@@ -18,7 +19,6 @@
   &:active {
     opacity: 0.6;
   }
-
   @each $key, $val in $themes {
     &--#{$key} {
       background-color: $val;
