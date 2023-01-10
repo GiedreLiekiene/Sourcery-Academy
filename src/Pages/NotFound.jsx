@@ -1,6 +1,6 @@
-import React from "react";
-import CustomLink from "../components/Link/CustomLink";
-import "./not-found.scss";
+import React from 'react';
+import CustomLink from '../components/Link/CustomLink';
+import './not-found.scss';
 
 import { assets } from '../assets/svg/assets';
 
@@ -18,7 +18,7 @@ const NotFoundPage = () => {
                 <CustomLink to="/" theme="primary">Connect</CustomLink>
               </div>
             </div> 
-            </div>
+          </div>
   );
 };
 

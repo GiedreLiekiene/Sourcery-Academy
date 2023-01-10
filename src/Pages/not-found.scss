@@ -1,4 +1,5 @@
 @import '../sass/media-queries';
+@import '../sass/variables';
 
 .not-found-page {
   display: flex;
@@ -6,8 +7,11 @@
   position: relative;
 
   &__header {
-    color: var(--color-primary);
-    font: 700 var(--font-size-headings) / 1.25 var(--font-family-headings);
+    color: $color-primary;
+    font-family: $font-family-headings;
+    font-size: map-get($heading-all-levels, h1);
+    font-weight: 700;
+    line-height: 1.25;
     text-align: center;
 
     @include media-query-mobile {
@@ -23,49 +27,118 @@
   }
 
   &__computer-svg {
-    transform: translateX(37rem) translateY(-3rem);
+    transform: translateX(-2rem) translateY(-3rem);
   }
 
   &__link {
     position: absolute;
   }
 
-  &__svg-cord {
+  &__svg-cord-left {
+    animation: move 2s ease-in-out infinite;
     position: absolute;
+  }
 
-    &-left {
-      animation: move 2s ease-in-out infinite;
-    }
-
-    &-right {
-      animation: move1 2s ease-in-out infinite;
-    }
+  &__svg-cord-right {
+    animation: move1 2s ease-in-out infinite;
+    position: absolute;
   }
 }
 
 @keyframes move {
   from {
-    transform: translateX(-50rem);
+    transform: translateX(-38rem);
   }
 
   50% {
-    transform: translateX(-45rem);
+    transform: translateX(-32rem);
   }
 
   to {
-    transform: translateX(-50rem);
+    transform: translateX(-38rem);
   }
 }
 @keyframes move1 {
   from {
-    transform: translateX(-17rem);
+    transform: translateX(35rem);
   }
 
   50% {
-    transform: translateX(-22rem);
+    transform: translateX(30rem);
   }
 
   to {
-    transform: translateX(-17rem);
+    transform: translateX(35rem);
   }
 }
+
+// @import '../sass/media-queries';
+// @import '../sass/variables.scss';
+
+// .not-found-page {
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+
+//   &__header {
+//     color: $color-primary;
+//     font: 700 map-get($heading-all-levels, h1) / 1.25 $font-family-headings;
+//     text-align: center;
+
+//     @include media-query-mobile {
+//       font-size: 4rem;
+//     }
+//   }
+
+//   &__container {
+//     align-items: center;
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 5rem;
+//   }
+
+//   &__computer-svg {
+//     transform: translateX(37rem) translateY(-3rem);
+//   }
+
+//   &__link {
+//     position: absolute;
+//   }
+
+//   &__svg-cord-left {
+//     animation: move 2s ease-in-out infinite;
+//     position: absolute;
+
+//     &__svg-cord-right {
+//       animation: move1 2s ease-in-out infinite;
+//       position: absolute;
+//     }
+//   }
+// }
+
+// @keyframes move {
+//   from {
+//     transform: translateX(-50rem);
+//   }
+
+//   50% {
+//     transform: translateX(-45rem);
+//   }
+
+//   to {
+//     transform: translateX(-50rem);
+//   }
+// }
+// @keyframes move1 {
+//   from {
+//     transform: translateX(-17rem);
+//   }
+
+//   50% {
+//     transform: translateX(-22rem);
+//   }
+
+//   to {
+//     transform: translateX(-17rem);
+//   }
+// }
