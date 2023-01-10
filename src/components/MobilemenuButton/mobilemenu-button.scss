@@ -2,6 +2,8 @@
 @import '../../sass/media-queries';
 
 .mobilemenu-button {
+  $this: &;
+
   background-color: var(--color-button-background);
   border: 0;
   cursor: pointer;
@@ -39,7 +41,7 @@
   }
 
   &.is-active {
-    &__bar {
+    #{$this}__bar {
       top: 50%;
       transform-origin: center;
 
