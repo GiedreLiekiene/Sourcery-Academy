@@ -4,10 +4,10 @@ import './modal.scss';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Modal = ({ isModalOpen, isModalClose, children, min, max }) => {
+const Modal = ({ onClickClose, children, min, med, max }) => {
   const closeOnEsc = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
-      isModalClose();
+      onClickClose();
     }
   };
 
@@ -20,26 +20,28 @@ const Modal = ({ isModalOpen, isModalClose, children, min, max }) => {
 
   const modalClass = classNames('modal-container__content', {
     'modal-container__content--min': min,
+    'modal-container__content--med': med,
     'modal-container__content--max': max,
   });
 
-  return isModalOpen
-    ? ReactDOM.createPortal(
-        <div className="modal-container">
-          <button className="modal-container__overlay" onClick={isModalClose}></button>
-          <div className={modalClass}>{children}</div>
-        </div>,
-        document.body
-      )
-    : null;
+  return ReactDOM.createPortal(
+    <div className="modal-container">
+      <button
+        className="modal-container__overlay"
+        onClick={onClickClose}
+      ></button>
+      <div className={modalClass}>{children}</div>
+    </div>,
+    document.body
+  );
 };
 
 export default Modal;
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
-  open: PropTypes.bool.isRequired,
-  close: PropTypes.func.isRequired,
+  onClickClose: PropTypes.func.isRequired,
   min: PropTypes.bool,
+  med: PropTypes.bool,
   max: PropTypes.bool,
 };
