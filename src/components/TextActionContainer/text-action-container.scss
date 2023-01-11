@@ -63,7 +63,6 @@ $padding-size-l: 10rem;
   @include media-query-mobile {
     &--right {
       align-items: center;
-      // padding: 0;
     }
 
     &__title {
@@ -87,11 +86,6 @@ $padding-size-l: 10rem;
       margin-top: 1rem;
       padding: 0;
       text-align: center;
-
-      &--right {
-        // padding: 0;
-        // text-align: left;
-      }
     }
   }
 }
