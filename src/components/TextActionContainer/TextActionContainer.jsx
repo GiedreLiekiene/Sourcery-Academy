@@ -19,6 +19,7 @@ export default function TextActionContainer({
   const titleClass = classNames(
     'text-action-container__title',
     `text-action-container__title--h${headingLevel}`,
+    `text-action-container__title--${theme}`,
     {
       'text-action-container__title--right': alignRight,
       'text-action-container__title--wrap': forceWrapTitle,

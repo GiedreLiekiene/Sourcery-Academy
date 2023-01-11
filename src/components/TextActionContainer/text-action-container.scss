@@ -11,7 +11,11 @@ $padding-size-l: 10rem;
   }
 
   &__title {
-    color: var(--color-primary);
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
+      }
+    }
 
     @each $key, $val in $heading-all-levels {
       @if #{$key} == h1 {
