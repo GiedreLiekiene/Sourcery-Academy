@@ -28,13 +28,17 @@ export default function TextActionContainer({
   const textClass = classNames('text-action-container__text', {
     'text-action-container__text--right': alignRight,
   });
+  const actionClass = classNames(
+    'text-action-container__action',
+    `text-action-container__action--${theme}`
+  );
 
   const HeadingTag = `h${headingLevel}`;
   return (
     <div className={textActionContainerClass}>
       <HeadingTag className={titleClass}>{title}</HeadingTag>
       <p className={textClass}>{text}</p>
-      <div className="text-action-container__action"></div>
+      <div className={actionClass}></div>
     </div>
   );
 }

@@ -60,5 +60,11 @@ $padding-size-l: 10rem;
 
   &__action {
     max-width: fit-content;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        background-color: $val;
+      }
+    }
   }
 }
