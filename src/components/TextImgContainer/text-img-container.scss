@@ -22,5 +22,6 @@
 
   @include media-query-mobile {
     display: block;
+    max-width: 100%;
   }
 }
