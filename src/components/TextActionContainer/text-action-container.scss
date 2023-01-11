@@ -1,8 +1,5 @@
 @import '../../sass/variables';
-@import '../../sass/media-queries';
-
-$padding-size-m: 5rem;
-$padding-size-l: 10rem;
+$_padding-size-m: 5rem;
 
 .text-action-container {
   display: flex;
@@ -13,26 +10,30 @@ $padding-size-l: 10rem;
   }
 
   &__title {
-    color: var(--color-primary);
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
+      }
+    }
 
     @each $key, $val in $heading-all-levels {
       @if #{$key} == h1 {
         &--#{$key} {
-          font-family: var(--font-family-headings);
+          font-family: $font-family-headings;
           font-size: $val;
-          font-weight: 700;
+          font-weight: $font-weight-bold;
         }
       } @else {
         &--#{$key} {
-          font-family: var(--font-family-headings);
+          font-family: $font-family-headings;
           font-size: $val;
-          margin: 1rem 0;
+          margin: $spacing-s 0;
         }
       }
     }
 
     &--right {
-      padding-left: $padding-size-m;
+      padding-left: $_padding-size-m;
       padding-right: 0;
       text-align: right;
     }
@@ -43,14 +44,14 @@ $padding-size-l: 10rem;
   }
 
   &__text {
-    color: var(--color-main-text);
-    font-family: var(--font-family);
-    font-size: 1.8rem;
-    line-height: var(--line-height-small);
-    padding-right: $padding-size-m;
+    color: $color-main-text;
+    font-family: $font-family;
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+    padding-right: $_padding-size-m;
 
     &--right {
-      padding-left: $padding-size-m;
+      padding-left: $_padding-size-m;
       padding-right: 0;
       text-align: right;
     }
@@ -58,6 +59,12 @@ $padding-size-l: 10rem;
 
   &__action {
     max-width: fit-content;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        background-color: $val;
+      }
+    }
   }
 
   @include media-query-mobile {

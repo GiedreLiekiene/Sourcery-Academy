@@ -66,11 +66,11 @@
     cursor: pointer;
     height: 5rem;
     padding: 0;
+    transition: transform 0.2s ease-in-out;
     width: 5rem;
 
     &:hover {
-      fill: var(--color-background-shadow);
-      transition: 0.2s ease-in-out;
+      transform: scale(1.1);
     }
   }
 }
