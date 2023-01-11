@@ -1,3 +1,5 @@
+@import '../sass/media-queries';
+
 @mixin wave-position($width, $direction, $direction_val, $translate_val) {
   position: absolute;
   transform: translateY($translate_val);
@@ -10,6 +12,10 @@
   display: flex;
   padding: 12rem 0;
   position: relative;
+
+  @include media-query-mobile {
+    padding: 4rem 0;
+  }
 
   &__first-wave {
     @include wave-position(50%, right, -2.5rem, -25%);
