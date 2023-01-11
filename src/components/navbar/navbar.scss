@@ -4,9 +4,9 @@
 
 .navbar {
   align-items: center;
-  background: var(--color-white);
-  box-shadow: 0 0.3rem 0.2rem var(--color-background-shadow);
-  color: var(--color-primary);
+  background: $color-white;
+  box-shadow: 0 0.3rem 0.2rem $color-bkg-shadow;
+  color: $color-primary;
   display: flex;
   height: 9.6rem;
   justify-content: space-between;
@@ -23,9 +23,9 @@
   }
 
   &__links {
-    background-color: var(--color-white);
+    background-color: $color-white;
     display: flex;
-    font-family: var(--font-family);
+    font-family: $font-family;
     height: 2.1rem;
     justify-content: space-between;
     padding: 0;
@@ -33,11 +33,11 @@
 
     @include media-query-mobile {
       animation: slide 0.3s ease-in-out;
-      background-color: var(--color-white);
+      background-color: $color-white;
       box-shadow: 0 0 0 1000rem rgba(0, 0, 0, 0.2),
-        0.3rem 0 0.5rem var(--color-background-shadow);
+        0.3rem 0 0.5rem $color-bkg-shadow;
       display: block;
-      font-family: var(--font-family);
+      font-family: $font-family;
       height: 100%;
       left: 0;
       position: fixed;
@@ -53,7 +53,7 @@
 
     &__logo {
       display: none;
-      padding: 1rem 1rem 0;
+      padding: $spacing-s $spacing-sm $spacing-sm;
       width: 24rem;
 
       @include media-query-mobile {
