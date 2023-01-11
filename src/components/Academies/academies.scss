@@ -4,6 +4,12 @@
   height: 100vh;
   position: relative;
 
+  @include media-query-mobile {
+    height: 100%;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
   &__particles {
     height: 100%;
     left: 0;
