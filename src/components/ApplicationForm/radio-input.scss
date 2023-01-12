@@ -4,70 +4,59 @@ $_button-background-color: #584dfc;
 $_color-labels: #5c5c5c;
 
 .radio-input {
-  display: none;
+  $this: &;
 
-  &--large {
-    border-radius: $border-radius-xxxl;
-    cursor: pointer;
-    display: flex;
-    font-family: $font-family;
-    font-size: $font-size-m;
-    font-weight: 700;
-    justify-content: space-around;
-    padding: $spacing-ss $spacing-l;
+  display: inline-block;
+  margin-right: 1rem;
+  position: relative;
+  white-space: nowrap;
 
-    &:hover {
-      background-color: $_button-background-color;
-      color: $color-white;
-      opacity: 0.8;
+  &__fake {
+    border: 2px solid $_color-labels;
+    border-radius: 50%;
+    height: 2rem;
+    position: absolute;
+    transition: all 0.3s ease;
+    transition-property: transform, border-color;
+    width: 2rem;
+
+    &::before {
+      background: $_button-background-color;
+      border-radius: 50%;
+      content: '';
+      height: 1rem;
+      left: 0.35rem;
+      position: absolute;
+      top: 0.35rem;
+      transform: scale(0);
+      transition: all 0.3s ease;
+      transition-property: transform, border-color;
+      width: 1rem;
     }
   }
 
-  &--small {
+  input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+  }
+
+  input:checked {
+    + #{$this}__fake {
+      border-color: $_button-background-color;
+
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__label {
     color: $_color-labels;
     cursor: pointer;
     font-family: $font-family;
     font-weight: 700;
     padding-left: 4rem;
     position: relative;
-
-    &::before,
-    &::after {
-      border-radius: 50%;
-      content: '';
-      position: absolute;
-      transition: all 0.3s ease;
-      transition-property: transform, border-color;
-    }
-
-    &::before {
-      border: 2px solid $_color-labels;
-      height: 2rem;
-      left: 0;
-      top: 0;
-      width: 2rem;
-    }
-
-    &::after {
-      background: $_button-background-color;
-      height: 1rem;
-      left: 0.5rem;
-      top: 0.5rem;
-      transform: scale(0);
-      width: 1rem;
-    }
-  }
-
-  :checked + &--large {
-    background-color: $_button-background-color;
-    color: $color-white;
-  }
-
-  :checked + &--small::before {
-    border-color: $_button-background-color;
-  }
-
-  :checked + &--small::after {
-    transform: scale(1);
   }
 }

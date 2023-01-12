@@ -3,34 +3,27 @@ import './radio-input.scss';
 import PropTypes from 'prop-types';
 
 export default function RadioInput({
-  type = 'radio',
   value,
   label,
   id,
   name,
-  large,
   onChange,
   checked,
 }) {
   return (
-    <div>
+    <div className="radio-input">
       <input
-        type={type}
+        type="radio"
         value={value}
-        className={'radio-input'}
         id={id}
         name={name}
         checked={checked}
         onChange={onChange}
       />
-      {label && (
-        <label
-          className={'radio-input' + (large ? '--large' : '--small')}
-          htmlFor={id}
-        >
-          {label}
-        </label>
-      )}
+      <span className="radio-input__fake" />
+      <label className="radio-input__label" htmlFor={id}>
+        {label}
+      </label>
     </div>
   );
 }
@@ -38,10 +31,8 @@ export default function RadioInput({
 RadioInput.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
-  type: PropTypes.string,
   checked: PropTypes.node.isRequired,
   value: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.node.isRequired,
-  large: PropTypes.bool,
 };
