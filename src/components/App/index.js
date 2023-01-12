@@ -48,7 +48,3 @@ export default function App() {
     </Router>
   );
 }
-
-App.propTypes = {
-  prop: PropTypes.string,
-};
