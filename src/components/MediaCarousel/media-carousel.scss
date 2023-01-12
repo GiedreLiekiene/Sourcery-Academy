@@ -15,8 +15,19 @@
 
     &:hover,
     &:focus {
+      animation: fadeInFromNone 0.5s ease-out;
       color: $color-white;
       opacity: 1;
+    }
+
+    @keyframes fadeInFromNone {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     &--close {
@@ -41,22 +52,20 @@
       }
     }
 
-    &--prev {
-      left: 0;
-
+    &--prev,
+    &--next {
       &:hover,
       &:focus {
-        background-color: $bakcground-color-button;
+        background-color: $color-bkg-button;
       }
+    }
+
+    &--prev {
+      left: 0;
     }
 
     &--next {
       right: 0;
-
-      &:hover,
-      &:focus {
-        background-color: $bakcground-color-button;
-      }
     }
   }
 
