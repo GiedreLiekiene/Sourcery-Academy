@@ -1,14 +1,71 @@
 import React from 'react';
+import TextActionContainer from '../components/TextActionContainer/TextActionContainer';
+import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
+import VideoBox from '../components/VideoBox/VideoBox';
 import CardContainer from '../components/CardContainer/CardContainer';
+import MediaContainer from '../components/MediaContainer/MediaContainer';
+import TestimonialsContainer from '../components/TestimonialsContainer/TestimonialsContainer';
 import ScheduleContainer from '../components/ScheduleContainer/ScheduleContainer';
 import { ThemeProvider } from '../utils/ThemeContext';
+import { SvgList } from '../assets/svg/index';
+
+import './academies.scss';
+import CustomLink from '../components/Link/CustomLink';
+import ImageHolder from '../components/ImageHolder/ImageHolder';
+
+
 
 function AcademyDevelopers() {
   return (
     <ThemeProvider theme="secondary">
-      <CardContainer title="Schedule" center>
-        <ScheduleContainer academy="Sourcery for Developers" />
-      </CardContainer>
+      <div className="section-group">
+        <TextImgContainer
+            leftChild={
+              <TextActionContainer
+                title={<>Sourcery Academy<br/>for developers</>}
+                text="Become a software developer with our free of charge three-month academy, available this fall and spring. Work with our top specialists as your mentors and lecturers in Kaunas and Vilnius."
+              >
+                <div className='action-wrap'>
+                  <CustomLink to='/register' theme='secondary'>
+                    Register
+                  </CustomLink>
+                    <div className="section-group__register-wave">
+                      <SvgList.RegisterWaveSvg />
+                    </div>
+                  </div>
+              </TextActionContainer>
+            }
+            rightChild={
+              <ImageHolder right image={<VideoBox thumbnail='https://sfe-2022-data.netlify.app/static/video/developers/thumbnails/47110170574_c00cc2b54d_k-1.jpg' videoSrc='https://sfe-2022-data.netlify.app/static/video/developers/80b0058a9428314582a3f25f3b1dfb8bc27de8a4.mp4'/>} /> 
+           }
+          ></TextImgContainer>
+          <div className="section-group__video-wave">
+            <SvgList.VideoWaveSvg />
+          </div>
+      </div>
+
+      <div className='section-group'>
+        <CardContainer title="Schedule" center>
+          <ScheduleContainer academy="Sourcery for Developers" />
+        </CardContainer>
+      </div>
+
+      <div className="section-group">
+        <CardContainer title="Testimonials" right>
+          <TestimonialsContainer academy="Random" />
+        </CardContainer>
+      </div>
+
+      <div className="section-group">
+        <CardContainer title="Media">
+          <MediaContainer academy={'developers'} />
+        </CardContainer>
+        {/* <div className="section-group__fourth-wave">
+          <FourthWaveSvg />
+        </div> */}
+      </div>
+
+
     </ThemeProvider>
   );
 }

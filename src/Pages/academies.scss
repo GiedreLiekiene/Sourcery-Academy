@@ -1,0 +1,25 @@
+@mixin wave-position($width, $direction, $direction_val, $translate_val) {
+  position: absolute;
+  transform: translateY($translate_val);
+  width: $width;
+  z-index: -1;
+  #{$direction}: $direction_val;
+}
+
+.action-wrap {
+  padding-top: 5rem;
+}
+
+.section-group {
+  display: flex;
+  padding: 10rem 0;
+  position: relative;
+
+  &__video-wave {
+    @include wave-position(48%, right, 0, 15%);
+  }
+
+  &__register-wave {
+    @include wave-position(35%, left, 7rem, -5%);
+  }
+}

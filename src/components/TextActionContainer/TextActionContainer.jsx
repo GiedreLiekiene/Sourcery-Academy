@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './text-action-container';
 
 export default function TextActionContainer({
   title,
+  children,
   forceWrapTitle = false,
   text,
   alignRight = false,
@@ -30,13 +31,14 @@ export default function TextActionContainer({
     <div className={textActionContainerClass}>
       <HeadingTag className={titleClass}>{title}</HeadingTag>
       <p className={textClass}>{text}</p>
-      <div className="text-action-container__action"></div>
+      <div className="text-action-container__action">{children}</div>
     </div>
   );
 }
 
 TextActionContainer.propTypes = {
   title: PropTypes.string.isRequired,
+  children: PropTypes.node,
   text: PropTypes.string.isRequired,
   alignRight: PropTypes.bool,
   headingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
