@@ -34,14 +34,14 @@
     &--close {
       font-size: 3rem;
       height: 2.5rem;
-      margin-top: 1.5rem;
+      margin-top: $spacing-sm;
       right: 1rem;
       top: 25rem;
       z-index: 3;
 
       @include media-query-mobile {
         height: 2.5rem;
-        margin-top: 1.5rem;
+        margin-top: $spacing-sm;
         right: 1rem;
         top: 25rem;
         z-index: 3;
@@ -76,11 +76,6 @@
     &--next {
       right: 0;
     }
-
-    // @include media-query-mobile {
-    //   height: 100%;
-    //   top: 60%;
-    // }
   }
 
   &__image {
@@ -97,7 +92,7 @@
     cursor: pointer;
     display: inline-block;
     height: 2.3rem;
-    margin: 1rem;
+    margin: $spacing-s;
     transform: rotate(-45deg);
     width: 23px;
 
