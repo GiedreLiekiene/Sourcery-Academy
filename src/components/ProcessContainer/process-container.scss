@@ -1,0 +1,33 @@
+@import '../../sass/variables';
+
+.process-container-wrapper {
+  border: 2px solid $color-black;
+  column-gap: $spacing-s;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__step {
+    border: 1px solid $color-quaternary;
+    flex: 49%;
+  }
+
+  &__step:nth-child(odd) {
+    margin-bottom: $spacing-m;
+  }
+
+  &__step:nth-child(even) {
+    margin-top: $spacing-m;
+  }
+
+  &__step-title {
+    font-size: 3.2rem;
+    font-weight: $font-weight-bold;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
+      }
+    }
+  }
+}
