@@ -1,7 +1,6 @@
 @import '../../sass/variables';
 
 $_fancy-border-color: #3d3691;
-$_color-labels: #5c5c5c;
 $_button-background-color: #584dfc;
 
 .selection-wrapper {
@@ -14,15 +13,10 @@ $_button-background-color: #584dfc;
   gap: 0.7rem;
   padding: 0.7rem;
 
-  input {
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
-  }
-
   &__label {
     align-items: center;
     border-radius: $border-radius-xxxl;
+    color: $color-radio-labels;
     cursor: pointer;
     display: flex;
     font-family: $font-family;
@@ -37,12 +31,24 @@ $_button-background-color: #584dfc;
       color: $color-white;
       opacity: 0.9;
     }
+
+    &:focus {
+      background-color: $_button-background-color;
+      color: $color-white;
+      opacity: 0.9;
+    }
   }
 
-  input:checked {
-    + #{$this}__label {
-      background-color: $_button-background-color;
-      color: $color_white;
+  input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+
+    &:checked {
+      + #{$this}__label {
+        background-color: $_button-background-color;
+        color: $color_white;
+      }
     }
   }
 }

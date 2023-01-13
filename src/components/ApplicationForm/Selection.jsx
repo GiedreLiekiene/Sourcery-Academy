@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './selection.scss';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 const Academies = [
   {
@@ -8,36 +8,58 @@ const Academies = [
     label: 'Full-stack',
     id: 'Full-stack',
     value: 'Full-stack',
+    key: 1,
   },
   {
     name: 'academy',
     label: 'Testers',
     id: 'Testers',
     value: 'Testers',
+    key: 2,
   },
   {
     name: 'academy',
     label: 'Front-End',
     id: 'Front-end',
     value: 'Front-end',
+    key: 3,
   },
 ];
 
-export default function Selection({ onChange, checked }) {
+export default function Selection() {
+  const [selected, setSelected] = useState(false);
+
+  const handleSelection = () => {
+    setSelected(true);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === ' ') {
+      setSelected(true);
+    }
+  };
+
   return (
     <div className="selection-wrapper">
       {Academies.map(function (academy) {
         return (
-          <div key={academy.id} className="selection-wrapper__item">
+          <div key={academy.key} className="selection-wrapper__item">
             <input
               type="radio"
               value={academy.value}
               id={academy.id}
               name={academy.name}
-              checked={checked}
-              onChange={onChange}
+              checked={selected}
+              tabIndex={-1}
+              onChange={handleSelection}
             />
-            <label className="selection-wrapper__label" htmlFor={academy.id}>
+            <label
+              className="selection-wrapper__label"
+              htmlFor={academy.id}
+              tabIndex={0}
+              onClick={handleSelection}
+              onKeyDown={handleKeyDown}
+            >
               {academy.label}
             </label>
           </div>
@@ -48,6 +70,6 @@ export default function Selection({ onChange, checked }) {
 }
 
 Selection.propTypes = {
-  checked: PropTypes.node.isRequired,
-  onChange: PropTypes.node.isRequired,
+  // checked: PropTypes.node.isRequired,
+  // onChange: PropTypes.node.isRequired,
 };
