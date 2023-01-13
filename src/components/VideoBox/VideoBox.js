@@ -46,15 +46,6 @@ const VideoBox = ({ thumbnail, altInfo, stroke, videoSrc }) => {
         stroke={stroke}
         onClick={onClickThumbnail}
       />
-      <div className="video-box">
-        <img src={thumbnail} alt={altInfo} />
-        <button className="video-box__button" onClick={onClickThumbnail}>
-          <PlayIcon
-            className="video-box__button__svg"
-            stroke={stroke || '#000000'}
-          />
-        </button>
-      </div>
       {isModalOpen && (
         <Modal onClickClose={closeModal}>
           <VideoPlayer videoSrc={videoSrc} />
