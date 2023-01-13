@@ -5,13 +5,22 @@
   color: $color-primary;
   display: flex;
   flex-wrap: wrap;
+  margin: $spacing-xxl 0;
+  min-height: 65vh;
+
+  @include media-query-mobile {
+    min-height: 60vh;
+  }
 
   &__title {
+    flex: 1;
     font: 700 4.8rem / 1.2 $font-family-headings;
-    margin: $spacing-xxl 0 $spacing-ml;
+    margin: 0;
+    margin-bottom: $spacing-ml;
 
     @include media-query-mobile {
       font-size: 3.2rem;
+      margin-bottom: 0;
       text-align: center;
     }
   }
@@ -19,15 +28,8 @@
   &__content {
     align-items: center;
     display: flex;
-    margin-bottom: $spacing-xxl;
+    gap: 8.4rem;
     width: 100%;
-
-    @include media-query-mobile {
-      flex-direction: column-reverse;
-      flex-wrap: wrap;
-      gap: $spacing-m;
-      margin: 5rem 0;
-    }
   }
 
   &__submit-check {
@@ -38,39 +40,33 @@
   }
 
   &__check-mark {
-    height: 10rem;
+    max-height: 10rem;
     max-width: 10rem;
 
     @include media-query-mobile {
       max-width: 6rem;
-      width: 100%;
     }
   }
 
   &__heading {
     font: 700 3.2rem / 1.5 $font-family-headings;
-    margin: $spacing-xxl 0 1.2rem;
-    text-align: center;
-
-    @include media-query-mobile {
-      margin: 0;
-    }
+    margin: $spacing-xxl 0 $spacing-ss;
   }
 
   &__submit-message {
     font: 700 1.8rem / 1.5 $font-family;
-    margin: 0;
-    text-align: center;
   }
 
   &__picture {
     flex: 1;
-    position: relative;
-    width: 62rem;
+
+    svg {
+      max-height: 38rem;
+      max-width: 62rem;
+    }
 
     @include media-query-mobile {
-      max-width: 40rem;
-      width: 100%;
+      display: none;
     }
   }
 }
