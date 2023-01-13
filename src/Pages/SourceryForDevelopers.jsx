@@ -8,12 +8,13 @@ import TestimonialsContainer from '../components/TestimonialsContainer/Testimoni
 import ScheduleContainer from '../components/ScheduleContainer/ScheduleContainer';
 import { ThemeProvider } from '../utils/ThemeContext';
 import { SvgList } from '../assets/svg/index';
+import { assets } from '../assets/svg/assets';
 
 import './academies.scss';
 import CustomLink from '../components/Link/CustomLink';
 import ImageHolder from '../components/ImageHolder/ImageHolder';
 
-
+const { WalkingToLaptopImg } = assets;
 
 function AcademyDevelopers() {
   return (
@@ -29,9 +30,6 @@ function AcademyDevelopers() {
                   <CustomLink to='/register' theme='secondary'>
                     Register
                   </CustomLink>
-                    <div className="section-group__register-wave">
-                      <SvgList.RegisterWaveSvg />
-                    </div>
                   </div>
               </TextActionContainer>
             }
@@ -39,20 +37,25 @@ function AcademyDevelopers() {
               <ImageHolder right image={<VideoBox thumbnail='https://sfe-2022-data.netlify.app/static/video/developers/thumbnails/47110170574_c00cc2b54d_k-1.jpg' videoSrc='https://sfe-2022-data.netlify.app/static/video/developers/80b0058a9428314582a3f25f3b1dfb8bc27de8a4.mp4'/>} /> 
            }
           ></TextImgContainer>
+          <div className="section-group__register-wave">
+            <SvgList.RegisterWaveSvg />
+          </div>
           <div className="section-group__video-wave">
             <SvgList.VideoWaveSvg />
           </div>
       </div>
-
       <div className='section-group'>
         <CardContainer title="Schedule" center>
           <ScheduleContainer academy="Sourcery for Developers" />
         </CardContainer>
+        <div className="section-group__schedule-wave">
+            <SvgList.ScheduleWaveSvg />
+        </div>
       </div>
 
       <div className="section-group">
         <CardContainer title="Testimonials" right>
-          <TestimonialsContainer academy="Random" />
+          <TestimonialsContainer academy="Sourcery for Developers Graduate" />
         </CardContainer>
       </div>
 
@@ -60,10 +63,26 @@ function AcademyDevelopers() {
         <CardContainer title="Media">
           <MediaContainer academy={'developers'} />
         </CardContainer>
-        {/* <div className="section-group__fourth-wave">
-          <FourthWaveSvg />
-        </div> */}
+        <div className="section-group__media-wave">
+            <SvgList.MediaWaveSvg />
+        </div>
       </div>
+
+      <div className="section-group">
+      <TextImgContainer
+          leftChild={
+            <TextActionContainer
+              title="Apply to academy"
+              text="Entrance test results define a priority list of candidates. We accept 20 candidates with highest marks into academy."
+            />
+          }
+          rightChild={<WalkingToLaptopImg />}
+          alignCenter
+        ></TextImgContainer>
+
+      </div>
+
+
 
 
     </ThemeProvider>

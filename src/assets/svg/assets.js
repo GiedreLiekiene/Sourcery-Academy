@@ -6,6 +6,7 @@ import WorkingAtDeskKidRobot from './image-working-at-desk-and-kid-with-robot.sv
 import Computer404 from './computer-404.svg';
 import CordLeft from './cord-404-left.svg';
 import CordRight from './cord-404-right.svg';
+import ApplyDevelopers from './apply-developers.svg'
 
 export const assets = {
   WalkingToLaptopImg: WalkingToLaptopImg,
@@ -16,4 +17,5 @@ export const assets = {
   Computer404: Computer404,
   CordLeft: CordLeft,
   CordRight: CordRight,
+  ApplyDevelopers: ApplyDevelopers,
 };

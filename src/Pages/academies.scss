@@ -6,13 +6,10 @@
   #{$direction}: $direction_val;
 }
 
-.action-wrap {
-  padding-top: 5rem;
-}
-
 .section-group {
   display: flex;
-  padding: 10rem 0;
+  min-height: 40rem;
+  padding: 12rem 0;
   position: relative;
 
   &__video-wave {
@@ -20,6 +17,18 @@
   }
 
   &__register-wave {
-    @include wave-position(35%, left, 7rem, -5%);
+    @include wave-position(35%, left, 7rem, 220%);
+  }
+
+  &__schedule-wave {
+    @include wave-position(3.5%, right, -7rem, 12%);
+  }
+
+  &__media-wave {
+    @include wave-position(10%, left, -7rem, 11%);
+  }
+
+  &__apply-wave {
+    @include wave-position(17%, right, -2rem, -20%);
   }
 }
