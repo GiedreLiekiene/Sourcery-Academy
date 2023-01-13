@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
 $_padding-size-m: 5rem;
 
 .text-action-container {
@@ -66,5 +67,48 @@ $_padding-size-m: 5rem;
 
   &__action {
     max-width: fit-content;
+  }
+
+  @include media-query-mobile {
+    &--right {
+      align-items: center;
+    }
+
+    &__title {
+      &--right {
+        font-size: 3rem;
+        padding: 0;
+        text-align: center;
+      }
+
+      &--left {
+        font-size: 3rem;
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      margin-bottom: $spacing-xxl;
+      margin-left: auto;
+      margin-top: $spacing-s;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: $font-family-headings;
+      font-size: 4rem;
+      font-weight: 700;
+      margin: $spacing-s;
+    }
+
+    h2 {
+      font-family: $font-family-headings;
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+    }
   }
 }

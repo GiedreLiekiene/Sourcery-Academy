@@ -1,3 +1,6 @@
+@import '../../sass/media-queries';
+@import '../../sass/variables';
+
 $themes: (
   primary: var(--color-primary),
   secondary: var(--color-secondary),
@@ -13,7 +16,12 @@ $themes: (
     font-size: 4.8rem;
     font-weight: 700;
     margin: 0;
-    padding: var(--spacer-l) 0;
+    padding: $spacing-l 0;
+
+    @include media-query-mobile {
+      font-size: 4rem;
+      font-weight: 700;
+    }
 
     &--center {
       align-self: center;
