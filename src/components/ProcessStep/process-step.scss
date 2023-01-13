@@ -1,1 +1,48 @@
 @import '../../sass/variables';
+$dist-a: 8rem;
+$color: #ff6347;
+
+.process-step-container {
+  column-gap: 2rem;
+  display: grid;
+  grid-template-areas:
+    'title image'
+    'text image'
+    'text .';
+  grid-template-columns: 1fr ($dist-a * 2);
+  grid-template-rows: $dist-a $dist-a;
+  position: relative;
+
+  &--is-flipped {
+    grid-template-areas:
+      'image title'
+      'image text'
+      '. text';
+    grid-template-columns: ($dist-a * 2) 1fr;
+  }
+
+  &__title {
+    color: map-get($map: $themes, $key: secondary);
+    font-size: map-get($map: $heading-all-levels, $key: h2);
+    grid-area: title;
+  }
+
+  &__horizontal-line {
+    background-color: $color;
+    bottom: 0;
+    grid-area: title;
+    height: 0.2rem;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__text {
+    grid-area: text;
+  }
+
+  &__image-holder {
+    border: 2px solid $color;
+    border-radius: 50%;
+    grid-area: image;
+  }
+}
