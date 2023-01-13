@@ -1,4 +1,5 @@
 @import '../../sass/media-queries';
+@import '../../sass/variables';
 
 .academies-container {
   height: 100vh;
@@ -6,8 +7,8 @@
 
   @include media-query-mobile {
     height: 100%;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-bottom: $spacing-xxl;
+    margin-top: $spacing-xxl;
   }
 
   &__particles {
@@ -29,8 +30,8 @@
   }
 
   &__header {
-    color: var(--color-violet);
-    font: 700 4.8rem / 1.25 var(--font-family-headings);
+    color: $color-primary;
+    font: 700 4.8rem / 1.25 $font-family-headings;
     margin: 0;
     padding: 0;
 
@@ -40,11 +41,11 @@
   }
 
   &__description {
-    color: var(--color-main-text);
-    font-family: var(--font-family);
+    color: $color-main-text;
+    font-family: $font-family;
     font-size: 1.8rem;
     line-height: 1.5;
-    margin: 3rem 0 0;
+    margin: $spacing-l 0 0;
     max-width: 102rem;
     padding: 0;
     text-align: center;
@@ -55,9 +56,9 @@
   }
 
   &__vertical-line {
-    border-left: 0.2rem solid var(--color-violet);
+    border-left: 0.2rem solid $color-primary;
     height: 5rem;
-    margin: 3.5rem 0 3rem;
+    margin: $spacing-xl 0 $spacing-l;
   }
 
   &__rounded-arrow {
