@@ -16,24 +16,26 @@
   @include media-query-mobile {
     padding: 2rem 0;
 
-    .wave {
+    &__wave {
       display: none;
     }
   }
 
-  &__first-wave {
-    @include wave-position(50%, right, -2.5rem, -25%);
-  }
+  &__wave {
+    &--first-wave {
+      @include wave-position(50%, right, -2.5rem, -25%);
+    }
 
-  &__second-wave {
-    @include wave-position(50%, left, -2.5rem, -20%);
-  }
+    &--second-wave {
+      @include wave-position(50%, left, -2.5rem, -20%);
+    }
 
-  &__third-wave {
-    @include wave-position(50%, right, 0, -15%);
-  }
+    &--third-wave {
+      @include wave-position(50%, right, 0, -15%);
+    }
 
-  &__fourth-wave {
-    @include wave-position(25%, left, 0, -35%);
+    &--fourth-wave {
+      @include wave-position(25%, left, 0, -35%);
+    }
   }
 }
