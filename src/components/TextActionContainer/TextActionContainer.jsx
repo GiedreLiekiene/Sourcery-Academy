@@ -10,6 +10,8 @@ export default function TextActionContainer({
   text,
   alignRight = false,
   headingLevel = 1,
+  children,
+  boldMainText = false,
 }) {
   const { theme } = useContext(ThemeContext);
 
@@ -27,6 +29,7 @@ export default function TextActionContainer({
   );
   const textClass = classNames('text-action-container__text', {
     'text-action-container__text--right': alignRight,
+    'text-action-container__text--bold': boldMainText,
   });
   const actionClass = classNames(
     'text-action-container__action',
@@ -38,7 +41,7 @@ export default function TextActionContainer({
     <div className={textActionContainerClass}>
       <HeadingTag className={titleClass}>{title}</HeadingTag>
       <p className={textClass}>{text}</p>
-      <div className={actionClass}></div>
+      <div className={actionClass}>{children}</div>
     </div>
   );
 }
@@ -47,6 +50,8 @@ TextActionContainer.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   alignRight: PropTypes.bool,
+  boldMainText: PropTypes.bool,
   headingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   forceWrapTitle: PropTypes.bool,
+  children: PropTypes.node,
 };

@@ -1,0 +1,30 @@
+[
+  {
+    "question": "Will you shift to remote learning?",
+    "answer": "The Academy offers blended learning that includes both online and in-person learning experiences. Students will get offline content for independent learning mixed with direct guidance by an assigned mentor who will help students to gain project development skills. Face-to-face team meetings might be arranged in the office depending on the circumstances."
+  },
+  {
+    "question": "How much time does the academy take?",
+    "answer": "If you want to graduate the academy successfully, you will have to dedicate ±20 hours per week. Approximately three hours should be dedicated for an offline weekly lectures. Other time should be dedicated for your personal development in order implement IT project in a team as well as to build your competence through trainings and individual or groups assignments."
+  },
+  {
+    "question": "How to prepare for the admission?",
+    "answer": "Do your best to prepare for the Entry Tests which is designed to check your logics, C# or JAVA (depends on the semester), JavaScript, OOP, SQL basics, software analysis and design skills. You need to show up on exact date, time and location where the test will be held. This information is provided on our website home page. During the test you need to have a pen only, no other materials or electronic devices allowed to use. Exam duration - 2 hours. There won't be any negative grades for wrong answers. The best-performing students will receive direct invitations to the academy. We accept 20 candidates with highest marks into academy."
+  },
+  {
+    "question": "Is this course for me?",
+    "answer": "This free-to-attend course is for everyone who is willing to learn the latest web technologies. We do not require any advanced development skills from you before the academy. However, you need to have at least basics of OOP in order to pass the admission. We are looking for smart, motivated people who are thinking outside the box and willing to learn the latest web technologies in order to kick start their career in IT as Junior software engineers."
+  },
+  {
+    "question": "Do I need to bring laptop to the Academy?",
+    "answer": "Yes, a personal laptop is required because you'll have to watch offline lectures, learn independently and develop a custom IT project in a team."
+  },
+  {
+    "question": "What time do lectures start?",
+    "answer": "The Academy provides offline content based on ten different topics. Each topic requires three hours of learning per week. This e-learning course takes three months in total, available in the Fall and Spring of each year (from October to Mid January and from March to Mid May)."
+  },
+  {
+    "question": "Is it possible to listen to recorded lectures or can I attend lectures in both cities if I have a rolling schedule at work/university?",
+    "answer": "Yes, the recordings are sent to all admitted students after they sigh agreements based on GDPR."
+  }
+]
