@@ -1,21 +1,46 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import './process-step.scss';
+import { ThemeContext } from '../../utils/ThemeContext';
 
-const ProcessStep = () => {
+const ProcessStep = ({
+  isFlipped = false,
+  title,
+  text,
+  stepNumber,
+  imageNode,
+}) => {
+  const { theme } = useContext(ThemeContext);
+  const processClass = classNames(
+    'process-step-container',
+    `process-step-container--${theme}`,
+    {
+      'process-step-container--is-flipped': isFlipped,
+    }
+  );
+
   return (
-    <div className="process-step-container">
-      <h2 className="process-step-container__title">Apply</h2>
+    <div className={processClass}>
+      <h2 className="process-step-container__title">{title}</h2>
       <span className="process-step-container__horizontal-line"></span>
-      <p className="process-step-container__text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure
-        voluptate corrupti eius sint tempora, iste atque minima quae iusto?
-      </p>
+      <p className="process-step-container__text">{text}</p>
       <div className="process-step-container__image-holder">
-        <p className="process-step-container__image-number">1</p>
-        <figure className="process-step-container__image-container"></figure>
+        <p className="process-step-container__image-number">{stepNumber}</p>
+        <div className="process-step-container__image-container">
+          {imageNode}
+        </div>
       </div>
     </div>
   );
 };
 
 export default ProcessStep;
+
+ProcessStep.propTypes = {
+  isFlipped: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  stepNumber: PropTypes.number.isRequired,
+  imageNode: PropTypes.node.isRequired,
+};
