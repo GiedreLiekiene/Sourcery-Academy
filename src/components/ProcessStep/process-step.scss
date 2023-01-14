@@ -94,10 +94,17 @@
   }
 
   &__image-container {
-    left: 0;
     position: absolute;
     top: 0;
     width: 130%;
+
+    &--center {
+      left: -10%;
+    }
+
+    &--right {
+      left: 10%;
+    }
   }
 
   @each $key, $val in $themes {

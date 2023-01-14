@@ -6,6 +6,7 @@ import { ThemeContext } from '../../utils/ThemeContext';
 
 const ProcessStep = ({
   isFlipped = false,
+  centerImage = false,
   title,
   text,
   stepNumber,
@@ -19,6 +20,13 @@ const ProcessStep = ({
       'process-step-container--is-flipped': isFlipped,
     }
   );
+  const imageContainerClass = classNames(
+    'process-step-container__image-container',
+    {
+      'process-step-container__image-container--center': centerImage,
+      'process-step-container__image-container--right': !centerImage,
+    }
+  );
 
   return (
     <div className={processClass}>
@@ -27,9 +35,7 @@ const ProcessStep = ({
       <p className="process-step-container__text">{text}</p>
       <div className="process-step-container__image-holder">
         <p className="process-step-container__image-number">{stepNumber}</p>
-        <div className="process-step-container__image-container">
-          {imageNode}
-        </div>
+        <div className={imageContainerClass}>{imageNode}</div>
       </div>
     </div>
   );
@@ -39,6 +45,7 @@ export default ProcessStep;
 
 ProcessStep.propTypes = {
   isFlipped: PropTypes.bool,
+  centerImage: PropTypes.bool,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   stepNumber: PropTypes.number.isRequired,
