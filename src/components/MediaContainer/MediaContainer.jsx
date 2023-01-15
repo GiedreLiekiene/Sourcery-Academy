@@ -8,6 +8,7 @@ import BoxShadow from '../BoxShadow/BoxShadow.jsx';
 import MediaCarousel from '../MediaCarousel/MediaCarousel.jsx';
 import Modal from '../Modal/Modal.jsx';
 import PropTypes from 'prop-types';
+import useIsWindowWiderThan from './useIsWindowWiderThan.js';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
 function MediaContainer({ academy, itemlimit, shouldUseExtended }) {
@@ -15,6 +16,7 @@ function MediaContainer({ academy, itemlimit, shouldUseExtended }) {
   const [images, setImages] = useState(null);
 
   const [carouselInitialIndex, setCarouselInitialIndex] = useState(null);
+  const isDesktopCarousel = useIsWindowWiderThan(768);
 
   const showCarousel = (initialIndex) => {
     setCarouselInitialIndex(initialIndex);
@@ -56,7 +58,7 @@ function MediaContainer({ academy, itemlimit, shouldUseExtended }) {
     return <LoadingMessage message="Loading..." />;
   }
 
-  return (
+  return isDesktopCarousel ? (
     <>
       <div className="media-container">
         {images.map(({ thumbnail, type }, index) => {
@@ -98,6 +100,12 @@ function MediaContainer({ academy, itemlimit, shouldUseExtended }) {
         </Modal>
       )}
     </>
+  ) : (
+    <div className="media-container--mobile">
+      <BoxShadow>
+        <MediaCarousel images={images.slice(0, 6)} initialIndex={0} />
+      </BoxShadow>
+    </div>
   );
 }
 

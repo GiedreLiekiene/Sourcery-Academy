@@ -55,15 +55,17 @@ const MediaCarousel = ({ images, initialIndex = 0, onClickClose }) => {
 
   return (
     <div className="carousel">
-      <button
-        type="button"
-        className="carousel__button carousel__button--close"
-        onClick={onClickClose}
-      >
-        <div className="carousel__button--close icon">
-          <span className="carousel__button--close icon">X</span>
-        </div>
-      </button>
+      {onClickClose && (
+        <button
+          type="button"
+          className="carousel__button carousel__button--close"
+          onClick={onClickClose}
+        >
+          <div className="carousel__button--close icon">
+            <span className="carousel__button--close icon">X</span>
+          </div>
+        </button>
+      )}
       <button
         type="button"
         className="carousel__button carousel__button--prev"
@@ -100,7 +102,7 @@ Arrow.propTypes = {
 MediaCarousel.propTypes = {
   images: PropTypes.array.isRequired,
   initialIndex: PropTypes.number,
-  onClickClose: PropTypes.func.isRequired,
+  onClickClose: PropTypes.func,
 };
 
 export default MediaCarousel;
