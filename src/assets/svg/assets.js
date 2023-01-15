@@ -6,6 +6,10 @@ import WorkingAtDeskKidRobot from './image-working-at-desk-and-kid-with-robot.sv
 import Computer404 from './computer-404.svg';
 import CordLeft from './cord-404-left.svg';
 import CordRight from './cord-404-right.svg';
+import ProcessStepOne from './image-step-1-girl-with-page.svg';
+import ProcessStepTwo from './image-step-2-man-with-envelope.svg';
+import ProcessStepThree from './image-step-3-people-with-phone.svg';
+import ProcessStepFour from './image-step-4-people-with-checkmark.svg';
 
 export const assets = {
   WalkingToLaptopImg: WalkingToLaptopImg,
@@ -16,4 +20,8 @@ export const assets = {
   Computer404: Computer404,
   CordLeft: CordLeft,
   CordRight: CordRight,
+  ProcessStepOne: ProcessStepOne,
+  ProcessStepTwo: ProcessStepTwo,
+  ProcessStepThree: ProcessStepThree,
+  ProcessStepFour: ProcessStepFour,
 };
