@@ -8,7 +8,6 @@ import { assets } from '../../assets/svg/assets';
 
 function ProcessContainer({ academy = 0 }) {
   const applicationStepText = academyInfo[academy]['application steps'];
-  // const applicationStepTitle = academyInfo[academy]['title'];
 
   const {
     ProcessStepOne,
