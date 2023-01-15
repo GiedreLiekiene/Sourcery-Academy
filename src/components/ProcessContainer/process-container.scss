@@ -2,38 +2,25 @@
 @import '../../sass/media-queries';
 
 .process-container-wrapper {
-  border: 1px solid $color-black;
-  column-gap: $spacing-s;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  display: grid;
+  grid-column-gap: 8rem;
+  grid-template-columns: 1fr 1fr;
 
-  @include media-query-mobile {
+  @include media-query-tablet {
     display: block;
   }
 
-  &__left-column {
-    border: 1px solid $color-quaternary;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    height: fit-content;
-  }
-
-  &__right-column {
-    border: 1px solid $color-quaternary;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    height: fit-content;
+  &__step:nth-child(even) {
     margin-top: 10rem;
 
-    @include media-query-mobile {
+    @include media-query-tablet {
       margin-top: 0;
     }
   }
 
-  &__step {
-    flex: 0.5;
+  &__step:not(:last-child) {
+    @include media-query-tablet {
+      margin-bottom: $spacing-m;
+    }
   }
 }
