@@ -2,17 +2,56 @@
   {
     "academy": "Sourcery for Developers",
     "intro": "A free of charge three-month cutting-edge technology course, available in the Spring and Fall of each year. Students are invited to the Devbridge in Kaunas and Vilnius offices to attend lectures and create custom projects with the help of software development professionals.",
-    "slogan": "Become a software development with our free of charge three-month academy, available this fall and spring. Work with our top specialists as your mentors and lecturers in Kaunas and Vilnius."
+    "slogan": "Become a software development with our free of charge three-month academy, available this fall and spring. Work with our top specialists as your mentors and lecturers in Kaunas and Vilnius.",
+    "application steps": {
+      "first": "Academy students are given an opportunity to be immersed in a professional three-month course for the developer beginners, build their competence through trainings and individual or group assignments.",
+      "second": "Registration is available for candidates who are willing to pass the entry exam. Results define a list of candidates who are invited into the workshop. We accept 20 candidates with highest marks into the academy.",
+      "third": "Students will learn the latest technologies and how to create software using the best tools on the market. Devbridge assigns a mentor to each student to serve as a resource for their development projects.",
+      "fourth": "At the end of term all students will receive recognition for completing the course and top students may receive job offers from Devbridge."
+    },
+    "admission": {
+      "introduction": "During your first lecture we will introduce the Sourcery academy, tell you more about what we do as developers, get to know your fellow team members, lecturers and mentors.",
+      "learning points": [
+        "react", "JPA", "Spring Boot"
+      ],
+      "interview promise": "Only the top candidates after the final exam are invited to a job interview which will challenge your technical skills and English knowledge."
+    }
   },
   {
     "academy": "Sourcery for Testers",
     "intro": "Top-notch studies for the future Test Engineers. Students join the Devbridge team as a paid employee for the Academy period (two months) to learn and work. Ones who finish the Academy successfully are invited to continue employment on full time.",
-    "slogan": "Kick off your career in software testing with our free of charge three-month academy “Sourcery for Testers”, available this summer. Work with our top specialists as your mentors and lecturers in Kaunas and Vilnius."
+    "slogan": "Kick off your career in software testing with our free of charge three-month academy “Sourcery for Testers”, available this summer. Work with our top specialists as your mentors and lecturers in Kaunas and Vilnius.",
+    "application steps": {
+      "first": "Academy students are given an opportunity to be immersed in a professional two-month course for the testing beginners, build their competence through trainings and individual or groups assignments.",
+      "second": "Best candidates will be offered a paid internship for the Academy period to work on the real projects with our development teams. In parallel they are expected to attend academy to develop their skills.",
+      "third": "Students will discover all types of techniques: learn the foundations of testing, functional testing for web applications and API, foundations of non-functional testing and foundations for test automation.",
+      "fourth": "At the end of term all students will receive a certificate of completion the Sourcery academy for Testers. Top graduates will be invited for an interview to become a Junior Test Engineer."
+    },
+    "admission": {
+      "introduction": "4 to 5 hours of activities. We will introduce the Sourcery academy, tell you more about what we do as testers, get to know each other and have a fun workshop challenging your critical thinking,problem solving, communication and team working skills.",
+      "learning points": [
+        "The foundations of testing", "Functional testing for web applications and API", "Foundations of non-functional testing", "Foundations for test automation"
+      ],
+      "interview promise": "Only top candidates from day one are invited to the interview which will challenge your technical skills and English knowledge."
+    }
   },
   {
     "academy": "Sourcery for Front-End",
     "intro": "Start your career in software development with the intense program at Sourcery for Front-End Developers. Complete the admission and enter our free of charge two-month academy this autumn in Vilnius to learn from our top specialists.",
-    "slogan": "Start your career in software development with the intense program at Sourcery for Front-End. Complete the admission and enter our free of charge three-month academy to learn from our top specialists."
+    "slogan": "Start your career in software development with the intense program at Sourcery for Front-End. Complete the admission and enter our free of charge three-month academy to learn from our top specialists.",
+    "application steps": {
+      "first": "Academy students are given an opportunity to be immersed in a professional two-month course for the front-end developers, build their competence through trainings and individual or groups assignments.",
+      "second": "Entry test is performed by those candidates who submit their summary. Test results define a priority list of candidates who are invited into the workshop. We accept 20 candidates with highest marks into academy.",
+      "third": "Students will discover all types, techniques and design approaches. They will learn how to write semantic elements in HTML, apply advanced CSS techniques, understand accessibility standards and many more.",
+      "fourth": "The Academy starts in the end of October and lasts until January.. Top graduates will be invited for an interview to become a Junior Front-End Software Engineer."
+    },
+    "admission": {
+      "introduction": "4 to 5 hours of activities. We will introduce the Sourcery academy, tell you more about what we do as front-end developers, get to know each other and have a fun workshop challenging your critical thinking, problem solving, communication and team working skills.",
+      "learning points": [
+        "Semantic HTML code", "Advanced CSS (Scss)", "BEM methodology", "Accessibility standards", "Agile methodology, build tools and task runners"
+      ],
+      "interview promise": "Only the top candidates after the final exam are invited to a job interview which will challenge your technical skills and English knowledge."
+    }
   },
   {
     "academy": "Sourcery for Kids",
