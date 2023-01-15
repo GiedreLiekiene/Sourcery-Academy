@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './selection.scss';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Academies = [
   {
@@ -25,20 +25,7 @@ const Academies = [
     key: 3,
   },
 ];
-
-export default function Selection() {
-  const [selected, setSelected] = useState(false);
-
-  const handleSelection = () => {
-    setSelected(true);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === ' ') {
-      setSelected(true);
-    }
-  };
-
+export default function Selection({ checked, onChange }) {
   return (
     <div className="selection-wrapper">
       {Academies.map(function (academy) {
@@ -49,17 +36,10 @@ export default function Selection() {
               value={academy.value}
               id={academy.id}
               name={academy.name}
-              checked={selected}
-              tabIndex={-1}
-              onChange={handleSelection}
+              checked={checked}
+              onChange={onChange}
             />
-            <label
-              className="selection-wrapper__label"
-              htmlFor={academy.id}
-              tabIndex={0}
-              onClick={handleSelection}
-              onKeyDown={handleKeyDown}
-            >
+            <label className="selection-wrapper__label" htmlFor={academy.id}>
               {academy.label}
             </label>
           </div>
@@ -70,6 +50,6 @@ export default function Selection() {
 }
 
 Selection.propTypes = {
-  // checked: PropTypes.node.isRequired,
-  // onChange: PropTypes.node.isRequired,
+  checked: PropTypes.node.isRequired,
+  onChange: PropTypes.node.isRequired,
 };

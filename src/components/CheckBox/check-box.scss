@@ -4,8 +4,6 @@ $_line-height-small: 1.5;
 $_border-radius: 0.3rem;
 
 .checkbox {
-  display: flex;
-
   &__check {
     appearance: none;
     border: 2px solid $checkbox-color;
@@ -38,5 +36,6 @@ $_border-radius: 0.3rem;
     font-weight: 400;
     line-height: $_line-height-small;
     margin-left: $spacing-ml;
+    position: absolute;
   }
 }
