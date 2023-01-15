@@ -1,4 +1,16 @@
-.admission {
-  font-weight: 700;
+@import '../../sass/variables';
+@import '../../sass/media-queries';
+
+.admission-wrapper {
   width: 100%;
+}
+
+.learning-point::marker {
+  font-size: 3rem;
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      color: $val;
+    }
+  }
 }
