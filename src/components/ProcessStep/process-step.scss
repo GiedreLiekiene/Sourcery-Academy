@@ -1,0 +1,126 @@
+@import '../../sass/variables';
+@import '../../sass/media-queries';
+
+.process-step-container {
+  $dist-a: 8rem;
+  $dist-b: 6rem;
+  $this: &;
+
+  column-gap: $spacing-m;
+  display: grid;
+  grid-template-areas:
+    'title image'
+    'text image'
+    'text .';
+  grid-template-columns: 1fr ($dist-a * 2);
+  grid-template-rows: $dist-a $dist-a;
+  position: relative;
+
+  @include media-query-mobile {
+    grid-template-columns: 1fr ($dist-b * 2);
+    grid-template-rows: $dist-b $dist-b;
+  }
+
+  &--is-flipped {
+    grid-template-areas:
+      'image title'
+      'image text'
+      '. text';
+    grid-template-columns: ($dist-a * 2) 1fr;
+
+    @include media-query-mobile {
+      grid-template-columns: ($dist-b * 2) 1fr;
+    }
+
+    #{$this}__title,
+    #{$this}__text {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-headings;
+    font-size: map-get($map: $heading-all-levels, $key: h2);
+    grid-area: title;
+
+    @include media-query-mobile {
+      font-size: $font-size-l;
+      margin-bottom: $spacing-s;
+    }
+  }
+
+  &__horizontal-line {
+    bottom: 0;
+    grid-area: title;
+    height: 0.2rem;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__text {
+    color: $color-main-text;
+    font-family: $font-family;
+    font-size: $font-size-m;
+    grid-area: text;
+    line-height: $line-height-m;
+
+    @include media-query-mobile {
+      font-size: $font-size-s;
+    }
+  }
+
+  &__image-holder {
+    border-radius: 50%;
+    display: grid;
+    grid-area: image;
+    position: relative;
+  }
+
+  &__image-number {
+    background-color: $color-white;
+    border-radius: 50%;
+    font-family: $font-family-headings;
+    font-size: map-get($map: $heading-all-levels, $key: h1);
+    font-weight: $font-weight-bold;
+    margin: 0;
+    padding: $spacing-s;
+    position: absolute;
+    width: fit-content;
+
+    @include media-query-mobile {
+      font-size: map-get($map: $heading-all-levels, $key: h2);
+      padding: calc($spacing-s / 2);
+    }
+  }
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    width: 130%;
+
+    &--center {
+      left: -10%;
+    }
+
+    &--right {
+      left: 10%;
+    }
+  }
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      #{$this}__title,
+      #{$this}__image-number {
+        color: $val;
+      }
+
+      #{$this}__horizontal-line {
+        background-color: $val;
+      }
+
+      #{$this}__image-holder {
+        border: 2px solid $val;
+      }
+    }
+  }
+}

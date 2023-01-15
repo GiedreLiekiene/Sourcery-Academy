@@ -1,0 +1,18 @@
+@import '../../sass/variables';
+
+.process-step-image {
+  $this: &;
+
+  width: 100%;
+  @each $key, $val in $themes {
+    &--#{$key} {
+      #{$this}__accent-element-1 {
+        fill: map-get($theme-accents, #{$key}, accent-1);
+      }
+
+      #{$this}__accent-element-2 {
+        fill: map-get($theme-accents, #{$key}, accent-2);
+      }
+    }
+  }
+}
