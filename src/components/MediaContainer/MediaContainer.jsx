@@ -8,7 +8,7 @@ import BoxShadow from '../BoxShadow/BoxShadow.jsx';
 import MediaCarousel from '../MediaCarousel/MediaCarousel.jsx';
 import Modal from '../Modal/Modal.jsx';
 import PropTypes from 'prop-types';
-import useIsWindowWiderThan from './useIsWindowWiderThan.jsx';
+import useIsWindowWiderThan from './useIsWindowWiderThan.js';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
 function MediaContainer({ academy }) {
