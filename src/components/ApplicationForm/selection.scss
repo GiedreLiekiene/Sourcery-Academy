@@ -2,6 +2,7 @@
 
 $_fancy-border-color: #3d3691;
 $_button-background-color: #584dfc;
+$_focus-hover-opacity: 0.8;
 
 .selection-wrapper {
   $this: &;
@@ -36,7 +37,7 @@ $_button-background-color: #584dfc;
       + #{$this}__label {
         background-color: $_button-background-color;
         color: $color-white;
-        opacity: 0.9;
+        opacity: $_focus-hover-opacity;
       }
     }
 
@@ -44,7 +45,7 @@ $_button-background-color: #584dfc;
       + #{$this}__label {
         background-color: $_button-background-color;
         color: $color-white;
-        opacity: 0.9;
+        opacity: $_focus-hover-opacity;
       }
     }
 
