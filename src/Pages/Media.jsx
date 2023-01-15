@@ -6,11 +6,9 @@ import { ThemeProvider } from '../utils/ThemeContext';
 function Media() {
   return (
     <ThemeProvider theme="primary">
-      <div>
-        <CardContainer>
-          <MediaContainer />
-        </CardContainer>
-      </div>
+      <CardContainer>
+        <MediaContainer />
+      </CardContainer>
     </ThemeProvider>
   );
 }
