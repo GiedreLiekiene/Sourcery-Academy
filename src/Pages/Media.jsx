@@ -6,7 +6,7 @@ import { ThemeProvider } from '../utils/ThemeContext';
 function Media() {
   return (
     <ThemeProvider theme="primary">
-      <CardContainer>
+      <CardContainer title="Media" left>
         <MediaContainer />
       </CardContainer>
     </ThemeProvider>
