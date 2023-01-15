@@ -1,33 +1,39 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
 
 .process-container-wrapper {
-  border: 2px solid $color-black;
+  border: 1px solid $color-black;
   column-gap: $spacing-s;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 
-  &__step {
+  @include media-query-mobile {
+    display: block;
+  }
+
+  &__left-column {
     border: 1px solid $color-quaternary;
-    flex: 49%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: fit-content;
   }
 
-  &__step:nth-child(odd) {
-    margin-bottom: $spacing-m;
-  }
+  &__right-column {
+    border: 1px solid $color-quaternary;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 10rem;
 
-  &__step:nth-child(even) {
-    margin-top: $spacing-m;
-  }
-
-  &__step-title {
-    font-size: 3.2rem;
-    font-weight: $font-weight-bold;
-
-    @each $key, $val in $themes {
-      &--#{$key} {
-        color: $val;
-      }
+    @include media-query-mobile {
+      margin-top: 0;
     }
+  }
+
+  &__step {
+    flex: 0.5;
   }
 }
