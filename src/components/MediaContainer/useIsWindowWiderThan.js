@@ -12,6 +12,8 @@ export default function useIsWindowWiderThan(width) {
       setIsWider(getWindowWidth() > width);
     }
 
+    handleResize();
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [width]);
