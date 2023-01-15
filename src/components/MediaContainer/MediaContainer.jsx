@@ -10,7 +10,7 @@ import Modal from '../Modal/Modal.jsx';
 import PropTypes from 'prop-types';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
-function MediaContainer({ academy, itemlimit }) {
+function MediaContainer({ academy, itemlimit, shouldUseExtended }) {
   const [error, setError] = useState(null);
   const [images, setImages] = useState(null);
 
@@ -60,7 +60,8 @@ function MediaContainer({ academy, itemlimit }) {
     <>
       <div className="media-container">
         {images.map(({ thumbnail, type }, index) => {
-          let extended = index == 1 || index == 5;
+          let extended = shouldUseExtended && (index == 1 || index == 5);
+
           const cardClass = classnames('media-container__item', {
             'media-container__item--extended': extended,
           });
@@ -103,6 +104,7 @@ function MediaContainer({ academy, itemlimit }) {
 MediaContainer.propTypes = {
   academy: PropTypes.string,
   itemlimit: PropTypes.number,
+  shouldUseExtended: PropTypes.bool,
 };
 
 export default MediaContainer;
