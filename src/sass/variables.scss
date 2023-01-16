@@ -62,6 +62,21 @@ $themes: (
   quaternary: #b40031,
 );
 
+$theme-accents: (
+  secondary: (
+    accent-1: #4d8af0,
+    accent-2: #17bce3,
+  ),
+  tertiary: (
+    accent-1: #1ce5af,
+    accent-2: #009b84,
+  ),
+  quaternary: (
+    accent-1: #ed1d55,
+    accent-2: #b40031,
+  ),
+);
+
 $color-primary: #3d3691;
 $color-secondary: #0048c1;
 $color-tertiary: #0b555f;
@@ -74,6 +89,8 @@ $color-bkg-links-hover: #f6f5f7;
 $color-bkg-shadow: #f6f5f7;
 $color-bkg-button: rgb($color-white, 0.1);
 $checkbox-color: #5c5c5c;
+$color-labels: #5c5c5c;
+$color-radio-labels: #3e3c4e;
 
 //Spacing
 $spacing-s: 1rem;
@@ -84,6 +101,7 @@ $spacing-ml: 2.5rem;
 $spacing-l: 3rem;
 $spacing-xl: 3.5rem;
 $spacing-xxl: 4rem;
+$spacing-xxxl: 6rem;
 
 //Radius
 $radius-xxs: 0.5rem;
@@ -91,12 +109,14 @@ $radius-xs: 0.8rem;
 $radius-s: 1.5rem;
 $radius-m: 2rem;
 $radius-l: 2.5rem;
+$border-radius-xxxl: 4rem;
 $radius-xxxxxxl: 4.8rem;
 
 //Font Size
 $font-size-s: 1.4rem;
 $font-size-base: 1.6rem;
 $font-size-m: 1.8rem;
+$font-size-l: 2.4rem;
 
 //Font Family
 $font-family: 'Raleway', sans-serif;

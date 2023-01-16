@@ -8,13 +8,15 @@ import BoxShadow from '../BoxShadow/BoxShadow.jsx';
 import MediaCarousel from '../MediaCarousel/MediaCarousel.jsx';
 import Modal from '../Modal/Modal.jsx';
 import PropTypes from 'prop-types';
+import useIsWindowWiderThan from './useIsWindowWiderThan.js';
 
 const mediaUrl = 'https://sfe-2022-data.netlify.app/static/media.json';
-function MediaContainer({ academy }) {
+function MediaContainer({ academy, itemlimit, shouldUseExtended }) {
   const [error, setError] = useState(null);
   const [images, setImages] = useState(null);
 
   const [carouselInitialIndex, setCarouselInitialIndex] = useState(null);
+  const isDesktopCarousel = useIsWindowWiderThan(768);
 
   const showCarousel = (initialIndex) => {
     setCarouselInitialIndex(initialIndex);
@@ -28,9 +30,18 @@ function MediaContainer({ academy }) {
     const fetchImages = async () => {
       try {
         const response = await fetch(mediaUrl);
-        const data = await response.json();
+        let data = await response.json();
 
-        setImages(data.filter((item) => item.academy === academy));
+        if (academy) {
+          data = data.filter((item) => item.academy === academy);
+          data = data.slice(0, 6);
+        }
+
+        if (itemlimit) {
+          data = data.slice(0, itemlimit);
+        }
+
+        setImages(data);
       } catch (error) {
         setError('Failed to load...');
       }
@@ -47,11 +58,12 @@ function MediaContainer({ academy }) {
     return <LoadingMessage message="Loading..." />;
   }
 
-  return (
+  return isDesktopCarousel ? (
     <>
       <div className="media-container">
-        {images.slice(0, 6).map(({ thumbnail, type }, index) => {
-          let extended = index == 1 || index == 5;
+        {images.map(({ thumbnail, type }, index) => {
+          let extended = shouldUseExtended && (index == 1 || index == 5);
+
           const cardClass = classnames('media-container__item', {
             'media-container__item--extended': extended,
           });
@@ -81,18 +93,26 @@ function MediaContainer({ academy }) {
       {carouselInitialIndex !== null && (
         <Modal onClickClose={closeCarousel} med>
           <MediaCarousel
-            images={images.slice(0, 6)}
+            images={images}
             initialIndex={carouselInitialIndex}
             onClickClose={closeCarousel}
           />
         </Modal>
       )}
     </>
+  ) : (
+    <div className="media-container--mobile">
+      <BoxShadow>
+        <MediaCarousel images={images.slice(0, 6)} initialIndex={0} />
+      </BoxShadow>
+    </div>
   );
 }
 
 MediaContainer.propTypes = {
-  academy: PropTypes.string.isRequired,
+  academy: PropTypes.string,
+  itemlimit: PropTypes.number,
+  shouldUseExtended: PropTypes.bool,
 };
 
 export default MediaContainer;

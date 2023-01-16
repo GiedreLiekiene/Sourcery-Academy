@@ -1,3 +1,5 @@
+@import '../../sass/media-queries';
+
 .text-img-container {
   align-items: center;
   display: flex;
@@ -16,5 +18,10 @@
   &__left,
   &__right {
     flex: 1;
+  }
+
+  @include media-query-mobile {
+    display: block;
+    max-width: 100%;
   }
 }
