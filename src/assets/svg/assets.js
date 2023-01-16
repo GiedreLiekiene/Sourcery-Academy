@@ -10,7 +10,6 @@ import ProcessStepOne from './image-step-1-girl-with-page.svg';
 import ProcessStepTwo from './image-step-2-man-with-envelope.svg';
 import ProcessStepThree from './image-step-3-people-with-phone.svg';
 import ProcessStepFour from './image-step-4-people-with-checkmark.svg';
-import ApplyDevelopers from './apply-developers.svg';
 import Construction from './construction.svg';
 import Gear from './gear.svg';
 import Hammer from './hammer.svg';
@@ -28,7 +27,6 @@ export const assets = {
   ProcessStepTwo: ProcessStepTwo,
   ProcessStepThree: ProcessStepThree,
   ProcessStepFour: ProcessStepFour,
-  ApplyDevelopers: ApplyDevelopers,
   Construction: Construction,
   Gear: Gear,
   Hammer: Hammer,

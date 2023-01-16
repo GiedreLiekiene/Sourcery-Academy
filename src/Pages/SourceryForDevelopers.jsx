@@ -3,6 +3,7 @@ import CardContainer from '../components/CardContainer/CardContainer';
 import ScheduleContainer from '../components/ScheduleContainer/ScheduleContainer';
 import { ThemeProvider } from '../utils/ThemeContext';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
+
 function AcademyDevelopers() {
   return (
     <ThemeProvider theme="secondary">
@@ -15,4 +16,5 @@ function AcademyDevelopers() {
     </ThemeProvider>
   );
 }
+
 export default AcademyDevelopers;
