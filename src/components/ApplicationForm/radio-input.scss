@@ -43,10 +43,12 @@ $_focus-hover-opacity: 0.8;
       + #{$this}__fake {
         border-color: $_button-background-color;
         opacity: $_focus-hover-opacity;
-      }
 
-      + #{$this}__fake::before {
-        opacity: 1;
+        /* stylelint-disable */
+        &::before {
+          opacity: 1;
+        }
+        /* stylelint-enable */
       }
     }
 
@@ -54,20 +56,24 @@ $_focus-hover-opacity: 0.8;
       + #{$this}__fake {
         border-color: $_button-background-color;
         opacity: $_focus-hover-opacity;
-      }
 
-      + #{$this}__fake::before {
-        opacity: 1;
+        /* stylelint-disable */
+        &::before {
+          opacity: 1;
+        }
+        /* stylelint-enable */
       }
     }
 
     &:checked {
       + #{$this}__fake {
         border-color: $_button-background-color;
-      }
 
-      + #{$this}__fake::before {
-        opacity: 1;
+        /* stylelint-disable */
+        &::before {
+          opacity: 1;
+        }
+        /* stylelint-enable */
       }
     }
   }
