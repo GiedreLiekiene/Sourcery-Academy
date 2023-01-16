@@ -3,12 +3,16 @@ import './check-box.scss';
 import PropTypes from 'prop-types';
 
 const Checkbox = ({ type = 'checkbox', label, value, name, onChange, id }) => {
-  const [checked, isChecked] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      isChecked((current) => !current);
+      setChecked((current) => !current);
     }
+  };
+
+  const handleClick = () => {
+    setChecked((current) => !current);
   };
 
   return (
@@ -23,6 +27,7 @@ const Checkbox = ({ type = 'checkbox', label, value, name, onChange, id }) => {
         tabIndex={0}
         id={id}
         onKeyDown={handleKeyDown}
+        onClick={handleClick}
       />
 
       <label htmlFor={id} className="checkbox__label">
@@ -39,6 +44,5 @@ Checkbox.propTypes = {
   value: PropTypes.node.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.node.isRequired,
-  tabIndex: PropTypes.number,
   id: PropTypes.string.isRequired,
 };
