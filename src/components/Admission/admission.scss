@@ -3,14 +3,31 @@
 
 .admission-wrapper {
   width: 100%;
-}
 
-.learning-point::marker {
-  font-size: 3rem;
+  li {
+    list-style: none;
+    margin-left: $spacing-m;
+    position: relative;
 
-  @each $key, $val in $themes {
-    &--#{$key} {
-      color: $val;
+    &::before {
+      content: '•';
+      font-size: 5rem;
+      left: -2.4rem;
+      line-height: 0.5;
+      position: absolute;
+      top: 0;
+      @each $key, $val in $themes {
+        &--#{$key} {
+          color: $val;
+        }
+      }
+    }
+  }
+
+  @include media-query-mobile {
+    .text-action-container__text {
+      margin-left: unset;
+      text-align: start;
     }
   }
 }
