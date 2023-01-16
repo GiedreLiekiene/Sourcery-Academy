@@ -1,0 +1,19 @@
+@import '../../sass/variables';
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xxl;
+  max-width: 80rem;
+
+  &__item {
+    flex: 1;
+  }
+
+  &__link {
+    color: $color-primary;
+    font-weight: $font-weight-bold;
+    margin-left: $spacing-s;
+    text-decoration: none;
+  }
+}
