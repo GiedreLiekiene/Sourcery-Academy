@@ -70,7 +70,7 @@ function AcademyDevelopers() {
 
       <div className="section-group">
         <CardContainer title="Media">
-          <MediaContainer academy={'developers'} />
+          <MediaContainer academy={'developers'} shouldUseExtended={true} />
         </CardContainer>
         <div className="section-group__media-wave">
            <WaveContainer>

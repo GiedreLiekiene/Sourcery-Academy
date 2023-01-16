@@ -1,18 +1,10 @@
-$themes: (
-  primary: var(--color-primary),
-  secondary: var(--color-secondary),
-  tertiary: var(--color-tertiary),
-  quaternary: var(--color-quaternary),
-);
+@import '../../sass/variables';
 
 .wave-container {
   @each $key, $val in $themes {
     &--#{$key} {
-      svg {
-        path {
-          stroke: $val;
-          stroke-width: 0.2rem;
-        }
+      path {
+        stroke: $val;
       }
     }
   }
