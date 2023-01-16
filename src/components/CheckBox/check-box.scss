@@ -4,6 +4,10 @@ $_line-height-small: 1.5;
 $_border-radius: 0.3rem;
 
 .checkbox {
+  align-items: start;
+  display: flex;
+  gap: $spacing-ml;
+
   &__check {
     appearance: none;
     border: 2px solid $checkbox-color;
@@ -31,11 +35,10 @@ $_border-radius: 0.3rem;
   }
 
   &__label {
+    flex: 1;
     font-family: $font-family;
     font-size: $font-size-m;
     font-weight: 400;
     line-height: $_line-height-small;
-    margin-left: $spacing-ml;
-    position: absolute;
   }
 }

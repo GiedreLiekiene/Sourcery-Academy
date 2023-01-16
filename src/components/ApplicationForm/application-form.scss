@@ -1,0 +1,57 @@
+@import '../../sass/variables';
+//$_label-color: #584dfc;
+$size-labels: 1.4rem;
+$size-uploaded: 1.2rem;
+$line-height: 2.1;
+$color-place-holders: #868686;
+$border-color: #999;
+$border-color-hover: #000000bc;
+
+.application-form {
+  &--title-info {
+    margin-bottom: 3rem;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
+      }
+    }
+  }
+
+  &__input {
+    margin-bottom: 2rem;
+  }
+
+  &__radio {
+    margin-bottom: 6rem;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    margin: 4rem 0 6rem;
+  }
+
+  &__button {
+    margin-top: 6rem;
+  }
+
+  &__label {
+    color: $color-labels;
+    display: block;
+    font-family: $font-family;
+    font-size: $size-labels;
+    font-weight: 400;
+    line-height: $line-height;
+    margin: 6rem 0 1.7rem;
+    position: relative;
+    right: 0.5rem;
+
+    &::before {
+      color: $color-error;
+      content: '*';
+      font-weight: 700;
+      position: relative;
+      right: 0.5rem;
+    }
+  }
+}
