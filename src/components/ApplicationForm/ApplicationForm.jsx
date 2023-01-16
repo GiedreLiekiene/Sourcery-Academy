@@ -14,7 +14,7 @@ export default function ApplicationForm() {
 
   const [isFile, setIsFile] = useState();
 
-  const [error, setError] = useState({});
+  const [error, setError] = useState(false);
 
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ export default function ApplicationForm() {
     const storedValues = localStorage.getItem('Form');
     if (!storedValues)
       return {
-        city: ' ',
+        city: '',
         name: '',
         lastName: '',
         email: '',
@@ -60,6 +60,14 @@ export default function ApplicationForm() {
       form.checkbox === false
     ) {
       setError(true);
+    } else if (
+      !form.name.match(/^[a-zA-Z]+$/) ||
+      !form.name.match(/^[a-zA-Z]+$/) ||
+      !form.email.match(
+        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      )
+    ) {
+      setError(true);
     } else {
       navigate('/application-form-success');
     }
@@ -68,13 +76,13 @@ export default function ApplicationForm() {
   const { theme } = useContext(ThemeContext);
 
   const headerClass = classNames(
-    'application-form--title-info',
-    `application-form--title-info--${theme}`
+    'application-form__title-info',
+    `application-form__title-info--${theme}`
   );
 
   return (
     <div>
-      <form id="application-form">
+      <form id="application-form" className="application-form">
         <h2 className={headerClass}>Academy information</h2>
 
         <div className="application-form__radio">

@@ -1,6 +1,4 @@
 @import '../../sass/variables';
-//$_label-color: #584dfc;
-$size-labels: 1.4rem;
 $size-uploaded: 1.2rem;
 $line-height: 2.1;
 $color-place-holders: #868686;
@@ -8,7 +6,10 @@ $border-color: #999;
 $border-color-hover: #000000bc;
 
 .application-form {
-  &--title-info {
+  margin: 8rem 0 4rem;
+  padding-right: 10rem;
+
+  &__title-info {
     margin-bottom: 3rem;
 
     @each $key, $val in $themes {
@@ -39,7 +40,7 @@ $border-color-hover: #000000bc;
     color: $color-labels;
     display: block;
     font-family: $font-family;
-    font-size: $size-labels;
+    font-size: $font-size-s;
     font-weight: 400;
     line-height: $line-height;
     margin: 6rem 0 1.7rem;
