@@ -10,17 +10,19 @@
     display: block;
   }
 
-  &__step:nth-child(even) {
-    margin-top: 10rem;
+  &__step {
+    &:nth-child(even) {
+      margin-top: 10rem;
 
-    @include media-query-tablet {
-      margin-top: 0;
+      @include media-query-tablet {
+        margin-top: 0;
+      }
     }
-  }
 
-  &__step:not(:last-child) {
-    @include media-query-tablet {
-      margin-bottom: $spacing-m;
+    &:not(:last-child) {
+      @include media-query-tablet {
+        margin-bottom: $spacing-m;
+      }
     }
   }
 }
