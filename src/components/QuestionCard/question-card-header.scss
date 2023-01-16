@@ -26,7 +26,7 @@
     transition: transform 0.1s ease-in-out;
     width: 2rem;
 
-    &--rotated {
+    &--is-expanded {
       transform: rotate(180deg);
     }
   }

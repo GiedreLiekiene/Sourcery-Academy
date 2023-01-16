@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 function QuestionCardHeader({ id, question, isExpanded, setIsExpanded }) {
   const iconClass = classNames('question-card-header__icon', {
-    'question-card-header__icon--rotated': isExpanded,
+    'question-card-header__icon--is-expanded': isExpanded,
   });
 
   return (
