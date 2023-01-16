@@ -16,5 +16,4 @@ function AcademyDevelopers() {
     </ThemeProvider>
   );
 }
-
 export default AcademyDevelopers;
