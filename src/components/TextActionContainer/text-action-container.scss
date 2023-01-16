@@ -50,6 +50,13 @@ $_padding-size-m: 5rem;
     line-height: $line-height-m;
     padding-right: $_padding-size-m;
 
+    &--bold {
+      color: $color-main-text;
+      font-family: $font-family-headings;
+      font-size: map-get($map: $heading-all-levels, $key: h2);
+      font-weight: $font-weight-bold;
+    }
+
     &--right {
       padding-left: $_padding-size-m;
       padding-right: 0;
@@ -59,11 +66,5 @@ $_padding-size-m: 5rem;
 
   &__action {
     max-width: fit-content;
-
-    @each $key, $val in $themes {
-      &--#{$key} {
-        background-color: $val;
-      }
-    }
   }
 }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Children } from 'react';
-=======
 import React, { useContext } from 'react';
->>>>>>> 0cc6021c9e8c13a3f65a94863acbba7be484d903
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './text-action-container';
@@ -10,11 +6,12 @@ import { ThemeContext } from '../../utils/ThemeContext';
 
 export default function TextActionContainer({
   title,
-  children,
   forceWrapTitle = false,
   text,
   alignRight = false,
   headingLevel = 1,
+  children,
+  boldMainText = false,
 }) {
   const { theme } = useContext(ThemeContext);
 
@@ -32,6 +29,7 @@ export default function TextActionContainer({
   );
   const textClass = classNames('text-action-container__text', {
     'text-action-container__text--right': alignRight,
+    'text-action-container__text--bold': boldMainText,
   });
   const actionClass = classNames(
     'text-action-container__action',
@@ -43,20 +41,17 @@ export default function TextActionContainer({
     <div className={textActionContainerClass}>
       <HeadingTag className={titleClass}>{title}</HeadingTag>
       <p className={textClass}>{text}</p>
-<<<<<<< HEAD
-      <div className="text-action-container__action">{children}</div>
-=======
-      <div className={actionClass}></div>
->>>>>>> 0cc6021c9e8c13a3f65a94863acbba7be484d903
+      <div className={actionClass}>{children}</div>
     </div>
   );
 }
 
 TextActionContainer.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node,
   text: PropTypes.string.isRequired,
   alignRight: PropTypes.bool,
+  boldMainText: PropTypes.bool,
   headingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   forceWrapTitle: PropTypes.bool,
+  children: PropTypes.node,
 };

@@ -6,6 +6,10 @@
   #{$direction}: $direction_val;
 }
 
+.action-wrap {
+  margin-top: 5rem;
+}
+
 .section-group {
   display: flex;
   min-height: 40rem;
@@ -13,11 +17,11 @@
   position: relative;
 
   &__video-wave {
-    @include wave-position(48%, right, 0, 15%);
+    @include wave-position(45%, right, 2rem, 13%);
   }
 
   &__register-wave {
-    @include wave-position(35%, left, 7rem, 220%);
+    @include wave-position(35%, left, 7rem, 195%);
   }
 
   &__schedule-wave {
@@ -29,6 +33,6 @@
   }
 
   &__apply-wave {
-    @include wave-position(17%, right, -2rem, -20%);
+    @include wave-position(18%, right, -3rem, -25%);
   }
 }
