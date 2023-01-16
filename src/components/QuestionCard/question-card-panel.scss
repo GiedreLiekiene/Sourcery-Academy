@@ -1,0 +1,12 @@
+@import '../../sass/variables';
+
+.question-card-panel {
+  border-radius: 0 0 $radius-s $radius-s;
+
+  &__answer {
+    color: $color-primary;
+    display: flex;
+    padding: 0 $spacing-m;
+    text-align: justify;
+  }
+}
