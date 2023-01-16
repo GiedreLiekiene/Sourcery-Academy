@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import './process-container.scss';
 import ProcessStep from '../ProcessStep/ProcessStep';
@@ -6,8 +6,14 @@ import academyInfo from '../../utils/academyInformation.json';
 import ProcessStepImageHandler from '../ProcessStep/ProcessStepImageHandler';
 import { assets } from '../../assets/svg/assets';
 
-function ProcessContainer({ academy = 0 }) {
-  const applicationStepText = academyInfo[academy]['application steps'];
+function ProcessContainer({ academy = 'Sourcery for Developers' }) {
+  const getApplicationSteps = (academy) => {
+    return academyInfo
+      .filter((item) => item.academy === academy)
+      .map((item) => item['application steps']);
+  };
+
+  const applicationSteps = useMemo(() => getApplicationSteps(academy), []);
 
   const {
     ProcessStepOne,
@@ -21,7 +27,7 @@ function ProcessContainer({ academy = 0 }) {
       <div className="process-container-wrapper__step">
         <ProcessStep
           title="Apply"
-          text={applicationStepText.first}
+          text={applicationSteps[0].first}
           stepNumber={1}
           imageNode={<ProcessStepImageHandler image={<ProcessStepOne />} />}
           centerImage
@@ -30,7 +36,7 @@ function ProcessContainer({ academy = 0 }) {
       <div className="process-container-wrapper__step">
         <ProcessStep
           title="Pass the admission"
-          text={applicationStepText.second}
+          text={applicationSteps[0].second}
           stepNumber={2}
           imageNode={<ProcessStepImageHandler image={<ProcessStepTwo />} />}
           isFlipped
@@ -39,7 +45,7 @@ function ProcessContainer({ academy = 0 }) {
       <div className="process-container-wrapper__step">
         <ProcessStep
           title="Learn from the experts"
-          text={applicationStepText.third}
+          text={applicationSteps[0].third}
           stepNumber={3}
           imageNode={<ProcessStepImageHandler image={<ProcessStepThree />} />}
         />
@@ -47,7 +53,7 @@ function ProcessContainer({ academy = 0 }) {
       <div className="process-container-wrapper__step">
         <ProcessStep
           title="Join the company"
-          text={applicationStepText.fourth}
+          text={applicationSteps[0].fourth}
           stepNumber={4}
           imageNode={<ProcessStepImageHandler image={<ProcessStepFour />} />}
           isFlipped
@@ -59,7 +65,7 @@ function ProcessContainer({ academy = 0 }) {
 }
 
 ProcessContainer.propTypes = {
-  academy: PropTypes.number.isRequired,
+  academy: PropTypes.string.isRequired,
 };
 
 export default ProcessContainer;
