@@ -42,6 +42,13 @@ $_padding-size-m: 5rem;
     &--wrap {
       word-spacing: 100rem;
     }
+
+    @include media-query-mobile {
+      &--wrap {
+        text-align: center;
+        word-spacing: 0;
+      }
+    }
   }
 
   &__text {
