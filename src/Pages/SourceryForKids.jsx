@@ -1,6 +1,9 @@
 import React from 'react';
+import WorkInProgress from '../components/WorkInProgress/WorkInProgress';
 
 function AcademyKids() {
-  return <div>Sourcery for Kids</div>;
+  return <div>
+    <WorkInProgress />
+  </div>;
 }
 export default AcademyKids;
