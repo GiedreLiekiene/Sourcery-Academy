@@ -1,0 +1,74 @@
+@import '../../sass/media-queries';
+@import '../../sass/variables';
+
+.work-in-progress {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__header {
+    color: $color-primary;
+    font-family: $font-family-headings;
+    font-size: map-get($heading-all-levels, h1);
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+
+    @include media-query-tablet {
+      font-size: 4rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+
+  &__construction-svg {
+    flex: 1;
+    max-width: 55rem;
+  }
+
+  &__hammer-svg {
+    animation: hit 1.5s ease-in infinite;
+    position: absolute;
+    width: 15rem;
+  }
+
+  &__gear-svg {
+    animation: rotation 3s linear infinite;
+    position: absolute;
+    width: 6rem;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: translate(-440%, 250%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-440%, 250%) rotate(360deg);
+  }
+}
+
+@keyframes hit {
+  from {
+    transform: translate(150%, -110%) rotate(-35deg);
+  }
+
+  50% {
+    transform: translate(150%, -110%) rotate(10deg);
+  }
+
+  to {
+    transform: translate(150%, -110%) rotate(-35deg);
+  }
+}
