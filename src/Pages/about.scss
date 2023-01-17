@@ -1,7 +1,9 @@
+@import '../sass/variables';
+
 .banner {
-  border-radius: 5rem;
+  border-radius: $radius-xxxxxxl;
   display: flex;
-  margin: 2rem 0;
+  margin: $spacing-m 0;
   object-fit: cover;
   overflow: hidden;
 
