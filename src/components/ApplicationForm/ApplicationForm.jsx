@@ -190,6 +190,11 @@ export default function ApplicationForm() {
             id="checkbox"
             error={error && !form.checkbox}
           />
+          {error && !form.checkbox && (
+            <div className="input__error">
+              Please accept with Privacy Notice.
+            </div>
+          )}
         </div>
 
         <div className="application-form__wrapper">
