@@ -81,6 +81,12 @@
   &__image {
     height: auto;
     width: 100%;
+
+    @include media-query-mobile {
+      height: 32rem;
+      object-fit: cover;
+      width: 100%;
+    }
   }
 
   &__arrow {
@@ -108,5 +114,12 @@
   .video-player {
     height: auto;
     width: 100%;
+
+    @include media-query-mobile {
+      height: 32rem;
+      margin-bottom: -1rem;
+      object-fit: cover;
+      width: 100%;
+    }
   }
 }

@@ -11,6 +11,8 @@ $themes: (
 .card-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: $spacing-l;
+  width: 100%;
 
   &__title {
     font-size: 4.8rem;
