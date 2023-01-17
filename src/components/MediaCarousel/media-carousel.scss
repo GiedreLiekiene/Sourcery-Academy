@@ -1,7 +1,21 @@
 @import '../../sass/variables';
 @import '../../sass/media-queries';
 
+$themes: (
+  primary: var(--color-primary),
+  secondary: var(--color-secondary),
+  tertiary: var(--color-tertiary),
+  quaternary: var(--color-quaternary),
+);
+
 .carousel {
+  display: flex;
+  @each $key, $val in $themes {
+    &--#{$key} {
+      background-color: $val;
+    }
+  }
+
   &__button {
     background: none;
     border: none;
@@ -81,7 +95,13 @@
 
   &__image {
     height: auto;
+    object-fit: cover;
     width: 100%;
+
+    @include media-query-mobile {
+      height: 32rem;
+      object-fit: contain;
+    }
   }
 
   &__arrow {
@@ -109,5 +129,10 @@
   .video-player {
     height: auto;
     width: 100%;
+
+    @include media-query-mobile {
+      height: 32rem;
+      width: 100%;
+    }
   }
 }
