@@ -29,6 +29,13 @@
     }
   }
 
+  @include media-query-mobile {
+    .text-action-container__text {
+      margin-left: unset;
+      text-align: start;
+    }
+  }
+
   &__right-column {
     display: flex;
     flex-direction: column;
@@ -38,10 +45,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-
-    svg {
-      max-width: 51rem;
-    }
+    $this: &;
 
     @each $key, $val in $themes {
       &--#{$key} {
@@ -53,6 +57,10 @@
           fill: map-get($theme-accents, #{$key}, accent-2);
         }
       }
+    }
+
+    svg {
+      max-width: 51rem;
     }
 
     @include media-query-mobile {
