@@ -1,0 +1,37 @@
+@import '../../sass/media-queries';
+@import '../../sass/variables';
+
+.dates-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__title {
+    align-self: flex-end;
+    font-size: map-get($map: $heading-all-levels, $key: h2);
+    margin: 0;
+    margin-bottom: $spacing-l;
+    text-align: right;
+    width: fit-content;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
+      }
+    }
+  }
+
+  &__cards {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    flex: 1;
+    margin-bottom: $spacing-s;
+    width: 100%;
+  }
+}

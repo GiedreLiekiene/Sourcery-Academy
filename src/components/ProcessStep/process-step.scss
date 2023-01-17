@@ -9,20 +9,22 @@
   column-gap: $spacing-m;
   display: grid;
   grid-template-areas:
+    'title .'
     'title image'
     'text image'
     'text .';
   grid-template-columns: 1fr ($dist-a * 2);
-  grid-template-rows: $dist-a $dist-a;
+  grid-template-rows: auto $dist-a $dist-a;
   position: relative;
 
   @include media-query-mobile {
     grid-template-columns: 1fr ($dist-b * 2);
-    grid-template-rows: $dist-b $dist-b;
+    grid-template-rows: auto $dist-b $dist-b;
   }
 
   &--is-flipped {
     grid-template-areas:
+      '. title'
       'image title'
       'image text'
       '. text';
@@ -34,6 +36,8 @@
 
     #{$this}__title,
     #{$this}__text {
+      padding-left: $spacing-m;
+      padding-right: 0;
       text-align: right;
     }
   }
@@ -63,6 +67,7 @@
     font-size: $font-size-m;
     grid-area: text;
     line-height: $line-height-m;
+    padding-right: $spacing-m;
 
     @include media-query-mobile {
       font-size: $font-size-s;
@@ -70,7 +75,7 @@
   }
 
   &__image-holder {
-    border-radius: 50%;
+    border-radius: $radius-circle;
     display: grid;
     grid-area: image;
     position: relative;
@@ -94,16 +99,17 @@
   }
 
   &__image-container {
+    height: 100%;
     position: absolute;
     top: 0;
-    width: 130%;
+    width: auto;
 
     &--center {
-      left: -10%;
+      left: -15%;
     }
 
     &--right {
-      left: 10%;
+      left: 20%;
     }
   }
 
