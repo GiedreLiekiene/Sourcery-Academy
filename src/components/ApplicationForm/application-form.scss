@@ -1,9 +1,10 @@
 @import '../../sass/variables';
 $_line-height: 2.1;
+$_spacing-right: 0.5rem;
 
 .application-form {
-  margin: 8rem 0 4rem;
-  padding: 0 10rem 0 4rem;
+  margin: 8rem 0 $spacing-xxl;
+  padding: 0 10rem 0 $spacing-xxl;
 
   &__title-info {
     margin-bottom: $spacing-l;
@@ -16,7 +17,7 @@ $_line-height: 2.1;
   }
 
   &__wrapper {
-    margin: 6rem 0 0;
+    margin-top: $spacing-xxxl;
 
     &--less-margin {
       margin-bottom: $spacing-m;
@@ -30,16 +31,16 @@ $_line-height: 2.1;
     font-size: $font-size-s;
     font-weight: $font-weight-normal;
     line-height: $_line-height;
-    margin: 6rem 0 1.7rem;
+    margin: $spacing-xxxl 0 1.7rem;
     position: relative;
-    right: 0.5rem;
+    right: $_spacing-right;
 
     &::before {
       color: $color-error;
       content: '*';
       font-weight: $font-weight-bold;
       position: relative;
-      right: 0.5rem;
+      right: $_spacing-right;
     }
   }
 }
