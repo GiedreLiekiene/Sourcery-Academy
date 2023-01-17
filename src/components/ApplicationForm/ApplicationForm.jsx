@@ -116,7 +116,7 @@ export default function ApplicationForm() {
             onChange={onChange}
             error={error && !form.city}
           />
-          {(error && !form.city === 'Vilnius')(
+          {error && !(form.city === 'Vilnius' || form.city === 'Kaunas') && (
             <div className="input__error">Please enter all the fields</div>
           )}
         </div>
