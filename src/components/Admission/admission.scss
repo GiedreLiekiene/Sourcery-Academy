@@ -7,14 +7,6 @@
   width: 100%;
 
   &__point {
-    @each $key, $val in $themes {
-      &--#{$key}::before {
-        color: $val;
-      }
-    }
-  }
-
-  li {
     list-style: none;
     margin-left: $spacing-m;
     position: relative;
@@ -26,6 +18,12 @@
       line-height: 0.5;
       position: absolute;
       top: 0;
+    }
+
+    @each $key, $val in $themes {
+      &--#{$key}::before {
+        color: $val;
+      }
     }
   }
 
