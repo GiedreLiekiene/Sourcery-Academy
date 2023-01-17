@@ -2,7 +2,17 @@
 @import '../../sass/media-queries';
 
 .admission-wrapper {
+  $this: &;
+
   width: 100%;
+
+  &__point {
+    @each $key, $val in $themes {
+      &--#{$key}::before {
+        color: $val;
+      }
+    }
+  }
 
   li {
     list-style: none;
@@ -16,18 +26,25 @@
       line-height: 0.5;
       position: absolute;
       top: 0;
-      @each $key, $val in $themes {
-        &--#{$key} {
-          color: $val;
-        }
-      }
     }
   }
 
-  @include media-query-mobile {
-    .text-action-container__text {
-      margin-left: unset;
-      text-align: start;
+  &__right-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    svg {
+      max-width: 51rem;
+    }
+
+    @include media-query-mobile {
+      justify-content: center;
     }
   }
 }
