@@ -15,7 +15,7 @@
 
   &--first {
     padding-bottom: 20rem;
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
 
   &--last {
@@ -24,14 +24,27 @@
 
   &__video-box-wrapper {
     margin-left: 5rem;
+
+    @include media-query-mobile {
+      margin: unset;
+    }
   }
 
   &__text-wrapper {
     margin-right: 12rem;
+
+    @include media-query-mobile {
+      margin: unset;
+      padding-bottom: 5rem;
+    }
   }
 
   @include media-query-mobile {
     padding: 6rem 0;
+
+    &--schedule {
+      display: unset;
+    }
 
     &__wave {
       display: none;

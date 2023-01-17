@@ -7,6 +7,7 @@ import { ThemeContext } from '../../utils/ThemeContext';
 export default function TextActionContainer({
   title,
   forceWrapTitle = false,
+  centerTitle = false,
   text,
   alignRight = false,
   headingLevel = 1,
@@ -25,6 +26,7 @@ export default function TextActionContainer({
     {
       'text-action-container__title--right': alignRight,
       'text-action-container__title--wrap': forceWrapTitle,
+      'text-action-container__title--center': centerTitle,
     }
   );
   const textClass = classNames('text-action-container__text', {
@@ -53,5 +55,6 @@ TextActionContainer.propTypes = {
   boldMainText: PropTypes.bool,
   headingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   forceWrapTitle: PropTypes.bool,
+  centerTitle: PropTypes.bool,
   children: PropTypes.node,
 };

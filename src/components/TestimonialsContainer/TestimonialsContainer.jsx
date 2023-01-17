@@ -23,7 +23,7 @@ function TestimonialsContainer({ academy }) {
       .then((result) =>
         randomAcademy === academy
           ? setShowPosts(result.slice(random, random + 3))
-          : setShowPosts(result)
+          : setShowPosts(result.slice(2))
       )
       .catch(() => setError('Failed to load...'));
     return data;

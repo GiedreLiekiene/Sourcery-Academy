@@ -34,6 +34,7 @@ function AcademyTesters() {
                 leftChild={
                   <div className='section-group__text-wrapper'>
                     <TextActionContainer
+                    centerTitle
                     title={getAcademyInfo('title', 'Sourcery for Testers')}
                     text={getAcademyInfo('slogan', 'Sourcery for Testers')}
                     >
@@ -43,7 +44,7 @@ function AcademyTesters() {
                 }
                 rightChild={
                   <div className='section-group__video-box-wrapper'>
-                    <VideoBox thumbnail='https://sfe-2022-data.netlify.app/static/video/developers/thumbnails/47110170574_c00cc2b54d_k-1.jpg' videoSrc='https://sfe-2022-data.netlify.app/static/video/developers/80b0058a9428314582a3f25f3b1dfb8bc27de8a4.mp4' />
+                    <VideoBox thumbnail='https://sfe-2022-data.netlify.app/static/video/testers/thumbnails/48741988306_5beb53f25e_o.jpg' videoSrc='https://sfe-2022-data.netlify.app/static/video/testers/7cd88093664cd782e4868a6706f2787da2eb7dc9.mp4' />
                   </div>           
                 }
           />
@@ -68,7 +69,7 @@ function AcademyTesters() {
           </div>
       </div>
 
-      <div className='section-group'>
+      <div className='section-group section-group--schedule'>
         <CardContainer title="Schedule" center>
           <ScheduleContainer academy="Sourcery for Testers" />
         </CardContainer>
@@ -101,6 +102,7 @@ function AcademyTesters() {
       <TextImgContainer
           leftChild={
             <TextActionContainer
+              centerTitle
               title="Apply to academy"
               text={getAcademyInfo('apply', 'Sourcery for Testers')}
               boldMainText

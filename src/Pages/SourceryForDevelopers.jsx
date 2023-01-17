@@ -36,6 +36,7 @@ function AcademyDevelopers() {
             leftChild={
               <div className='section-group__text-wrapper'>
                 <TextActionContainer
+                  centerTitle
                   title={getAcademyInfo('title', 'Sourcery for Developers')}
                   text={getAcademyInfo('slogan', 'Sourcery for Developers')}
                 >
@@ -70,7 +71,7 @@ function AcademyDevelopers() {
           </div>
       </div>
 
-      <div className='section-group'>
+      <div className='section-group section-group--schedule'>
         <CardContainer title="Schedule" center>
           <ScheduleContainer academy="Sourcery for Developers" />
         </CardContainer>
@@ -103,6 +104,7 @@ function AcademyDevelopers() {
       <TextImgContainer
           leftChild={
             <TextActionContainer
+              centerTitle
               title="Apply to academy"
               text={getAcademyInfo('apply', 'Sourcery for Developers')}
               boldMainText
