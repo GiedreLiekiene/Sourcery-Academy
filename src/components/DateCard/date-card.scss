@@ -1,0 +1,59 @@
+@import '../../sass/variables';
+
+.date-card {
+  $this: &;
+
+  align-items: center;
+  border-radius: $radius-s;
+  display: flex;
+  padding: $spacing-xs;
+
+  &__date {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 8rem;
+  }
+
+  &__date-month {
+    font-size: $font-size-s;
+    margin: 0;
+    word-spacing: 0.25rem;
+  }
+
+  &__date-day {
+    font-size: $font-size-m;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  &__event {
+    font-size: $font-size-m;
+    margin: 0;
+  }
+
+  &__vertical-line {
+    align-self: center;
+    height: 3.5rem;
+    margin: 0 $spacing-s;
+    width: 0.2rem;
+  }
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      border: 2px solid $val;
+
+      #{$this}__date-month,
+      #{$this}__date-day,
+      #{$this}__event {
+        color: $val;
+      }
+
+      #{$this}__vertical-line {
+        background-color: $val;
+      }
+    }
+  }
+}
