@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './application-form.scss';
 import Input, { errorMessage } from './Input';
@@ -33,17 +33,21 @@ export default function ApplicationForm() {
     }));
   };
 
+  useEffect(() => {
+    localStorage.setItem('Form', JSON.stringify('form'));
+  }, [form]);
+
   function getFormValues() {
     const storedValues = localStorage.getItem('Form');
     if (!storedValues)
       return {
+        academy: '',
         city: '',
         name: '',
         lastName: '',
         email: '',
         resume: [],
         checkbox: false,
-        academy: '',
       };
     return JSON.parse(storedValues);
   }

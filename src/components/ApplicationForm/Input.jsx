@@ -30,11 +30,7 @@ export default function Input({
 
   return (
     <div>
-      {label && (
-        <label className="input__label" htmlFor={id}>
-          {label}
-        </label>
-      )}
+      {label && <label className="input__label">{label}</label>}
       <input
         type={type}
         value={value}
