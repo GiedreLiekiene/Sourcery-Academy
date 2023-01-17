@@ -1,0 +1,10 @@
+@import '../sass/media-queries';
+
+.questions {
+  &__image-wrapper {
+    padding-left: 12rem;
+    @include media-query-mobile {
+      display: none;
+    }
+  }
+}
