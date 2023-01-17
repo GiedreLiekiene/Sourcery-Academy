@@ -1,7 +1,6 @@
 import React from 'react';
 import TestimonialsContainer from '../components/TestimonialsContainer/TestimonialsContainer';
 import VideoBox from '../components/VideoBox/VideoBox';
-import ImageHolder from '../components/ImageHolder/ImageHolder';
 import CustomLink from '../components/Link/CustomLink';
 import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
 import TextActionContainer from '../components/TextActionContainer/TextActionContainer';
@@ -9,6 +8,8 @@ import CardContainer from '../components/CardContainer/CardContainer';
 import ScheduleContainer from '../components/ScheduleContainer/ScheduleContainer';
 import WaveContainer from '../components/WaveContainer/WaveContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
+import academyInformation from '../utils/academyInformation.json';
+import ProcessContainer from '../components/ProcessContainer/ProcessContainer';
 import { ThemeProvider } from '../utils/ThemeContext';
 import { ROUTES } from '../components/App/Routes';
 import { SvgList } from '../assets/svg';
@@ -19,36 +20,56 @@ const { register } = ROUTES;
 
 const { ApplyDevelopers } = assets;
 
+function getAcademyInfo(key, academy) {
+  return academyInformation
+    .filter((item) => item.academy === academy)
+    .map((item) => item[key])
+    .toString();
+}
+
 
 function AcademyDevelopers() {
   return (
     <ThemeProvider theme="secondary">
-      <div className="section-group">
+      <div className="section-group section-group--first">
         <TextImgContainer
             leftChild={
-              <TextActionContainer
-                title="Sourcery Academy for developers"
-                text="Become a software developer with our free of charge three-month academy, available this fall and spring. Work with our top specialists as your mentors and lecturers in Kaunas and Vilnius."
-              >
-                <CustomLink to={register}>Register</CustomLink>
-              </TextActionContainer>
+              <div className='section-group__text-wrapper'>
+                <TextActionContainer
+                  title="Sourcery Academy for developers"
+                  text={getAcademyInfo('slogan', 'Sourcery for Developers')}
+                >
+                  <CustomLink to={register}>Register</CustomLink>
+                </TextActionContainer>
+              </div>
             }
             rightChild={
-              <ImageHolder right image={<VideoBox thumbnail='https://sfe-2022-data.netlify.app/static/video/developers/thumbnails/47110170574_c00cc2b54d_k-1.jpg' videoSrc='https://sfe-2022-data.netlify.app/static/video/developers/80b0058a9428314582a3f25f3b1dfb8bc27de8a4.mp4' />} /> 
-           }
-          ></TextImgContainer>
+              <div className='section-group__video-box-wrapper'>
+                <VideoBox thumbnail='https://sfe-2022-data.netlify.app/static/video/developers/thumbnails/47110170574_c00cc2b54d_k-1.jpg' videoSrc='https://sfe-2022-data.netlify.app/static/video/developers/80b0058a9428314582a3f25f3b1dfb8bc27de8a4.mp4' />
+              </div>
+            }
+          />
           <div className="section-group__wave section-group__wave--register-wave">
             <WaveContainer>            
               <SvgList.RegisterWaveSvg />
             </WaveContainer>
           </div>
           <div className="section-group__wave section-group__wave--video-wave">
-          <WaveContainer>
-            <SvgList.VideoWaveSvg />
-          </WaveContainer>
-
+            <WaveContainer>
+              <SvgList.VideoWaveSvg />
+            </WaveContainer>
           </div>
       </div>
+
+      <div className='section-group'>
+          <ProcessContainer academy='Sourcery for Developers'/>
+          <div className="section-group__wave section-group__wave--process-wave">
+            <WaveContainer>            
+              <SvgList.ProcessWaveSvg />
+            </WaveContainer>
+          </div>
+      </div>
+
       <div className='section-group'>
         <CardContainer title="Schedule" center>
           <ScheduleContainer academy="Sourcery for Developers" />
@@ -83,7 +104,7 @@ function AcademyDevelopers() {
           leftChild={
             <TextActionContainer
               title="Apply to academy"
-              text="Entrance test results define a priority list of candidates. We accept 20 candidates with highest marks into academy."
+              text={getAcademyInfo('apply', 'Sourcery for Developers')}
               boldMainText
             >                
                 <CustomLink to={register}>Apply now</CustomLink>

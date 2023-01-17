@@ -13,6 +13,23 @@
   padding: 10rem 0;
   position: relative;
 
+  &--first {
+    padding-bottom: 20rem;
+    padding-top: 5rem;
+  }
+
+  &--last {
+    padding-bottom: 20rem;
+  }
+
+  &__video-box-wrapper {
+    margin-left: 5rem;
+  }
+
+  &__text-wrapper {
+    margin-right: 12rem;
+  }
+
   @include media-query-mobile {
     padding: 6rem 0;
 
@@ -22,8 +39,6 @@
   }
 
   @include media-query-desktop {
-    padding: 6rem 0;
-
     &__wave {
       &--video-wave {
         display: none;
@@ -37,11 +52,15 @@
 
   &__wave {
     &--video-wave {
-      @include wave-position(42%, right, 7rem, 17%);
+      @include wave-position(49%, right, 2rem, 14%);
     }
 
     &--register-wave {
-      @include wave-position(30%, left, 7rem, 230%);
+      @include wave-position(35%, left, 5rem, 220%);
+    }
+
+    &--process-wave {
+      @include wave-position(6%, left, -8rem, 0%);
     }
 
     &--schedule-wave {
