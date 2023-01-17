@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './application-form.scss';
-import Input, { errorMessage } from './Input';
+import Input from './Input';
 import Checkbox from '~/components/CheckBox/CheckBox';
 import Button from '~/components/Buttons/Button';
 import Selection from '~/components/ApplicationForm/Selection';
@@ -19,10 +19,10 @@ export default function ApplicationForm() {
   const navigate = useNavigate();
 
   const onFileChange = (e) => {
-    return setIsFile(e.target.value);
+    return setIsFile(e.target.files[0].name);
   };
   let fileName;
-  fileName = isFile ? <span>{isFile}</span> : <span></span>;
+  fileName = isFile && <span>{isFile}</span>;
 
   useEffect(() => {
     localStorage.setItem('Form', JSON.stringify(form));
@@ -95,7 +95,7 @@ export default function ApplicationForm() {
 
         <div className="application-form__wrapper">
           <label className="application-form__label">Academy type</label>
-          <Selection onChange={onChange} />
+          <Selection onChange={onChange} error={error && !form.academy} />
         </div>
 
         <div className="application-form__wrapper">
@@ -106,6 +106,7 @@ export default function ApplicationForm() {
             value="Vilnius"
             id="Vilnius"
             onChange={onChange}
+            error={error && !form.city}
           />
           <RadioInput
             name="city"
@@ -113,7 +114,11 @@ export default function ApplicationForm() {
             value="Kaunas"
             id="Kaunas"
             onChange={onChange}
+            error={error && !form.city}
           />
+          {error && (
+            <div className="input__error">Please enter all the fields</div>
+          )}
         </div>
 
         <div className="application-form__wrapper">
@@ -126,6 +131,7 @@ export default function ApplicationForm() {
               label="First name"
               name="name"
               onChange={onChange}
+              error={error && !form.name.match(/^[a-zA-Z]+$/)}
             />
           </div>
 
@@ -137,6 +143,7 @@ export default function ApplicationForm() {
               label="Last name"
               name="lastName"
               onChange={onChange}
+              error={error && !form.lastName.match(/^[a-zA-Z]+$/)}
             />
           </div>
 
@@ -149,6 +156,12 @@ export default function ApplicationForm() {
               label="Email"
               name="email"
               onChange={onChange}
+              error={
+                error &&
+                !form.email.match(
+                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+                )
+              }
             />
           </div>
 
@@ -159,9 +172,10 @@ export default function ApplicationForm() {
               label="Resume"
               name="resume"
               onChange={onFileChange}
-              isFile={fileName}
+              isFile
               id="file"
-              fileName
+              fileName={fileName}
+              error={error && !fileName}
             />
           </div>
         </div>
@@ -177,7 +191,7 @@ export default function ApplicationForm() {
           />
         </div>
 
-        {error ? <div>{errorMessage()}</div> : <div></div>}
+        {/*{error ? <div>{errorMessage()}</div> : <div></div>}*/}
 
         <div className="application-form__wrapper">
           <Button

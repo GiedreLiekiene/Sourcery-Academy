@@ -20,6 +20,10 @@ $_focus-hover-opacity: 0.8;
     transition-property: transform, border-color;
     width: 2rem;
 
+    &--is-error {
+      border: 2px solid $color-error;
+    }
+
     &::before {
       background: $_button-background-color;
       border-radius: 50%;

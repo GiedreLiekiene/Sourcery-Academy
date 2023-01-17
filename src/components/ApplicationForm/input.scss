@@ -51,22 +51,28 @@ $border-color-hover: #000000bc;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-  }
 
-  &__file-icon {
-    width: 2rem;
+    &--red-border {
+      border: 1px solid $color-error;
+    }
   }
 
   &__uploaded {
     color: $color-labels;
     font-family: $font-family;
     font-size: $size-uploaded;
-    margin-top: 0.1rem;
+    margin-top: 1rem;
   }
 
-  &__error {
+  &--iconic {
+    width: 2rem;
+  }
+
+  &__message {
     color: $color-error;
-    font-size: 1.4rem;
-    position: absolute;
+  }
+
+  &--is-error {
+    border: 1px solid $color-error;
   }
 }

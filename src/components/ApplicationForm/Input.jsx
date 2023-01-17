@@ -2,10 +2,7 @@ import React from 'react';
 import './input.scss';
 import FileUploadSvg from '../../assets/svg/icon-upload.svg';
 import PropTypes from 'prop-types';
-
-export const errorMessage = () => {
-  return <div className="input__error">Please enter all the fields</div>;
-};
+import classNames from 'classnames';
 
 export default function Input({
   type = 'text',
@@ -16,6 +13,8 @@ export default function Input({
   onChange,
   isFile,
   id,
+  fileName,
+  error,
   filePlaceholder = 'Upload your resume',
 }) {
   let inputRef;
@@ -25,7 +24,13 @@ export default function Input({
     }
   };
 
-  const inputClass = 'input' + (isFile ? '__file' : '');
+  const inputClass = classNames('input', {
+    input__file: isFile,
+    'input--is-error': error,
+  });
+  const inputFileClass = classNames('input', 'input__file-label', {
+    'input__file-label--red-border': error,
+  });
   const accept = isFile ? 'application/pdf, application/vnd.ms-excel' : '';
 
   return (
@@ -47,18 +52,21 @@ export default function Input({
         <label
           tabIndex={0}
           onKeyDown={handleUpload}
-          className="input input__file-label"
+          className={inputFileClass}
           htmlFor={id}
         >
           {filePlaceholder}
-          <FileUploadSvg className={`${inputClass}-icon`} />
+          <FileUploadSvg className={'input--iconic'} />
         </label>
       )}
-      {isFile && <div className="input__uploaded">{isFile}</div>}
+      {isFile && <div className="input__uploaded">{fileName}</div>}
+      {error && <div className="input__error">Please enter all the fields</div>}
     </div>
   );
 }
 Input.propTypes = {
+  error: PropTypes.node,
+  fileName: PropTypes.node,
   filePlaceholder: PropTypes.string,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
