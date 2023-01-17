@@ -1,10 +1,12 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../utils/ThemeContext';
 import './link.scss';
 
-const CustomLink = ({ to, children, theme = 'primary' }) => {
+const CustomLink = ({ to, children }) => {
+  const { theme } = useContext(ThemeContext);
   const linkClass = classNames('link-container', `link-container--${theme}`);
 
   return (
@@ -17,7 +19,6 @@ const CustomLink = ({ to, children, theme = 'primary' }) => {
 CustomLink.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
-  theme: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
 };
 
 export default CustomLink;

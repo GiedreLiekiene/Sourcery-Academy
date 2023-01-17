@@ -1,21 +1,23 @@
 import React from 'react';
-import TextActionContainer from '../components/TextActionContainer/TextActionContainer';
-import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
-import VideoBox from '../components/VideoBox/VideoBox';
-import CardContainer from '../components/CardContainer/CardContainer';
-import MediaContainer from '../components/MediaContainer/MediaContainer';
 import TestimonialsContainer from '../components/TestimonialsContainer/TestimonialsContainer';
+import VideoBox from '../components/VideoBox/VideoBox';
+import ImageHolder from '../components/ImageHolder/ImageHolder';
+import CustomLink from '../components/Link/CustomLink';
+import TextImgContainer from '../components/TextImgContainer/TextImgContainer';
+import TextActionContainer from '../components/TextActionContainer/TextActionContainer';
+import CardContainer from '../components/CardContainer/CardContainer';
 import ScheduleContainer from '../components/ScheduleContainer/ScheduleContainer';
+import WaveContainer from '../components/WaveContainer/WaveContainer';
+import MediaContainer from '../components/MediaContainer/MediaContainer';
 import { ThemeProvider } from '../utils/ThemeContext';
-import { SvgList } from '../assets/svg/index';
+import { ROUTES } from '../components/App/Routes';
+import { SvgList } from '../assets/svg';
 import { assets } from '../assets/svg/assets';
 
-import './academies.scss';
-import CustomLink from '../components/Link/CustomLink';
-import ImageHolder from '../components/ImageHolder/ImageHolder';
-import WaveContainer from '../components/WaveContainer/WaveContainer';
+const { home } = ROUTES;
 
 const { ApplyDevelopers } = assets;
+
 
 function AcademyDevelopers() {
   return (
@@ -28,10 +30,8 @@ function AcademyDevelopers() {
                 text="Become a software developer with our free of charge three-month academy, available this fall and spring. Work with our top specialists as your mentors and lecturers in Kaunas and Vilnius."
               >
                 <div className='action-wrap'>
-                  <CustomLink to='/register' theme='secondary'>
-                    Register
-                  </CustomLink>
-                  </div>
+                  <CustomLink to={home}>Register</CustomLink>
+                </div>
               </TextActionContainer>
             }
             rightChild={
@@ -87,12 +87,11 @@ function AcademyDevelopers() {
               title="Apply to academy"
               text="Entrance test results define a priority list of candidates. We accept 20 candidates with highest marks into academy."
               boldMainText
-            >                <div className='action-wrap'>
-                  <CustomLink to='/register' theme='secondary'>
-                    Apply now
-                  </CustomLink>
-                  </div>
-                  </TextActionContainer>
+            >                
+            <div className='action-wrap'>
+                <CustomLink to={home}>Apply now</CustomLink>
+            </div>
+            </TextActionContainer>
           }
           rightChild={<ApplyDevelopers />}
           alignCenter
@@ -102,13 +101,7 @@ function AcademyDevelopers() {
             <SvgList.ApplyWaveSvg />
           </WaveContainer>
         </div>
-
-
       </div>
-
-
-
-
     </ThemeProvider>
   );
 }
