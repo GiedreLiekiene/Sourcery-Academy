@@ -6,7 +6,7 @@ $_line-height: 2.1;
   padding: 0 10rem 0 4rem;
 
   &__title-info {
-    margin-bottom: 3rem;
+    margin-bottom: $spacing-l;
 
     @each $key, $val in $themes {
       &--#{$key} {
@@ -15,12 +15,12 @@ $_line-height: 2.1;
     }
   }
 
-  &__item {
-    margin-bottom: 2rem;
-  }
-
   &__wrapper {
     margin: 6rem 0 0;
+
+    &--less-margin {
+      margin-bottom: $spacing-m;
+    }
   }
 
   &__label {
@@ -28,7 +28,7 @@ $_line-height: 2.1;
     display: block;
     font-family: $font-family;
     font-size: $font-size-s;
-    font-weight: 400;
+    font-weight: $font-weight-normal;
     line-height: $_line-height;
     margin: 6rem 0 1.7rem;
     position: relative;
@@ -37,7 +37,7 @@ $_line-height: 2.1;
     &::before {
       color: $color-error;
       content: '*';
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       position: relative;
       right: 0.5rem;
     }

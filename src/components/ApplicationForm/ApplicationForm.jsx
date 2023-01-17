@@ -110,7 +110,7 @@ export default function ApplicationForm() {
 
         <div className="application-form__wrapper">
           <h2 className={headerClass}>Personal information</h2>
-          <div className="application-form__item">
+          <div className="application-form__wrapper--less-margin">
             <Input
               id="name"
               value={form.name}
@@ -121,7 +121,7 @@ export default function ApplicationForm() {
             />
           </div>
 
-          <div className="application-form__item">
+          <div className="application-form__wrapper--less-margin">
             <Input
               id="lastName"
               value={form.lastName}
@@ -132,7 +132,7 @@ export default function ApplicationForm() {
             />
           </div>
 
-          <div className="application-form__item">
+          <div className="application-form__wrapper--less-margin">
             <Input
               id="email"
               type="email"
@@ -144,7 +144,7 @@ export default function ApplicationForm() {
             />
           </div>
 
-          <div className="application-form__item">
+          <div className="application-form__wrapper--less-margin">
             <Input
               type="file"
               value={form.resume}
