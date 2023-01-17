@@ -50,7 +50,7 @@ const Checkbox = ({
 
 export default Checkbox;
 Checkbox.propTypes = {
-  error: PropTypes.node,
+  error: PropTypes.bool,
   type: PropTypes.string,
   label: PropTypes.string.isRequired,
   value: PropTypes.node,

@@ -32,7 +32,7 @@ export default function RadioInput({
 }
 
 RadioInput.propTypes = {
-  error: PropTypes.node,
+  error: PropTypes.bool,
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
   value: PropTypes.node.isRequired,

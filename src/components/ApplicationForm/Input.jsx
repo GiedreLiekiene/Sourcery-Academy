@@ -65,7 +65,7 @@ export default function Input({
   );
 }
 Input.propTypes = {
-  error: PropTypes.node,
+  error: PropTypes.bool,
   fileName: PropTypes.node,
   filePlaceholder: PropTypes.string,
   id: PropTypes.string.isRequired,
@@ -75,5 +75,5 @@ Input.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
-  isFile: PropTypes.node,
+  isFile: PropTypes.bool,
 };

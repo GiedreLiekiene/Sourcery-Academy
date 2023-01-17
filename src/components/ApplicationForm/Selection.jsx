@@ -56,6 +56,6 @@ export default function Selection({ onChange, error }) {
 }
 
 Selection.propTypes = {
-  error: PropTypes.node,
+  error: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
 };
