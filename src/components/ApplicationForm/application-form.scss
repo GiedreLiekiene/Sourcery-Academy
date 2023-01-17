@@ -38,9 +38,9 @@ $_spacing-right: 0.5rem;
     &::before {
       color: $color-error;
       content: '*';
+      display: inline-block;
       font-weight: $font-weight-bold;
-      position: relative;
-      right: $_spacing-right;
+      margin-right: $spacing-xs;
     }
   }
 }
