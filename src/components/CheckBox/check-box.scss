@@ -2,14 +2,16 @@
 
 $_line-height-small: 1.5;
 $_border-radius: 0.3rem;
+$_checkbox-hover-color: #9a9999ff;
 
 .checkbox {
+  $this: &;
+
   align-items: start;
   display: flex;
   gap: $spacing-ml;
 
-  &__check {
-    appearance: none;
+  &__fake {
     border: 2px solid $checkbox-color;
     border-radius: $_border-radius;
     cursor: pointer;
@@ -17,20 +19,53 @@ $_border-radius: 0.3rem;
     position: relative;
     width: 2.2rem;
 
-    &:checked,
+    &--is-error {
+      border: 2px solid $color-error;
+    }
+
+    &::before {
+      color: $checkbox-color;
+      content: '✔';
+      font-size: 2rem;
+      margin: auto 0.1rem;
+      opacity: 0;
+      position: absolute;
+      top: -0.2rem;
+    }
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+
     &:hover {
-      &::after {
-        color: $checkbox-color;
-        content: '✔';
-        font-size: 2rem;
-        margin: auto 0.1rem;
-        position: absolute;
-        top: -0.5rem;
+      + #{$this}__fake {
+        border-color: $_checkbox-hover-color;
+        /* stylelint-disable */
+        &::before {
+          color: $_checkbox-hover-color;
+        }
+        /* stylelint-enable */
       }
     }
 
-    &:hover {
-      opacity: 0.7;
+    &:focus {
+      + #{$this}__fake {
+        border-color: $_checkbox-hover-color;
+      }
+    }
+
+    &:checked {
+      + #{$this}__fake {
+        //border-color: $_button-background-color;
+
+        /* stylelint-disable */
+        &::before {
+          opacity: 1;
+        }
+        /* stylelint-enable */
+      }
     }
   }
 

@@ -30,7 +30,6 @@ const Checkbox = ({
   return (
     <div className="checkbox">
       <input
-        className="checkbox__check"
         type={type}
         checked={checked}
         value={value}

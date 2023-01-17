@@ -116,7 +116,7 @@ export default function ApplicationForm() {
             onChange={onChange}
             error={error && !form.city}
           />
-          {error && (
+          {(error && !form.city === 'Vilnius')(
             <div className="input__error">Please enter all the fields</div>
           )}
         </div>
@@ -188,10 +188,9 @@ export default function ApplicationForm() {
             onChange={onChange}
             label="I have read, understand and accept the content of the Privacy Notice and consent to the processing of my data as part of this application."
             id="checkbox"
+            error={error && !form.checkbox}
           />
         </div>
-
-        {/*{error ? <div>{errorMessage()}</div> : <div></div>}*/}
 
         <div className="application-form__wrapper">
           <Button
