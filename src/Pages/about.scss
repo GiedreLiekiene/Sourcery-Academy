@@ -1,0 +1,11 @@
+.banner {
+  border-radius: 5rem;
+  display: flex;
+  margin: 2rem 0;
+  object-fit: cover;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+  }
+}

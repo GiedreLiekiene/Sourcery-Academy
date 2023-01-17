@@ -56,7 +56,7 @@ function Home() {
               text={getAcademyInfo('intro', 'Sourcery for Developers')}
             />
           }
-          rightChild={<ImageHolder image={<WorkingWithLaptop />} />}
+          rightChild={<ImageHolder image={<WorkingWithLaptop />} alignRight/>}
         ></TextImgContainer>
         <div className="section-group__wave section-group__wave--first-wave">
           <FirstWaveSvg />
