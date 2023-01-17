@@ -1,0 +1,13 @@
+@import '../sass/variables';
+
+.banner {
+  border-radius: $radius-xxxxxxl;
+  display: flex;
+  margin: $spacing-m 0;
+  object-fit: cover;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+  }
+}

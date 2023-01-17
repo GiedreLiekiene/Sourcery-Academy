@@ -13,6 +13,11 @@ import ProcessStepFour from './image-step-4-people-with-checkmark.svg';
 import Construction from './construction.svg';
 import Gear from './gear.svg';
 import Hammer from './hammer.svg';
+import Paulina from './paulina.svg';
+import Giedre from './giedre.svg';
+import Arturas from './arturas.svg';
+import Aukse from './aukse.svg';
+import Linas from './linas.svg';
 
 export const assets = {
   WalkingToLaptopImg: WalkingToLaptopImg,
@@ -30,4 +35,9 @@ export const assets = {
   Construction: Construction,
   Gear: Gear,
   Hammer: Hammer,
+  Paulina: Paulina,
+  Giedre: Giedre,
+  Arturas: Arturas,
+  Aukse: Aukse,
+  Linas: Linas,
 };
