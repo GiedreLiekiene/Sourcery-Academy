@@ -1,9 +1,10 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useContext } from 'react';
 import './media-carousel.scss';
 import PropTypes from 'prop-types';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import VideoPlayer from '../VideoBox/VideoPlayer';
 import classnames from 'classnames';
+import { ThemeContext } from '../../utils/ThemeContext';
 
 const Arrow = ({ left, right }) => {
   const arrowClass = classnames('carousel__arrow', {
@@ -53,8 +54,11 @@ const MediaCarousel = ({ images, initialIndex = 0, onClickClose }) => {
 
   let { src, type } = images[index];
 
+  const { theme } = useContext(ThemeContext);
+  const carouselClass = classnames('carousel', `carousel--${theme}`);
+
   return (
-    <div className="carousel">
+    <div className={carouselClass}>
       {onClickClose && (
         <button
           type="button"
