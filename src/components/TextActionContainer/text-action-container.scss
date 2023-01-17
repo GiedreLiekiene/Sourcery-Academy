@@ -73,7 +73,12 @@ $_padding-size-m: 5rem;
   }
 
   &__action {
+    margin-top: $spacing-l;
     max-width: fit-content;
+
+    @include media-query-mobile {
+      margin: $spacing-m auto;
+    }
   }
 
   @include media-query-mobile {

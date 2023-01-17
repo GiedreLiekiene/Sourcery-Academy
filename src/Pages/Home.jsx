@@ -7,10 +7,14 @@ import CardContainer from '../components/CardContainer/CardContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
 import ImageHolder from '../components/ImageHolder/ImageHolder';
 import academyInformation from '../utils/academyInformation.json';
+import { ROUTES } from '../components/App/Routes';
 import { assets } from '../assets/svg/assets';
 import { SvgList } from '../assets/svg/index';
 import { ThemeProvider } from '../utils/ThemeContext';
 import './home.scss';
+import CustomLink from '../components/Link/CustomLink';
+
+const { forDevelopers, forTesters, forFrontEnd, forKids } = ROUTES;
 
 const {
   WalkingToLaptopImg,
@@ -54,7 +58,9 @@ function Home() {
               headingLevel={2}
               title="Sourcery for Developers"
               text={getAcademyInfo('intro', 'Sourcery for Developers')}
-            />
+            >
+              <CustomLink to={forDevelopers}>Learn More</CustomLink>
+            </TextActionContainer>
           }
           rightChild={<ImageHolder image={<WorkingWithLaptop />} />}
         ></TextImgContainer>
@@ -72,7 +78,9 @@ function Home() {
               headingLevel={2}
               title="Sourcery for Testers"
               text={getAcademyInfo('intro', 'Sourcery for Testers')}
-            />
+            >
+              <CustomLink to={forTesters}>Learn More</CustomLink>
+            </TextActionContainer>
           }
           alignRight
         ></TextImgContainer>
@@ -90,7 +98,9 @@ function Home() {
               title="Sourcery for Front-End"
               alignRight
               text={getAcademyInfo('intro', 'Sourcery for Front-End')}
-            />
+            >
+              <CustomLink to={forFrontEnd}>Learn More</CustomLink>
+            </TextActionContainer>
           }
           alignRight
         ></TextImgContainer>
@@ -103,7 +113,9 @@ function Home() {
               headingLevel={2}
               title="Sourcery for Kids"
               text={getAcademyInfo('intro', 'Sourcery for Kids')}
-            />
+            >
+              <CustomLink to={forKids}>Learn More</CustomLink>
+            </TextActionContainer>
           }
           rightChild={<ImageHolder image={<WorkingAtDeskKidRobot />} />}
         ></TextImgContainer>
@@ -122,7 +134,7 @@ function Home() {
         <CardContainer title="Media">
           <MediaContainer academy={'frontend'} shouldUseExtended={true} />
         </CardContainer>
-        <div className="section-group__fourth-wave wave">
+        <div className="section-group__wave section-group__wave--fourth-wave ">
           <FourthWaveSvg />
         </div>
       </div>
