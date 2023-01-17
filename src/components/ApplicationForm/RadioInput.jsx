@@ -2,14 +2,7 @@ import React from 'react';
 import './radio-input.scss';
 import PropTypes from 'prop-types';
 
-export default function RadioInput({
-  value,
-  label,
-  id,
-  name,
-  onChange,
-  checked,
-}) {
+export default function RadioInput({ value, label, id, name, onChange }) {
   return (
     <div className="radio-input">
       <input
@@ -17,7 +10,6 @@ export default function RadioInput({
         value={value}
         id={id}
         name={name}
-        checked={checked}
         onChange={onChange}
       />
       <span className="radio-input__fake" />
@@ -31,8 +23,7 @@ export default function RadioInput({
 RadioInput.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
-  checked: PropTypes.node.isRequired,
   value: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
-  onChange: PropTypes.node.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

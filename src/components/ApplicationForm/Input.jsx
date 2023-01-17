@@ -69,7 +69,7 @@ Input.propTypes = {
   type: PropTypes.string,
   value: PropTypes.node,
   name: PropTypes.string,
-  onChange: PropTypes.node.isRequired,
+  onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   isFile: PropTypes.node,
 };

@@ -25,7 +25,7 @@ const Academies = [
     key: 3,
   },
 ];
-export default function Selection({ checked, onChange }) {
+export default function Selection({ onChange }) {
   return (
     <div className="selection-wrapper">
       {Academies.map(function (academy) {
@@ -36,7 +36,6 @@ export default function Selection({ checked, onChange }) {
               value={academy.value}
               id={academy.id}
               name={academy.name}
-              checked={checked}
               onChange={onChange}
             />
             <label className="selection-wrapper__label" htmlFor={academy.id}>
@@ -50,6 +49,5 @@ export default function Selection({ checked, onChange }) {
 }
 
 Selection.propTypes = {
-  checked: PropTypes.node.isRequired,
-  onChange: PropTypes.node.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
