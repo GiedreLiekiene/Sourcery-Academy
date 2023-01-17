@@ -50,7 +50,9 @@ export default function Selection({ onChange, error }) {
           );
         })}
       </div>
-      {error && <div className="input__error">Please enter all the fields</div>}
+      {error && (
+        <div className="input__error">Please select one of academies.</div>
+      )}
     </div>
   );
 }

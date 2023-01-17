@@ -16,7 +16,9 @@ $_checkbox-hover-color: #9a9999ff;
     border-radius: $_border-radius;
     cursor: pointer;
     height: 2.2rem;
+    line-height: 1;
     position: relative;
+    text-align: center;
     width: 2.2rem;
 
     &--is-error {
@@ -27,10 +29,7 @@ $_checkbox-hover-color: #9a9999ff;
       color: $checkbox-color;
       content: '✔';
       font-size: 2rem;
-      margin: auto 0.1rem;
       opacity: 0;
-      position: absolute;
-      top: -0.2rem;
     }
   }
 

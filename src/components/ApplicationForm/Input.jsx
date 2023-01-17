@@ -60,7 +60,19 @@ export default function Input({
         </label>
       )}
       {isFile && <div className="input__uploaded">{fileName}</div>}
-      {error && <div className="input__error">Please enter all the fields</div>}
+      {error && type === 'text' && (
+        <div className="input__error">
+          {label} is incorrect. Do not use numbers please.{' '}
+        </div>
+      )}
+      {error && type === 'email' && (
+        <div className="input__error">{label} is incorrect. Use @ please. </div>
+      )}
+      {error && type === 'file' && (
+        <div className="input__error">
+          {label} is not uploaded. Upload please.{' '}
+        </div>
+      )}
     </div>
   );
 }
