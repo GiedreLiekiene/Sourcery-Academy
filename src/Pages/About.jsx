@@ -15,11 +15,11 @@ const {
 
 function About() {
   return(
-    <ThemeProvider theme='primary'>
-      <div className='banner'>
-        <img className='banner__image' src='https://i.ibb.co/X3FWZNM/codefather01.png' />
+    <ThemeProvider theme="primary">
+      <div className="banner">
+        <img className="banner__image" src='https://i.ibb.co/X3FWZNM/codefather01.png' />
       </div>
-
+      
       <div className="section-group">
         <TextImgContainer
           leftChild={
@@ -27,6 +27,7 @@ function About() {
               title="Paulina"
               text="I used to be very hyped about exploring abandoned buildings until I fell from third floor and now in my spare time I make rugs and enjoy long walks with my lovely dog."
               boldMainText
+              forceWrapTitle
             />
           }
           rightChild={<Paulina />}
@@ -44,6 +45,7 @@ function About() {
               text="I played basketball for more than 12 years of my life, 4 times Lithuanian champion and also had an offer to play for the National basketball team of Great Britain during my studies there."
               alignRight
               boldMainText
+              forceWrapTitle
             />
           }
         ></TextImgContainer>
@@ -56,6 +58,7 @@ function About() {
               title="Artūras"
               text="I dance and teach lindy-hop for 9 years. Once I won an endurance competition where I danced for 15 minutes non-stop. The top speed of music was 345 beats per minute."
               boldMainText
+              forceWrapTitle
             />
           }
           rightChild={<Arturas />}
@@ -72,6 +75,7 @@ function About() {
               title="Auksė"
               text="While traveling through Caribbeans, I learned Spanish and to dance bachata. So now I do both at the same time."
               alignRight
+              forceWrapTitle
               boldMainText
             />
           }
@@ -84,6 +88,7 @@ function About() {
             <TextActionContainer
               title="Linas"
               text="I dance salsa for 8 years. In my spare time from coding and dancing- I make wine."
+              forceWrapTitle
               boldMainText
             />
           }
@@ -91,11 +96,6 @@ function About() {
           alignCenter
         ></TextImgContainer>
       </div>
-
-
-
-
-
     </ThemeProvider>
   );
 }
