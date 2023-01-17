@@ -3,7 +3,14 @@
 .process-step-image {
   $this: &;
 
-  width: 100%;
+  height: 100%;
+  width: auto;
+
+  &__svg-element {
+    height: 100%;
+    width: auto;
+  }
+
   @each $key, $val in $themes {
     &--#{$key} {
       #{$this}__accent-element-1 {
