@@ -55,7 +55,7 @@ function Home() {
               title="Sourcery for Developers"
               text={getAcademyInfo('intro', 'Sourcery for Developers')}
             />
-            
+          }
           rightChild={<ImageHolder image={<WorkingWithLaptop />} />}
         ></TextImgContainer>
         <div className="section-group__wave section-group__wave--first-wave">
