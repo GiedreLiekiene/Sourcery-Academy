@@ -19,7 +19,7 @@ function About() {
       <div className="banner">
         <img className="banner__image" src='https://i.ibb.co/X3FWZNM/codefather01.png' />
       </div>
-      
+
       <div className="section-group">
         <TextImgContainer
           leftChild={
@@ -87,7 +87,7 @@ function About() {
           leftChild={
             <TextActionContainer
               title="Linas"
-              text="I dance salsa for 8 years. In my spare time from coding and dancing- I make wine."
+              text="I dance salsa for 8 years. In my spare time from coding and dancing I make wine."
               forceWrapTitle
               boldMainText
             />
