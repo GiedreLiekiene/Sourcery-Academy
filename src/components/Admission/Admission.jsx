@@ -5,7 +5,6 @@ import './admission.scss';
 import CardContainer from '../CardContainer/CardContainer';
 import TextActionContainer from '../TextActionContainer/TextActionContainer';
 import TextImgContainer from '../TextImgContainer/TextImgContainer';
-import ImageHolder from '../ImageHolder/ImageHolder';
 import ShowingLocations from '../../assets/svg/image-girl-showing-locations.svg';
 import academyInformation from '../../utils/academyInformation.json';
 import DatesContainer from '../DatesContainer/DatesContainer';
@@ -24,6 +23,11 @@ export default function Admission({ academy = 'Sourcery for Developers' }) {
   const pointClass = classNames(
     'admission-wrapper__point',
     `admission-wrapper__point--${theme}`
+  );
+
+  const imageClass = classNames(
+    'admission-wrapper__image',
+    `admission-wrapper__image--${theme}`
   );
 
   return (
@@ -59,7 +63,7 @@ export default function Admission({ academy = 'Sourcery for Developers' }) {
           rightChild={
             <div className="admission-wrapper__right-column">
               <DatesContainer academy="Sourcery for Developers" />
-              <div className="admission-wrapper__image">
+              <div className={imageClass}>
                 <ShowingLocations />
               </div>
             </div>

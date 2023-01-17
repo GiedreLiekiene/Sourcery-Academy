@@ -43,6 +43,18 @@
       max-width: 51rem;
     }
 
+    @each $key, $val in $themes {
+      &--#{$key} {
+        #{$this}__accent-element-1 {
+          fill: map-get($theme-accents, #{$key}, accent-1);
+        }
+
+        #{$this}__accent-element-2 {
+          fill: map-get($theme-accents, #{$key}, accent-2);
+        }
+      }
+    }
+
     @include media-query-mobile {
       justify-content: center;
     }
