@@ -81,16 +81,16 @@ export default function ApplicationForm() {
   );
 
   return (
-    <div>
-      <form id="application-form" className="application-form">
+    <div className="application-form">
+      <form id="application-form" className="application-form__wrapper">
         <h2 className={headerClass}>Academy information</h2>
 
-        <div className="application-form__radio">
+        <div className="application-form__wrapper">
           <label className="application-form__label">Academy type</label>
           <Selection onChange={onChange} />
         </div>
 
-        <div className="application-form__radio">
+        <div className="application-form__wrapper">
           <label className="application-form__label">Academy city</label>
           <RadioInput
             name="city"
@@ -108,56 +108,57 @@ export default function ApplicationForm() {
           />
         </div>
 
-        <h2 className={headerClass}>Personal information</h2>
+        <div className="application-form__wrapper">
+          <h2 className={headerClass}>Personal information</h2>
+          <div className="application-form__input">
+            <Input
+              id="name"
+              value={form.name}
+              placeholder="Enter your first name"
+              label="First name"
+              name="name"
+              onChange={onChange}
+            />
+          </div>
 
-        <div className="application-form__input">
-          <Input
-            id="name"
-            value={form.name}
-            placeholder="Enter your first name"
-            label="First name"
-            name="name"
-            onChange={onChange}
-          />
+          <div className="application-form__input">
+            <Input
+              id="lastName"
+              value={form.lastName}
+              placeholder="Enter your last name"
+              label="Last name"
+              name="lastName"
+              onChange={onChange}
+            />
+          </div>
+
+          <div className="application-form__input">
+            <Input
+              id="email"
+              type="email"
+              value={form.email}
+              placeholder="Enter your email"
+              label="Email"
+              name="email"
+              onChange={onChange}
+            />
+          </div>
+
+          <div className="application-form__input">
+            <Input
+              type="file"
+              value={form.resume}
+              label="Resume"
+              name="resume"
+              onChange={onFileChange}
+              isFile={fileName}
+              id="file"
+              fileName
+            />
+          </div>
         </div>
 
-        <div className="application-form__input">
-          <Input
-            id="lastName"
-            value={form.lastName}
-            placeholder="Enter your last name"
-            label="Last name"
-            name="lastName"
-            onChange={onChange}
-          />
-        </div>
-
-        <div className="application-form__input">
-          <Input
-            id="email"
-            type="email"
-            value={form.email}
-            placeholder="Enter your email"
-            label="Email"
-            name="email"
-            onChange={onChange}
-          />
-        </div>
-
-        <div className="application-form__input">
-          <Input
-            type="file"
-            value={form.resume}
-            label="Resume"
-            name="resume"
-            onChange={onFileChange}
-            isFile={fileName}
-            id="file"
-            fileName
-          />
-        </div>
-
-        <div className="application-form__checkbox">
+        <div className="application-form__wrapper">
           <Checkbox
             type="checkbox"
             name="checkbox"
@@ -170,7 +171,7 @@ export default function ApplicationForm() {
 
         {error ? <div>{errorMessage()}</div> : <div></div>}
 
-        <div className="application-form__button">
+        <div className="application-form__wrapper">
           <Button
             onClick={handleSubmit}
             type="submit"

@@ -1,9 +1,5 @@
 @import '../../sass/variables';
-$size-uploaded: 1.2rem;
-$line-height: 2.1;
-$color-place-holders: #868686;
-$border-color: #999;
-$border-color-hover: #000000bc;
+$_line-height: 2.1;
 
 .application-form {
   margin: 8rem 0 4rem;
@@ -23,17 +19,8 @@ $border-color-hover: #000000bc;
     margin-bottom: 2rem;
   }
 
-  &__radio {
-    margin-bottom: 6rem;
-  }
-
-  &__checkbox {
-    display: inline-block;
-    margin: 4rem 0 6rem;
-  }
-
-  &__button {
-    margin-top: 6rem;
+  &__wrapper {
+    margin: 6rem 0 0;
   }
 
   &__label {
@@ -42,7 +29,7 @@ $border-color-hover: #000000bc;
     font-family: $font-family;
     font-size: $font-size-s;
     font-weight: 400;
-    line-height: $line-height;
+    line-height: $_line-height;
     margin: 6rem 0 1.7rem;
     position: relative;
     right: 0.5rem;
