@@ -80,12 +80,13 @@
 
   &__image {
     height: auto;
+    object-fit: cover;
     width: 100%;
 
     @include media-query-mobile {
+      background-color: $color-primary;
       height: 32rem;
-      object-fit: cover;
-      width: 100%;
+      object-fit: contain;
     }
   }
 
@@ -116,9 +117,10 @@
     width: 100%;
 
     @include media-query-mobile {
+      background-color: $color-primary;
       height: 32rem;
       margin-bottom: -1rem;
-      object-fit: cover;
+      object-fit: contain;
       width: 100%;
     }
   }
