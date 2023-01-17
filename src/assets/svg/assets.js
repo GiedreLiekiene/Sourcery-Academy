@@ -14,6 +14,11 @@ import Construction from './construction.svg';
 import Gear from './gear.svg';
 import Hammer from './hammer.svg';
 import ApplyDevelopers from './apply-developers.svg';
+import Paulina from './paulina.svg';
+import Giedre from './giedre.svg';
+import Arturas from './arturas.svg';
+import Aukse from './aukse.svg';
+import Linas from './linas.svg';
 
 export const assets = {
   WalkingToLaptopImg: WalkingToLaptopImg,
@@ -32,4 +37,9 @@ export const assets = {
   Gear: Gear,
   Hammer: Hammer,
   ApplyDevelopers: ApplyDevelopers,
+  Paulina: Paulina,
+  Giedre: Giedre,
+  Arturas: Arturas,
+  Aukse: Aukse,
+  Linas: Linas,
 };
