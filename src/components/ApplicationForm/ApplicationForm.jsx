@@ -24,17 +24,8 @@ export default function ApplicationForm() {
   let fileName;
   fileName = isFile ? <span>{isFile}</span> : <span></span>;
 
-  const onChange = (e) => {
-    const { value, name } = e.target;
-    const isCheckbox = e.target.type === 'checkbox';
-    setForm((state) => ({
-      ...state,
-      [name]: isCheckbox ? e.target.checked : value,
-    }));
-  };
-
   useEffect(() => {
-    localStorage.setItem('Form', JSON.stringify('form'));
+    localStorage.setItem('Form', JSON.stringify(form));
   }, [form]);
 
   function getFormValues() {
@@ -51,6 +42,15 @@ export default function ApplicationForm() {
       };
     return JSON.parse(storedValues);
   }
+
+  const onChange = (e) => {
+    const { value, name } = e.target;
+    const isCheckbox = e.target.type === 'checkbox';
+    setForm((state) => ({
+      ...state,
+      [name]: isCheckbox ? e.target.checked : value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -86,7 +86,11 @@ export default function ApplicationForm() {
 
   return (
     <div className="application-form">
-      <form id="application-form" className="application-form__wrapper">
+      <form
+        id="application-form"
+        className="application-form__wrapper"
+        onSubmit={handleSubmit}
+      >
         <h2 className={headerClass}>Academy information</h2>
 
         <div className="application-form__wrapper">
