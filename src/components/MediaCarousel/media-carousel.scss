@@ -21,7 +21,7 @@ $themes: (
     border: none;
     cursor: pointer;
     font-size: $font-size-m;
-    height: 100%;
+    height: 20%;
     opacity: 0.5;
     position: absolute;
     top: 50%;
@@ -46,11 +46,12 @@ $themes: (
     }
 
     &--close {
+      background: transparent;
       font-size: 3rem;
-      height: 2.5rem;
+      height: 1.5rem;
       margin-top: $spacing-sm;
       right: 1rem;
-      top: 25rem;
+      top: 0.5rem;
       z-index: 3;
 
       @include media-query-mobile {
