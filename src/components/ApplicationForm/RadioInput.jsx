@@ -1,6 +1,7 @@
 import React from 'react';
 import './radio-input.scss';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export default function RadioInput({
   value,
@@ -8,8 +9,11 @@ export default function RadioInput({
   id,
   name,
   onChange,
-  checked,
+  error,
 }) {
+  const radioClass = classNames('radio-input__fake', {
+    'radio-input__fake--is-error': error,
+  });
   return (
     <div className="radio-input">
       <input
@@ -17,10 +21,9 @@ export default function RadioInput({
         value={value}
         id={id}
         name={name}
-        checked={checked}
         onChange={onChange}
       />
-      <span className="radio-input__fake" />
+      <span className={radioClass} />
       <label className="radio-input__label" htmlFor={id}>
         {label}
       </label>
@@ -29,10 +32,10 @@ export default function RadioInput({
 }
 
 RadioInput.propTypes = {
+  error: PropTypes.bool,
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
-  checked: PropTypes.node.isRequired,
   value: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
-  onChange: PropTypes.node.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

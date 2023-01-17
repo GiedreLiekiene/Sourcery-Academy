@@ -1,0 +1,16 @@
+@import 'src/sass/media-queries';
+@import 'src/sass/variables';
+
+.form-title {
+  font-family: $font-family-headings;
+  font-size: 4.8rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-m;
+  padding-left: $spacing-xxl;
+
+  @each $key, $val in $themes {
+    &--#{$key} {
+      color: $val;
+    }
+  }
+}
