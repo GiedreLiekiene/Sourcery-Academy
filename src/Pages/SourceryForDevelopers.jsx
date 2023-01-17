@@ -36,7 +36,7 @@ function AcademyDevelopers() {
             leftChild={
               <div className='section-group__text-wrapper'>
                 <TextActionContainer
-                  title="Sourcery Academy for developers"
+                  title={getAcademyInfo('title', 'Sourcery for Developers')}
                   text={getAcademyInfo('slogan', 'Sourcery for Developers')}
                 >
                   <CustomLink to={register}>Register</CustomLink>

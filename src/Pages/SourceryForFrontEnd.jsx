@@ -35,7 +35,7 @@ function AcademyFrontEnd() {
             leftChild={
               <div className='section-group__text-wrapper'>
                 <TextActionContainer
-                  title="Push the Pixels with Sourcery Academy for Front-End"
+                  title={getAcademyInfo('title', 'Sourcery for Front-End')}
                   text={getAcademyInfo('slogan', 'Sourcery for Front-End')}
                 >
                   <CustomLink to={register}>Register</CustomLink>

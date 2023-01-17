@@ -34,7 +34,7 @@ function AcademyTesters() {
                 leftChild={
                   <div className='section-group__text-wrapper'>
                     <TextActionContainer
-                    title="Set your inner tester free with Sourcery for Testers!"
+                    title={getAcademyInfo('title', 'Sourcery for Testers')}
                     text={getAcademyInfo('slogan', 'Sourcery for Testers')}
                     >
                       <CustomLink to={register}>Register</CustomLink>
