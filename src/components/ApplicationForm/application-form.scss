@@ -7,47 +7,47 @@ $_spacing-right: 0.5rem;
     color: $color-error;
     font-size: 1.4rem;
   }
+}
 
-  .application-form {
-    margin: 8rem 0 $spacing-xxl;
-    padding: 0 10rem 0 $spacing-xxl;
+.application-form {
+  margin: 8rem 0 $spacing-xxl;
+  padding: 0 10rem 0 $spacing-xxl;
 
-    &__title-info {
-      margin-bottom: $spacing-l;
+  &__title-info {
+    margin-bottom: $spacing-l;
 
-      @each $key, $val in $themes {
-        &--#{$key} {
-          color: $val;
-        }
+    @each $key, $val in $themes {
+      &--#{$key} {
+        color: $val;
       }
     }
+  }
 
-    &__wrapper {
-      margin-top: $spacing-xxxl;
+  &__wrapper {
+    margin-top: $spacing-xxxl;
 
-      &--less-margin {
-        margin-bottom: $spacing-m;
-      }
+    &--less-margin {
+      margin-bottom: $spacing-m;
     }
+  }
 
-    &__label {
-      color: $color-labels;
-      display: block;
-      font-family: $font-family;
-      font-size: $font-size-s;
-      font-weight: $font-weight-normal;
-      line-height: $_line-height;
-      margin: $spacing-xxxl 0 1.7rem;
-      position: relative;
-      right: $_spacing-right;
+  &__label {
+    color: $color-labels;
+    display: block;
+    font-family: $font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-normal;
+    line-height: $_line-height;
+    margin: $spacing-xxxl 0 1.7rem;
+    position: relative;
+    right: $_spacing-right;
 
-      &::before {
-        color: $color-error;
-        content: '*';
-        display: inline-block;
-        font-weight: $font-weight-bold;
-        margin-right: $spacing-xs;
-      }
+    &::before {
+      color: $color-error;
+      content: '*';
+      display: inline-block;
+      font-weight: $font-weight-bold;
+      margin-right: $spacing-xs;
     }
   }
 }
