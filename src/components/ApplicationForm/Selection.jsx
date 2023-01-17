@@ -1,6 +1,7 @@
 import React from 'react';
 import './selection.scss';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Academies = [
   {
@@ -25,31 +26,38 @@ const Academies = [
     key: 3,
   },
 ];
-export default function Selection({ checked, onChange }) {
+export default function Selection({ onChange, error }) {
+  const wrapClass = classNames('selection-wrapper', {
+    'selection-wrapper--is-error': error,
+  });
   return (
-    <div className="selection-wrapper">
-      {Academies.map(function (academy) {
-        return (
-          <div key={academy.key} className="selection-wrapper__item">
-            <input
-              type="radio"
-              value={academy.value}
-              id={academy.id}
-              name={academy.name}
-              checked={checked}
-              onChange={onChange}
-            />
-            <label className="selection-wrapper__label" htmlFor={academy.id}>
-              {academy.label}
-            </label>
-          </div>
-        );
-      })}
+    <div>
+      <div className={wrapClass}>
+        {Academies.map(function (academy) {
+          return (
+            <div key={academy.key} className="selection-wrapper__item">
+              <input
+                type="radio"
+                value={academy.value}
+                id={academy.id}
+                name={academy.name}
+                onChange={onChange}
+              />
+              <label className="selection-wrapper__label" htmlFor={academy.id}>
+                {academy.label}
+              </label>
+            </div>
+          );
+        })}
+      </div>
+      {error && (
+        <div className="input__error">Please select one of academies.</div>
+      )}
     </div>
   );
 }
 
 Selection.propTypes = {
-  checked: PropTypes.node.isRequired,
-  onChange: PropTypes.node.isRequired,
+  error: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
 };
