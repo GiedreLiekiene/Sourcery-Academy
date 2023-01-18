@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
 $_color-twitter: #1da1f2;
 $_color-facebook: #3b5998;
 $_color-instagram: #8a3ab9;
@@ -7,6 +8,12 @@ $_color-instagram: #8a3ab9;
   height: 4rem;
   margin: $spacing-s;
   width: 4rem;
+
+  @include media-query-mobile {
+    height: 3rem;
+    margin: $spacing-xs;
+    width: 3rem;
+  }
 
   &:hover {
     .icon-background {
