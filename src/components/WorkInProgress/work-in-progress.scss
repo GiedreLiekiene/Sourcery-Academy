@@ -17,6 +17,10 @@
     @include media-query-tablet {
       font-size: 4rem;
     }
+
+    @include media-query-mobile {
+      font-size: 2rem;
+    }
   }
 
   &__link {
@@ -40,12 +44,20 @@
     animation: hit 1.5s ease-in infinite;
     position: absolute;
     width: 15rem;
+
+    @include media-query-mobile {
+      display: none;
+    }
   }
 
   &__gear-svg {
     animation: rotation 3s linear infinite;
     position: absolute;
     width: 6rem;
+
+    @include media-query-mobile {
+      display: none;
+    }
   }
 }
 
