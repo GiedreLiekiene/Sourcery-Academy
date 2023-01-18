@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
 
 $_button-background-color: #584dfc;
 $_focus-hover-opacity: 0.8;
@@ -10,6 +11,10 @@ $_focus-hover-opacity: 0.8;
   margin-right: $spacing-s;
   position: relative;
   white-space: nowrap;
+
+  @include media-query-mobile {
+    margin-bottom: $spacing-xs;
+  }
 
   &__fake {
     border: 2px solid $color-radio-labels;

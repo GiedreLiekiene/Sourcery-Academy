@@ -16,8 +16,8 @@ $_focus-hover-opacity: 0.8;
   padding: 0.7rem;
 
   @include media-query-mobile {
-    display: flex;
-    justify-content: space-between;
+    border-radius: 3rem;
+    display: grid;
   }
 
   &--is-error {
