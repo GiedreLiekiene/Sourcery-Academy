@@ -35,7 +35,6 @@ const Checkbox = ({
         value={value}
         name={name}
         onChange={onChange}
-        tabIndex={0}
         id={id}
         onKeyDown={handleKeyDown}
         onClick={handleClick}
