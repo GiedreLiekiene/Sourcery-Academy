@@ -45,21 +45,11 @@
     &--schedule {
       display: unset;
     }
-
-    &__wave {
-      display: none;
-    }
   }
 
   @include media-query-desktop {
     &__wave {
-      &--video-wave {
-        display: none;
-      }
-
-      &--register-wave {
-        display: none;
-      }
+      display: none;
     }
   }
 
@@ -74,6 +64,10 @@
 
     &--process-wave {
       @include wave-position(6%, left, -8rem, 0%);
+    }
+
+    &--dates-wave {
+      @include wave-position(40%, right, -10rem, -35%);
     }
 
     &--schedule-wave {

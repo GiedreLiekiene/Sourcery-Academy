@@ -10,6 +10,7 @@ import WaveContainer from '../components/WaveContainer/WaveContainer';
 import MediaContainer from '../components/MediaContainer/MediaContainer';
 import academyInformation from '../utils/academyInformation.json';
 import ProcessContainer from '../components/ProcessContainer/ProcessContainer';
+import Admission from '../components/Admission/Admission';
 import { ThemeProvider } from '../utils/ThemeContext';
 import { ROUTES } from '../components/App/Routes';
 import { SvgList } from '../assets/svg';
@@ -18,7 +19,7 @@ import './academies.scss';
 
 const { register } = ROUTES;
 
-const { RegisterWaveSvg, VideoWaveSvg, ProcessWaveSvg, ScheduleWaveSvg, MediaWaveSvg, ApplyWaveSvg } = SvgList;
+const { RegisterWaveSvg, VideoWaveSvg, ProcessWaveSvg, ScheduleWaveSvg, MediaWaveSvg, ApplyWaveSvg, DatesWaveSvg } = SvgList;
 
 const { ApplyTesters } = assets;
 
@@ -62,11 +63,20 @@ function AcademyTesters() {
           </div>
       </div>
 
-      <div className='section-group'>
+      <div className="section-group">
           <ProcessContainer academy='Sourcery for Testers'/>
           <div className="section-group__wave section-group__wave--process-wave">
             <WaveContainer>            
               <ProcessWaveSvg />
+            </WaveContainer>
+          </div>
+      </div>
+
+      <div className="section-group">
+          <Admission academy="Sourcery for Testers" />
+          <div className="section-group__wave section-group__wave--dates-wave">
+            <WaveContainer>            
+              <DatesWaveSvg />
             </WaveContainer>
           </div>
       </div>
@@ -94,9 +104,8 @@ function AcademyTesters() {
         </CardContainer>
         <div className="section-group__wave section-group__wave--media-wave">
            <WaveContainer>
-            <MediaWaveSvg />
+              <MediaWaveSvg />
            </WaveContainer>
-
         </div>
       </div>
 
