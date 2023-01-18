@@ -13,6 +13,10 @@
     align-items: flex-end;
     display: flex;
     justify-content: center;
+
+    @include media-query-mobile {
+      padding: 0 6rem 0 0;
+    }
   }
 
   &__copyright {
