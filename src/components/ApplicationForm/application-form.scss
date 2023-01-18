@@ -17,7 +17,7 @@ $_spacing-right: 0.5rem;
   padding: 0 10rem 0 $spacing-xxl;
 
   @include media-query-mobile {
-    margin: $spacing-xxl 0 $spacing-m;
+    margin: $spacing-xxl 0 $spacing-xxl;
     padding: 0;
   }
 
