@@ -13,4 +13,15 @@
       color: $val;
     }
   }
+  @include media-query-mobile {
+    font-size: 3.2rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.form-svg {
+  @include media-query-mobile {
+    display: none;
+  }
 }

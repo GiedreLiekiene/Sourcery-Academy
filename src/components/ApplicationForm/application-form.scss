@@ -1,4 +1,6 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
+
 $_line-height: 2.1;
 $_spacing-right: 0.5rem;
 
@@ -14,8 +16,17 @@ $_spacing-right: 0.5rem;
   margin: 8rem 0 $spacing-xxl;
   padding: 0 10rem 0 $spacing-xxl;
 
+  @include media-query-mobile {
+    margin: $spacing-xxl 0 $spacing-xxl;
+    padding: 0;
+  }
+
   &__title-info {
     margin-bottom: $spacing-l;
+
+    @include media-query-mobile {
+      text-align: center;
+    }
 
     @each $key, $val in $themes {
       &--#{$key} {
@@ -43,6 +54,10 @@ $_spacing-right: 0.5rem;
     position: relative;
     right: $_spacing-right;
 
+    @include media-query-mobile {
+      margin: $spacing-m 0 $spacing-s;
+    }
+
     &::before {
       color: $color-error;
       content: '*';
@@ -50,5 +65,11 @@ $_spacing-right: 0.5rem;
       font-weight: $font-weight-bold;
       margin-right: $spacing-xs;
     }
+  }
+}
+
+.button {
+  @include media-query-mobile {
+    width: 100%;
   }
 }

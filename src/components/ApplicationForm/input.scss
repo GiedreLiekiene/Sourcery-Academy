@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
 
 $color-labels: #5c5c5c;
 $size-labels: 1.4rem;
@@ -18,6 +19,10 @@ $border-color-hover: #000000bc;
   max-width: 51rem;
   padding: 1.2rem;
   width: 100%;
+
+  @include media-query-mobile {
+    max-width: 100%;
+  }
 
   &:hover {
     border: 1px solid $border-color-hover;

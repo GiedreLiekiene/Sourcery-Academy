@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/media-queries';
 
 $_fancy-border-color: #3d3691;
 $_button-background-color: #584dfc;
@@ -13,6 +14,11 @@ $_focus-hover-opacity: 0.8;
   display: inline-flex;
   gap: 0.7rem;
   padding: 0.7rem;
+
+  @include media-query-mobile {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &--is-error {
     border: 2px solid $color-error;
