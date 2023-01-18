@@ -37,11 +37,13 @@ export default function Admission({ academy = 'Sourcery for Developers' }) {
           leftChild={
             <div>
               <TextActionContainer
+                leftMobileText
                 headingLevel={2}
                 title="Introduction"
                 text={applicationSteps.introduction}
               />
               <TextActionContainer
+                leftMobileText
                 className="points"
                 headingLevel={2}
                 title="Learning points"
@@ -54,6 +56,7 @@ export default function Admission({ academy = 'Sourcery for Developers' }) {
                 )}
               />
               <TextActionContainer
+                leftMobileText
                 headingLevel={2}
                 title="Interview"
                 text={applicationSteps['interview promise']}

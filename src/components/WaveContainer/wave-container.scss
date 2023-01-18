@@ -1,0 +1,11 @@
+@import '../../sass/variables';
+
+.wave-container {
+  @each $key, $val in $themes {
+    &--#{$key} {
+      path {
+        stroke: $val;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import '../sass/media-queries';
+
+@mixin wave-position($width, $direction, $direction_val, $translate_val) {
+  position: absolute;
+  transform: translateY($translate_val);
+  width: $width;
+  z-index: -1;
+  #{$direction}: $direction_val;
+}
+
+.section-group {
+  display: flex;
+  padding: 10rem 0;
+  position: relative;
+
+  &--first {
+    padding-bottom: 20rem;
+    padding-top: 3rem;
+  }
+
+  &--last {
+    padding-bottom: 20rem;
+  }
+
+  &__video-box-wrapper {
+    margin-left: 5rem;
+
+    @include media-query-mobile {
+      margin: unset;
+    }
+  }
+
+  &__text-wrapper {
+    margin-right: 12rem;
+
+    @include media-query-mobile {
+      margin: unset;
+      padding-bottom: 5rem;
+    }
+  }
+
+  @include media-query-mobile {
+    padding: 6rem 0;
+
+    &--schedule {
+      display: unset;
+    }
+  }
+
+  @include media-query-desktop {
+    &__wave {
+      display: none;
+    }
+  }
+
+  &__wave {
+    &--video-wave {
+      @include wave-position(49%, right, 2rem, 14%);
+    }
+
+    &--register-wave {
+      @include wave-position(35%, left, 5rem, 220%);
+    }
+
+    &--process-wave {
+      @include wave-position(6%, left, -8rem, 0%);
+    }
+
+    &--dates-wave {
+      @include wave-position(40%, right, -10rem, -35%);
+    }
+
+    &--schedule-wave {
+      @include wave-position(3%, right, -7rem, 20%);
+    }
+
+    &--media-wave {
+      @include wave-position(10%, left, -7rem, 13%);
+    }
+
+    &--apply-wave {
+      @include wave-position(15%, right, 0, -17%);
+    }
+  }
+}

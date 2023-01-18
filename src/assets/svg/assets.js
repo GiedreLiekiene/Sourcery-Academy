@@ -13,6 +13,9 @@ import ProcessStepFour from './image-step-4-people-with-checkmark.svg';
 import Construction from './construction.svg';
 import Gear from './gear.svg';
 import Hammer from './hammer.svg';
+import ApplyDevelopers from './apply-developers.svg';
+import ApplyTesters from './apply-testers.svg';
+import ApplyFrontEnd from './apply-front-end.svg';
 import Paulina from './paulina.svg';
 import Giedre from './giedre.svg';
 import Arturas from './arturas.svg';
@@ -35,6 +38,9 @@ export const assets = {
   Construction: Construction,
   Gear: Gear,
   Hammer: Hammer,
+  ApplyDevelopers: ApplyDevelopers,
+  ApplyFrontEnd: ApplyFrontEnd,
+  ApplyTesters: ApplyTesters,
   Paulina: Paulina,
   Giedre: Giedre,
   Arturas: Arturas,

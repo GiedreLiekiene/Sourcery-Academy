@@ -44,6 +44,10 @@ $_padding-size-m: 5rem;
     }
 
     @include media-query-mobile {
+      &--center {
+        text-align: center;
+      }
+
       &--wrap {
         text-align: center;
         word-spacing: 0;
@@ -107,6 +111,11 @@ $_padding-size-m: 5rem;
       margin-top: $spacing-s;
       padding: 0;
       text-align: center;
+
+      &--left {
+        margin-left: unset;
+        text-align: start;
+      }
     }
 
     h1 {

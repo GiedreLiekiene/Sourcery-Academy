@@ -7,11 +7,13 @@ import { ThemeContext } from '../../utils/ThemeContext';
 export default function TextActionContainer({
   title,
   forceWrapTitle = false,
+  centerTitle = false,
   text,
   alignRight = false,
   headingLevel = 1,
   children,
   boldMainText = false,
+  leftMobileText = false,
 }) {
   const { theme } = useContext(ThemeContext);
 
@@ -25,11 +27,13 @@ export default function TextActionContainer({
     {
       'text-action-container__title--right': alignRight,
       'text-action-container__title--wrap': forceWrapTitle,
+      'text-action-container__title--center': centerTitle,
     }
   );
   const textClass = classNames('text-action-container__text', {
     'text-action-container__text--right': alignRight,
     'text-action-container__text--bold': boldMainText,
+    'text-action-container__text--left': leftMobileText,
   });
   const actionClass = classNames(
     'text-action-container__action',
@@ -48,10 +52,12 @@ export default function TextActionContainer({
 
 TextActionContainer.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([ PropTypes.string, PropTypes.array ]).isRequired,
   alignRight: PropTypes.bool,
+  leftMobileText: PropTypes.bool,
   boldMainText: PropTypes.bool,
   headingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   forceWrapTitle: PropTypes.bool,
+  centerTitle: PropTypes.bool,
   children: PropTypes.node,
 };
