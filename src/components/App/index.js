@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 import About from '../../Pages/About';
 import Home from '../../Pages/Home';
@@ -16,7 +16,22 @@ import Layout from '~/components/layout/Layout';
 import ApplicationFormSuccess from '../../Pages/ApplicationFormSuccess';
 import { ROUTES } from './Routes';
 
-function Routing() {
+function Routing() {  
+  const previousLocation = useRef(null);
+  const location = useLocation();
+  const [isInitialRender, setIsInitialRender] = useState(true);
+  
+  useEffect(() => {
+      if (!isInitialRender) {
+          if (previousLocation.current !== location.pathname) {
+              window.scrollTo(0, 0);
+          }
+      } else {
+          setIsInitialRender(false);
+      }
+      previousLocation.current = location.pathname;
+  }, [location]);
+
   return (
     <Routes>
       <Route path={ROUTES.home} element={<Home />} />
