@@ -15,19 +15,26 @@
     text-align: center;
 
     @include media-query-mobile {
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
 
   &__container {
     align-items: center;
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     margin-top: 5rem;
   }
 
   &__computer-svg {
+    flex: 1;
     transform: translateX(-2rem) translateY(-3rem);
+
+    @include media-query-mobile {
+      margin-left: 3rem;
+      width: 100%;
+    }
   }
 
   &__link {
@@ -37,11 +44,19 @@
   &__svg-cord-left {
     animation: move 2s ease-in-out infinite;
     position: absolute;
+
+    @include media-query-mobile {
+      display: none;
+    }
   }
 
   &__svg-cord-right {
     animation: move1 2s ease-in-out infinite;
     position: absolute;
+
+    @include media-query-mobile {
+      display: none;
+    }
   }
 }
 
