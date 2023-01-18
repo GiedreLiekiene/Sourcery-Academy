@@ -14,7 +14,7 @@ function ApplicationFormScreen() {
       <h1 className={screenHeaderClass}>Sourcery Academy Application</h1>
       <TextImgContainer
         leftChild={<ApplicationForm />}
-        rightChild={<FormImage />}
+        rightChild={<FormImage className="form-svg" />}
       />
     </div>
   );

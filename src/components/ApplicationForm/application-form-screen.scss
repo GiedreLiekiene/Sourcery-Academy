@@ -20,7 +20,7 @@
   }
 }
 
-svg {
+.form-svg {
   @include media-query-mobile {
     display: none;
   }
