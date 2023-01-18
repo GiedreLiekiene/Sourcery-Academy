@@ -52,7 +52,7 @@ export default function TextActionContainer({
 
 TextActionContainer.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([ PropTypes.string, PropTypes.array ]).isRequired,
   alignRight: PropTypes.bool,
   leftMobileText: PropTypes.bool,
   boldMainText: PropTypes.bool,
