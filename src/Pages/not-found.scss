@@ -2,6 +2,7 @@
 @import '../sass/variables';
 
 .not-found-page {
+  align-items: center;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -25,11 +26,14 @@
     flex-grow: 1;
     justify-content: center;
     margin-top: 5rem;
+    max-width: 80rem;
+    width: 100%;
   }
 
   &__computer-svg {
     flex: 1;
     transform: translateX(-2rem) translateY(-3rem);
+    width: 100%;
 
     @include media-query-mobile {
       margin-left: 3rem;
