@@ -18,6 +18,8 @@ import './academies.scss';
 
 const { register } = ROUTES;
 
+const { RegisterWaveSvg, VideoWaveSvg, ProcessWaveSvg, ScheduleWaveSvg, MediaWaveSvg, ApplyWaveSvg } = SvgList;
+
 const { ApplyFrontEnd } = assets;
 
 function getAcademyInfo(key, academy) {
@@ -51,12 +53,12 @@ function AcademyFrontEnd() {
           />
           <div className="section-group__wave section-group__wave--register-wave">
             <WaveContainer>            
-              <SvgList.RegisterWaveSvg />
+              <RegisterWaveSvg />
             </WaveContainer>
           </div>
           <div className="section-group__wave section-group__wave--video-wave">
             <WaveContainer>
-              <SvgList.VideoWaveSvg />
+              <VideoWaveSvg />
             </WaveContainer>
           </div>
       </div>
@@ -65,7 +67,7 @@ function AcademyFrontEnd() {
           <ProcessContainer academy='Sourcery for Front-End'/>
           <div className="section-group__wave section-group__wave--process-wave">
             <WaveContainer>            
-              <SvgList.ProcessWaveSvg />
+              <ProcessWaveSvg />
             </WaveContainer>
           </div>
       </div>
@@ -76,7 +78,7 @@ function AcademyFrontEnd() {
         </CardContainer>
         <div className="section-group__wave section-group__wave--schedule-wave">
           <WaveContainer>
-            <SvgList.ScheduleWaveSvg />
+            <ScheduleWaveSvg />
           </WaveContainer>
         </div>
       </div>
@@ -93,7 +95,7 @@ function AcademyFrontEnd() {
         </CardContainer>
         <div className="section-group__wave section-group__wave--media-wave">
            <WaveContainer>
-            <SvgList.MediaWaveSvg />
+            <MediaWaveSvg />
            </WaveContainer>
 
         </div>
@@ -116,7 +118,7 @@ function AcademyFrontEnd() {
         ></TextImgContainer>
         <div className="section-group__wave section-group__wave--apply-wave">
           <WaveContainer>
-            <SvgList.ApplyWaveSvg />
+            <ApplyWaveSvg />
           </WaveContainer>
         </div>
       </div>
