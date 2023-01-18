@@ -4,7 +4,12 @@
 .dates-container {
   display: flex;
   flex-direction: column;
+  padding-right: 5rem;
   width: 100%;
+
+  @include media-query-mobile {
+    padding: 0;
+  }
 
   &__title {
     align-self: flex-end;
@@ -14,6 +19,11 @@
     text-align: right;
     width: fit-content;
 
+    @include media-query-mobile {
+      text-align: center;
+      width: 100%;
+    }
+
     @each $key, $val in $themes {
       &--#{$key} {
         color: $val;
@@ -22,16 +32,22 @@
   }
 
   &__cards {
-    align-items: center;
+    align-items: flex-end;
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 14rem;
+
+    @include media-query-mobile {
+      align-items: center;
+    }
   }
 
   &__item {
     flex: 1;
     margin-bottom: $spacing-s;
+    max-width: 30rem;
     width: 100%;
   }
 }
