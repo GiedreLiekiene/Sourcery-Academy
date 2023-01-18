@@ -1,0 +1,68 @@
+@import '../../sass/variables';
+@import '../../sass/media-queries';
+
+.admission-wrapper {
+  $this: &;
+
+  width: 100%;
+
+  &__point {
+    list-style: none;
+    margin-left: $spacing-m;
+    position: relative;
+
+    &::before {
+      content: '•';
+      font-size: 5rem;
+      left: -2.4rem;
+      line-height: 0.5;
+      position: absolute;
+      top: 0;
+    }
+
+    @each $key, $val in $themes {
+      &--#{$key}::before {
+        color: $val;
+      }
+    }
+  }
+
+  @include media-query-mobile {
+    .text-action-container__text {
+      margin-left: unset;
+      text-align: start;
+    }
+  }
+
+  &__right-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    $this: &;
+
+    @each $key, $val in $themes {
+      &--#{$key} {
+        #{$this}__accent-element-1 {
+          fill: map-get($theme-accents, #{$key}, accent-1);
+        }
+
+        #{$this}__accent-element-2 {
+          fill: map-get($theme-accents, #{$key}, accent-2);
+        }
+      }
+    }
+
+    svg {
+      max-width: 51rem;
+    }
+
+    @include media-query-mobile {
+      justify-content: center;
+    }
+  }
+}
