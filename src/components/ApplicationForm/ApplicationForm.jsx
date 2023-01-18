@@ -131,7 +131,7 @@ export default function ApplicationForm() {
               label="First name"
               name="name"
               onChange={onChange}
-              error={error && !form.name.match(/^[a-zA-Z]+$/)}
+              error={error && !form.name.match(/^[\p{L}'][ \p{L}'-]*[\p{L}]$/u)}
             />
           </div>
 
@@ -143,7 +143,9 @@ export default function ApplicationForm() {
               label="Last name"
               name="lastName"
               onChange={onChange}
-              error={error && !form.lastName.match(/^[a-zA-Z]+$/)}
+              error={
+                error && !form.lastName.match(/^[\p{L}'][ \p{L}'-]*[\p{L}]$/u)
+              }
             />
           </div>
 
