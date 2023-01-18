@@ -111,6 +111,11 @@ $_padding-size-m: 5rem;
       margin-top: $spacing-s;
       padding: 0;
       text-align: center;
+
+      &--left {
+        margin-left: unset;
+        text-align: start;
+      }
     }
 
     h1 {

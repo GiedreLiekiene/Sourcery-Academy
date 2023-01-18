@@ -27,13 +27,6 @@
     }
   }
 
-  @include media-query-mobile {
-    .text-action-container__text {
-      margin-left: unset;
-      text-align: start;
-    }
-  }
-
   &__right-column {
     display: flex;
     flex-direction: column;
