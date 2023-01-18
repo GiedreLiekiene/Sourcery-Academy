@@ -65,8 +65,8 @@ export default function ApplicationForm() {
     ) {
       setError(true);
     } else if (
-      !form.name.match(/^[a-zA-Z]+$/) ||
-      !form.lastName.match(/^[a-zA-Z]+$/) ||
+      !form.name.match(/^[\p{L}'][ \p{L}'-]*[\p{L}]$/u) ||
+      !form.lastName.match(/^[\p{L}'][ \p{L}'-]*[\p{L}]$/u) ||
       !form.email.match(
         /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
       )
