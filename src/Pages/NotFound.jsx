@@ -17,7 +17,7 @@ const NotFoundPage = () => {
         </h1>
         <div className="not-found-page__container">
           <div className="not-found-page__computer-svg">
-            <Computer404 width="70rem" />
+            <Computer404 />
           </div>
           <div className="not-found-page__svg-cord-left">
             <CordLeft height="15rem" />
